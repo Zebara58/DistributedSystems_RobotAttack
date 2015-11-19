@@ -5,14 +5,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>763e76c8-04fc-49af-aeb5-9b7b9dcfd32a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>DistributedSystems_RobotAttack.py</StartupFile>
+    <StartupFile>bin\DistributedSystems_RobotAttack.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>DistributedSystems_RobotAttack</Name>
     <RootNamespace>DistributedSystems_RobotAttack</RootNamespace>
-    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterId>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -24,10 +24,25 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DistributedSystems_RobotAttack.py" />
+    <Compile Include="bin\DistributedSystems_RobotAttack.py" />
+    <Compile Include="bin\Map.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="bin\Robot.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="bin\Rules.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="bin\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\3.4" />
+    <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\3.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
