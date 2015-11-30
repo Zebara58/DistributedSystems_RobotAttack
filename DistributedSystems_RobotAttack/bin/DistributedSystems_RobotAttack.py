@@ -18,14 +18,20 @@ if __name__ == '__main__':
     m = Map(xSize, ySize)
 
     numRobots = 2
-    rules = Rules(numRobots, m)
+    rules = Rules(numRobots, m, condition)
+    print("before rules")
+    rules.start()
+    condition.acquire()
+    condition.notify()
+    condition.release()
+    print("rules started")
+    r1 = Robot(0,0,xSize,ySize,m, 1, rules, condition)
+    r2 = Robot(1,1,xSize,ySize,m, 2, rules, condition)
+    print("before robot")
+    r1.start()
+    print("robot started")
 
-    t_rules = Thread(name = "r1", target = Rules.operate, args=(condition,))
-    t_rules.start()
-    #r1 = Robot(0,0,xSize,ySize,m, 1, rules, condition)
-    #r2 = Robot(1,1,xSize,ySize,m, 2, rules, condition)
-    
-    t_rules.join()
+    #t_rules.join()
 
     #m.print()
     #r1.move("r", m)

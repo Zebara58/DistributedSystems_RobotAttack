@@ -1,7 +1,8 @@
-from copy import copy, deepcopy
+﻿from copy import copy, deepcopy
 from threading import Thread
 import threading
-class Robot:
+import logging
+class Robot(Thread):
     def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition):
         #Intialize
         #params: start x coord, start y coord, 
@@ -15,10 +16,8 @@ class Robot:
         self.alive = True
         self.mainMap = m
         self.rules = rules
-
-        self.t = Thread(name = "t"+str(self.robotID), target = self.operate, args=(condition,))
-        self.t.start()
-
+        self.cv = condition
+        Thread.__init__(self)
 
         #if(x!=0):
         #	self.matrix[x-1][y] = m[x-1][y]
@@ -29,20 +28,23 @@ class Robot:
         #if(y!=ySize-1):
         #	self.matrix[x][y+1] = m[x][y+1]
 
-    def operate(self, cv):
-        with cv:
+    def run(self):
+        logging.info('robot_'+str(self.robotID)+' started!');
+        with self.cv:
+            logging.info('robot_'+str(self.robotID)+' with!');
             while(self.alive):
-                print("start")
+                logging.info("start")
                 self.move("d")
-                print("moved! "+str(self.robotID))
+                logging.info("moved! "+str(self.robotID))
                 #wait(10000)
                 self.rules.inc()
                 print("wait! "+str(self.robotID))
                 cv.wait()
-                print("get latest! "+str(self.robotID))
+                logging.info("get latest! "+str(self.robotID))
                 getlatest()
 
                 wait(10000)
+        logging.info('robot_'+str(self.robotID)+' finished!');
 
 
     def move(self, dir):
