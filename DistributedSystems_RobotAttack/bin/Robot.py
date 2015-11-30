@@ -30,8 +30,9 @@ class Robot(Thread):
 
     def run(self):
         logging.info('robot_'+str(self.robotID)+' started!');
-        with self.cv:
-            logging.info('robot_'+str(self.robotID)+' with!');
+        #with self.cv:
+        logging.info('robot_'+str(self.robotID)+' with!');
+        with cv:
             while(self.alive):
                 logging.info("start")
                 self.move("d")
@@ -39,11 +40,11 @@ class Robot(Thread):
                 #wait(10000)
                 self.rules.inc()
                 print("wait! "+str(self.robotID))
-                cv.wait()
+                #cv.wait()
                 logging.info("get latest! "+str(self.robotID))
-                getlatest()
+                self.getLatest()
 
-                wait(10000)
+            #wait(10000)
         logging.info('robot_'+str(self.robotID)+' finished!');
 
 
@@ -77,13 +78,13 @@ class Robot(Thread):
         #self.wait()
 
     def getLatest(self):
-        if(x!=0):
+        if(self.x!=0):
         	self.matrix[x-1][y] = self.mainMap[x-1][y]
-        if(x!=xSize-1):
+        if(self.x!=self.xSize-1):
         	self.matrix[x+1][y] = self.mainMap[x+1][y]
-        if(y!=0):
+        if(self.y!=0):
         	self.matrix[x][y-1] = self.mainMap[x][y-1]
-        if(y!=ySize-1):
+        if(self.y!=ySize-1):
         	self.matrix[x][y+1] = self.mainMap[x][y+1]
 
     def printKnowledge(self):
