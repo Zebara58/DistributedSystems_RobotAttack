@@ -30,20 +30,20 @@ class Robot(Thread):
 
     def run(self):
         logging.info('robot_'+str(self.robotID)+' started!');
-        #with self.cv:
-        logging.info('robot_'+str(self.robotID)+' with!');
+        
+        with self.cv:
+            logging.info('robot_'+str(self.robotID)+' with!');
+            while(self.alive):
+                logging.info("start")
+                self.move("d")
+                logging.info("moved! "+str(self.robotID))
 
-        while(self.alive):
-            logging.info("start")
-            self.move("d")
-            logging.info("moved! "+str(self.robotID))
-
-            #wait(10000)
-            self.rules.inc()
-            print("wait! "+str(self.robotID))
-            #cv.wait()
-            logging.info("get latest! "+str(self.robotID))
-            self.getLatest()
+                #wait(10000)
+                self.rules.inc()
+                print("wait! "+str(self.robotID))
+                self.cv.wait()
+                logging.info("get latest! "+str(self.robotID))
+                self.getLatest()
 
         #wait(10000)
         logging.info('robot_'+str(self.robotID)+' finished!');
@@ -80,13 +80,13 @@ class Robot(Thread):
 
     def getLatest(self):
         if(self.x!=0):
-        	self.matrix[self.x-1][self.y] = self.mainMap[self.x-1][self.y]
+        	self.matrix[self.x-1][self.y] = self.mainMap.matrix[self.x-1][self.y]
         if(self.x!=self.xSize-1):
-        	self.matrix[self.x+1][self.y] = self.mainMap[self.x+1][self.y]
+        	self.matrix[self.x+1][self.y] = self.mainMap.matrix[self.x+1][self.y]
         if(self.y!=0):
-        	self.matrix[self.x][self.y-1] = self.mainMap[self.x][self.y-1]
-        if(self.y!=ySize-1):
-        	self.matrix[self.x][self.y+1] = self.mainMap[self.x][self.y+1]
+        	self.matrix[self.x][self.y-1] = self.mainMap.matrix[self.x][self.y-1]
+        if(self.y!=self.ySize-1):
+        	self.matrix[self.x][self.y+1] = self.mainMap.matrix[self.x][self.y+1]
 
     def printKnowledge(self):
         print(self.matrix)

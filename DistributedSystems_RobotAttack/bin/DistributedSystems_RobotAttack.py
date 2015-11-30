@@ -3,6 +3,7 @@ import threading
 from Map import Map
 from Robot import Robot
 from Rules import Rules
+import os
 
 #Robot/malicious in matrix is 1
 #Empty spaces is 0
@@ -11,6 +12,8 @@ from Rules import Rules
 #Matrix[x][y]
 
 if __name__ == '__main__':
+    os.remove("robotattack.log");
+
     xSize = 5
     ySize = 5
 

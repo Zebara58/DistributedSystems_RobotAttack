@@ -9,8 +9,8 @@ class Rules(Thread):
         self.mainMap = m 
         self.cv = cv
         Thread.__init__(self)
-        #logging.basicConfig(filename='robotattack.log',level=logging.DEBUG)
-        logging.FileHandler(filename='robotattack.log', mode='w')
+        logging.basicConfig(filename='robotattack.log',level=logging.DEBUG)
+        #logging.FileHandler(filename='robotattack.log', mode='w')
 
     def run(self):
         gameOver = False 
@@ -21,8 +21,11 @@ class Rules(Thread):
             if(self.notifyA==self.numR):
                 logging.info("notifyA limit reached!")
                 self.notifyA=0
+                self.cv.acquire()
                 self.cv.notifyAll()
+                self.cv.release()
                 self.mainMap.print()
+                logging.info("notifyA limit reached OVER!")
         logging.info('rules finished!');
 
    
