@@ -32,19 +32,19 @@ class Robot(Thread):
         logging.info('robot_'+str(self.robotID)+' started!');
         #with self.cv:
         logging.info('robot_'+str(self.robotID)+' with!');
-        with cv:
-            while(self.alive):
-                logging.info("start")
-                self.move("d")
-                logging.info("moved! "+str(self.robotID))
-                #wait(10000)
-                self.rules.inc()
-                print("wait! "+str(self.robotID))
-                #cv.wait()
-                logging.info("get latest! "+str(self.robotID))
-                self.getLatest()
-
+        #with cv:
+        while(self.alive):
+            logging.info("start")
+            self.move("d")
+            logging.info("moved! "+str(self.robotID))
             #wait(10000)
+            self.rules.inc()
+            print("wait! "+str(self.robotID))
+            #cv.wait()
+            logging.info("get latest! "+str(self.robotID))
+            self.getLatest()
+
+        #wait(10000)
         logging.info('robot_'+str(self.robotID)+' finished!');
 
 

@@ -15,14 +15,14 @@ class Rules(Thread):
     def run(self):
         gameOver = False 
         logging.info("started!")
-        with self.cv:
-            logging.info("thread cv")
-            while(not gameOver):
-                if(self.notifyA==self.numR):
-                    logging.info("notifyA limit reached!")
-                    self.notifyA=0
-                    cv.notifyAll()
-                    self.mainMap.print()
+        #with self.cv:
+        logging.info("thread cv")
+        while(not gameOver):
+            if(self.notifyA==self.numR):
+                logging.info("notifyA limit reached!")
+                self.notifyA=0
+                self.cv.notifyAll()
+                self.mainMap.print()
         logging.info('rules finished!');
 
    
