@@ -28,8 +28,11 @@ if __name__ == '__main__':
     #condition.notify()
     #condition.release()
     print("rules started")
-    r1 = Robot(0,0,xSize,ySize,m, 1, rules, condition)
-    r2 = Robot(1,1,xSize,ySize,m, 2, rules, condition)
+
+
+    r1 = Robot(0,0,xSize,ySize,m, 1, rules, condition, 2, q)
+    r2 = Robot(1,1,xSize,ySize,m, 2, rules, condition, 2, q)
+    
     print("before robot")
     r1.start()
     print("robot started")

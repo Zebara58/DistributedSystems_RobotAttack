@@ -1,9 +1,10 @@
 ﻿from copy import copy, deepcopy
 from threading import Thread
 import threading
+import time
 import logging
 class Robot(Thread):
-    def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition):
+    def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition, numRobots):
         #Intialize
         #params: start x coord, start y coord, 
         self.x = x
@@ -18,6 +19,11 @@ class Robot(Thread):
         self.rules = rules
         self.cv = condition
         Thread.__init__(self)
+        self.isLeader = False
+        self.leaderFound = False
+        self.numRobots = numRobots
+        self.queue = Queue()
+
 
         #if(x!=0):
         #	self.matrix[x-1][y] = m[x-1][y]
@@ -28,9 +34,20 @@ class Robot(Thread):
         #if(y!=ySize-1):
         #	self.matrix[x][y+1] = m[x][y+1]
 
+    def recieveMessage(self, message):
+        if message[1] == "Elect leader":
+            queue.put(message[0])
+
+    def robotConnectToNetwork(self, Network):
+        self.network = Network
+
     def run(self):
-        logging.info('robot_'+str(self.robotID)+' started!');
-        
+        logging.info('robot_'+str(self.robotID)+' started!')
+        message = []
+        message.append(self.robotID)
+        message.append("Elect leader")
+        self.network.broadcastMessage(message)
+        time.sleep(1)
         with self.cv:
             logging.info('robot_'+str(self.robotID)+' with!');
             while(self.alive):
@@ -94,3 +111,4 @@ class Robot(Thread):
     def printPos(self):
         print("X location = "+str(self.x))
         print("Y location = "+str(self.y))
+
