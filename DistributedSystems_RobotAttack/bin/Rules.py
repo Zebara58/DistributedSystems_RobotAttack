@@ -21,14 +21,14 @@ class Rules(Thread):
         logging.info("thread cv")
         while(not gameOver):
             if(self.notifyA==self.numR):
-                #logging.info("notifyA limit reached!")
+                logging.info("notifyA limit reached!")
                 time.sleep(1)
                 self.notifyA=0
                 self.cv.acquire()
                 self.cv.notifyAll()
                 self.cv.release()
                 self.mainMap.print()
-                #logging.info("notifyA limit reached OVER!")
+                logging.info("notifyA limit reached OVER!")
         logging.info('rules finished!');
 
    

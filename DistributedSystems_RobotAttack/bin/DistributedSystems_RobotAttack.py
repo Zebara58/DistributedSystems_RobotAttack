@@ -24,12 +24,9 @@ if __name__ == '__main__':
 
     numRobots = 2
     rules = Rules(numRobots, m, condition)
-    #print("before rules")
+    print("before rules")
     rules.start()
-    #condition.acquire()
-    #condition.notify()
-    #condition.release()
-    #print("rules started")
+    print("rules started")
 
 
     r1 = Robot(0,0,xSize,ySize,m, 1, rules, condition, 2)
@@ -40,9 +37,9 @@ if __name__ == '__main__':
     r1.robotConnectToNetwork(n)
     r2.robotConnectToNetwork(n)
     
-    #print("before robot")
+    print("before robot")
     r1.start()
-    #print("robot started")
+    print("robot started")
     r2.start()
 
     #t_rules.join()
