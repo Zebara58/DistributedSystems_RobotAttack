@@ -87,35 +87,34 @@ class Robot(Thread):
             logging.info(str(self.robotID) + " is the leader!")
         time.sleep(1)
 
-        with self.cv:
+        while(self.alive):
+            self.logSelf("start")
 
-            logging.info('robot_'+str(self.robotID)+' with!');
-            while(self.alive):
-                logging.info("start")
-
-                #if(self.isLeader):
-                #    #Leader issue commands to other robots through the network
-                #    #This also moves the leader
-                #    self.sendCommands()
-                #else:
-                #    #Wait to recieve command from leader
-                #    while(self.moveQueue.empty()):
-                #        time.sleep(1)
-                #    self.logSelf("About to move!")
-                #    self.move(self.moveQueue.get())
+            if(self.isLeader):
+                #Leader issue commands to other robots through the network
+                #This also moves the leader
+                self.sendCommands()
+            else:
+                #Wait to recieve command from leader
+                while(self.moveQueue.empty()):
+                    time.sleep(1)
+                self.logSelf("About to move!")
+                self.move(self.moveQueue.get())
                 
-                self.move("d")
+            #self.move("d")
 
-                logging.info("moved! "+str(self.robotID))
+            logging.info("moved! "+str(self.robotID))
 
-                #wait(1)
-                self.rules.inc()
-                #print("wait! "+str(self.robotID))
+            #wait(1)
+            self.rules.inc()
+            #print("wait! "+str(self.robotID))
 
-                #Wait for all other robots to move by waiting for the Rules to notify that the round is over
+            #Wait for all other robots to move by waiting for the Rules to notify that the round is over
+            with self.cv:
+                logging.info('robot_'+str(self.robotID)+' with!');
                 self.cv.wait()
-                logging.info("get latest! "+str(self.robotID))
-                self.getLatest()
+            logging.info("get latest! "+str(self.robotID))
+            self.getLatest()
 
         #wait(10000)
         logging.info('robot_'+str(self.robotID)+' finished!');

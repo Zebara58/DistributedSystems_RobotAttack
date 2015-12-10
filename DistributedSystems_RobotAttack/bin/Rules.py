@@ -17,16 +17,16 @@ class Rules(Thread):
         self.mainMap.print()
         gameOver = False 
         logging.info("started!")
-        #with self.cv:
         logging.info("thread cv")
         while(not gameOver):
             if(self.notifyA==self.numR):
                 logging.info("notifyA limit reached!")
                 time.sleep(1)
                 self.notifyA=0
-                self.cv.acquire()
-                self.cv.notifyAll()
-                self.cv.release()
+                with self.cv:
+                    self.cv.acquire()
+                    self.cv.notifyAll()
+                    self.cv.release()
                 self.mainMap.print()
                 logging.info("notifyA limit reached OVER!")
         logging.info('rules finished!');

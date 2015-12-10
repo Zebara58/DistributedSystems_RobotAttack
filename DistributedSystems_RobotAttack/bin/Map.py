@@ -1,4 +1,5 @@
-﻿class Map:
+﻿import logging
+class Map:
     def __init__(self, xSize, ySize):
         self.matrix = [[0 for x in range(xSize)] for y in range(ySize)]
         #self.matrix[3][3] = 1
@@ -26,3 +27,4 @@
         self.matrix[prevX][prevY] = 0
         #check for malicious robot location here
         self.matrix[curX][curY] = id
+        logging.info("update for "+str(id)+" curX-"+str(curX)+"  curY-"+str(curY)+ "  prevX-"+str(prevX)+"  prevY-"+str(prevY))
