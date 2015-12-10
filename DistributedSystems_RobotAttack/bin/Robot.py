@@ -3,6 +3,7 @@ from threading import Thread
 import threading
 import time
 import logging
+from queue import *
 class Robot(Thread):
     def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition, numRobots):
         #Intialize
@@ -23,6 +24,7 @@ class Robot(Thread):
         self.leaderFound = False
         self.numRobots = numRobots
         self.queue = Queue()
+        self.moveQueue = Queue()
 
 
         #if(x!=0):
@@ -35,11 +37,35 @@ class Robot(Thread):
         #	self.matrix[x][y+1] = m[x][y+1]
 
     def recieveMessage(self, message):
+        logging.info("Robot"+str(self.robotID)+" recieved message! - "+str(message))
         if message[1] == "Elect leader":
-            queue.put(message[0])
+            self.queue.put(message[0])
+        elif message[1] == "Move":
+            self.moveQueue.put(message[0])
 
     def robotConnectToNetwork(self, Network):
         self.network = Network
+
+    #Elect self as leader if self has the lowest ID
+    def electLeader(self):
+        lowest = self.robotID
+        #logging.info(str(self.queue.qsize()) +" queue size")
+        while(not self.queue.empty()):
+            cur = self.queue.get()
+            logging.info("cur" + str(cur))
+            if(cur<lowest):
+                lowest = cur
+        if(lowest == self.robotID):
+            self.isLeader = True
+
+    #Broadcast commands over the network to all robots
+    #Move self
+    def sendCommands(self):
+        message = []
+        message.append("d")
+        message.append("Move")
+        self.network.broadcastMessage(message)
+        self.move("d")
 
     def run(self):
         logging.info('robot_'+str(self.robotID)+' started!')
@@ -47,17 +73,37 @@ class Robot(Thread):
         message.append(self.robotID)
         message.append("Elect leader")
         self.network.broadcastMessage(message)
+        #Wait for the messages for the election are recieved
+        while(self.queue.qsize()!=(self.numRobots -1)):
+            time.sleep(1)
+        #logging.info(str(self.queue.qsize()) +" queue size")
+        self.electLeader()
+        logging.info('Leader elected!')
+        if(self.isLeader):
+            logging.info(str(self.robotID) + " is the leader!")
         time.sleep(1)
         with self.cv:
             logging.info('robot_'+str(self.robotID)+' with!');
             while(self.alive):
                 logging.info("start")
-                self.move("d")
+
+                if(self.isLeader):
+                    #Leader issue commands to other robots through the network
+                    #This also moves the leader
+                    self.sendCommands()
+                else:
+                    #Wait to recieve command from leader
+                    while(not self.moveQueue.empty()):
+                        time.sleep(1)
+                    self.move(self.moveQueue.get())
+
                 logging.info("moved! "+str(self.robotID))
 
                 #wait(10000)
                 self.rules.inc()
-                print("wait! "+str(self.robotID))
+                #print("wait! "+str(self.robotID))
+
+                #Wait for all other robots to move by waiting for the Rules to notify that the round is over
                 self.cv.wait()
                 logging.info("get latest! "+str(self.robotID))
                 self.getLatest()

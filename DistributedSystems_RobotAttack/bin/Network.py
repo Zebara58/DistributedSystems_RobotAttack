@@ -1,3 +1,5 @@
+﻿from threading import Thread
+import threading
 class Network(Thread):
     def __init__(self):
         self.robotList = []
@@ -5,7 +7,8 @@ class Network(Thread):
     def addRobots(self, robot):
         self.robotList.append(robot)
 
-    def sendMessageBroadcast(self, message):
-        for i in robotList:
+    def broadcastMessage(self, message):
+        for i in self.robotList:
             if i.robotID != message[0]:
-                
+                #send to robot
+                i.recieveMessage(message)

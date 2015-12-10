@@ -1,4 +1,4 @@
-class Map:
+﻿class Map:
     def __init__(self, xSize, ySize):
         self.matrix = [[0 for x in range(xSize)] for y in range(ySize)]
         #self.matrix[3][3] = 1
@@ -14,6 +14,7 @@ class Map:
             for x in range(self.xSize):
                 string += str(self.matrix[x][y]) + "  "
             print(string)
+        print("*****************************************")
 
     #def getLock(self):
     #    self.lock.acquire()
