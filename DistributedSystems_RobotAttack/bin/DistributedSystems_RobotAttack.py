@@ -13,6 +13,7 @@ import random
 
 #Matrix[x][y]
 import time
+import random
 def checkRobotPlacement(m):
     full = True
     while full:
@@ -32,28 +33,36 @@ if __name__ == '__main__':
     condition = threading.Condition()
     m = Map(xSize, ySize)
 
-    numRobots = 2
+    numRobots = 3
     rules = Rules(numRobots, m, condition)
     print("before rules")
     rules.start()
     print("rules started")
+    robots = []
+    robotIDs = []
+    for i in range(0,numRobots):
+        uniqueIDfound = False
+        
+        while not uniqueIDfound:
+            newID = random.randint(0, 99)
+            if newID not in robotIDs:
+                uniqueIDfound = True
+        robotIDs.append(newID)
+        location = checkRobotPlacement(m)
+        r1 = Robot(location[0],location[1],xSize,ySize,m, newID, rules, condition, numRobots)
+        robots.append(r1)
     
-    location = checkRobotPlacement(m)
-    r1 = Robot(location[0],location[1],xSize,ySize,m, 1, rules, condition, 2)
-    location = checkRobotPlacement(m)
-
-    r2 = Robot(location[0],location[1],xSize,ySize,m, 2, rules, condition, 2)
     m.print()
     n = Network()
-    n.addRobots(r1)
-    n.addRobots(r2)
-    r1.robotConnectToNetwork(n)
-    r2.robotConnectToNetwork(n)
+
+    for r in robots:
+        n.addRobots(r)
+
+    for r in robots:
+        r.robotConnectToNetwork(n)
     
-    print("before robot")
-    r1.start()
-    print("robot started")
-    r2.start()
+    for r in robots:
+        r.start()
 
     #t_rules.join()
 

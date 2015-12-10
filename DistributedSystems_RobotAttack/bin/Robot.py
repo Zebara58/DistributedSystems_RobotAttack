@@ -25,6 +25,9 @@ class Robot(Thread):
         self.numRobots = numRobots
         self.queue = Queue()
         self.moveQueue = Queue()
+        self.goalFound = False
+        self.goalX = -1
+        self.goalY = -1
 
 
         #if(x!=0):
@@ -42,6 +45,10 @@ class Robot(Thread):
             self.queue.put(message[0])
         elif message[1] == "Move":
             self.moveQueue.put(message[0])
+        elif self.isLeader and not self.goalFound:
+            self.goalX = message[0][0]
+            self.goalY = message[0][1]
+            self.logSelf("Leader found goal at "+str(self.goalX) +" " + str(self.goalY))
 
     def robotConnectToNetwork(self, Network):
         self.network = Network
@@ -125,25 +132,31 @@ class Robot(Thread):
         prevLocY = self.y
         if(dir=="r"):
             if(self.x!=self.xSize-1):
-                self.matrix[self.x][self.y] = 0
-                self.x = self.x+1
-                self.matrix[self.x][self.y] = self.robotID
-                
+                if(self.matrix[self.x+1][self.y]=='0'):
+                    self.matrix[self.x][self.y] = '0'
+                    self.x = self.x+1
+                    self.matrix[self.x][self.y] = chr(self.robotID)
+
         if(dir=="l"):
             if(self.x!=0):
-                self.matrix[self.x][self.y] = 0
-                self.x = self.x-1
-                self.matrix[self.x][self.y] = self.robotID
+                if(self.matrix[self.x-1][self.y]=='0'):
+                    self.matrix[self.x][self.y] = '0'
+                    self.x = self.x-1
+                    self.matrix[self.x][self.y] = chr(self.robotID)
+
         if(dir=="d"):
             if(self.y!=self.ySize-1):
-                self.matrix[self.x][self.y] = 0
-                self.y = self.y+1
-                self.matrix[self.x][self.y] = self.robotID
+                if(self.matrix[self.x][self.y+1]=='0'):
+                    self.matrix[self.x][self.y] = '0'
+                    self.y = self.y+1
+                    self.matrix[self.x][self.y] = chr(self.robotID)
+
         if(dir=="u"):
             if(self.y!=0):
-                self.matrix[self.x][self.y] = 0
-                self.y = self.y-1
-                self.matrix[self.x][self.y] = self.robotID
+                if(self.matrix[self.x][self.y-1]=='0'):
+                    self.matrix[self.x][self.y] = '0'
+                    self.y = self.y-1
+                    self.matrix[self.x][self.y] = chr(self.robotID)
         #m.getLock()
         self.mainMap.update(self.x, self.y, prevLocX, prevLocY, self.robotID)
         #m.releaseLock()
@@ -158,6 +171,21 @@ class Robot(Thread):
         	self.matrix[self.x][self.y-1] = self.mainMap.matrix[self.x][self.y-1]
         if(self.y!=self.ySize-1):
         	self.matrix[self.x][self.y+1] = self.mainMap.matrix[self.x][self.y+1]
+
+        #check for goal
+        if not self.goalFound:
+            if(self.x!=0 and self.matrix[self.x-1][self.y] == 'g'):
+                self.network.broadcastMessage([[self.x-1,self.y], "goal"])
+                self.goalFound = True
+            elif(self.x!=self.xSize-1 and self.matrix[self.x+1][self.y] == 'g'):
+                self.network.broadcastMessage([[self.x-1,self.y], "goal"])
+                self.goalFound = True
+            elif(self.y!=0 and self.matrix[self.x][self.y-1] == 'g'):
+                self.network.broadcastMessage([[self.x,self.y+1], "goal"])
+                self.goalFound = True
+            elif(self.y!=self.ySize-1 and self.matrix[self.x][self.y+1] == 'g'):
+                self.network.broadcastMessage([[self.x,self.y-1], "goal"])
+                self.goalFound = True
 
     def printKnowledge(self):
         print(self.matrix)
