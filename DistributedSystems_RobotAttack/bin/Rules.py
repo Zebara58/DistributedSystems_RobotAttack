@@ -14,7 +14,6 @@ class Rules(Thread):
         #logging.FileHandler(filename='robotattack.log', mode='w')
 
     def run(self):
-        self.mainMap.print()
         gameOver = False 
         logging.info("started!")
         logging.info("thread cv")
@@ -25,9 +24,9 @@ class Rules(Thread):
                 self.notifyA=0
                 with self.cv:
                     self.cv.acquire()
+                    self.mainMap.print()
                     self.cv.notifyAll()
                     self.cv.release()
-                self.mainMap.print()
                 logging.info("notifyA limit reached OVER!")
         logging.info('rules finished!');
 

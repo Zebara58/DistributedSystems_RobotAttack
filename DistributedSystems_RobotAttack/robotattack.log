@@ -1,3 +1,5 @@
+INFO:root:started!
+INFO:root:thread cv
 INFO:root:robot_1 started!
 INFO:root:broadcast starting!
 INFO:root:sent to -> 2
@@ -8,26 +10,25 @@ INFO:root:sent to -> 1
 INFO:root:Robot1 recieved message! - [2, 'Elect leader']
 INFO:root:cur1
 INFO:root:Leader elected!
-INFO:root:started!
-INFO:root:thread cv
 INFO:root:cur2
-INFO:root:Robot2 start
 INFO:root:Leader elected!
 INFO:root:1 is the leader!
+INFO:root:Robot2 start
 INFO:root:Robot1 start
 INFO:root:broadcast starting!
 INFO:root:sent to -> 1
 INFO:root:Robot1 recieved message! - ['d', 'Move']
 INFO:root:sent to -> 2
 INFO:root:Robot2 recieved message! - ['d', 'Move']
-INFO:root:update for 1 curX-0  curY-1  prevX-0  prevY-0
+INFO:root:update for 1 curX-2  curY-4  prevX-2  prevY-4
 INFO:root:moved! 1
 INFO:root:robot_1 with!
 INFO:root:Robot2 About to move!
-INFO:root:update for 2 curX-1  curY-2  prevX-1  prevY-1
+INFO:root:update for 2 curX-0  curY-1  prevX-0  prevY-0
 INFO:root:moved! 2
 INFO:root:robot_2 with!
 INFO:root:notifyA limit reached!
+INFO:root:notifyA limit reached OVER!
 INFO:root:get latest! 1
 INFO:root:get latest! 2
 INFO:root:Robot1 start
@@ -37,69 +38,15 @@ INFO:root:sent to -> 1
 INFO:root:Robot1 recieved message! - ['d', 'Move']
 INFO:root:sent to -> 2
 INFO:root:Robot2 recieved message! - ['d', 'Move']
-INFO:root:update for 1 curX-0  curY-2  prevX-0  prevY-1
+INFO:root:update for 1 curX-2  curY-4  prevX-2  prevY-4
 INFO:root:moved! 1
 INFO:root:robot_1 with!
-INFO:root:notifyA limit reached OVER!
 INFO:root:Robot2 About to move!
-INFO:root:update for 2 curX-1  curY-3  prevX-1  prevY-2
+INFO:root:update for 2 curX-0  curY-2  prevX-0  prevY-1
 INFO:root:moved! 2
 INFO:root:robot_2 with!
 INFO:root:notifyA limit reached!
-INFO:root:get latest! 2
-INFO:root:get latest! 1
-INFO:root:Robot2 start
-INFO:root:Robot1 start
-INFO:root:broadcast starting!
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 2
-INFO:root:Robot2 recieved message! - ['d', 'Move']
-INFO:root:update for 1 curX-0  curY-3  prevX-0  prevY-2
-INFO:root:moved! 1
-INFO:root:robot_1 with!
 INFO:root:notifyA limit reached OVER!
-INFO:root:Robot2 About to move!
-INFO:root:update for 2 curX-1  curY-4  prevX-1  prevY-3
-INFO:root:moved! 2
-INFO:root:robot_2 with!
-INFO:root:notifyA limit reached!
-INFO:root:get latest! 1
-INFO:root:Robot1 start
-INFO:root:broadcast starting!
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 2
-INFO:root:get latest! 2
-INFO:root:Robot2 recieved message! - ['d', 'Move']
-INFO:root:Robot2 start
-INFO:root:update for 1 curX-0  curY-4  prevX-0  prevY-3
-INFO:root:Robot2 About to move!
-INFO:root:moved! 1
-INFO:root:update for 2 curX-1  curY-4  prevX-1  prevY-4
-INFO:root:robot_1 with!
-INFO:root:moved! 2
-INFO:root:robot_2 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:notifyA limit reached!
-INFO:root:get latest! 1
-INFO:root:Robot1 start
-INFO:root:get latest! 2
-INFO:root:broadcast starting!
-INFO:root:Robot2 start
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 2
-INFO:root:Robot2 recieved message! - ['d', 'Move']
-INFO:root:update for 1 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:Robot2 About to move!
-INFO:root:update for 2 curX-1  curY-4  prevX-1  prevY-4
-INFO:root:moved! 2
-INFO:root:robot_2 with!
-INFO:root:notifyA limit reached!
 INFO:root:get latest! 1
 INFO:root:get latest! 2
 INFO:root:Robot1 start
@@ -109,30 +56,42 @@ INFO:root:sent to -> 1
 INFO:root:Robot1 recieved message! - ['d', 'Move']
 INFO:root:sent to -> 2
 INFO:root:Robot2 recieved message! - ['d', 'Move']
-INFO:root:update for 1 curX-0  curY-4  prevX-0  prevY-4
+INFO:root:update for 1 curX-2  curY-4  prevX-2  prevY-4
 INFO:root:moved! 1
 INFO:root:robot_1 with!
-INFO:root:notifyA limit reached OVER!
 INFO:root:Robot2 About to move!
-INFO:root:update for 2 curX-1  curY-4  prevX-1  prevY-4
+INFO:root:update for 2 curX-0  curY-3  prevX-0  prevY-2
 INFO:root:moved! 2
 INFO:root:robot_2 with!
 INFO:root:notifyA limit reached!
-INFO:root:get latest! 2
+INFO:root:notifyA limit reached OVER!
 INFO:root:get latest! 1
-INFO:root:Robot2 start
+INFO:root:get latest! 2
 INFO:root:Robot1 start
+INFO:root:Robot2 start
 INFO:root:broadcast starting!
 INFO:root:sent to -> 1
 INFO:root:Robot1 recieved message! - ['d', 'Move']
 INFO:root:sent to -> 2
 INFO:root:Robot2 recieved message! - ['d', 'Move']
-INFO:root:update for 1 curX-0  curY-4  prevX-0  prevY-4
+INFO:root:update for 1 curX-2  curY-4  prevX-2  prevY-4
 INFO:root:moved! 1
 INFO:root:robot_1 with!
-INFO:root:notifyA limit reached OVER!
 INFO:root:Robot2 About to move!
-INFO:root:update for 2 curX-1  curY-4  prevX-1  prevY-4
+INFO:root:update for 2 curX-0  curY-4  prevX-0  prevY-3
 INFO:root:moved! 2
 INFO:root:robot_2 with!
 INFO:root:notifyA limit reached!
+INFO:root:notifyA limit reached OVER!
+INFO:root:get latest! 1
+INFO:root:get latest! 2
+INFO:root:Robot1 start
+INFO:root:Robot2 start
+INFO:root:broadcast starting!
+INFO:root:sent to -> 1
+INFO:root:Robot1 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 2
+INFO:root:Robot2 recieved message! - ['d', 'Move']
+INFO:root:update for 1 curX-2  curY-4  prevX-2  prevY-4
+INFO:root:moved! 1
+INFO:root:robot_1 with!

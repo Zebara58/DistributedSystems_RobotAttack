@@ -5,6 +5,7 @@ from Robot import Robot
 from Rules import Rules
 from Network import Network
 import os
+import random
 
 #Robot/malicious in matrix is 1
 #Empty spaces is 0
@@ -12,6 +13,15 @@ import os
 
 #Matrix[x][y]
 import time
+def checkRobotPlacement(m):
+    full = True
+    while full:
+        xRand = random.randint(0, xSize-1)
+        yRand = random.randint(0, ySize-1)
+        full = m.checkIfFilled(xRand,yRand)
+    return [xRand, yRand]
+
+
 if __name__ == '__main__':
 
     os.remove("robotattack.log");
@@ -27,10 +37,13 @@ if __name__ == '__main__':
     print("before rules")
     rules.start()
     print("rules started")
+    
+    location = checkRobotPlacement(m)
+    r1 = Robot(location[0],location[1],xSize,ySize,m, 1, rules, condition, 2)
+    location = checkRobotPlacement(m)
 
-
-    r1 = Robot(0,0,xSize,ySize,m, 1, rules, condition, 2)
-    r2 = Robot(1,1,xSize,ySize,m, 2, rules, condition, 2)
+    r2 = Robot(location[0],location[1],xSize,ySize,m, 2, rules, condition, 2)
+    m.print()
     n = Network()
     n.addRobots(r1)
     n.addRobots(r2)

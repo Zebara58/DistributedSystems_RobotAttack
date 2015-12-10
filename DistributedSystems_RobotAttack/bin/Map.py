@@ -8,6 +8,11 @@ class Map:
         self.xSize = xSize
         self.ySize = ySize
         
+    def checkIfFilled(self, x, y):
+        if self.matrix[x][y] == 0:
+            return False
+        else:
+            return True
 
     def print(self):
         for y in range(self.ySize):
