@@ -14,6 +14,7 @@ class Map:
         ranY = random.randint(0,ySize-1)
 
         self.matrix[ranX][ranY] = 'g'
+        self.goal = [ranX,ranY]
         
     def checkIfFilled(self, x, y):
         if self.matrix[x][y] == '0':

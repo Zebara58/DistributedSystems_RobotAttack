@@ -24,6 +24,11 @@ def checkRobotPlacement(m):
 
 
 if __name__ == '__main__':
+    knowGoal = True
+    setStart = True
+    badBots = False
+
+
 
     os.remove("robotattack.log");
 
@@ -33,7 +38,7 @@ if __name__ == '__main__':
     condition = threading.Condition()
     m = Map(xSize, ySize)
 
-    numRobots = 3
+    numRobots = 4
     rules = Rules(numRobots, m, condition)
     print("before rules")
     rules.start()
@@ -54,6 +59,10 @@ if __name__ == '__main__':
     
     m.print()
     n = Network()
+
+    if knowGoal:
+        for r in robots:
+            r.addGoal(m.goal)
 
     for r in robots:
         n.addRobots(r)

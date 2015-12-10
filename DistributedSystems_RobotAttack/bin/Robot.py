@@ -28,7 +28,7 @@ class Robot(Thread):
         self.goalFound = False
         self.goalX = -1
         self.goalY = -1
-
+        self.robotList = {}
 
         #if(x!=0):
         #	self.matrix[x-1][y] = m[x-1][y]
@@ -45,13 +45,23 @@ class Robot(Thread):
             self.queue.put(message[0])
         elif message[1] == "Move":
             self.moveQueue.put(message[0])
-        elif self.isLeader and not self.goalFound:
-            self.goalX = message[0][0]
-            self.goalY = message[0][1]
-            self.logSelf("Leader found goal at "+str(self.goalX) +" " + str(self.goalY))
+        elif (self.isLeader):  
+            if(not self.goalFound and message[1] =="goal"):
+                self.goalX = message[0][0]
+                self.goalY = message[0][1]
+                self.logSelf("Leader found goal at "+str(self.goalX) +" " + str(self.goalY))
+            elif(message[1] == "position"):
+                mesX = message[2][0]
+                mesY = message[2][1]
+                self.matrix[mesX][mesY] = chr(message[0])
+                self.robotList[chr(message[0])] = [mesX,mesY]
 
     def robotConnectToNetwork(self, Network):
         self.network = Network
+
+    def addGoal(self, goal):
+        self.goalX = goal[0]
+        self.goalY = goal[1]
 
     #Elect self as leader if self has the lowest ID
     def electLeader(self):
@@ -62,9 +72,14 @@ class Robot(Thread):
             logging.info("cur" + str(cur))
             if(cur<lowest):
                 lowest = cur
+
         if(lowest == self.robotID):
             self.isLeader = True
+            self.determineQuadrants()
 
+    def determineQuadrants(self):
+        blar = "blark"
+        
     #Broadcast commands over the network to all robots
     #Move self
     def sendCommands(self):
@@ -92,6 +107,8 @@ class Robot(Thread):
         logging.info('Leader elected!')
         if(self.isLeader):
             logging.info(str(self.robotID) + " is the leader!")
+
+        self.network.broadcastMessage([self.robotID, "position", [self.x,self.y]])
         time.sleep(1)
 
         while(self.alive):
@@ -171,6 +188,8 @@ class Robot(Thread):
         	self.matrix[self.x][self.y-1] = self.mainMap.matrix[self.x][self.y-1]
         if(self.y!=self.ySize-1):
         	self.matrix[self.x][self.y+1] = self.mainMap.matrix[self.x][self.y+1]
+
+        self.network.broadcastMessage([self.robotID, "position", [self.x,self.y]])
 
         #check for goal
         if not self.goalFound:

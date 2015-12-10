@@ -1,181 +1,477 @@
 INFO:root:started!
 INFO:root:thread cv
-INFO:root:robot_69 started!
+INFO:root:robot_13 started!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 63
-INFO:root:robot_63 started!
-INFO:root:Robot63 recieved message! - [69, 'Elect leader']
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - [13, 'Elect leader']
+INFO:root:robot_4 started!
+INFO:root:sent to -> 68
 INFO:root:broadcast starting!
-INFO:root:robot_79 started!
-INFO:root:sent to -> 79
-INFO:root:sent to -> 69
+INFO:root:Robot68 recieved message! - [13, 'Elect leader']
+INFO:root:robot_68 started!
+INFO:root:sent to -> 13
+INFO:root:sent to -> 65
+INFO:root:robot_65 started!
 INFO:root:broadcast starting!
-INFO:root:Robot79 recieved message! - [69, 'Elect leader']
-INFO:root:Robot69 recieved message! - [63, 'Elect leader']
-INFO:root:sent to -> 69
-INFO:root:sent to -> 79
-INFO:root:Robot69 recieved message! - [79, 'Elect leader']
-INFO:root:Robot79 recieved message! - [63, 'Elect leader']
-INFO:root:sent to -> 63
-INFO:root:Robot63 recieved message! - [79, 'Elect leader']
-INFO:root:cur69
-INFO:root:cur63
+INFO:root:Robot13 recieved message! - [4, 'Elect leader']
+INFO:root:Robot65 recieved message! - [13, 'Elect leader']
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:sent to -> 68
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - [68, 'Elect leader']
+INFO:root:Robot68 recieved message! - [4, 'Elect leader']
+INFO:root:Robot13 recieved message! - [65, 'Elect leader']
+INFO:root:sent to -> 4
+INFO:root:sent to -> 65
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - [68, 'Elect leader']
+INFO:root:Robot65 recieved message! - [4, 'Elect leader']
+INFO:root:Robot4 recieved message! - [65, 'Elect leader']
+INFO:root:sent to -> 65
+INFO:root:sent to -> 68
+INFO:root:Robot65 recieved message! - [68, 'Elect leader']
+INFO:root:Robot68 recieved message! - [65, 'Elect leader']
+INFO:root:cur13
+INFO:root:cur4
+INFO:root:cur68
 INFO:root:Leader elected!
-INFO:root:cur63
-INFO:root:cur79
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - [65, 'position', [1, 2]]
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - [65, 'position', [1, 2]]
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - [65, 'position', [1, 2]]
+INFO:root:cur4
+INFO:root:cur68
+INFO:root:cur65
 INFO:root:Leader elected!
-INFO:root:cur69
-INFO:root:cur79
+INFO:root:broadcast starting!
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - [13, 'position', [1, 0]]
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - [13, 'position', [1, 0]]
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - [13, 'position', [1, 0]]
+INFO:root:cur13
+INFO:root:cur68
+INFO:root:cur65
 INFO:root:Leader elected!
-INFO:root:63 is the leader!
-INFO:root:Robot79 start
-INFO:root:Robot69 start
-INFO:root:Robot63 start
+INFO:root:4 is the leader!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 69
-INFO:root:Robot69 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 63
-INFO:root:Robot63 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 79
-INFO:root:Robot79 recieved message! - ['d', 'Move']
-INFO:root:update for 63 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 63
-INFO:root:robot_63 with!
-INFO:root:Robot69 About to move!
-INFO:root:update for 69 curX-2  curY-2  prevX-2  prevY-1
-INFO:root:moved! 69
-INFO:root:robot_69 with!
-INFO:root:Robot79 About to move!
-INFO:root:update for 79 curX-4  curY-1  prevX-4  prevY-0
-INFO:root:moved! 79
-INFO:root:robot_79 with!
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - [4, 'position', [4, 4]]
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - [4, 'position', [4, 4]]
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - [4, 'position', [4, 4]]
+INFO:root:cur13
+INFO:root:cur4
+INFO:root:cur65
+INFO:root:Leader elected!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - [68, 'position', [4, 3]]
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - [68, 'position', [4, 3]]
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot65 start
+INFO:root:Robot13 start
+INFO:root:Robot4 start
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - ['d', 'Move']
+INFO:root:update for 4 curX-4  curY-4  prevX-4  prevY-4
+INFO:root:moved! 4
+INFO:root:robot_4 with!
+INFO:root:Robot68 start
+INFO:root:Robot68 About to move!
+INFO:root:update for 68 curX-4  curY-3  prevX-4  prevY-3
+INFO:root:moved! 68
+INFO:root:robot_68 with!
+INFO:root:Robot65 About to move!
+INFO:root:update for 65 curX-1  curY-2  prevX-1  prevY-2
+INFO:root:moved! 65
+INFO:root:robot_65 with!
+INFO:root:Robot13 About to move!
+INFO:root:update for 13 curX-1  curY-1  prevX-1  prevY-0
+INFO:root:moved! 13
+INFO:root:robot_13 with!
 INFO:root:notifyA limit reached!
 INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 79
-INFO:root:get latest! 63
-INFO:root:get latest! 69
-INFO:root:Robot79 start
-INFO:root:Robot63 start
-INFO:root:Robot69 start
+INFO:root:get latest! 4
+INFO:root:get latest! 68
+INFO:root:get latest! 65
+INFO:root:get latest! 13
 INFO:root:broadcast starting!
-INFO:root:sent to -> 69
-INFO:root:Robot69 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 63
-INFO:root:Robot63 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 79
-INFO:root:Robot79 recieved message! - ['d', 'Move']
-INFO:root:update for 63 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 63
-INFO:root:robot_63 with!
-INFO:root:Robot79 About to move!
-INFO:root:update for 79 curX-4  curY-2  prevX-4  prevY-1
-INFO:root:moved! 79
-INFO:root:robot_79 with!
-INFO:root:Robot69 About to move!
-INFO:root:update for 69 curX-2  curY-3  prevX-2  prevY-2
-INFO:root:moved! 69
-INFO:root:robot_69 with!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 4
+INFO:root:Robot13 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot13 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot13 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot4 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 68
+INFO:root:sent to -> 4
+INFO:root:sent to -> 4
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot4 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot4 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot68 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 65
+INFO:root:sent to -> 65
+INFO:root:sent to -> 68
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot65 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot68 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot65 recieved message! - [13, 'position', [1, 1]]
+INFO:root:Robot4 start
+INFO:root:Robot68 start
+INFO:root:broadcast starting!
+INFO:root:Robot13 start
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - [[1, 1], 'goal']
+INFO:root:Robot13 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 4
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - [[1, 1], 'goal']
+INFO:root:Robot4 recieved message! - ['d', 'Move']
+INFO:root:Robot4 Leader found goal at 1 1
+INFO:root:sent to -> 68
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - ['d', 'Move']
+INFO:root:Robot68 recieved message! - [[1, 1], 'goal']
+INFO:root:sent to -> 65
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - ['d', 'Move']
+INFO:root:Robot65 recieved message! - [[1, 1], 'goal']
+INFO:root:update for 4 curX-4  curY-4  prevX-4  prevY-4
+INFO:root:Robot65 start
+INFO:root:moved! 4
+INFO:root:Robot65 About to move!
+INFO:root:robot_4 with!
+INFO:root:update for 65 curX-1  curY-2  prevX-1  prevY-2
+INFO:root:moved! 65
+INFO:root:robot_65 with!
+INFO:root:Robot68 About to move!
+INFO:root:update for 68 curX-4  curY-3  prevX-4  prevY-3
+INFO:root:moved! 68
+INFO:root:robot_68 with!
+INFO:root:Robot13 About to move!
+INFO:root:update for 13 curX-1  curY-1  prevX-1  prevY-1
+INFO:root:moved! 13
+INFO:root:robot_13 with!
 INFO:root:notifyA limit reached!
 INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 63
-INFO:root:get latest! 69
-INFO:root:get latest! 79
-INFO:root:Robot63 start
-INFO:root:Robot69 start
+INFO:root:get latest! 65
+INFO:root:get latest! 68
+INFO:root:get latest! 4
+INFO:root:get latest! 13
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 69
-INFO:root:sent to -> 69
-INFO:root:Robot69 recieved message! - [[4, 1], 'goal']
-INFO:root:Robot69 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 63
-INFO:root:sent to -> 63
-INFO:root:Robot63 recieved message! - [[4, 1], 'goal']
-INFO:root:Robot63 recieved message! - ['d', 'Move']
-INFO:root:Robot63 Leader found goal at 4 1
-INFO:root:sent to -> 79
-INFO:root:sent to -> 79
-INFO:root:Robot79 recieved message! - ['d', 'Move']
-INFO:root:Robot79 recieved message! - [[4, 1], 'goal']
-INFO:root:update for 63 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:Robot79 start
-INFO:root:moved! 63
-INFO:root:Robot79 About to move!
-INFO:root:robot_63 with!
-INFO:root:update for 79 curX-4  curY-2  prevX-4  prevY-2
-INFO:root:moved! 79
-INFO:root:robot_79 with!
-INFO:root:Robot69 About to move!
-INFO:root:update for 69 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 69
-INFO:root:robot_69 with!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 4
+INFO:root:Robot13 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot13 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot13 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot4 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 4
+INFO:root:sent to -> 4
+INFO:root:sent to -> 68
+INFO:root:sent to -> 68
+INFO:root:Robot4 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot4 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot68 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot68 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 68
+INFO:root:sent to -> 65
+INFO:root:sent to -> 65
+INFO:root:sent to -> 65
+INFO:root:Robot68 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot65 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot65 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot65 recieved message! - [13, 'position', [1, 1]]
+INFO:root:Robot65 start
+INFO:root:Robot68 start
+INFO:root:Robot4 start
+INFO:root:Robot13 start
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - ['d', 'Move']
+INFO:root:update for 4 curX-4  curY-4  prevX-4  prevY-4
+INFO:root:moved! 4
+INFO:root:robot_4 with!
+INFO:root:Robot65 About to move!
+INFO:root:update for 65 curX-1  curY-2  prevX-1  prevY-2
+INFO:root:Robot68 About to move!
+INFO:root:moved! 65
+INFO:root:update for 68 curX-4  curY-3  prevX-4  prevY-3
+INFO:root:Robot13 About to move!
+INFO:root:robot_65 with!
+INFO:root:moved! 68
+INFO:root:update for 13 curX-1  curY-1  prevX-1  prevY-1
+INFO:root:robot_68 with!
+INFO:root:moved! 13
+INFO:root:robot_13 with!
 INFO:root:notifyA limit reached!
 INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 63
-INFO:root:get latest! 79
-INFO:root:get latest! 69
-INFO:root:Robot63 start
-INFO:root:Robot79 start
-INFO:root:Robot69 start
+INFO:root:get latest! 4
+INFO:root:get latest! 65
+INFO:root:get latest! 68
+INFO:root:get latest! 13
 INFO:root:broadcast starting!
-INFO:root:sent to -> 69
-INFO:root:Robot69 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 63
-INFO:root:Robot63 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 79
-INFO:root:Robot79 recieved message! - ['d', 'Move']
-INFO:root:update for 63 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 63
-INFO:root:robot_63 with!
-INFO:root:Robot79 About to move!
-INFO:root:update for 79 curX-4  curY-2  prevX-4  prevY-2
-INFO:root:Robot69 About to move!
-INFO:root:moved! 79
-INFO:root:update for 69 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:robot_79 with!
-INFO:root:moved! 69
-INFO:root:robot_69 with!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 4
+INFO:root:Robot13 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot13 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot13 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot4 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 68
+INFO:root:sent to -> 4
+INFO:root:sent to -> 4
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot4 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot4 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot68 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 65
+INFO:root:sent to -> 68
+INFO:root:sent to -> 65
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot68 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot65 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot65 recieved message! - [13, 'position', [1, 1]]
+INFO:root:Robot4 start
+INFO:root:Robot65 start
+INFO:root:Robot68 start
+INFO:root:Robot13 start
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - ['d', 'Move']
+INFO:root:update for 4 curX-4  curY-4  prevX-4  prevY-4
+INFO:root:moved! 4
+INFO:root:robot_4 with!
+INFO:root:Robot65 About to move!
+INFO:root:update for 65 curX-1  curY-2  prevX-1  prevY-2
+INFO:root:Robot68 About to move!
+INFO:root:moved! 65
+INFO:root:Robot13 About to move!
+INFO:root:update for 68 curX-4  curY-3  prevX-4  prevY-3
+INFO:root:robot_65 with!
+INFO:root:update for 13 curX-1  curY-1  prevX-1  prevY-1
+INFO:root:moved! 68
+INFO:root:moved! 13
+INFO:root:robot_68 with!
 INFO:root:notifyA limit reached!
+INFO:root:robot_13 with!
 INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 63
-INFO:root:get latest! 79
-INFO:root:get latest! 69
-INFO:root:Robot63 start
-INFO:root:Robot79 start
-INFO:root:Robot69 start
+INFO:root:get latest! 4
+INFO:root:get latest! 65
+INFO:root:get latest! 68
+INFO:root:get latest! 13
 INFO:root:broadcast starting!
-INFO:root:sent to -> 69
-INFO:root:Robot69 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 63
-INFO:root:Robot63 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 79
-INFO:root:Robot79 recieved message! - ['d', 'Move']
-INFO:root:update for 63 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 63
-INFO:root:robot_63 with!
-INFO:root:Robot79 About to move!
-INFO:root:update for 79 curX-4  curY-2  prevX-4  prevY-2
-INFO:root:moved! 79
-INFO:root:robot_79 with!
-INFO:root:Robot69 About to move!
-INFO:root:update for 69 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 69
-INFO:root:robot_69 with!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 4
+INFO:root:Robot13 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot13 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot13 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot4 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 68
+INFO:root:sent to -> 4
+INFO:root:sent to -> 4
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot4 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot4 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot68 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 65
+INFO:root:sent to -> 68
+INFO:root:sent to -> 65
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot68 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot65 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot65 recieved message! - [13, 'position', [1, 1]]
+INFO:root:Robot4 start
+INFO:root:Robot65 start
+INFO:root:Robot68 start
+INFO:root:Robot13 start
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - ['d', 'Move']
+INFO:root:update for 4 curX-4  curY-4  prevX-4  prevY-4
+INFO:root:moved! 4
+INFO:root:robot_4 with!
+INFO:root:Robot65 About to move!
+INFO:root:update for 65 curX-1  curY-2  prevX-1  prevY-2
+INFO:root:Robot68 About to move!
+INFO:root:moved! 65
+INFO:root:Robot13 About to move!
+INFO:root:update for 68 curX-4  curY-3  prevX-4  prevY-3
+INFO:root:robot_65 with!
+INFO:root:update for 13 curX-1  curY-1  prevX-1  prevY-1
+INFO:root:moved! 68
+INFO:root:moved! 13
+INFO:root:robot_68 with!
 INFO:root:notifyA limit reached!
+INFO:root:robot_13 with!
 INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 63
-INFO:root:get latest! 79
-INFO:root:get latest! 69
-INFO:root:Robot63 start
-INFO:root:Robot79 start
-INFO:root:Robot69 start
+INFO:root:get latest! 4
+INFO:root:get latest! 65
+INFO:root:get latest! 68
+INFO:root:get latest! 13
 INFO:root:broadcast starting!
-INFO:root:sent to -> 69
-INFO:root:Robot69 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 63
-INFO:root:Robot63 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 79
-INFO:root:Robot79 recieved message! - ['d', 'Move']
-INFO:root:update for 63 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 63
-INFO:root:robot_63 with!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 4
+INFO:root:Robot13 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot13 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot13 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot4 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 68
+INFO:root:sent to -> 4
+INFO:root:sent to -> 4
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot4 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot4 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot68 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 65
+INFO:root:sent to -> 68
+INFO:root:sent to -> 65
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot68 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot65 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot65 recieved message! - [13, 'position', [1, 1]]
+INFO:root:Robot4 start
+INFO:root:Robot65 start
+INFO:root:Robot68 start
+INFO:root:Robot13 start
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - ['d', 'Move']
+INFO:root:update for 4 curX-4  curY-4  prevX-4  prevY-4
+INFO:root:moved! 4
+INFO:root:robot_4 with!
+INFO:root:Robot65 About to move!
+INFO:root:update for 65 curX-1  curY-2  prevX-1  prevY-2
+INFO:root:Robot68 About to move!
+INFO:root:moved! 65
+INFO:root:Robot13 About to move!
+INFO:root:update for 68 curX-4  curY-3  prevX-4  prevY-3
+INFO:root:robot_65 with!
+INFO:root:update for 13 curX-1  curY-1  prevX-1  prevY-1
+INFO:root:moved! 68
+INFO:root:moved! 13
+INFO:root:robot_68 with!
+INFO:root:notifyA limit reached!
+INFO:root:robot_13 with!
+INFO:root:notifyA limit reached OVER!
+INFO:root:get latest! 4
+INFO:root:get latest! 65
+INFO:root:get latest! 68
+INFO:root:get latest! 13
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 13
+INFO:root:sent to -> 4
+INFO:root:Robot13 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot13 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot13 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot4 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 68
+INFO:root:sent to -> 4
+INFO:root:sent to -> 4
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot4 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot4 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot68 recieved message! - [13, 'position', [1, 1]]
+INFO:root:sent to -> 65
+INFO:root:sent to -> 68
+INFO:root:sent to -> 65
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - [4, 'position', [4, 4]]
+INFO:root:Robot68 recieved message! - [65, 'position', [1, 2]]
+INFO:root:Robot65 recieved message! - [68, 'position', [4, 3]]
+INFO:root:Robot65 recieved message! - [13, 'position', [1, 1]]
+INFO:root:Robot4 start
+INFO:root:Robot65 start
+INFO:root:Robot68 start
+INFO:root:Robot13 start
+INFO:root:broadcast starting!
+INFO:root:sent to -> 13
+INFO:root:Robot13 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 4
+INFO:root:Robot4 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 68
+INFO:root:Robot68 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 65
+INFO:root:Robot65 recieved message! - ['d', 'Move']
+INFO:root:update for 4 curX-4  curY-4  prevX-4  prevY-4
+INFO:root:moved! 4
+INFO:root:robot_4 with!
