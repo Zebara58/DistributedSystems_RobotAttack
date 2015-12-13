@@ -62,6 +62,7 @@ class Robot(Thread):
     def addGoal(self, goal):
         self.goalX = goal[0]
         self.goalY = goal[1]
+        self.goalFound = True
 
     #Elect self as leader if self has the lowest ID
     def electLeader(self):
@@ -81,19 +82,27 @@ class Robot(Thread):
         blar = "blark"
         
     #Broadcast commands over the network to all robots
-    #Move self
+    #Move self      
     def sendCommands(self):
         if self.goalFound:
             goalPlace = 0
             placed = 0
             ringNum = 1
-            while(placed<len(robotList)):
-                for r2 in robotList:
+            lowest = 99999
+            lowestRobot = self
+            self.robotList[str(self.robotID)] = [self.x,self.y]
+            while(placed<len(self.robotList)):
+                for r2key in self.robotList:
                     #calc manhatttan distance from r2 to goal place
                     #returns the distance or -1 if invalid
-                    dist = calManhattanDistance(r2, goalPlace, ringNum)
+                    dist = self.calcManhattanDistance(r2key, goalPlace, ringNum)
+                    
                     if(dist != -1):
-                        blah = 1
+                        if dist < lowest:
+                            lowest = dist
+                            lowestRobot = r2key
+                        placed+=1
+                logging.info(str(lowestRobot) + " is the lowest robot" + str(lowest))
                 goalPlace+=1
                 if(goalPlace == 8*ringNum):
                     ringNum+=1
@@ -107,32 +116,48 @@ class Robot(Thread):
         self.move("d")
     
 
-    def calcManhattanDistance(self, robot, goalPlace, ringNum):
+    def calcManhattanDistance(self, robot, goalPlace, ringNumber):
         if(goalPlace == 0):
             #top
-            pos = [self.goalX][self.goalY-ringNumber]
+            pos = [self.goalX,self.goalY-ringNumber]
             if(pos[1]<0):
                 return -1
+            return self.calcBetweenTwoSpaces(self.goalX, self.goalY-ringNumber, self.robotList[robot][0], self.robotList[robot][1])
         elif(goalPlace == 1):
             #bot
-            pos = [self.goalX][self.goalY+ringNumber]
+            pos = [self.goalX,self.goalY+ringNumber]
             if(pos[1]>=self.ySize):
                 return -1
+            return self.calcBetweenTwoSpaces(self.goalX, self.goalY+ringNumber, self.robotList[robot][0], self.robotList[robot][1])
         elif(goalPlace== 2):
             #left
-            pos = [self.goalX-ringNumber][self.goalY]
+            pos = [self.goalX-ringNumber,self.goalY]
             if(pos[0]<0):
                 return -1
+            return self.calcBetweenTwoSpaces(self.goalX-ringNumber, self.goalY, self.robotList[robot][0], self.robotList[robot][1])
         elif(goalPlace == 3):
             #right
-            pos = [self.goalX+ringNumber][self.goalY]
+            pos = [self.goalX+ringNumber,self.goalY]
             if(pos[0]>=self.xSize):
                 return -1
+            return self.calcBetweenTwoSpaces(self.goalX+ringNumber, self.goalY, self.robotList[robot][0], self.robotList[robot][1])
         else:
             #we want to do the ring now 
             #have a loop from -ringNum to ringNum for x and y
-            yada=this
-        
+            #find what the x and y the goal place corespond to
+            tempGoalPlace = 0
+            for i in range(self.goalX-ringNumber,self.goalX+ringNum):
+                for j in range(self.goalY-ringNumber,self.goalY+ringNumber):
+                    #calculate manhattan distance for each robot to here
+                    if not(i == self.goalX or j == self.goalY) and tempGoalPlace == goalPlace-4:
+                        
+                        return self.calcBetweenTwoSpaces(i,j, self.robotList[robot][0], self.robotList[robot][1])
+                    tempGoalPlace +=1
+
+    def calcBetweenTwoSpaces(self, targetX, targetY, rx, ry):
+        distance = abs(targetX-rx) + abs(targetY-ry)
+        return distance
+            
     def logSelf(self, m):
         logging.info("Robot"+str(self.robotID)+" "+m)
 
