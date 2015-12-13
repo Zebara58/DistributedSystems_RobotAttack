@@ -53,8 +53,8 @@ class Robot(Thread):
             elif(message[1] == "position"):
                 mesX = message[2][0]
                 mesY = message[2][1]
-                self.matrix[mesX][mesY] = chr(message[0])
-                self.robotList[chr(message[0])] = [mesX,mesY]
+                self.matrix[mesX][mesY] = str(message[0])
+                self.robotList[str(message[0])] = [mesX,mesY]
 
     def robotConnectToNetwork(self, Network):
         self.network = Network
@@ -83,11 +83,25 @@ class Robot(Thread):
     #Broadcast commands over the network to all robots
     #Move self
     def sendCommands(self):
+        if self.goalFound:
+            goalPlace = 0
+            for r in robotList:
+                for r2 in robotList:
+                    #calc manhatttan distance from r2 to goal place
+                    calManhattanDistance(r2, goalPlace)
+                goalPlace+=1
+
+        logging.info(self.robotList)
         message = []
         message.append("d")
         message.append("Move")
         self.network.broadcastMessage(message)
         self.move("d")
+    
+    def calcManhattanDistance(self, robot, goalPlace):
+        ringNumber = int(goalPlace / 8)
+        if ringNumber == 1:
+
 
     def logSelf(self, m):
         logging.info("Robot"+str(self.robotID)+" "+m)
@@ -152,28 +166,28 @@ class Robot(Thread):
                 if(self.matrix[self.x+1][self.y]=='0'):
                     self.matrix[self.x][self.y] = '0'
                     self.x = self.x+1
-                    self.matrix[self.x][self.y] = chr(self.robotID)
+                    self.matrix[self.x][self.y] = str(self.robotID)
 
         if(dir=="l"):
             if(self.x!=0):
                 if(self.matrix[self.x-1][self.y]=='0'):
                     self.matrix[self.x][self.y] = '0'
                     self.x = self.x-1
-                    self.matrix[self.x][self.y] = chr(self.robotID)
+                    self.matrix[self.x][self.y] = str(self.robotID)
 
         if(dir=="d"):
             if(self.y!=self.ySize-1):
                 if(self.matrix[self.x][self.y+1]=='0'):
                     self.matrix[self.x][self.y] = '0'
                     self.y = self.y+1
-                    self.matrix[self.x][self.y] = chr(self.robotID)
+                    self.matrix[self.x][self.y] = str(self.robotID)
 
         if(dir=="u"):
             if(self.y!=0):
                 if(self.matrix[self.x][self.y-1]=='0'):
                     self.matrix[self.x][self.y] = '0'
                     self.y = self.y-1
-                    self.matrix[self.x][self.y] = chr(self.robotID)
+                    self.matrix[self.x][self.y] = str(self.robotID)
         #m.getLock()
         self.mainMap.update(self.x, self.y, prevLocX, prevLocY, self.robotID)
         #m.releaseLock()
