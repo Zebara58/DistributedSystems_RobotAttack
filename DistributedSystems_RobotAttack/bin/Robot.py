@@ -85,11 +85,19 @@ class Robot(Thread):
     def sendCommands(self):
         if self.goalFound:
             goalPlace = 0
-            for r in robotList:
+            placed = 0
+            ringNum = 1
+            while(placed<len(robotList)):
                 for r2 in robotList:
                     #calc manhatttan distance from r2 to goal place
-                    calManhattanDistance(r2, goalPlace)
+                    #returns the distance or -1 if invalid
+                    dist = calManhattanDistance(r2, goalPlace, ringNum)
+                    if(dist != -1):
+                        blah = 1
                 goalPlace+=1
+                if(goalPlace == 8*ringNum):
+                    ringNum+=1
+                    goalPlace = 0
 
         logging.info(self.robotList)
         message = []
@@ -98,11 +106,33 @@ class Robot(Thread):
         self.network.broadcastMessage(message)
         self.move("d")
     
-    def calcManhattanDistance(self, robot, goalPlace):
-        ringNumber = int(goalPlace / 8)
-        if ringNumber == 1:
 
-
+    def calcManhattanDistance(self, robot, goalPlace, ringNum):
+        if(goalPlace == 0):
+            #top
+            pos = [self.goalX][self.goalY-ringNumber]
+            if(pos[1]<0):
+                return -1
+        elif(goalPlace == 1):
+            #bot
+            pos = [self.goalX][self.goalY+ringNumber]
+            if(pos[1]>=self.ySize):
+                return -1
+        elif(goalPlace== 2):
+            #left
+            pos = [self.goalX-ringNumber][self.goalY]
+            if(pos[0]<0):
+                return -1
+        elif(goalPlace == 3):
+            #right
+            pos = [self.goalX+ringNumber][self.goalY]
+            if(pos[0]>=self.xSize):
+                return -1
+        else:
+            #we want to do the ring now 
+            #have a loop from -ringNum to ringNum for x and y
+            yada=this
+        
     def logSelf(self, m):
         logging.info("Robot"+str(self.robotID)+" "+m)
 
