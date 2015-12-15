@@ -1,174 +1,162 @@
 INFO:root:started!
 INFO:root:thread cv
-INFO:root:robot_14 started!
+INFO:root:robot_38 started!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 92
-INFO:root:Robot92 recieved message! - [14, 'Elect leader']
-INFO:root:robot_92 started!
-INFO:root:sent to -> 17
+INFO:root:sent to -> 15
+INFO:root:Robot15 recieved message! - [38, 'Elect leader']
+INFO:root:robot_15 started!
+INFO:root:sent to -> 56
 INFO:root:broadcast starting!
-INFO:root:robot_17 started!
-INFO:root:Robot17 recieved message! - [14, 'Elect leader']
-INFO:root:sent to -> 14
-INFO:root:robot_90 started!
+INFO:root:Robot56 recieved message! - [38, 'Elect leader']
+INFO:root:robot_56 started!
+INFO:root:sent to -> 38
+INFO:root:sent to -> 84
+INFO:root:robot_84 started!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 90
-INFO:root:Robot14 recieved message! - [92, 'Elect leader']
+INFO:root:Robot38 recieved message! - [15, 'Elect leader']
+INFO:root:Robot84 recieved message! - [38, 'Elect leader']
 INFO:root:broadcast starting!
-INFO:root:sent to -> 14
-INFO:root:Robot90 recieved message! - [14, 'Elect leader']
-INFO:root:sent to -> 17
-INFO:root:sent to -> 14
-INFO:root:Robot14 recieved message! - [17, 'Elect leader']
-INFO:root:Robot17 recieved message! - [92, 'Elect leader']
-INFO:root:Robot14 recieved message! - [90, 'Elect leader']
-INFO:root:sent to -> 92
-INFO:root:sent to -> 90
-INFO:root:sent to -> 92
-INFO:root:Robot92 recieved message! - [17, 'Elect leader']
-INFO:root:Robot90 recieved message! - [92, 'Elect leader']
-INFO:root:Robot92 recieved message! - [90, 'Elect leader']
-INFO:root:sent to -> 90
-INFO:root:sent to -> 17
-INFO:root:Robot90 recieved message! - [17, 'Elect leader']
-INFO:root:Robot17 recieved message! - [90, 'Elect leader']
-INFO:root:cur14
-INFO:root:cur92
-INFO:root:cur17
+INFO:root:sent to -> 38
+INFO:root:sent to -> 56
+INFO:root:sent to -> 38
+INFO:root:Robot38 recieved message! - [56, 'Elect leader']
+INFO:root:Robot56 recieved message! - [15, 'Elect leader']
+INFO:root:Robot38 recieved message! - [84, 'Elect leader']
+INFO:root:sent to -> 15
+INFO:root:sent to -> 84
+INFO:root:sent to -> 15
+INFO:root:Robot15 recieved message! - [56, 'Elect leader']
+INFO:root:Robot84 recieved message! - [15, 'Elect leader']
+INFO:root:Robot15 recieved message! - [84, 'Elect leader']
+INFO:root:sent to -> 84
+INFO:root:sent to -> 56
+INFO:root:Robot84 recieved message! - [56, 'Elect leader']
+INFO:root:Robot56 recieved message! - [84, 'Elect leader']
+INFO:root:cur38
+INFO:root:cur15
+INFO:root:cur56
 INFO:root:Leader elected!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 14
-INFO:root:Robot14 recieved message! - [90, 'position', [1, 2]]
-INFO:root:sent to -> 92
-INFO:root:Robot92 recieved message! - [90, 'position', [1, 2]]
-INFO:root:sent to -> 17
-INFO:root:Robot17 recieved message! - [90, 'position', [1, 2]]
-INFO:root:cur92
-INFO:root:cur17
-INFO:root:cur90
-INFO:root:Leader elected!
-INFO:root:14 is the leader!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 92
-INFO:root:Robot92 recieved message! - [14, 'position', [3, 0]]
-INFO:root:sent to -> 17
-INFO:root:Robot17 recieved message! - [14, 'position', [3, 0]]
-INFO:root:sent to -> 90
-INFO:root:Robot90 recieved message! - [14, 'position', [3, 0]]
-INFO:root:cur14
-INFO:root:cur17
-INFO:root:cur90
+INFO:root:sent to -> 38
+INFO:root:Robot38 recieved message! - [84, 'position', [2, 2]]
+INFO:root:sent to -> 15
+INFO:root:Robot15 recieved message! - [84, 'position', [2, 2]]
+INFO:root:sent to -> 56
+INFO:root:Robot56 recieved message! - [84, 'position', [2, 2]]
+INFO:root:cur15
+INFO:root:cur56
+INFO:root:cur84
 INFO:root:Leader elected!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 14
-INFO:root:Robot14 recieved message! - [92, 'position', [4, 1]]
-INFO:root:sent to -> 17
-INFO:root:Robot17 recieved message! - [92, 'position', [4, 1]]
-INFO:root:sent to -> 90
-INFO:root:Robot90 recieved message! - [92, 'position', [4, 1]]
-INFO:root:cur14
-INFO:root:cur92
-INFO:root:cur90
+INFO:root:sent to -> 15
+INFO:root:Robot15 recieved message! - [38, 'position', [1, 4]]
+INFO:root:sent to -> 56
+INFO:root:Robot56 recieved message! - [38, 'position', [1, 4]]
+INFO:root:sent to -> 84
+INFO:root:Robot84 recieved message! - [38, 'position', [1, 4]]
+INFO:root:cur38
+INFO:root:cur56
+INFO:root:cur84
+INFO:root:Leader elected!
+INFO:root:15 is the leader!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 38
+INFO:root:Robot38 recieved message! - [15, 'position', [2, 1]]
+INFO:root:sent to -> 56
+INFO:root:Robot56 recieved message! - [15, 'position', [2, 1]]
+INFO:root:sent to -> 84
+INFO:root:Robot84 recieved message! - [15, 'position', [2, 1]]
+INFO:root:cur38
+INFO:root:cur15
+INFO:root:cur84
 INFO:root:Leader elected!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 14
-INFO:root:Robot14 recieved message! - [17, 'position', [1, 1]]
-INFO:root:sent to -> 92
-INFO:root:Robot92 recieved message! - [17, 'position', [1, 1]]
-INFO:root:sent to -> 90
-INFO:root:Robot90 recieved message! - [17, 'position', [1, 1]]
-INFO:root:Robot90 start
-INFO:root:Robot14 start
-INFO:root:17 is the lowest robot1
-INFO:root:{'92': [4, 1], '14': [3, 0], '17': [1, 1]}
+INFO:root:sent to -> 38
+INFO:root:Robot38 recieved message! - [56, 'position', [2, 0]]
+INFO:root:sent to -> 15
+INFO:root:Robot15 recieved message! - [56, 'position', [2, 0]]
+INFO:root:sent to -> 84
+INFO:root:Robot84 recieved message! - [56, 'position', [2, 0]]
+INFO:root:Robot84 start
+INFO:root:Robot38 start
+INFO:root:Robot15 start
+INFO:root:robotList = {'15': [2, 1], '56': [2, 0]}
+INFO:root:robotList deepcopy= {'15': [2, 1], '56': [2, 0]}
+INFO:root:{'15': [2, 1], '56': [2, 0]}
+INFO:root:tempRobotList after del {'56': [2, 0]}
+INFO:root:15 is the lowest robot2 for space number1
+INFO:root:{'56': [2, 0]}
+INFO:root:tempRobotList after del {}
+INFO:root:56 is the lowest robot1 for space number3
+INFO:root:{'15': [2, 1], '56': [2, 0]}
 INFO:root:broadcast starting!
-INFO:root:sent to -> 14
-INFO:root:Robot14 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 92
-INFO:root:Robot92 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 17
-INFO:root:Robot17 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 90
-INFO:root:Robot90 recieved message! - ['d', 'Move']
-INFO:root:update for 14 curX-3  curY-1  prevX-3  prevY-0
-INFO:root:moved! 14
-INFO:root:robot_14 with!
-INFO:root:Robot92 start
-INFO:root:Robot92 About to move!
-INFO:root:update for 92 curX-4  curY-2  prevX-4  prevY-1
-INFO:root:moved! 92
-INFO:root:robot_92 with!
-INFO:root:Robot17 start
-INFO:root:Robot17 About to move!
-INFO:root:Robot90 About to move!
-INFO:root:update for 17 curX-1  curY-2  prevX-1  prevY-1
-INFO:root:update for 90 curX-1  curY-2  prevX-1  prevY-2
-INFO:root:moved! 17
-INFO:root:moved! 90
-INFO:root:robot_17 with!
+INFO:root:sent to -> 38
+INFO:root:Robot38 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 15
+INFO:root:Robot56 start
+INFO:root:Robot15 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 56
+INFO:root:Robot56 recieved message! - ['d', 'Move']
+INFO:root:sent to -> 84
+INFO:root:Robot84 recieved message! - ['d', 'Move']
+INFO:root:update for 15 curX-2  curY-2  prevX-2  prevY-1
+INFO:root:moved! 15
+INFO:root:robot_15 with!
+INFO:root:Robot38 About to move!
+INFO:root:update for 38 curX-1  curY-4  prevX-1  prevY-4
+INFO:root:moved! 38
+INFO:root:robot_38 with!
+INFO:root:Robot56 About to move!
+INFO:root:update for 56 curX-2  curY-0  prevX-2  prevY-0
+INFO:root:moved! 56
+INFO:root:robot_56 with!
+INFO:root:Robot84 About to move!
+INFO:root:update for 84 curX-2  curY-3  prevX-2  prevY-2
+INFO:root:moved! 84
+INFO:root:robot_84 with!
 INFO:root:notifyA limit reached!
-INFO:root:robot_90 with!
 INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 14
-INFO:root:get latest! 92
-INFO:root:get latest! 17
-INFO:root:get latest! 90
+INFO:root:get latest! 15
+INFO:root:get latest! 38
+INFO:root:get latest! 56
+INFO:root:get latest! 84
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 92
-INFO:root:sent to -> 14
-INFO:root:sent to -> 14
-INFO:root:sent to -> 14
-INFO:root:Robot92 recieved message! - [14, 'position', [3, 1]]
-INFO:root:Robot14 recieved message! - [92, 'position', [4, 2]]
-INFO:root:Robot14 recieved message! - [17, 'position', [1, 2]]
-INFO:root:Robot14 recieved message! - [90, 'position', [1, 2]]
-INFO:root:sent to -> 17
-INFO:root:sent to -> 17
-INFO:root:sent to -> 92
-INFO:root:sent to -> 92
-INFO:root:Robot17 recieved message! - [14, 'position', [3, 1]]
-INFO:root:Robot17 recieved message! - [92, 'position', [4, 2]]
-INFO:root:Robot92 recieved message! - [17, 'position', [1, 2]]
-INFO:root:Robot92 recieved message! - [90, 'position', [1, 2]]
-INFO:root:sent to -> 90
-INFO:root:sent to -> 90
-INFO:root:sent to -> 90
-INFO:root:sent to -> 17
-INFO:root:Robot90 recieved message! - [14, 'position', [3, 1]]
-INFO:root:Robot90 recieved message! - [92, 'position', [4, 2]]
-INFO:root:Robot90 recieved message! - [17, 'position', [1, 2]]
-INFO:root:Robot17 recieved message! - [90, 'position', [1, 2]]
-INFO:root:Robot14 start
-INFO:root:Robot92 start
-INFO:root:Robot17 start
-INFO:root:Robot90 start
-INFO:root:90 is the lowest robot0
-INFO:root:{'92': [4, 2], '90': [1, 2], '14': [3, 1], '17': [1, 2]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 14
-INFO:root:Robot14 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 92
-INFO:root:Robot92 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 17
-INFO:root:Robot17 recieved message! - ['d', 'Move']
-INFO:root:sent to -> 90
-INFO:root:Robot90 recieved message! - ['d', 'Move']
-INFO:root:update for 14 curX-3  curY-2  prevX-3  prevY-1
-INFO:root:moved! 14
-INFO:root:robot_14 with!
-INFO:root:Robot92 About to move!
-INFO:root:update for 92 curX-4  curY-3  prevX-4  prevY-2
-INFO:root:Robot17 About to move!
-INFO:root:moved! 92
-INFO:root:Robot90 About to move!
-INFO:root:update for 17 curX-1  curY-2  prevX-1  prevY-2
-INFO:root:robot_92 with!
-INFO:root:update for 90 curX-1  curY-2  prevX-1  prevY-2
-INFO:root:moved! 17
-INFO:root:moved! 90
-INFO:root:robot_17 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_90 with!
+INFO:root:sent to -> 38
+INFO:root:sent to -> 15
+INFO:root:sent to -> 38
+INFO:root:sent to -> 38
+INFO:root:Robot38 recieved message! - [15, 'position', [2, 2]]
+INFO:root:Robot15 recieved message! - [38, 'position', [1, 4]]
+INFO:root:Robot38 recieved message! - [56, 'position', [2, 0]]
+INFO:root:Robot38 recieved message! - [84, 'position', [2, 3]]
+INFO:root:sent to -> 56
+INFO:root:sent to -> 56
+INFO:root:sent to -> 15
+INFO:root:sent to -> 15
+INFO:root:Robot56 recieved message! - [15, 'position', [2, 2]]
+INFO:root:Robot56 recieved message! - [38, 'position', [1, 4]]
+INFO:root:Robot15 recieved message! - [56, 'position', [2, 0]]
+INFO:root:Robot15 recieved message! - [84, 'position', [2, 3]]
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 56
+INFO:root:Robot84 recieved message! - [15, 'position', [2, 2]]
+INFO:root:Robot84 recieved message! - [38, 'position', [1, 4]]
+INFO:root:Robot84 recieved message! - [56, 'position', [2, 0]]
+INFO:root:Robot56 recieved message! - [84, 'position', [2, 3]]
+INFO:root:Robot15 start
+INFO:root:Robot38 start
+INFO:root:Robot56 start
+INFO:root:Robot84 start
+INFO:root:robotList = {'15': [2, 2], '56': [2, 0], '84': [2, 3], '38': [1, 4]}
+INFO:root:robotList deepcopy= {'15': [2, 2], '56': [2, 0], '84': [2, 3], '38': [1, 4]}
+INFO:root:{'15': [2, 2], '56': [2, 0], '84': [2, 3], '38': [1, 4]}
+INFO:root:tempRobotList after del {'56': [2, 0], '84': [2, 3], '38': [1, 4]}
+INFO:root:15 is the lowest robot3 for space number1
+INFO:root:{'56': [2, 0], '84': [2, 3], '38': [1, 4]}
+INFO:root:tempRobotList after del {'84': [2, 3], '38': [1, 4]}
+INFO:root:56 is the lowest robot1 for space number3

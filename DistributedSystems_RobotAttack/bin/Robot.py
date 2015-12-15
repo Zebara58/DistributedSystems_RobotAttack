@@ -88,11 +88,19 @@ class Robot(Thread):
             goalPlace = 0
             placed = 0
             ringNum = 1
-            lowest = 99999
             lowestRobot = self
+            self.robotPlacement = []
             self.robotList[str(self.robotID)] = [self.x,self.y]
+            logging.info("robotList = "+str(self.robotList))
+            
+            tempRobotList = deepcopy(self.robotList)
+            logging.info("robotList deepcopy= "+str(tempRobotList))
+            invalidPlace = False
+            posX = -1
+            posY = -1
             while(placed<len(self.robotList)):
-                for r2key in self.robotList:
+                lowest = 99999
+                for r2key in tempRobotList:
                     #calc manhatttan distance from r2 to goal place
                     #returns the distance or -1 if invalid
                     dist = self.calcManhattanDistance(r2key, goalPlace, ringNum)
@@ -101,13 +109,23 @@ class Robot(Thread):
                         if dist < lowest:
                             lowest = dist
                             lowestRobot = r2key
-                        placed+=1
-                logging.info(str(lowestRobot) + " is the lowest robot" + str(lowest))
-                goalPlace+=1
+                    else:
+                        invalidPlace = True
+                        break
+
+                if not invalidPlace:
+                    placed+=1
+                    self.robotPlacement.append([lowestRobot, posX, posY])
+                    logging.info(tempRobotList)
+                    del tempRobotList[lowestRobot]
+                    logging.info("tempRobotList after del "+str(tempRobotList))
+                    logging.info(str(lowestRobot) + " is the lowest robot" + str(lowest) + " for space number" +str(goalPlace ))
+                
+                goalPlace+=1    
                 if(goalPlace == 8*ringNum):
                     ringNum+=1
                     goalPlace = 0
-
+                invalidPlace = False
         logging.info(self.robotList)
         message = []
         message.append("d")
@@ -145,12 +163,16 @@ class Robot(Thread):
             #we want to do the ring now 
             #have a loop from -ringNum to ringNum for x and y
             #find what the x and y the goal place corespond to
+
+            #bug here returns none type
             tempGoalPlace = 0
-            for i in range(self.goalX-ringNumber,self.goalX+ringNum):
+            for i in range(self.goalX-ringNumber,self.goalX+ringNumber):
                 for j in range(self.goalY-ringNumber,self.goalY+ringNumber):
                     #calculate manhattan distance for each robot to here
                     if not(i == self.goalX or j == self.goalY) and tempGoalPlace == goalPlace-4:
-                        
+                        #bounds checks
+                        if (i < 0 or i > self.numRobots) or (j < 0 or j > self.numRobots):
+                            return -1
                         return self.calcBetweenTwoSpaces(i,j, self.robotList[robot][0], self.robotList[robot][1])
                     tempGoalPlace +=1
 
