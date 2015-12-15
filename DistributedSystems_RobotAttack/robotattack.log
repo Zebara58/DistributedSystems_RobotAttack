@@ -1,2690 +1,1509 @@
 INFO:root:started!
 INFO:root:thread cv
-INFO:root:robot_23 started!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - [23, 'Elect leader']
 INFO:root:robot_1 started!
-INFO:root:Robot1 finished recieving message - [23, 'Elect leader']
 INFO:root:broadcast starting!
-INFO:root:robot_25 started!
-INFO:root:sent to -> 25
-INFO:root:sent to -> 23
-INFO:root:robot_60 started!
+INFO:root:sent to -> 80
+INFO:root:Robot80 recieved message! - [1, 'Elect leader']
+INFO:root:robot_80 started!
+INFO:root:Robot80 finished recieving message - [1, 'Elect leader']
 INFO:root:broadcast starting!
-INFO:root:Robot25 recieved message! - [23, 'Elect leader']
-INFO:root:Robot23 recieved message! - [1, 'Elect leader']
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot25 finished recieving message - [23, 'Elect leader']
-INFO:root:Robot23 finished recieving message - [1, 'Elect leader']
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - [25, 'Elect leader']
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:Robot23 recieved message! - [60, 'Elect leader']
-INFO:root:Robot23 finished recieving message - [25, 'Elect leader']
-INFO:root:Robot60 recieved message! - [23, 'Elect leader']
-INFO:root:Robot25 recieved message! - [1, 'Elect leader']
-INFO:root:Robot23 finished recieving message - [60, 'Elect leader']
+INFO:root:sent to -> 95
+INFO:root:robot_95 started!
 INFO:root:sent to -> 1
-INFO:root:Robot60 finished recieving message - [23, 'Elect leader']
-INFO:root:Robot25 finished recieving message - [1, 'Elect leader']
+INFO:root:Robot95 recieved message! - [1, 'Elect leader']
+INFO:root:robot_48 started!
+INFO:root:broadcast starting!
+INFO:root:robot_3 started!
+INFO:root:Robot1 recieved message! - [80, 'Elect leader']
+INFO:root:Robot95 finished recieving message - [1, 'Elect leader']
+INFO:root:broadcast starting!
+INFO:root:robot_10 started!
 INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - [25, 'Elect leader']
+INFO:root:broadcast starting!
+INFO:root:robot_75 started!
+INFO:root:Robot1 finished recieving message - [80, 'Elect leader']
+INFO:root:sent to -> 48
+INFO:root:robot_37 started!
+INFO:root:sent to -> 1
+INFO:root:broadcast starting!
+INFO:root:robot_86 started!
+INFO:root:Robot1 recieved message! - [95, 'Elect leader']
+INFO:root:sent to -> 1
+INFO:root:robot_84 started!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 95
+INFO:root:Robot48 recieved message! - [1, 'Elect leader']
+INFO:root:broadcast starting!
+INFO:root:Robot1 recieved message! - [48, 'Elect leader']
+INFO:root:sent to -> 1
+INFO:root:broadcast starting!
+INFO:root:Robot1 finished recieving message - [95, 'Elect leader']
+INFO:root:Robot1 recieved message! - [3, 'Elect leader']
+INFO:root:broadcast starting!
+INFO:root:sent to -> 1
+INFO:root:Robot95 recieved message! - [80, 'Elect leader']
+INFO:root:Robot48 finished recieving message - [1, 'Elect leader']
+INFO:root:sent to -> 1
+INFO:root:Robot1 finished recieving message - [48, 'Elect leader']
+INFO:root:Robot1 recieved message! - [10, 'Elect leader']
+INFO:root:sent to -> 1
+INFO:root:sent to -> 80
+INFO:root:Robot1 finished recieving message - [3, 'Elect leader']
+INFO:root:sent to -> 1
+INFO:root:Robot1 recieved message! - [75, 'Elect leader']
+INFO:root:Robot95 finished recieving message - [80, 'Elect leader']
+INFO:root:sent to -> 3
+INFO:root:Robot1 recieved message! - [37, 'Elect leader']
+INFO:root:sent to -> 80
+INFO:root:Robot1 finished recieving message - [10, 'Elect leader']
+INFO:root:Robot1 recieved message! - [86, 'Elect leader']
+INFO:root:Robot80 recieved message! - [95, 'Elect leader']
+INFO:root:sent to -> 80
+INFO:root:Robot1 recieved message! - [84, 'Elect leader']
+INFO:root:Robot1 finished recieving message - [75, 'Elect leader']
+INFO:root:sent to -> 48
+INFO:root:Robot3 recieved message! - [1, 'Elect leader']
+INFO:root:Robot1 finished recieving message - [37, 'Elect leader']
+INFO:root:Robot80 recieved message! - [48, 'Elect leader']
+INFO:root:sent to -> 80
+INFO:root:Robot1 finished recieving message - [86, 'Elect leader']
+INFO:root:Robot80 finished recieving message - [95, 'Elect leader']
+INFO:root:Robot80 recieved message! - [3, 'Elect leader']
+INFO:root:Robot1 finished recieving message - [84, 'Elect leader']
+INFO:root:sent to -> 80
+INFO:root:Robot48 recieved message! - [80, 'Elect leader']
+INFO:root:Robot3 finished recieving message - [1, 'Elect leader']
+INFO:root:sent to -> 80
+INFO:root:Robot80 finished recieving message - [48, 'Elect leader']
+INFO:root:Robot80 recieved message! - [10, 'Elect leader']
+INFO:root:sent to -> 80
+INFO:root:sent to -> 48
+INFO:root:Robot80 finished recieving message - [3, 'Elect leader']
+INFO:root:sent to -> 80
+INFO:root:Robot80 recieved message! - [75, 'Elect leader']
+INFO:root:Robot48 finished recieving message - [80, 'Elect leader']
+INFO:root:sent to -> 10
+INFO:root:Robot80 recieved message! - [37, 'Elect leader']
+INFO:root:sent to -> 95
+INFO:root:Robot80 finished recieving message - [10, 'Elect leader']
+INFO:root:Robot80 recieved message! - [86, 'Elect leader']
+INFO:root:Robot48 recieved message! - [95, 'Elect leader']
+INFO:root:sent to -> 95
+INFO:root:Robot80 recieved message! - [84, 'Elect leader']
+INFO:root:Robot80 finished recieving message - [75, 'Elect leader']
+INFO:root:sent to -> 3
+INFO:root:Robot10 recieved message! - [1, 'Elect leader']
+INFO:root:Robot80 finished recieving message - [37, 'Elect leader']
+INFO:root:Robot95 recieved message! - [48, 'Elect leader']
+INFO:root:sent to -> 95
+INFO:root:Robot80 finished recieving message - [86, 'Elect leader']
+INFO:root:Robot48 finished recieving message - [95, 'Elect leader']
+INFO:root:Robot95 recieved message! - [3, 'Elect leader']
+INFO:root:Robot80 finished recieving message - [84, 'Elect leader']
+INFO:root:sent to -> 95
+INFO:root:Robot3 recieved message! - [80, 'Elect leader']
+INFO:root:Robot10 finished recieving message - [1, 'Elect leader']
+INFO:root:sent to -> 95
+INFO:root:Robot95 finished recieving message - [48, 'Elect leader']
+INFO:root:Robot95 recieved message! - [10, 'Elect leader']
+INFO:root:sent to -> 95
+INFO:root:sent to -> 3
+INFO:root:Robot95 finished recieving message - [3, 'Elect leader']
+INFO:root:sent to -> 95
+INFO:root:Robot95 recieved message! - [75, 'Elect leader']
+INFO:root:Robot3 finished recieving message - [80, 'Elect leader']
+INFO:root:sent to -> 75
+INFO:root:Robot95 recieved message! - [37, 'Elect leader']
+INFO:root:sent to -> 3
+INFO:root:Robot95 finished recieving message - [10, 'Elect leader']
+INFO:root:Robot95 recieved message! - [86, 'Elect leader']
+INFO:root:Robot3 recieved message! - [95, 'Elect leader']
+INFO:root:sent to -> 48
+INFO:root:Robot95 recieved message! - [84, 'Elect leader']
+INFO:root:Robot95 finished recieving message - [75, 'Elect leader']
+INFO:root:sent to -> 10
+INFO:root:Robot75 recieved message! - [1, 'Elect leader']
+INFO:root:Robot95 finished recieving message - [37, 'Elect leader']
+INFO:root:Robot3 recieved message! - [48, 'Elect leader']
+INFO:root:sent to -> 48
+INFO:root:Robot95 finished recieving message - [86, 'Elect leader']
+INFO:root:Robot3 finished recieving message - [95, 'Elect leader']
+INFO:root:Robot48 recieved message! - [3, 'Elect leader']
+INFO:root:Robot95 finished recieving message - [84, 'Elect leader']
+INFO:root:sent to -> 48
+INFO:root:Robot10 recieved message! - [80, 'Elect leader']
+INFO:root:Robot75 finished recieving message - [1, 'Elect leader']
+INFO:root:sent to -> 48
+INFO:root:Robot3 finished recieving message - [48, 'Elect leader']
+INFO:root:Robot48 recieved message! - [10, 'Elect leader']
+INFO:root:sent to -> 48
+INFO:root:sent to -> 10
+INFO:root:Robot48 finished recieving message - [3, 'Elect leader']
+INFO:root:sent to -> 48
+INFO:root:Robot48 recieved message! - [75, 'Elect leader']
+INFO:root:Robot10 finished recieving message - [80, 'Elect leader']
+INFO:root:sent to -> 37
+INFO:root:Robot48 recieved message! - [37, 'Elect leader']
+INFO:root:sent to -> 10
+INFO:root:Robot48 finished recieving message - [10, 'Elect leader']
+INFO:root:Robot48 recieved message! - [86, 'Elect leader']
+INFO:root:Robot10 recieved message! - [95, 'Elect leader']
+INFO:root:sent to -> 10
+INFO:root:Robot48 recieved message! - [84, 'Elect leader']
+INFO:root:Robot48 finished recieving message - [75, 'Elect leader']
+INFO:root:sent to -> 75
+INFO:root:Robot37 recieved message! - [1, 'Elect leader']
+INFO:root:Robot48 finished recieving message - [37, 'Elect leader']
+INFO:root:Robot10 recieved message! - [48, 'Elect leader']
+INFO:root:sent to -> 3
+INFO:root:Robot48 finished recieving message - [86, 'Elect leader']
+INFO:root:Robot10 finished recieving message - [95, 'Elect leader']
+INFO:root:Robot10 recieved message! - [3, 'Elect leader']
+INFO:root:Robot48 finished recieving message - [84, 'Elect leader']
+INFO:root:sent to -> 3
+INFO:root:Robot75 recieved message! - [80, 'Elect leader']
+INFO:root:Robot37 finished recieving message - [1, 'Elect leader']
+INFO:root:sent to -> 3
+INFO:root:Robot10 finished recieving message - [48, 'Elect leader']
+INFO:root:Robot3 recieved message! - [10, 'Elect leader']
+INFO:root:sent to -> 3
+INFO:root:sent to -> 75
+INFO:root:Robot10 finished recieving message - [3, 'Elect leader']
+INFO:root:sent to -> 3
+INFO:root:Robot3 recieved message! - [75, 'Elect leader']
+INFO:root:Robot75 finished recieving message - [80, 'Elect leader']
+INFO:root:sent to -> 86
+INFO:root:Robot3 recieved message! - [37, 'Elect leader']
+INFO:root:sent to -> 75
+INFO:root:Robot3 finished recieving message - [10, 'Elect leader']
+INFO:root:Robot3 recieved message! - [86, 'Elect leader']
+INFO:root:Robot75 recieved message! - [95, 'Elect leader']
+INFO:root:sent to -> 75
+INFO:root:Robot3 recieved message! - [84, 'Elect leader']
+INFO:root:Robot3 finished recieving message - [75, 'Elect leader']
+INFO:root:sent to -> 37
+INFO:root:Robot86 recieved message! - [1, 'Elect leader']
+INFO:root:Robot3 finished recieving message - [37, 'Elect leader']
+INFO:root:Robot75 recieved message! - [48, 'Elect leader']
+INFO:root:sent to -> 75
+INFO:root:Robot3 finished recieving message - [86, 'Elect leader']
+INFO:root:Robot75 finished recieving message - [95, 'Elect leader']
+INFO:root:Robot75 recieved message! - [3, 'Elect leader']
+INFO:root:Robot3 finished recieving message - [84, 'Elect leader']
+INFO:root:sent to -> 10
+INFO:root:Robot37 recieved message! - [80, 'Elect leader']
+INFO:root:Robot86 finished recieving message - [1, 'Elect leader']
+INFO:root:sent to -> 10
+INFO:root:Robot75 finished recieving message - [48, 'Elect leader']
+INFO:root:Robot75 recieved message! - [10, 'Elect leader']
+INFO:root:sent to -> 10
+INFO:root:sent to -> 37
+INFO:root:Robot75 finished recieving message - [3, 'Elect leader']
+INFO:root:sent to -> 10
+INFO:root:Robot10 recieved message! - [75, 'Elect leader']
+INFO:root:Robot37 finished recieving message - [80, 'Elect leader']
+INFO:root:sent to -> 84
+INFO:root:Robot10 recieved message! - [37, 'Elect leader']
+INFO:root:sent to -> 37
+INFO:root:Robot75 finished recieving message - [10, 'Elect leader']
+INFO:root:Robot10 recieved message! - [86, 'Elect leader']
+INFO:root:Robot37 recieved message! - [95, 'Elect leader']
+INFO:root:sent to -> 37
+INFO:root:Robot10 recieved message! - [84, 'Elect leader']
+INFO:root:Robot10 finished recieving message - [75, 'Elect leader']
+INFO:root:sent to -> 86
+INFO:root:Robot84 recieved message! - [1, 'Elect leader']
+INFO:root:Robot10 finished recieving message - [37, 'Elect leader']
+INFO:root:Robot37 recieved message! - [48, 'Elect leader']
+INFO:root:sent to -> 37
+INFO:root:Robot10 finished recieving message - [86, 'Elect leader']
+INFO:root:Robot37 finished recieving message - [95, 'Elect leader']
+INFO:root:Robot37 recieved message! - [3, 'Elect leader']
+INFO:root:Robot10 finished recieving message - [84, 'Elect leader']
+INFO:root:sent to -> 37
+INFO:root:Robot86 recieved message! - [80, 'Elect leader']
+INFO:root:Robot84 finished recieving message - [1, 'Elect leader']
+INFO:root:sent to -> 75
+INFO:root:Robot37 finished recieving message - [48, 'Elect leader']
+INFO:root:Robot37 recieved message! - [10, 'Elect leader']
+INFO:root:sent to -> 75
+INFO:root:sent to -> 86
+INFO:root:Robot37 finished recieving message - [3, 'Elect leader']
+INFO:root:sent to -> 75
+INFO:root:Robot37 recieved message! - [75, 'Elect leader']
+INFO:root:Robot86 finished recieving message - [80, 'Elect leader']
+INFO:root:cur80
+INFO:root:Robot75 recieved message! - [37, 'Elect leader']
+INFO:root:sent to -> 86
+INFO:root:Robot37 finished recieving message - [10, 'Elect leader']
+INFO:root:Robot75 recieved message! - [86, 'Elect leader']
+INFO:root:Robot86 recieved message! - [95, 'Elect leader']
+INFO:root:sent to -> 86
+INFO:root:Robot75 recieved message! - [84, 'Elect leader']
+INFO:root:Robot37 finished recieving message - [75, 'Elect leader']
+INFO:root:sent to -> 84
+INFO:root:cur95
+INFO:root:Robot75 finished recieving message - [37, 'Elect leader']
+INFO:root:Robot86 recieved message! - [48, 'Elect leader']
+INFO:root:sent to -> 86
+INFO:root:Robot75 finished recieving message - [86, 'Elect leader']
+INFO:root:Robot86 finished recieving message - [95, 'Elect leader']
+INFO:root:Robot86 recieved message! - [3, 'Elect leader']
+INFO:root:Robot75 finished recieving message - [84, 'Elect leader']
+INFO:root:sent to -> 86
+INFO:root:Robot84 recieved message! - [80, 'Elect leader']
+INFO:root:cur48
+INFO:root:sent to -> 86
+INFO:root:Robot86 finished recieving message - [48, 'Elect leader']
+INFO:root:Robot86 recieved message! - [10, 'Elect leader']
+INFO:root:sent to -> 37
+INFO:root:sent to -> 84
+INFO:root:Robot86 finished recieving message - [3, 'Elect leader']
+INFO:root:sent to -> 37
+INFO:root:Robot86 recieved message! - [75, 'Elect leader']
+INFO:root:Robot84 finished recieving message - [80, 'Elect leader']
+INFO:root:cur3
+INFO:root:Robot86 recieved message! - [37, 'Elect leader']
+INFO:root:sent to -> 84
+INFO:root:Robot86 finished recieving message - [10, 'Elect leader']
+INFO:root:Robot37 recieved message! - [86, 'Elect leader']
+INFO:root:Robot84 recieved message! - [95, 'Elect leader']
+INFO:root:sent to -> 84
+INFO:root:Robot37 recieved message! - [84, 'Elect leader']
+INFO:root:Robot86 finished recieving message - [75, 'Elect leader']
 INFO:root:cur1
-INFO:root:sent to -> 60
-INFO:root:Robot1 recieved message! - [60, 'Elect leader']
-INFO:root:Robot1 finished recieving message - [25, 'Elect leader']
-INFO:root:cur25
-INFO:root:Robot60 recieved message! - [1, 'Elect leader']
-INFO:root:Robot1 finished recieving message - [60, 'Elect leader']
-INFO:root:sent to -> 60
-INFO:root:cur60
-INFO:root:Robot60 finished recieving message - [1, 'Elect leader']
-INFO:root:sent to -> 25
-INFO:root:Robot60 recieved message! - [25, 'Elect leader']
+INFO:root:cur10
+INFO:root:Robot86 finished recieving message - [37, 'Elect leader']
+INFO:root:Robot84 recieved message! - [48, 'Elect leader']
+INFO:root:sent to -> 84
+INFO:root:Robot37 finished recieving message - [86, 'Elect leader']
+INFO:root:Robot84 finished recieving message - [95, 'Elect leader']
+INFO:root:Robot84 recieved message! - [3, 'Elect leader']
+INFO:root:Robot37 finished recieving message - [84, 'Elect leader']
+INFO:root:sent to -> 84
+INFO:root:cur95
+INFO:root:cur75
+INFO:root:sent to -> 84
+INFO:root:Robot84 finished recieving message - [48, 'Elect leader']
+INFO:root:Robot84 recieved message! - [10, 'Elect leader']
+INFO:root:sent to -> 84
+INFO:root:cur1
+INFO:root:Robot84 finished recieving message - [3, 'Elect leader']
+INFO:root:sent to -> 86
+INFO:root:Robot84 recieved message! - [75, 'Elect leader']
+INFO:root:cur48
+INFO:root:cur37
+INFO:root:Robot84 recieved message! - [37, 'Elect leader']
+INFO:root:cur1
+INFO:root:Robot84 finished recieving message - [10, 'Elect leader']
+INFO:root:Robot84 recieved message! - [86, 'Elect leader']
+INFO:root:cur80
+INFO:root:cur1
+INFO:root:Robot86 recieved message! - [84, 'Elect leader']
+INFO:root:Robot84 finished recieving message - [75, 'Elect leader']
+INFO:root:cur3
+INFO:root:cur86
+INFO:root:Robot84 finished recieving message - [37, 'Elect leader']
+INFO:root:cur80
+INFO:root:cur1
+INFO:root:Robot84 finished recieving message - [86, 'Elect leader']
+INFO:root:cur48
+INFO:root:cur80
+INFO:root:Robot86 finished recieving message - [84, 'Elect leader']
+INFO:root:cur1
+INFO:root:cur10
+INFO:root:cur84
+INFO:root:cur1
+INFO:root:cur95
+INFO:root:cur80
+INFO:root:cur1
+INFO:root:cur3
+INFO:root:cur95
+INFO:root:cur1
+INFO:root:cur80
+INFO:root:cur75
 INFO:root:Leader elected!
-INFO:root:cur23
-INFO:root:Robot25 recieved message! - [60, 'Elect leader']
-INFO:root:Robot60 finished recieving message - [25, 'Elect leader']
-INFO:root:broadcast starting!
-INFO:root:cur25
-INFO:root:Robot25 finished recieving message - [60, 'Elect leader']
-INFO:root:cur23
-INFO:root:sent to -> 1
-INFO:root:cur60
-INFO:root:cur23
-INFO:root:cur1
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 3]]
-INFO:root:Leader elected!
-INFO:root:cur1
-INFO:root:cur60
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 3]]
+INFO:root:cur80
+INFO:root:cur3
+INFO:root:cur95
+INFO:root:cur80
+INFO:root:cur10
+INFO:root:cur48
+INFO:root:cur80
+INFO:root:cur95
+INFO:root:cur37
 INFO:root:1 is the leader!
-INFO:root:cur25
+INFO:root:cur95
+INFO:root:cur10
+INFO:root:cur48
+INFO:root:cur95
+INFO:root:cur75
+INFO:root:cur10
+INFO:root:cur95
+INFO:root:cur48
+INFO:root:cur86
+INFO:root:broadcast starting!
+INFO:root:cur48
+INFO:root:cur75
+INFO:root:cur3
+INFO:root:cur48
+INFO:root:cur37
+INFO:root:cur75
+INFO:root:cur48
+INFO:root:cur3
+INFO:root:cur84
+INFO:root:sent to -> 80
+INFO:root:cur3
+INFO:root:cur37
+INFO:root:cur75
+INFO:root:cur3
+INFO:root:cur86
+INFO:root:cur37
+INFO:root:cur3
+INFO:root:cur10
 INFO:root:Leader elected!
-INFO:root:sent to -> 25
+INFO:root:Robot80 recieved message! - [1, 'position', [6, 3]]
+INFO:root:cur10
+INFO:root:cur86
+INFO:root:cur37
+INFO:root:cur10
+INFO:root:cur84
+INFO:root:cur86
+INFO:root:cur10
+INFO:root:cur37
+INFO:root:broadcast starting!
+INFO:root:Robot80 finished recieving message - [1, 'position', [6, 3]]
+INFO:root:cur75
+INFO:root:cur84
+INFO:root:cur86
+INFO:root:cur75
+INFO:root:Leader elected!
+INFO:root:cur84
+INFO:root:cur75
+INFO:root:cur86
+INFO:root:sent to -> 1
+INFO:root:sent to -> 95
+INFO:root:cur86
+INFO:root:Leader elected!
+INFO:root:cur84
+INFO:root:cur37
 INFO:root:broadcast starting!
 INFO:root:Leader elected!
+INFO:root:cur37
+INFO:root:cur84
+INFO:root:Robot1 recieved message! - [80, 'position', [2, 3]]
+INFO:root:Robot95 recieved message! - [1, 'position', [6, 3]]
+INFO:root:cur84
 INFO:root:broadcast starting!
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 3]]
-INFO:root:sent to -> 23
+INFO:root:Leader elected!
+INFO:root:cur84
+INFO:root:sent to -> 1
 INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 3]]
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 0]]
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 3]]
-INFO:root:sent to -> 60
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 0]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 2]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 3]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 3]]
-INFO:root:sent to -> 25
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 2]]
+INFO:root:cur86
+INFO:root:Leader elected!
+INFO:root:Robot1 finished recieving message - [80, 'position', [2, 3]]
+INFO:root:Robot95 finished recieving message - [1, 'position', [6, 3]]
+INFO:root:Leader elected!
 INFO:root:sent to -> 1
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 3]]
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 0]]
+INFO:root:broadcast starting!
+INFO:root:Leader elected!
+INFO:root:Robot1 recieved message! - [95, 'position', [7, 1]]
 INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 3]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 0]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 2]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 3]]
-INFO:root:sent to -> 60
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 2]]
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 0]]
-INFO:root:sent to -> 25
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 3]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 0]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 2]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 3]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 2]]
-INFO:root:Robot23 start while
+INFO:root:Leader elected!
+INFO:root:broadcast starting!
+INFO:root:sent to -> 95
+INFO:root:sent to -> 48
+INFO:root:broadcast starting!
+INFO:root:Robot1 recieved message! - [48, 'position', [0, 0]]
+INFO:root:sent to -> 1
+INFO:root:broadcast starting!
+INFO:root:Robot1 finished recieving message - [95, 'position', [7, 1]]
+INFO:root:Robot1 recieved message! - [3, 'position', [3, 0]]
+INFO:root:broadcast starting!
+INFO:root:sent to -> 1
+INFO:root:Robot95 recieved message! - [80, 'position', [2, 3]]
+INFO:root:Robot48 recieved message! - [1, 'position', [6, 3]]
+INFO:root:sent to -> 1
+INFO:root:Robot1 finished recieving message - [48, 'position', [0, 0]]
+INFO:root:Robot1 recieved message! - [10, 'position', [1, 7]]
+INFO:root:sent to -> 1
+INFO:root:sent to -> 80
+INFO:root:Robot1 finished recieving message - [3, 'position', [3, 0]]
+INFO:root:sent to -> 1
+INFO:root:Robot1 recieved message! - [75, 'position', [3, 6]]
+INFO:root:Robot95 finished recieving message - [80, 'position', [2, 3]]
+INFO:root:Robot48 finished recieving message - [1, 'position', [6, 3]]
+INFO:root:Robot1 recieved message! - [37, 'position', [5, 7]]
+INFO:root:sent to -> 80
+INFO:root:Robot1 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot1 recieved message! - [86, 'position', [0, 4]]
+INFO:root:Robot80 recieved message! - [95, 'position', [7, 1]]
+INFO:root:sent to -> 80
+INFO:root:Robot1 recieved message! - [84, 'position', [6, 1]]
+INFO:root:Robot1 finished recieving message - [75, 'position', [3, 6]]
+INFO:root:sent to -> 48
+INFO:root:sent to -> 3
+INFO:root:Robot1 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot80 recieved message! - [48, 'position', [0, 0]]
+INFO:root:sent to -> 80
+INFO:root:Robot1 finished recieving message - [86, 'position', [0, 4]]
+INFO:root:Robot80 finished recieving message - [95, 'position', [7, 1]]
+INFO:root:Robot80 recieved message! - [3, 'position', [3, 0]]
+INFO:root:Robot1 finished recieving message - [84, 'position', [6, 1]]
+INFO:root:sent to -> 80
+INFO:root:Robot48 recieved message! - [80, 'position', [2, 3]]
+INFO:root:Robot3 recieved message! - [1, 'position', [6, 3]]
+INFO:root:sent to -> 80
+INFO:root:Robot80 finished recieving message - [48, 'position', [0, 0]]
+INFO:root:Robot80 recieved message! - [10, 'position', [1, 7]]
+INFO:root:sent to -> 80
+INFO:root:sent to -> 48
+INFO:root:Robot80 finished recieving message - [3, 'position', [3, 0]]
+INFO:root:sent to -> 80
+INFO:root:Robot80 recieved message! - [75, 'position', [3, 6]]
+INFO:root:Robot48 finished recieving message - [80, 'position', [2, 3]]
+INFO:root:Robot3 finished recieving message - [1, 'position', [6, 3]]
+INFO:root:Robot80 recieved message! - [37, 'position', [5, 7]]
+INFO:root:sent to -> 95
+INFO:root:Robot80 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot80 recieved message! - [86, 'position', [0, 4]]
+INFO:root:Robot48 recieved message! - [95, 'position', [7, 1]]
+INFO:root:sent to -> 95
+INFO:root:Robot80 recieved message! - [84, 'position', [6, 1]]
+INFO:root:Robot80 finished recieving message - [75, 'position', [3, 6]]
+INFO:root:sent to -> 3
+INFO:root:sent to -> 10
+INFO:root:Robot80 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot95 recieved message! - [48, 'position', [0, 0]]
+INFO:root:sent to -> 95
+INFO:root:Robot80 finished recieving message - [86, 'position', [0, 4]]
+INFO:root:Robot48 finished recieving message - [95, 'position', [7, 1]]
+INFO:root:Robot95 recieved message! - [3, 'position', [3, 0]]
+INFO:root:Robot80 finished recieving message - [84, 'position', [6, 1]]
+INFO:root:sent to -> 95
+INFO:root:Robot3 recieved message! - [80, 'position', [2, 3]]
+INFO:root:Robot10 recieved message! - [1, 'position', [6, 3]]
+INFO:root:sent to -> 95
+INFO:root:Robot95 finished recieving message - [48, 'position', [0, 0]]
+INFO:root:Robot95 recieved message! - [10, 'position', [1, 7]]
+INFO:root:sent to -> 95
+INFO:root:sent to -> 3
+INFO:root:Robot95 finished recieving message - [3, 'position', [3, 0]]
+INFO:root:sent to -> 95
+INFO:root:Robot95 recieved message! - [75, 'position', [3, 6]]
+INFO:root:Robot3 finished recieving message - [80, 'position', [2, 3]]
+INFO:root:Robot10 finished recieving message - [1, 'position', [6, 3]]
+INFO:root:Robot95 recieved message! - [37, 'position', [5, 7]]
+INFO:root:sent to -> 3
+INFO:root:Robot95 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot95 recieved message! - [86, 'position', [0, 4]]
+INFO:root:Robot3 recieved message! - [95, 'position', [7, 1]]
+INFO:root:sent to -> 48
+INFO:root:Robot95 recieved message! - [84, 'position', [6, 1]]
+INFO:root:Robot95 finished recieving message - [75, 'position', [3, 6]]
+INFO:root:sent to -> 10
+INFO:root:sent to -> 75
+INFO:root:Robot95 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot3 recieved message! - [48, 'position', [0, 0]]
+INFO:root:sent to -> 48
+INFO:root:Robot95 finished recieving message - [86, 'position', [0, 4]]
+INFO:root:Robot3 finished recieving message - [95, 'position', [7, 1]]
+INFO:root:Robot48 recieved message! - [3, 'position', [3, 0]]
+INFO:root:Robot95 finished recieving message - [84, 'position', [6, 1]]
+INFO:root:sent to -> 48
+INFO:root:Robot10 recieved message! - [80, 'position', [2, 3]]
+INFO:root:Robot75 recieved message! - [1, 'position', [6, 3]]
+INFO:root:sent to -> 48
+INFO:root:Robot3 finished recieving message - [48, 'position', [0, 0]]
+INFO:root:Robot48 recieved message! - [10, 'position', [1, 7]]
+INFO:root:sent to -> 48
+INFO:root:sent to -> 10
+INFO:root:Robot48 finished recieving message - [3, 'position', [3, 0]]
+INFO:root:sent to -> 48
+INFO:root:Robot48 recieved message! - [75, 'position', [3, 6]]
+INFO:root:Robot10 finished recieving message - [80, 'position', [2, 3]]
+INFO:root:Robot75 finished recieving message - [1, 'position', [6, 3]]
+INFO:root:Robot48 recieved message! - [37, 'position', [5, 7]]
+INFO:root:sent to -> 10
+INFO:root:Robot48 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot48 recieved message! - [86, 'position', [0, 4]]
+INFO:root:Robot10 recieved message! - [95, 'position', [7, 1]]
+INFO:root:sent to -> 10
+INFO:root:Robot48 recieved message! - [84, 'position', [6, 1]]
+INFO:root:Robot48 finished recieving message - [75, 'position', [3, 6]]
+INFO:root:sent to -> 75
+INFO:root:sent to -> 37
+INFO:root:Robot48 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot10 recieved message! - [48, 'position', [0, 0]]
+INFO:root:sent to -> 3
+INFO:root:Robot48 finished recieving message - [86, 'position', [0, 4]]
+INFO:root:Robot10 finished recieving message - [95, 'position', [7, 1]]
+INFO:root:Robot10 recieved message! - [3, 'position', [3, 0]]
+INFO:root:Robot48 finished recieving message - [84, 'position', [6, 1]]
+INFO:root:sent to -> 3
+INFO:root:Robot75 recieved message! - [80, 'position', [2, 3]]
+INFO:root:Robot37 recieved message! - [1, 'position', [6, 3]]
+INFO:root:sent to -> 3
+INFO:root:Robot10 finished recieving message - [48, 'position', [0, 0]]
+INFO:root:Robot3 recieved message! - [10, 'position', [1, 7]]
+INFO:root:sent to -> 3
+INFO:root:sent to -> 75
+INFO:root:Robot10 finished recieving message - [3, 'position', [3, 0]]
+INFO:root:sent to -> 3
+INFO:root:Robot3 recieved message! - [75, 'position', [3, 6]]
+INFO:root:Robot75 finished recieving message - [80, 'position', [2, 3]]
+INFO:root:Robot37 finished recieving message - [1, 'position', [6, 3]]
+INFO:root:Robot3 recieved message! - [37, 'position', [5, 7]]
+INFO:root:sent to -> 75
+INFO:root:Robot3 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot3 recieved message! - [86, 'position', [0, 4]]
+INFO:root:Robot75 recieved message! - [95, 'position', [7, 1]]
+INFO:root:sent to -> 75
+INFO:root:Robot3 recieved message! - [84, 'position', [6, 1]]
+INFO:root:Robot3 finished recieving message - [75, 'position', [3, 6]]
+INFO:root:sent to -> 37
+INFO:root:sent to -> 86
+INFO:root:Robot3 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot75 recieved message! - [48, 'position', [0, 0]]
+INFO:root:sent to -> 75
+INFO:root:Robot3 finished recieving message - [86, 'position', [0, 4]]
+INFO:root:Robot75 finished recieving message - [95, 'position', [7, 1]]
+INFO:root:Robot75 recieved message! - [3, 'position', [3, 0]]
+INFO:root:Robot3 finished recieving message - [84, 'position', [6, 1]]
+INFO:root:sent to -> 10
+INFO:root:Robot37 recieved message! - [80, 'position', [2, 3]]
+INFO:root:Robot86 recieved message! - [1, 'position', [6, 3]]
+INFO:root:sent to -> 10
+INFO:root:Robot75 finished recieving message - [48, 'position', [0, 0]]
+INFO:root:Robot75 recieved message! - [10, 'position', [1, 7]]
+INFO:root:sent to -> 10
+INFO:root:sent to -> 37
+INFO:root:Robot75 finished recieving message - [3, 'position', [3, 0]]
+INFO:root:sent to -> 10
+INFO:root:Robot10 recieved message! - [75, 'position', [3, 6]]
+INFO:root:Robot37 finished recieving message - [80, 'position', [2, 3]]
+INFO:root:Robot86 finished recieving message - [1, 'position', [6, 3]]
+INFO:root:Robot10 recieved message! - [37, 'position', [5, 7]]
+INFO:root:sent to -> 37
+INFO:root:Robot75 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot10 recieved message! - [86, 'position', [0, 4]]
+INFO:root:Robot37 recieved message! - [95, 'position', [7, 1]]
+INFO:root:sent to -> 37
+INFO:root:Robot10 recieved message! - [84, 'position', [6, 1]]
+INFO:root:Robot10 finished recieving message - [75, 'position', [3, 6]]
+INFO:root:sent to -> 86
+INFO:root:sent to -> 84
+INFO:root:Robot10 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot37 recieved message! - [48, 'position', [0, 0]]
+INFO:root:sent to -> 37
+INFO:root:Robot10 finished recieving message - [86, 'position', [0, 4]]
+INFO:root:Robot37 finished recieving message - [95, 'position', [7, 1]]
+INFO:root:Robot37 recieved message! - [3, 'position', [3, 0]]
+INFO:root:Robot10 finished recieving message - [84, 'position', [6, 1]]
+INFO:root:sent to -> 37
+INFO:root:Robot86 recieved message! - [80, 'position', [2, 3]]
+INFO:root:Robot84 recieved message! - [1, 'position', [6, 3]]
+INFO:root:sent to -> 75
+INFO:root:Robot37 finished recieving message - [48, 'position', [0, 0]]
+INFO:root:Robot37 recieved message! - [10, 'position', [1, 7]]
+INFO:root:sent to -> 75
+INFO:root:sent to -> 86
+INFO:root:Robot37 finished recieving message - [3, 'position', [3, 0]]
+INFO:root:sent to -> 75
+INFO:root:Robot37 recieved message! - [75, 'position', [3, 6]]
+INFO:root:Robot86 finished recieving message - [80, 'position', [2, 3]]
+INFO:root:Robot84 finished recieving message - [1, 'position', [6, 3]]
+INFO:root:Robot75 recieved message! - [37, 'position', [5, 7]]
+INFO:root:sent to -> 86
+INFO:root:Robot37 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot75 recieved message! - [86, 'position', [0, 4]]
+INFO:root:Robot86 recieved message! - [95, 'position', [7, 1]]
+INFO:root:sent to -> 86
+INFO:root:Robot75 recieved message! - [84, 'position', [6, 1]]
+INFO:root:Robot37 finished recieving message - [75, 'position', [3, 6]]
+INFO:root:sent to -> 84
 INFO:root:Robot1 start while
-INFO:root:robotList = {'60': [2, 2], '25': [0, 3], '1': [2, 0], '23': [3, 3]}
-INFO:root:robotList deepcopy= {'23': [3, 3], '60': [2, 2], '1': [2, 0], '25': [0, 3]}
-INFO:root:{'23': [3, 3], '60': [2, 2], '1': [2, 0], '25': [0, 3]}
-INFO:root:tempRobotList after del {'23': [3, 3], '60': [2, 2], '1': [2, 0]}
-INFO:root:Robot25 start while
-INFO:root:25 is the lowest robot with distance 1 for space number0
-INFO:root:Robot60 start while
-INFO:root:{'23': [3, 3], '60': [2, 2], '1': [2, 0]}
-INFO:root:tempRobotList after del {'60': [2, 2], '1': [2, 0]}
-INFO:root:23 is the lowest robot with distance 4 for space number2
-INFO:root:{'60': [2, 2], '1': [2, 0]}
-INFO:root:tempRobotList after del {'1': [2, 0]}
-INFO:root:60 is the lowest robot with distance 2 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'1': [2, 0]}
+INFO:root:Robot75 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot86 recieved message! - [48, 'position', [0, 0]]
+INFO:root:sent to -> 86
+INFO:root:Robot75 finished recieving message - [86, 'position', [0, 4]]
+INFO:root:Robot86 finished recieving message - [95, 'position', [7, 1]]
+INFO:root:Robot86 recieved message! - [3, 'position', [3, 0]]
+INFO:root:Robot75 finished recieving message - [84, 'position', [6, 1]]
+INFO:root:sent to -> 86
+INFO:root:Robot84 recieved message! - [80, 'position', [2, 3]]
+INFO:root:robotList = {'95': [7, 1], '86': [0, 4], '1': [6, 3], '37': [5, 7], '84': [6, 1], '80': [2, 3], '75': [3, 6], '10': [1, 7], '3': [3, 0], '48': [0, 0]}
+INFO:root:sent to -> 86
+INFO:root:Robot86 finished recieving message - [48, 'position', [0, 0]]
+INFO:root:Robot86 recieved message! - [10, 'position', [1, 7]]
+INFO:root:sent to -> 37
+INFO:root:sent to -> 84
+INFO:root:Robot86 finished recieving message - [3, 'position', [3, 0]]
+INFO:root:sent to -> 37
+INFO:root:Robot86 recieved message! - [75, 'position', [3, 6]]
+INFO:root:Robot84 finished recieving message - [80, 'position', [2, 3]]
+INFO:root:robotList deepcopy= {'48': [0, 0], '95': [7, 1], '86': [0, 4], '1': [6, 3], '75': [3, 6], '84': [6, 1], '37': [5, 7], '10': [1, 7], '3': [3, 0], '80': [2, 3]}
+INFO:root:Robot86 recieved message! - [37, 'position', [5, 7]]
+INFO:root:sent to -> 84
+INFO:root:Robot86 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot37 recieved message! - [86, 'position', [0, 4]]
+INFO:root:Robot84 recieved message! - [95, 'position', [7, 1]]
+INFO:root:sent to -> 84
+INFO:root:Robot37 recieved message! - [84, 'position', [6, 1]]
+INFO:root:Robot86 finished recieving message - [75, 'position', [3, 6]]
+INFO:root:Robot80 start while
+INFO:root:{'48': [0, 0], '95': [7, 1], '86': [0, 4], '1': [6, 3], '75': [3, 6], '84': [6, 1], '37': [5, 7], '10': [1, 7], '3': [3, 0], '80': [2, 3]}
+INFO:root:Robot86 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot84 recieved message! - [48, 'position', [0, 0]]
+INFO:root:sent to -> 84
+INFO:root:Robot37 finished recieving message - [86, 'position', [0, 4]]
+INFO:root:Robot84 finished recieving message - [95, 'position', [7, 1]]
+INFO:root:Robot84 recieved message! - [3, 'position', [3, 0]]
+INFO:root:Robot37 finished recieving message - [84, 'position', [6, 1]]
+INFO:root:sent to -> 84
+INFO:root:tempRobotList after del {'48': [0, 0], '95': [7, 1], '86': [0, 4], '1': [6, 3], '75': [3, 6], '37': [5, 7], '10': [1, 7], '3': [3, 0], '80': [2, 3]}
+INFO:root:sent to -> 84
+INFO:root:Robot84 finished recieving message - [48, 'position', [0, 0]]
+INFO:root:Robot84 recieved message! - [10, 'position', [1, 7]]
+INFO:root:sent to -> 84
+INFO:root:Robot95 start while
+INFO:root:Robot84 finished recieving message - [3, 'position', [3, 0]]
+INFO:root:sent to -> 86
+INFO:root:Robot84 recieved message! - [75, 'position', [3, 6]]
+INFO:root:84 is the lowest robot with distance 1 for space number 0 at location 5, 1
+INFO:root:Robot84 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot48 start while
+INFO:root:Robot84 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot84 recieved message! - [86, 'position', [0, 4]]
+INFO:root:Robot3 start while
+INFO:root:Robot86 recieved message! - [84, 'position', [6, 1]]
+INFO:root:Robot84 finished recieving message - [75, 'position', [3, 6]]
+INFO:root:{'48': [0, 0], '95': [7, 1], '86': [0, 4], '1': [6, 3], '75': [3, 6], '37': [5, 7], '10': [1, 7], '3': [3, 0], '80': [2, 3]}
+INFO:root:Robot84 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot10 start while
+INFO:root:Robot84 finished recieving message - [86, 'position', [0, 4]]
+INFO:root:Robot86 finished recieving message - [84, 'position', [6, 1]]
+INFO:root:Robot75 start while
+INFO:root:tempRobotList after del {'48': [0, 0], '95': [7, 1], '86': [0, 4], '75': [3, 6], '37': [5, 7], '10': [1, 7], '3': [3, 0], '80': [2, 3]}
+INFO:root:Robot37 start while
+INFO:root:Robot86 start while
+INFO:root:Robot84 start while
+INFO:root:1 is the lowest robot with distance 1 for space number 1 at location 5, 3
+INFO:root:{'48': [0, 0], '95': [7, 1], '86': [0, 4], '75': [3, 6], '37': [5, 7], '10': [1, 7], '3': [3, 0], '80': [2, 3]}
+INFO:root:tempRobotList after del {'48': [0, 0], '95': [7, 1], '86': [0, 4], '75': [3, 6], '37': [5, 7], '10': [1, 7], '80': [2, 3]}
+INFO:root:3 is the lowest robot with distance 3 for space number 2 at location 4, 2
+INFO:root:{'48': [0, 0], '95': [7, 1], '86': [0, 4], '75': [3, 6], '37': [5, 7], '10': [1, 7], '80': [2, 3]}
+INFO:root:tempRobotList after del {'48': [0, 0], '86': [0, 4], '75': [3, 6], '37': [5, 7], '10': [1, 7], '80': [2, 3]}
+INFO:root:95 is the lowest robot with distance 2 for space number 3 at location 6, 2
+INFO:root:Found ring place -> x=4 y=1
+INFO:root:{'48': [0, 0], '86': [0, 4], '75': [3, 6], '37': [5, 7], '10': [1, 7], '80': [2, 3]}
+INFO:root:tempRobotList after del {'48': [0, 0], '86': [0, 4], '75': [3, 6], '37': [5, 7], '10': [1, 7]}
+INFO:root:80 is the lowest robot with distance 4 for space number 4 at location 4, 1
+INFO:root:Found ring place -> x=5 y=1
+INFO:root:Found ring place -> x=6 y=1
+INFO:root:Found ring place -> x=4 y=2
+INFO:root:Found ring place -> x=6 y=2
+INFO:root:Found ring place -> x=4 y=3
+INFO:root:{'48': [0, 0], '86': [0, 4], '75': [3, 6], '37': [5, 7], '10': [1, 7]}
+INFO:root:tempRobotList after del {'48': [0, 0], '86': [0, 4], '37': [5, 7], '10': [1, 7]}
+INFO:root:75 is the lowest robot with distance 4 for space number 9 at location 4, 3
+INFO:root:Found ring place -> x=5 y=3
+INFO:root:Found ring place -> x=6 y=3
+INFO:root:{'48': [0, 0], '86': [0, 4], '37': [5, 7], '10': [1, 7]}
+INFO:root:tempRobotList after del {'86': [0, 4], '37': [5, 7], '10': [1, 7]}
+INFO:root:48 is the lowest robot with distance 5 for space number 0 at location 5, 0
+INFO:root:{'86': [0, 4], '37': [5, 7], '10': [1, 7]}
+INFO:root:tempRobotList after del {'86': [0, 4], '10': [1, 7]}
+INFO:root:37 is the lowest robot with distance 3 for space number 1 at location 5, 4
+INFO:root:{'86': [0, 4], '10': [1, 7]}
+INFO:root:tempRobotList after del {'10': [1, 7]}
+INFO:root:86 is the lowest robot with distance 5 for space number 2 at location 3, 2
+INFO:root:{'10': [1, 7]}
 INFO:root:tempRobotList after del {}
-INFO:root:1 is the lowest robot with distance 5 for space number4
-INFO:root:{'60': [2, 2], '25': [0, 3], '1': [2, 0], '23': [3, 3]}
+INFO:root:10 is the lowest robot with distance 11 for space number 3 at location 7, 2
+INFO:root:{'95': [7, 1], '86': [0, 4], '1': [6, 3], '37': [5, 7], '84': [6, 1], '80': [2, 3], '75': [3, 6], '10': [1, 7], '3': [3, 0], '48': [0, 0]}
 INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
 INFO:root:sent to -> 1
 INFO:root:Robot1 recieved message! - ['d', 'Move']
 INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-1  prevX-2  prevY-0
+INFO:root:sent to -> 80
+INFO:root:Robot80 recieved message! - ['d', 'Move']
+INFO:root:Robot80 finished recieving message - ['d', 'Move']
+INFO:root:Robot80 About to move!
+INFO:root:sent to -> 95
+INFO:root:update for 80 curX-2  curY-4  prevX-2  prevY-3
+INFO:root:Robot95 recieved message! - ['d', 'Move']
+INFO:root:moved! 80
+INFO:root:Robot95 finished recieving message - ['d', 'Move']
+INFO:root:Robot95 About to move!
+INFO:root:robot_80 with!
+INFO:root:sent to -> 48
+INFO:root:update for 95 curX-7  curY-2  prevX-7  prevY-1
+INFO:root:Robot48 recieved message! - ['d', 'Move']
+INFO:root:moved! 95
+INFO:root:Robot48 finished recieving message - ['d', 'Move']
+INFO:root:Robot48 About to move!
+INFO:root:robot_95 with!
+INFO:root:sent to -> 3
+INFO:root:update for 48 curX-0  curY-1  prevX-0  prevY-0
+INFO:root:Robot3 recieved message! - ['d', 'Move']
+INFO:root:moved! 48
+INFO:root:Robot3 finished recieving message - ['d', 'Move']
+INFO:root:Robot3 About to move!
+INFO:root:robot_48 with!
+INFO:root:sent to -> 10
+INFO:root:update for 3 curX-3  curY-1  prevX-3  prevY-0
+INFO:root:Robot10 recieved message! - ['d', 'Move']
+INFO:root:moved! 3
+INFO:root:Robot10 finished recieving message - ['d', 'Move']
+INFO:root:Robot10 About to move!
+INFO:root:robot_3 with!
+INFO:root:sent to -> 75
+INFO:root:update for 10 curX-1  curY-7  prevX-1  prevY-7
+INFO:root:Robot75 recieved message! - ['d', 'Move']
+INFO:root:moved! 10
+INFO:root:Robot75 finished recieving message - ['d', 'Move']
+INFO:root:Robot75 About to move!
+INFO:root:robot_10 with!
+INFO:root:sent to -> 37
+INFO:root:update for 75 curX-3  curY-7  prevX-3  prevY-6
+INFO:root:Robot37 recieved message! - ['d', 'Move']
+INFO:root:moved! 75
+INFO:root:Robot37 finished recieving message - ['d', 'Move']
+INFO:root:Robot37 About to move!
+INFO:root:robot_75 with!
+INFO:root:sent to -> 86
+INFO:root:update for 37 curX-5  curY-7  prevX-5  prevY-7
+INFO:root:Robot86 recieved message! - ['d', 'Move']
+INFO:root:moved! 37
+INFO:root:Robot86 finished recieving message - ['d', 'Move']
+INFO:root:Robot86 About to move!
+INFO:root:robot_37 with!
+INFO:root:sent to -> 84
+INFO:root:update for 86 curX-0  curY-5  prevX-0  prevY-4
+INFO:root:Robot84 recieved message! - ['d', 'Move']
+INFO:root:moved! 86
+INFO:root:Robot84 finished recieving message - ['d', 'Move']
+INFO:root:Robot84 About to move!
+INFO:root:robot_86 with!
+INFO:root:update for 1 curX-6  curY-4  prevX-6  prevY-3
+INFO:root:update for 84 curX-6  curY-2  prevX-6  prevY-1
 INFO:root:moved! 1
+INFO:root:moved! 84
 INFO:root:robot_1 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-3
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-3
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-3  prevX-2  prevY-2
-INFO:root:moved! 60
-INFO:root:robot_60 with!
 INFO:root:notifyA limit reached!
+INFO:root:robot_84 with!
 INFO:root:notifyA limit reached OVER!
+INFO:root:get latest! 95
+INFO:root:get latest! 48
+INFO:root:get latest! 80
+INFO:root:get latest! 3
+INFO:root:get latest! 75
+INFO:root:get latest! 37
+INFO:root:get latest! 10
+INFO:root:get latest! 84
+INFO:root:get latest! 86
+INFO:root:broadcast starting!
 INFO:root:get latest! 1
-INFO:root:get latest! 23
-INFO:root:get latest! 25
-INFO:root:get latest! 60
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 23
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
 INFO:root:sent to -> 1
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 1]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 1]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 3]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 25
+INFO:root:broadcast starting!
 INFO:root:sent to -> 1
 INFO:root:sent to -> 1
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 1]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 3]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 1]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 3]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 1]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 1]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 3]]
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:Robot1 recieved message! - [95, 'position', [7, 2]]
+INFO:root:sent to -> 80
+INFO:root:Robot1 recieved message! - [48, 'position', [0, 1]]
+INFO:root:Robot1 recieved message! - [80, 'position', [2, 4]]
+INFO:root:Robot1 recieved message! - [3, 'position', [3, 1]]
+INFO:root:Robot1 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot1 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot1 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot1 recieved message! - [84, 'position', [6, 2]]
+INFO:root:Robot1 recieved message! - [86, 'position', [0, 5]]
+INFO:root:Robot1 finished recieving message - [95, 'position', [7, 2]]
+INFO:root:Robot80 recieved message! - [1, 'position', [6, 4]]
+INFO:root:Robot1 finished recieving message - [48, 'position', [0, 1]]
+INFO:root:Robot1 finished recieving message - [80, 'position', [2, 4]]
+INFO:root:Robot1 finished recieving message - [3, 'position', [3, 1]]
+INFO:root:Robot1 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot1 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot1 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot1 finished recieving message - [84, 'position', [6, 2]]
+INFO:root:Robot1 finished recieving message - [86, 'position', [0, 5]]
+INFO:root:sent to -> 80
+INFO:root:Robot80 finished recieving message - [1, 'position', [6, 4]]
+INFO:root:sent to -> 80
+INFO:root:sent to -> 95
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:Robot80 recieved message! - [95, 'position', [7, 2]]
+INFO:root:sent to -> 95
+INFO:root:Robot80 recieved message! - [48, 'position', [0, 1]]
+INFO:root:Robot95 recieved message! - [80, 'position', [2, 4]]
+INFO:root:Robot80 recieved message! - [3, 'position', [3, 1]]
+INFO:root:Robot80 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot80 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot80 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot80 recieved message! - [84, 'position', [6, 2]]
+INFO:root:Robot80 recieved message! - [86, 'position', [0, 5]]
+INFO:root:Robot80 finished recieving message - [95, 'position', [7, 2]]
+INFO:root:Robot95 recieved message! - [1, 'position', [6, 4]]
+INFO:root:Robot80 finished recieving message - [48, 'position', [0, 1]]
+INFO:root:Robot95 finished recieving message - [80, 'position', [2, 4]]
+INFO:root:Robot80 finished recieving message - [3, 'position', [3, 1]]
+INFO:root:Robot80 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot80 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot80 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot80 finished recieving message - [84, 'position', [6, 2]]
+INFO:root:Robot80 finished recieving message - [86, 'position', [0, 5]]
+INFO:root:sent to -> 48
+INFO:root:Robot95 finished recieving message - [1, 'position', [6, 4]]
+INFO:root:sent to -> 95
+INFO:root:sent to -> 48
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:Robot48 recieved message! - [95, 'position', [7, 2]]
+INFO:root:sent to -> 48
+INFO:root:Robot95 recieved message! - [48, 'position', [0, 1]]
+INFO:root:Robot48 recieved message! - [80, 'position', [2, 4]]
+INFO:root:Robot95 recieved message! - [3, 'position', [3, 1]]
+INFO:root:Robot95 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot95 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot95 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot95 recieved message! - [84, 'position', [6, 2]]
+INFO:root:Robot95 recieved message! - [86, 'position', [0, 5]]
+INFO:root:Robot48 finished recieving message - [95, 'position', [7, 2]]
+INFO:root:Robot48 recieved message! - [1, 'position', [6, 4]]
+INFO:root:Robot95 finished recieving message - [48, 'position', [0, 1]]
+INFO:root:Robot48 finished recieving message - [80, 'position', [2, 4]]
+INFO:root:Robot95 finished recieving message - [3, 'position', [3, 1]]
+INFO:root:Robot95 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot95 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot95 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot95 finished recieving message - [84, 'position', [6, 2]]
+INFO:root:Robot95 finished recieving message - [86, 'position', [0, 5]]
+INFO:root:sent to -> 3
+INFO:root:Robot48 finished recieving message - [1, 'position', [6, 4]]
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:Robot3 recieved message! - [95, 'position', [7, 2]]
+INFO:root:sent to -> 3
+INFO:root:Robot3 recieved message! - [48, 'position', [0, 1]]
+INFO:root:Robot3 recieved message! - [80, 'position', [2, 4]]
+INFO:root:Robot48 recieved message! - [3, 'position', [3, 1]]
+INFO:root:Robot48 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot48 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot48 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot48 recieved message! - [84, 'position', [6, 2]]
+INFO:root:Robot48 recieved message! - [86, 'position', [0, 5]]
+INFO:root:Robot3 finished recieving message - [95, 'position', [7, 2]]
+INFO:root:Robot3 recieved message! - [1, 'position', [6, 4]]
+INFO:root:Robot3 finished recieving message - [48, 'position', [0, 1]]
+INFO:root:Robot3 finished recieving message - [80, 'position', [2, 4]]
+INFO:root:Robot48 finished recieving message - [3, 'position', [3, 1]]
+INFO:root:Robot48 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot48 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot48 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot48 finished recieving message - [84, 'position', [6, 2]]
+INFO:root:Robot48 finished recieving message - [86, 'position', [0, 5]]
+INFO:root:sent to -> 10
+INFO:root:Robot3 finished recieving message - [1, 'position', [6, 4]]
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:Robot10 recieved message! - [95, 'position', [7, 2]]
+INFO:root:sent to -> 10
+INFO:root:Robot10 recieved message! - [48, 'position', [0, 1]]
+INFO:root:Robot10 recieved message! - [80, 'position', [2, 4]]
+INFO:root:Robot10 recieved message! - [3, 'position', [3, 1]]
+INFO:root:Robot3 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot3 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot3 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot3 recieved message! - [84, 'position', [6, 2]]
+INFO:root:Robot3 recieved message! - [86, 'position', [0, 5]]
+INFO:root:Robot10 finished recieving message - [95, 'position', [7, 2]]
+INFO:root:Robot10 recieved message! - [1, 'position', [6, 4]]
+INFO:root:Robot10 finished recieving message - [48, 'position', [0, 1]]
+INFO:root:Robot10 finished recieving message - [80, 'position', [2, 4]]
+INFO:root:Robot10 finished recieving message - [3, 'position', [3, 1]]
+INFO:root:Robot3 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot3 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot3 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot3 finished recieving message - [84, 'position', [6, 2]]
+INFO:root:Robot3 finished recieving message - [86, 'position', [0, 5]]
+INFO:root:sent to -> 75
+INFO:root:Robot10 finished recieving message - [1, 'position', [6, 4]]
+INFO:root:sent to -> 75
+INFO:root:sent to -> 75
+INFO:root:sent to -> 75
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:sent to -> 75
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:Robot75 recieved message! - [95, 'position', [7, 2]]
+INFO:root:sent to -> 75
+INFO:root:Robot75 recieved message! - [48, 'position', [0, 1]]
+INFO:root:Robot75 recieved message! - [80, 'position', [2, 4]]
+INFO:root:Robot75 recieved message! - [3, 'position', [3, 1]]
+INFO:root:Robot10 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot10 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot75 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot10 recieved message! - [84, 'position', [6, 2]]
+INFO:root:Robot10 recieved message! - [86, 'position', [0, 5]]
+INFO:root:Robot75 finished recieving message - [95, 'position', [7, 2]]
+INFO:root:Robot75 recieved message! - [1, 'position', [6, 4]]
+INFO:root:Robot75 finished recieving message - [48, 'position', [0, 1]]
+INFO:root:Robot75 finished recieving message - [80, 'position', [2, 4]]
+INFO:root:Robot75 finished recieving message - [3, 'position', [3, 1]]
+INFO:root:Robot10 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot10 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot75 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot10 finished recieving message - [84, 'position', [6, 2]]
+INFO:root:Robot10 finished recieving message - [86, 'position', [0, 5]]
+INFO:root:sent to -> 37
+INFO:root:Robot75 finished recieving message - [1, 'position', [6, 4]]
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:sent to -> 75
+INFO:root:sent to -> 37
+INFO:root:sent to -> 75
+INFO:root:sent to -> 75
+INFO:root:Robot37 recieved message! - [95, 'position', [7, 2]]
+INFO:root:sent to -> 37
+INFO:root:Robot37 recieved message! - [48, 'position', [0, 1]]
+INFO:root:Robot37 recieved message! - [80, 'position', [2, 4]]
+INFO:root:Robot37 recieved message! - [3, 'position', [3, 1]]
+INFO:root:Robot37 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot75 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot37 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot75 recieved message! - [84, 'position', [6, 2]]
+INFO:root:Robot75 recieved message! - [86, 'position', [0, 5]]
+INFO:root:Robot37 finished recieving message - [95, 'position', [7, 2]]
+INFO:root:Robot37 recieved message! - [1, 'position', [6, 4]]
+INFO:root:Robot37 finished recieving message - [48, 'position', [0, 1]]
+INFO:root:Robot37 finished recieving message - [80, 'position', [2, 4]]
+INFO:root:Robot37 finished recieving message - [3, 'position', [3, 1]]
+INFO:root:Robot37 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot75 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot37 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot75 finished recieving message - [84, 'position', [6, 2]]
+INFO:root:Robot75 finished recieving message - [86, 'position', [0, 5]]
+INFO:root:sent to -> 86
+INFO:root:Robot37 finished recieving message - [1, 'position', [6, 4]]
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:Robot86 recieved message! - [95, 'position', [7, 2]]
+INFO:root:sent to -> 86
+INFO:root:Robot86 recieved message! - [48, 'position', [0, 1]]
+INFO:root:Robot86 recieved message! - [80, 'position', [2, 4]]
+INFO:root:Robot86 recieved message! - [3, 'position', [3, 1]]
+INFO:root:Robot86 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot86 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot86 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot37 recieved message! - [84, 'position', [6, 2]]
+INFO:root:Robot37 recieved message! - [86, 'position', [0, 5]]
+INFO:root:Robot86 finished recieving message - [95, 'position', [7, 2]]
+INFO:root:Robot86 recieved message! - [1, 'position', [6, 4]]
+INFO:root:Robot86 finished recieving message - [48, 'position', [0, 1]]
+INFO:root:Robot86 finished recieving message - [80, 'position', [2, 4]]
+INFO:root:Robot86 finished recieving message - [3, 'position', [3, 1]]
+INFO:root:Robot86 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot86 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot86 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot37 finished recieving message - [84, 'position', [6, 2]]
+INFO:root:Robot37 finished recieving message - [86, 'position', [0, 5]]
+INFO:root:sent to -> 84
+INFO:root:Robot86 finished recieving message - [1, 'position', [6, 4]]
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 86
+INFO:root:sent to -> 84
+INFO:root:Robot84 recieved message! - [95, 'position', [7, 2]]
+INFO:root:sent to -> 84
+INFO:root:Robot84 recieved message! - [48, 'position', [0, 1]]
+INFO:root:Robot84 recieved message! - [80, 'position', [2, 4]]
+INFO:root:Robot84 recieved message! - [3, 'position', [3, 1]]
+INFO:root:Robot84 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot84 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot84 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot86 recieved message! - [84, 'position', [6, 2]]
+INFO:root:Robot84 recieved message! - [86, 'position', [0, 5]]
+INFO:root:Robot84 finished recieving message - [95, 'position', [7, 2]]
+INFO:root:Robot84 recieved message! - [1, 'position', [6, 4]]
+INFO:root:Robot84 finished recieving message - [48, 'position', [0, 1]]
+INFO:root:Robot84 finished recieving message - [80, 'position', [2, 4]]
+INFO:root:Robot84 finished recieving message - [3, 'position', [3, 1]]
+INFO:root:Robot84 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot84 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot84 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot86 finished recieving message - [84, 'position', [6, 2]]
+INFO:root:Robot84 finished recieving message - [86, 'position', [0, 5]]
+INFO:root:Robot95 start while
+INFO:root:Robot84 finished recieving message - [1, 'position', [6, 4]]
+INFO:root:Robot48 start while
+INFO:root:Robot80 start while
+INFO:root:Robot3 start while
+INFO:root:Robot75 start while
+INFO:root:Robot37 start while
+INFO:root:Robot10 start while
+INFO:root:Robot84 start while
+INFO:root:Robot86 start while
 INFO:root:Robot1 start while
-INFO:root:Robot23 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:robotList = {'60': [2, 3], '25': [0, 4], '1': [2, 1], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 3], '1': [2, 1], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 3], '1': [2, 1], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '1': [2, 1], '25': [0, 4]}
-INFO:root:60 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '1': [2, 1], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '1': [2, 1]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '1': [2, 1]}
-INFO:root:tempRobotList after del {'1': [2, 1]}
-INFO:root:23 is the lowest robot with distance 1 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'1': [2, 1]}
+INFO:root:robotList = {'95': [7, 2], '86': [0, 5], '1': [6, 4], '37': [5, 7], '84': [6, 2], '80': [2, 4], '75': [3, 7], '10': [1, 7], '3': [3, 1], '48': [0, 1]}
+INFO:root:robotList deepcopy= {'48': [0, 1], '95': [7, 2], '86': [0, 5], '1': [6, 4], '75': [3, 7], '84': [6, 2], '37': [5, 7], '10': [1, 7], '3': [3, 1], '80': [2, 4]}
+INFO:root:{'48': [0, 1], '95': [7, 2], '86': [0, 5], '1': [6, 4], '75': [3, 7], '84': [6, 2], '37': [5, 7], '10': [1, 7], '3': [3, 1], '80': [2, 4]}
+INFO:root:tempRobotList after del {'48': [0, 1], '95': [7, 2], '86': [0, 5], '1': [6, 4], '75': [3, 7], '37': [5, 7], '10': [1, 7], '3': [3, 1], '80': [2, 4]}
+INFO:root:84 is the lowest robot with distance 2 for space number 0 at location 5, 1
+INFO:root:{'48': [0, 1], '95': [7, 2], '86': [0, 5], '1': [6, 4], '75': [3, 7], '37': [5, 7], '10': [1, 7], '3': [3, 1], '80': [2, 4]}
+INFO:root:tempRobotList after del {'48': [0, 1], '95': [7, 2], '86': [0, 5], '75': [3, 7], '37': [5, 7], '10': [1, 7], '3': [3, 1], '80': [2, 4]}
+INFO:root:1 is the lowest robot with distance 2 for space number 1 at location 5, 3
+INFO:root:{'48': [0, 1], '95': [7, 2], '86': [0, 5], '75': [3, 7], '37': [5, 7], '10': [1, 7], '3': [3, 1], '80': [2, 4]}
+INFO:root:tempRobotList after del {'48': [0, 1], '95': [7, 2], '86': [0, 5], '75': [3, 7], '37': [5, 7], '10': [1, 7], '80': [2, 4]}
+INFO:root:3 is the lowest robot with distance 2 for space number 2 at location 4, 2
+INFO:root:{'48': [0, 1], '95': [7, 2], '86': [0, 5], '75': [3, 7], '37': [5, 7], '10': [1, 7], '80': [2, 4]}
+INFO:root:tempRobotList after del {'48': [0, 1], '86': [0, 5], '75': [3, 7], '37': [5, 7], '10': [1, 7], '80': [2, 4]}
+INFO:root:95 is the lowest robot with distance 1 for space number 3 at location 6, 2
+INFO:root:Found ring place -> x=4 y=1
+INFO:root:{'48': [0, 1], '86': [0, 5], '75': [3, 7], '37': [5, 7], '10': [1, 7], '80': [2, 4]}
+INFO:root:tempRobotList after del {'86': [0, 5], '75': [3, 7], '37': [5, 7], '10': [1, 7], '80': [2, 4]}
+INFO:root:48 is the lowest robot with distance 4 for space number 4 at location 4, 1
+INFO:root:Found ring place -> x=5 y=1
+INFO:root:Found ring place -> x=6 y=1
+INFO:root:{'86': [0, 5], '75': [3, 7], '37': [5, 7], '10': [1, 7], '80': [2, 4]}
+INFO:root:tempRobotList after del {'86': [0, 5], '75': [3, 7], '10': [1, 7], '80': [2, 4]}
+INFO:root:37 is the lowest robot with distance 7 for space number 6 at location 6, 1
+INFO:root:Found ring place -> x=4 y=2
+INFO:root:Found ring place -> x=6 y=2
+INFO:root:Found ring place -> x=4 y=3
+INFO:root:{'86': [0, 5], '75': [3, 7], '10': [1, 7], '80': [2, 4]}
+INFO:root:tempRobotList after del {'86': [0, 5], '75': [3, 7], '10': [1, 7]}
+INFO:root:80 is the lowest robot with distance 3 for space number 9 at location 4, 3
+INFO:root:Found ring place -> x=5 y=3
+INFO:root:Found ring place -> x=6 y=3
+INFO:root:{'86': [0, 5], '75': [3, 7], '10': [1, 7]}
+INFO:root:tempRobotList after del {'86': [0, 5], '10': [1, 7]}
+INFO:root:75 is the lowest robot with distance 7 for space number 11 at location 6, 3
+INFO:root:{'86': [0, 5], '10': [1, 7]}
+INFO:root:tempRobotList after del {'10': [1, 7]}
+INFO:root:86 is the lowest robot with distance 10 for space number 0 at location 5, 0
+INFO:root:{'10': [1, 7]}
 INFO:root:tempRobotList after del {}
-INFO:root:1 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 3], '25': [0, 4], '1': [2, 1], '23': [3, 4]}
+INFO:root:10 is the lowest robot with distance 7 for space number 1 at location 5, 4
+INFO:root:{'95': [7, 2], '86': [0, 5], '1': [6, 4], '37': [5, 7], '84': [6, 2], '80': [2, 4], '75': [3, 7], '10': [1, 7], '3': [3, 1], '48': [0, 1]}
 INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
 INFO:root:sent to -> 1
 INFO:root:Robot1 recieved message! - ['d', 'Move']
 INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-2  prevX-2  prevY-1
+INFO:root:sent to -> 80
+INFO:root:Robot80 recieved message! - ['d', 'Move']
+INFO:root:Robot80 finished recieving message - ['d', 'Move']
+INFO:root:Robot80 About to move!
+INFO:root:sent to -> 95
+INFO:root:update for 80 curX-2  curY-5  prevX-2  prevY-4
+INFO:root:Robot95 recieved message! - ['d', 'Move']
+INFO:root:moved! 80
+INFO:root:Robot95 finished recieving message - ['d', 'Move']
+INFO:root:Robot95 About to move!
+INFO:root:robot_80 with!
+INFO:root:sent to -> 48
+INFO:root:update for 95 curX-7  curY-3  prevX-7  prevY-2
+INFO:root:Robot48 recieved message! - ['d', 'Move']
+INFO:root:moved! 95
+INFO:root:Robot48 finished recieving message - ['d', 'Move']
+INFO:root:Robot48 About to move!
+INFO:root:robot_95 with!
+INFO:root:sent to -> 3
+INFO:root:update for 48 curX-0  curY-2  prevX-0  prevY-1
+INFO:root:Robot3 recieved message! - ['d', 'Move']
+INFO:root:moved! 48
+INFO:root:Robot3 finished recieving message - ['d', 'Move']
+INFO:root:Robot3 About to move!
+INFO:root:robot_48 with!
+INFO:root:sent to -> 10
+INFO:root:update for 3 curX-3  curY-2  prevX-3  prevY-1
+INFO:root:Robot10 recieved message! - ['d', 'Move']
+INFO:root:moved! 3
+INFO:root:Robot10 finished recieving message - ['d', 'Move']
+INFO:root:Robot10 About to move!
+INFO:root:robot_3 with!
+INFO:root:sent to -> 75
+INFO:root:update for 10 curX-1  curY-7  prevX-1  prevY-7
+INFO:root:Robot75 recieved message! - ['d', 'Move']
+INFO:root:moved! 10
+INFO:root:Robot75 finished recieving message - ['d', 'Move']
+INFO:root:Robot75 About to move!
+INFO:root:robot_10 with!
+INFO:root:sent to -> 37
+INFO:root:update for 75 curX-3  curY-7  prevX-3  prevY-7
+INFO:root:Robot37 recieved message! - ['d', 'Move']
+INFO:root:moved! 75
+INFO:root:Robot37 finished recieving message - ['d', 'Move']
+INFO:root:Robot37 About to move!
+INFO:root:robot_75 with!
+INFO:root:sent to -> 86
+INFO:root:update for 37 curX-5  curY-7  prevX-5  prevY-7
+INFO:root:Robot86 recieved message! - ['d', 'Move']
+INFO:root:moved! 37
+INFO:root:Robot86 finished recieving message - ['d', 'Move']
+INFO:root:Robot86 About to move!
+INFO:root:robot_37 with!
+INFO:root:sent to -> 84
+INFO:root:update for 86 curX-0  curY-6  prevX-0  prevY-5
+INFO:root:Robot84 recieved message! - ['d', 'Move']
+INFO:root:moved! 86
+INFO:root:Robot84 finished recieving message - ['d', 'Move']
+INFO:root:Robot84 About to move!
+INFO:root:robot_86 with!
+INFO:root:update for 1 curX-6  curY-5  prevX-6  prevY-4
+INFO:root:update for 84 curX-6  curY-3  prevX-6  prevY-2
 INFO:root:moved! 1
+INFO:root:moved! 84
 INFO:root:robot_1 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 23
-INFO:root:Robot25 About to move!
-INFO:root:robot_23 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-3
-INFO:root:moved! 25
-INFO:root:moved! 60
-INFO:root:robot_25 with!
 INFO:root:notifyA limit reached!
-INFO:root:robot_60 with!
+INFO:root:robot_84 with!
 INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 25
-INFO:root:get latest! 60
+INFO:root:get latest! 80
+INFO:root:get latest! 95
+INFO:root:get latest! 48
+INFO:root:get latest! 3
+INFO:root:get latest! 10
+INFO:root:get latest! 75
+INFO:root:get latest! 37
+INFO:root:get latest! 86
+INFO:root:get latest! 84
 INFO:root:get latest! 1
-INFO:root:get latest! 23
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
 INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 2]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 2]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
+INFO:root:broadcast starting!
 INFO:root:sent to -> 1
 INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:sent to -> 25
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 2]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 2]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 2]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 2]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 1
+INFO:root:sent to -> 80
+INFO:root:Robot1 recieved message! - [80, 'position', [2, 5]]
+INFO:root:Robot1 recieved message! - [95, 'position', [7, 3]]
+INFO:root:Robot1 recieved message! - [48, 'position', [0, 2]]
+INFO:root:Robot1 recieved message! - [3, 'position', [3, 2]]
+INFO:root:Robot1 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot1 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot1 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot1 recieved message! - [86, 'position', [0, 6]]
+INFO:root:Robot1 recieved message! - [84, 'position', [6, 3]]
+INFO:root:Robot80 recieved message! - [1, 'position', [6, 5]]
+INFO:root:Robot1 finished recieving message - [80, 'position', [2, 5]]
+INFO:root:Robot1 finished recieving message - [95, 'position', [7, 3]]
+INFO:root:Robot1 finished recieving message - [48, 'position', [0, 2]]
+INFO:root:Robot1 finished recieving message - [3, 'position', [3, 2]]
+INFO:root:Robot1 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot1 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot1 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot1 finished recieving message - [86, 'position', [0, 6]]
+INFO:root:Robot1 finished recieving message - [84, 'position', [6, 3]]
+INFO:root:Robot80 finished recieving message - [1, 'position', [6, 5]]
+INFO:root:sent to -> 95
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 80
+INFO:root:sent to -> 95
+INFO:root:Robot95 recieved message! - [80, 'position', [2, 5]]
+INFO:root:Robot80 recieved message! - [95, 'position', [7, 3]]
+INFO:root:Robot80 recieved message! - [48, 'position', [0, 2]]
+INFO:root:Robot80 recieved message! - [3, 'position', [3, 2]]
+INFO:root:Robot80 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot80 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot80 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot80 recieved message! - [86, 'position', [0, 6]]
+INFO:root:Robot80 recieved message! - [84, 'position', [6, 3]]
+INFO:root:Robot95 recieved message! - [1, 'position', [6, 5]]
+INFO:root:Robot95 finished recieving message - [80, 'position', [2, 5]]
+INFO:root:Robot80 finished recieving message - [95, 'position', [7, 3]]
+INFO:root:Robot80 finished recieving message - [48, 'position', [0, 2]]
+INFO:root:Robot80 finished recieving message - [3, 'position', [3, 2]]
+INFO:root:Robot80 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot80 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot80 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot80 finished recieving message - [86, 'position', [0, 6]]
+INFO:root:Robot80 finished recieving message - [84, 'position', [6, 3]]
+INFO:root:Robot95 finished recieving message - [1, 'position', [6, 5]]
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 95
+INFO:root:sent to -> 48
+INFO:root:Robot48 recieved message! - [80, 'position', [2, 5]]
+INFO:root:Robot48 recieved message! - [95, 'position', [7, 3]]
+INFO:root:Robot95 recieved message! - [48, 'position', [0, 2]]
+INFO:root:Robot95 recieved message! - [3, 'position', [3, 2]]
+INFO:root:Robot95 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot95 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot95 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot95 recieved message! - [86, 'position', [0, 6]]
+INFO:root:Robot95 recieved message! - [84, 'position', [6, 3]]
+INFO:root:Robot48 recieved message! - [1, 'position', [6, 5]]
+INFO:root:Robot48 finished recieving message - [80, 'position', [2, 5]]
+INFO:root:Robot48 finished recieving message - [95, 'position', [7, 3]]
+INFO:root:Robot95 finished recieving message - [48, 'position', [0, 2]]
+INFO:root:Robot95 finished recieving message - [3, 'position', [3, 2]]
+INFO:root:Robot95 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot95 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot95 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot95 finished recieving message - [86, 'position', [0, 6]]
+INFO:root:Robot95 finished recieving message - [84, 'position', [6, 3]]
+INFO:root:Robot48 finished recieving message - [1, 'position', [6, 5]]
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 48
+INFO:root:sent to -> 3
+INFO:root:Robot3 recieved message! - [80, 'position', [2, 5]]
+INFO:root:Robot3 recieved message! - [95, 'position', [7, 3]]
+INFO:root:Robot3 recieved message! - [48, 'position', [0, 2]]
+INFO:root:Robot48 recieved message! - [3, 'position', [3, 2]]
+INFO:root:Robot48 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot48 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot48 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot48 recieved message! - [86, 'position', [0, 6]]
+INFO:root:Robot48 recieved message! - [84, 'position', [6, 3]]
+INFO:root:Robot3 recieved message! - [1, 'position', [6, 5]]
+INFO:root:Robot3 finished recieving message - [80, 'position', [2, 5]]
+INFO:root:Robot3 finished recieving message - [95, 'position', [7, 3]]
+INFO:root:Robot3 finished recieving message - [48, 'position', [0, 2]]
+INFO:root:Robot48 finished recieving message - [3, 'position', [3, 2]]
+INFO:root:Robot48 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot48 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot48 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot48 finished recieving message - [86, 'position', [0, 6]]
+INFO:root:Robot48 finished recieving message - [84, 'position', [6, 3]]
+INFO:root:Robot3 finished recieving message - [1, 'position', [6, 5]]
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 3
+INFO:root:sent to -> 10
+INFO:root:Robot10 recieved message! - [80, 'position', [2, 5]]
+INFO:root:Robot10 recieved message! - [95, 'position', [7, 3]]
+INFO:root:Robot10 recieved message! - [48, 'position', [0, 2]]
+INFO:root:Robot10 recieved message! - [3, 'position', [3, 2]]
+INFO:root:Robot3 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot3 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot3 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot3 recieved message! - [86, 'position', [0, 6]]
+INFO:root:Robot3 recieved message! - [84, 'position', [6, 3]]
+INFO:root:Robot10 recieved message! - [1, 'position', [6, 5]]
+INFO:root:Robot10 finished recieving message - [80, 'position', [2, 5]]
+INFO:root:Robot10 finished recieving message - [95, 'position', [7, 3]]
+INFO:root:Robot10 finished recieving message - [48, 'position', [0, 2]]
+INFO:root:Robot10 finished recieving message - [3, 'position', [3, 2]]
+INFO:root:Robot3 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot3 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot3 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot3 finished recieving message - [86, 'position', [0, 6]]
+INFO:root:Robot3 finished recieving message - [84, 'position', [6, 3]]
+INFO:root:Robot10 finished recieving message - [1, 'position', [6, 5]]
+INFO:root:sent to -> 75
+INFO:root:sent to -> 75
+INFO:root:sent to -> 75
+INFO:root:sent to -> 75
+INFO:root:sent to -> 75
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:sent to -> 10
+INFO:root:sent to -> 75
+INFO:root:Robot75 recieved message! - [80, 'position', [2, 5]]
+INFO:root:Robot75 recieved message! - [95, 'position', [7, 3]]
+INFO:root:Robot75 recieved message! - [48, 'position', [0, 2]]
+INFO:root:Robot75 recieved message! - [3, 'position', [3, 2]]
+INFO:root:Robot75 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot10 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot10 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot10 recieved message! - [86, 'position', [0, 6]]
+INFO:root:Robot10 recieved message! - [84, 'position', [6, 3]]
+INFO:root:Robot75 recieved message! - [1, 'position', [6, 5]]
+INFO:root:Robot75 finished recieving message - [80, 'position', [2, 5]]
+INFO:root:Robot75 finished recieving message - [95, 'position', [7, 3]]
+INFO:root:Robot75 finished recieving message - [48, 'position', [0, 2]]
+INFO:root:Robot75 finished recieving message - [3, 'position', [3, 2]]
+INFO:root:Robot75 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot10 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot10 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot10 finished recieving message - [86, 'position', [0, 6]]
+INFO:root:Robot10 finished recieving message - [84, 'position', [6, 3]]
+INFO:root:Robot75 finished recieving message - [1, 'position', [6, 5]]
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:sent to -> 75
+INFO:root:sent to -> 75
+INFO:root:sent to -> 75
+INFO:root:sent to -> 37
+INFO:root:Robot37 recieved message! - [80, 'position', [2, 5]]
+INFO:root:Robot37 recieved message! - [95, 'position', [7, 3]]
+INFO:root:Robot37 recieved message! - [48, 'position', [0, 2]]
+INFO:root:Robot37 recieved message! - [3, 'position', [3, 2]]
+INFO:root:Robot37 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot37 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot75 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot75 recieved message! - [86, 'position', [0, 6]]
+INFO:root:Robot75 recieved message! - [84, 'position', [6, 3]]
+INFO:root:Robot37 recieved message! - [1, 'position', [6, 5]]
+INFO:root:Robot37 finished recieving message - [80, 'position', [2, 5]]
+INFO:root:Robot37 finished recieving message - [95, 'position', [7, 3]]
+INFO:root:Robot37 finished recieving message - [48, 'position', [0, 2]]
+INFO:root:Robot37 finished recieving message - [3, 'position', [3, 2]]
+INFO:root:Robot37 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot37 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot75 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot75 finished recieving message - [86, 'position', [0, 6]]
+INFO:root:Robot75 finished recieving message - [84, 'position', [6, 3]]
+INFO:root:Robot37 finished recieving message - [1, 'position', [6, 5]]
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 86
+INFO:root:sent to -> 37
+INFO:root:sent to -> 37
+INFO:root:sent to -> 86
+INFO:root:Robot86 recieved message! - [80, 'position', [2, 5]]
+INFO:root:Robot86 recieved message! - [95, 'position', [7, 3]]
+INFO:root:Robot86 recieved message! - [48, 'position', [0, 2]]
+INFO:root:Robot86 recieved message! - [3, 'position', [3, 2]]
+INFO:root:Robot86 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot86 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot86 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot37 recieved message! - [86, 'position', [0, 6]]
+INFO:root:Robot37 recieved message! - [84, 'position', [6, 3]]
+INFO:root:Robot86 recieved message! - [1, 'position', [6, 5]]
+INFO:root:Robot86 finished recieving message - [80, 'position', [2, 5]]
+INFO:root:Robot86 finished recieving message - [95, 'position', [7, 3]]
+INFO:root:Robot86 finished recieving message - [48, 'position', [0, 2]]
+INFO:root:Robot86 finished recieving message - [3, 'position', [3, 2]]
+INFO:root:Robot86 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot86 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot86 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot37 finished recieving message - [86, 'position', [0, 6]]
+INFO:root:Robot37 finished recieving message - [84, 'position', [6, 3]]
+INFO:root:Robot86 finished recieving message - [1, 'position', [6, 5]]
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 84
+INFO:root:sent to -> 86
+INFO:root:sent to -> 84
+INFO:root:Robot84 recieved message! - [80, 'position', [2, 5]]
+INFO:root:Robot84 recieved message! - [95, 'position', [7, 3]]
+INFO:root:Robot84 recieved message! - [48, 'position', [0, 2]]
+INFO:root:Robot84 recieved message! - [3, 'position', [3, 2]]
+INFO:root:Robot84 recieved message! - [10, 'position', [1, 7]]
+INFO:root:Robot84 recieved message! - [75, 'position', [3, 7]]
+INFO:root:Robot84 recieved message! - [37, 'position', [5, 7]]
+INFO:root:Robot84 recieved message! - [86, 'position', [0, 6]]
+INFO:root:Robot86 recieved message! - [84, 'position', [6, 3]]
+INFO:root:Robot84 recieved message! - [1, 'position', [6, 5]]
+INFO:root:Robot84 finished recieving message - [80, 'position', [2, 5]]
+INFO:root:Robot84 finished recieving message - [95, 'position', [7, 3]]
+INFO:root:Robot84 finished recieving message - [48, 'position', [0, 2]]
+INFO:root:Robot84 finished recieving message - [3, 'position', [3, 2]]
+INFO:root:Robot84 finished recieving message - [10, 'position', [1, 7]]
+INFO:root:Robot84 finished recieving message - [75, 'position', [3, 7]]
+INFO:root:Robot84 finished recieving message - [37, 'position', [5, 7]]
+INFO:root:Robot84 finished recieving message - [86, 'position', [0, 6]]
+INFO:root:Robot86 finished recieving message - [84, 'position', [6, 3]]
+INFO:root:Robot84 finished recieving message - [1, 'position', [6, 5]]
+INFO:root:Robot80 start while
+INFO:root:Robot95 start while
+INFO:root:Robot48 start while
+INFO:root:Robot3 start while
+INFO:root:Robot10 start while
+INFO:root:Robot75 start while
+INFO:root:Robot37 start while
+INFO:root:Robot86 start while
+INFO:root:Robot84 start while
 INFO:root:Robot1 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 2], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 2], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 2], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '1': [2, 2], '25': [0, 4]}
-INFO:root:60 is the lowest robot with distance 2 for space number0
-INFO:root:{'23': [3, 4], '1': [2, 2], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '1': [2, 2]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '1': [2, 2]}
-INFO:root:tempRobotList after del {'1': [2, 2]}
-INFO:root:23 is the lowest robot with distance 1 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'1': [2, 2]}
-INFO:root:tempRobotList after del {}
-INFO:root:1 is the lowest robot with distance 3 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 2], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-2
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:Robot23 About to move!
-INFO:root:robot_25 with!
-INFO:root:moved! 60
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:robot_60 with!
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:robot_25 with!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 60
-INFO:root:robot_60 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:Robot60 About to move!
-INFO:root:robot_25 with!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:Robot23 About to move!
-INFO:root:moved! 60
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:robot_60 with!
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:robot_25 with!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 60
-INFO:root:robot_60 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:Robot23 About to move!
-INFO:root:robot_25 with!
-INFO:root:moved! 60
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:robot_60 with!
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 60
-INFO:root:robot_60 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 60
-INFO:root:robot_60 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:Robot23 About to move!
-INFO:root:moved! 60
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:robot_60 with!
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:robot_25 with!
-INFO:root:Robot23 About to move!
-INFO:root:moved! 60
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:robot_60 with!
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:robot_25 with!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:robot_25 with!
-INFO:root:Robot23 About to move!
-INFO:root:moved! 60
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:robot_60 with!
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:Robot60 About to move!
-INFO:root:robot_25 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:robot_25 with!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:Robot23 About to move!
-INFO:root:robot_25 with!
-INFO:root:moved! 60
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:robot_60 with!
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:robot_25 with!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:robot_25 with!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:Robot60 About to move!
-INFO:root:moved! 25
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:robot_25 with!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 60
-INFO:root:robot_60 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:Robot60 About to move!
-INFO:root:robot_25 with!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:Robot23 About to move!
-INFO:root:moved! 60
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:robot_60 with!
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 60
-INFO:root:robot_60 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 60
-INFO:root:Robot23 About to move!
-INFO:root:robot_60 with!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:Robot60 About to move!
-INFO:root:robot_25 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 60
-INFO:root:moved! 23
-INFO:root:robot_60 with!
-INFO:root:notifyA limit reached!
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached OVER!
-INFO:root:get latest! 1
-INFO:root:get latest! 25
-INFO:root:get latest! 60
-INFO:root:get latest! 23
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 23
-INFO:root:sent to -> 1
-INFO:root:Robot23 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot23 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot23 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot1 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot23 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot23 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot23 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot1 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 25
-INFO:root:sent to -> 1
-INFO:root:sent to -> 1
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot1 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot1 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot25 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot25 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot1 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot1 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot25 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:sent to -> 60
-INFO:root:sent to -> 60
-INFO:root:sent to -> 25
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - [1, 'position', [2, 3]]
-INFO:root:Robot60 recieved message! - [25, 'position', [0, 4]]
-INFO:root:Robot25 recieved message! - [60, 'position', [2, 4]]
-INFO:root:Robot60 recieved message! - [23, 'position', [3, 4]]
-INFO:root:Robot60 finished recieving message - [1, 'position', [2, 3]]
-INFO:root:Robot60 finished recieving message - [25, 'position', [0, 4]]
-INFO:root:Robot25 finished recieving message - [60, 'position', [2, 4]]
-INFO:root:Robot60 finished recieving message - [23, 'position', [3, 4]]
-INFO:root:Robot1 start while
-INFO:root:Robot25 start while
-INFO:root:Robot60 start while
-INFO:root:Robot23 start while
-INFO:root:robotList = {'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:robotList deepcopy= {'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:{'23': [3, 4], '60': [2, 4], '1': [2, 3], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:1 is the lowest robot with distance 1 for space number0
-INFO:root:{'23': [3, 4], '60': [2, 4], '25': [0, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4], '60': [2, 4]}
-INFO:root:25 is the lowest robot with distance 0 for space number2
-INFO:root:{'23': [3, 4], '60': [2, 4]}
-INFO:root:tempRobotList after del {'23': [3, 4]}
-INFO:root:60 is the lowest robot with distance 0 for space number3
-INFO:root:Found ring place -> x=0 y=3
-INFO:root:{'23': [3, 4]}
-INFO:root:tempRobotList after del {}
-INFO:root:23 is the lowest robot with distance 4 for space number4
-INFO:root:{'60': [2, 4], '25': [0, 4], '1': [2, 3], '23': [3, 4]}
-INFO:root:broadcast starting!
-INFO:root:sent to -> 23
-INFO:root:Robot23 recieved message! - ['d', 'Move']
-INFO:root:Robot23 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 1
-INFO:root:Robot1 recieved message! - ['d', 'Move']
-INFO:root:Robot1 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 25
-INFO:root:Robot25 recieved message! - ['d', 'Move']
-INFO:root:Robot25 finished recieving message - ['d', 'Move']
-INFO:root:sent to -> 60
-INFO:root:Robot60 recieved message! - ['d', 'Move']
-INFO:root:Robot60 finished recieving message - ['d', 'Move']
-INFO:root:update for 1 curX-2  curY-3  prevX-2  prevY-3
-INFO:root:moved! 1
-INFO:root:robot_1 with!
-INFO:root:Robot25 About to move!
-INFO:root:update for 25 curX-0  curY-4  prevX-0  prevY-4
-INFO:root:moved! 25
-INFO:root:robot_25 with!
-INFO:root:Robot60 About to move!
-INFO:root:update for 60 curX-2  curY-4  prevX-2  prevY-4
-INFO:root:moved! 60
-INFO:root:robot_60 with!
-INFO:root:Robot23 About to move!
-INFO:root:update for 23 curX-3  curY-4  prevX-3  prevY-4
-INFO:root:moved! 23
-INFO:root:robot_23 with!
-INFO:root:notifyA limit reached!

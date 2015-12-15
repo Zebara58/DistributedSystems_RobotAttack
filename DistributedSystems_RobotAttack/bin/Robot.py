@@ -50,7 +50,7 @@ class Robot(Thread):
         else:
             while(not self.leaderElected):
                 self.logSelf("Waiting for leader to be elected")
-                time.sleep(0.5)
+                time.sleep(0.005)
             if(self.isLeader):  
                 if(not self.goalFound and message[1] =="goal"):
                     self.goalX = message[0][0]
@@ -103,57 +103,139 @@ class Robot(Thread):
             tempRobotList = deepcopy(self.robotList)
             logging.info("robotList deepcopy= "+str(tempRobotList))
             invalidPlace = False
-            posX = -1
-            posY = -1
+
             while(placed<len(self.robotList)):
                 lowest = 99999
                 i=-1
                 j=-1
-                if(goalPlace>3):
+
+                #check if robot is in goal space
+                #gX = self.goalX
+                #gY = self.goalY -1
+                #if(gY>-1 and self.matrix[gX][gY]!="0"):
+                #    if self.matrix[gX][gY] in tempRobotList.keys():
+                #        del tempRobotList[self.matrix[gX][gY]]
+                #        self.robotPlacement.append([0, gX, gY])
+                #        placed+=1
+                #    invalidPlace= True
+                    
+                #gX = self.goalX
+                #gY = self.goalY +1
+                #if(gY<self.ySize and self.matrix[gX][gY]!="0"):
+                #    if self.matrix[gX][gY] in tempRobotList.keys():
+                #        del tempRobotList[self.matrix[gX][gY]]
+                #        self.robotPlacement.append([0, gX, gY])
+                #        placed+=1
+                #    invalidPlace= True
+                #gX = self.goalX -1
+                #gY = self.goalY
+                #if(gX>-1 and self.matrix[gX][gY]!="0"):
+                #    if self.matrix[gX][gY] in tempRobotList.keys():
+                #        del tempRobotList[self.matrix[gX][gY]]
+                #        self.robotPlacement.append([0, gX, gY])
+                #        placed+=1
+                #    invalidPlace= True
+                #gX = self.goalX +1
+                #gY = self.goalY
+                #if(gX<self.xSize and self.matrix[gX][gY]!="0"):
+                #    if self.matrix[gX][gY] in tempRobotList.keys():
+                #        del tempRobotList[self.matrix[gX][gY]]
+                #        self.robotPlacement.append([0, gX, gY])
+                #        placed+=1
+                #    invalidPlace= True
+
+                    
+
+                if((not invalidPlace) and goalPlace>3):
                     #have a loop from -ringNum to ringNum for x and y
                     #find what the x and y the goal place corespond to
-
-                    #bug here returns none type
                     tempGoalPlace = 0
                     foundRingPlace = False
-                    ringNumber = 1
-                    for i in range(self.goalX-ringNumber,self.goalX+ringNumber):
-                        for j in range(self.goalY-ringNumber,self.goalY+ringNumber):
-                            #calculate manhattan distance for each robot to here
-                            if not(i == self.goalX or j == self.goalY) and tempGoalPlace == goalPlace-4:
-                                #bounds checks
-                                if (i < 0 or i > self.numRobots) or (j < 0 or j > self.numRobots):
-                                    invalidPlace = True
-                                logging.info("Found ring place -> x="+str(i)+" y="+str(j))
-                                foundRingPlace = True
-                                break
-                            tempGoalPlace +=1
+                    for j in range(self.goalY-ringNum,self.goalY+ringNum+1):
+                        if(j==self.goalY-ringNum or j == self.goalY+ringNum):
+                            for i in range(self.goalX-ringNum,self.goalX+ringNum+1):
+                                #calculate position
+                                if tempGoalPlace+4 == goalPlace:
+                                    #bounds checks
+                                    if (i == self.goalX or j == self.goalY) or (i < 0 or i >= self.numRobots) or (j < 0 or j >= self.numRobots) or (self.mainMap.matrix[i][j]!="0"):
+                                        invalidPlace = True
+                                    logging.info("Found ring place -> x="+str(i)+" y="+str(j))
+                                    foundRingPlace = True
+                                    break
+                                tempGoalPlace +=1
+                        else:
+                            for i in [self.goalX-ringNum, self.goalX+ringNum]:
+                                #calculate position
+                                if tempGoalPlace+4 == goalPlace:
+                                    #bounds checks
+                                    if (i == self.goalX or j == self.goalY) or (i < 0 or i > self.numRobots) or (j < 0 or j > self.numRobots) or (self.mainMap.matrix[i][j]!="0"):
+                                        invalidPlace = True
+                                    logging.info("Found ring place -> x="+str(i)+" y="+str(j))
+                                    foundRingPlace = True
+                                    break
+                                tempGoalPlace +=1
                         if(foundRingPlace):
                             break
                 if not invalidPlace:
                     for r2key in tempRobotList:
                         #calc manhatttan distance from r2 to goal place
                         #returns the distance or -1 if invalid
-                        dist = self.calcManhattanDistance(r2key, goalPlace, ringNum, i, j)
+                        if(goalPlace == 0):
+                            #top
+                            i = self.goalX
+                            j = self.goalY-ringNum
+                            if(j<0):
+                                dist= -1
+                            else:
+                                dist=  self.calcBetweenTwoSpaces(self.goalX, self.goalY-ringNum, self.robotList[r2key][0], self.robotList[r2key][1])
+                        elif(goalPlace == 1):
+                            #bot
+                            i = self.goalX
+                            j = self.goalY+ringNum
+                            if(j>=self.ySize):
+                                dist= -1
+                            else:
+                                dist=  self.calcBetweenTwoSpaces(self.goalX, self.goalY+ringNum, self.robotList[r2key][0], self.robotList[r2key][1])
+                        elif(goalPlace== 2):
+                            #left
+                            i = self.goalX-ringNum
+                            j = self.goalY
+                            if(i<0):
+                                dist= -1
+                            else:
+                                dist=  self.calcBetweenTwoSpaces(self.goalX-ringNum, self.goalY, self.robotList[r2key][0], self.robotList[r2key][1])
+                        elif(goalPlace == 3):
+                            #right
+                            i = self.goalX+ringNum
+                            j = self.goalY
+                            if(i>=self.xSize):
+                                dist= -1
+                            else:
+                                dist=  self.calcBetweenTwoSpaces(self.goalX+ringNum, self.goalY, self.robotList[r2key][0], self.robotList[r2key][1])
+                        else:
+                            #we want to do the ring now 
+                            dist= self.calcBetweenTwoSpaces(i,j, self.robotList[r2key][0], self.robotList[r2key][1])
                     
                         if(dist != -1):
                             if dist < lowest:
                                 lowest = dist
                                 lowestRobot = r2key
+                                lowestPlace = [i,j]
                         else:
                             invalidPlace = True
                             break
 
                     if not invalidPlace:
                         placed+=1
-                        self.robotPlacement.append([lowestRobot, posX, posY])
+                        self.robotPlacement.append([lowestRobot, i, j])
                         logging.info(tempRobotList)
                         del tempRobotList[lowestRobot]
                         logging.info("tempRobotList after del "+str(tempRobotList))
-                        logging.info(str(lowestRobot) + " is the lowest robot with distance " + str(lowest) + " for space number" +str(goalPlace ))
+                        logging.info(str(lowestRobot) + " is the lowest robot with distance " + str(lowest) + " for space number " +str(goalPlace ) + " at location "+str(lowestPlace[0])+", "+str(lowestPlace[1]))
                 
                 goalPlace+=1    
-                if(goalPlace == 8*ringNum):
+                #multiple of 8 placements in each ring
+                if(goalPlace == (8*ringNum)+4):
                     ringNum+=1
                     goalPlace = 0
                 invalidPlace = False
@@ -163,36 +245,7 @@ class Robot(Thread):
         message.append("Move")
         self.network.broadcastMessage(message)
         self.move("d")
-    
-
-    def calcManhattanDistance(self, robot, goalPlace, ringNumber, i, j):
-        if(goalPlace == 0):
-            #top
-            pos = [self.goalX,self.goalY-ringNumber]
-            if(pos[1]<0):
-                return -1
-            return self.calcBetweenTwoSpaces(self.goalX, self.goalY-ringNumber, self.robotList[robot][0], self.robotList[robot][1])
-        elif(goalPlace == 1):
-            #bot
-            pos = [self.goalX,self.goalY+ringNumber]
-            if(pos[1]>=self.ySize):
-                return -1
-            return self.calcBetweenTwoSpaces(self.goalX, self.goalY+ringNumber, self.robotList[robot][0], self.robotList[robot][1])
-        elif(goalPlace== 2):
-            #left
-            pos = [self.goalX-ringNumber,self.goalY]
-            if(pos[0]<0):
-                return -1
-            return self.calcBetweenTwoSpaces(self.goalX-ringNumber, self.goalY, self.robotList[robot][0], self.robotList[robot][1])
-        elif(goalPlace == 3):
-            #right
-            pos = [self.goalX+ringNumber,self.goalY]
-            if(pos[0]>=self.xSize):
-                return -1
-            return self.calcBetweenTwoSpaces(self.goalX+ringNumber, self.goalY, self.robotList[robot][0], self.robotList[robot][1])
-        else:
-            #we want to do the ring now 
-            return self.calcBetweenTwoSpaces(i,j, self.robotList[robot][0], self.robotList[robot][1])
+        
 
     def calcBetweenTwoSpaces(self, targetX, targetY, rx, ry):
         distance = abs(targetX-rx) + abs(targetY-ry)
@@ -210,7 +263,7 @@ class Robot(Thread):
         self.network.broadcastMessage(message)
         #Wait for the messages for the election are recieved
         while(self.queue.qsize()!=(self.numRobots -1)):
-            time.sleep(0.5)
+            time.sleep(0.005)
         #logging.info(str(self.queue.qsize()) +" queue size")
         self.electLeader()
         logging.info('Leader elected!')
@@ -218,14 +271,14 @@ class Robot(Thread):
             logging.info(str(self.robotID) + " is the leader!")
         
         self.network.broadcastMessage([self.robotID, "position", [self.x,self.y]])
-        time.sleep(1)
+        time.sleep(.005)
 
         while(self.alive):
             self.logSelf("start while")
             if(self.isLeader):
                 #Wait for recieving the positions of all robots
                 while(len(self.robotList)<self.numRobots-1):
-                    time.sleep(0.5)
+                    time.sleep(0.005)
                     logging.info("robotList = "+str(self.robotList))
                 #Leader issue commands to other robots through the network
                 #This also moves the leader
@@ -233,7 +286,7 @@ class Robot(Thread):
             else:
                 #Wait to recieve command from leader
                 while(self.moveQueue.empty()):
-                    time.sleep(1)
+                    time.sleep(0.005)
                 self.logSelf("About to move!")
                 self.move(self.moveQueue.get())
                 

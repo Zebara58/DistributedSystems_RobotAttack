@@ -32,13 +32,13 @@ if __name__ == '__main__':
 
     os.remove("robotattack.log");
 
-    xSize = 5
-    ySize = 5
+    xSize = 8
+    ySize = 8
 
     condition = threading.Condition()
     m = Map(xSize, ySize)
 
-    numRobots = 4
+    numRobots = 10
     rules = Rules(numRobots, m, condition)
     print("before rules")
     rules.start()
