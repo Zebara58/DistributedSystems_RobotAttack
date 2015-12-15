@@ -29,6 +29,7 @@ class Robot(Thread):
         self.goalX = -1
         self.goalY = -1
         self.robotList = {}
+        self.leaderElected = False
 
         #if(x!=0):
         #	self.matrix[x-1][y] = m[x-1][y]
@@ -41,6 +42,11 @@ class Robot(Thread):
 
     def recieveMessage(self, message):
         logging.info("Robot"+str(self.robotID)+" recieved message! - "+str(message))
+
+        if(not self.leaderElected):
+            self.logSelf("Waiting for leader to be elected")
+            time.sleep(0.5)
+
         if message[1] == "Elect leader":
             self.queue.put(message[0])
         elif message[1] == "Move":
@@ -55,7 +61,7 @@ class Robot(Thread):
                 mesY = message[2][1]
                 self.matrix[mesX][mesY] = str(message[0])
                 self.robotList[str(message[0])] = [mesX,mesY]
-
+        self.logSelf("finished recieving message - "+str(message))
     def robotConnectToNetwork(self, Network):
         self.network = Network
 
@@ -77,6 +83,7 @@ class Robot(Thread):
         if(lowest == self.robotID):
             self.isLeader = True
             self.determineQuadrants()
+        self.leaderElected = True
 
     def determineQuadrants(self):
         blar = "blark"
@@ -100,26 +107,50 @@ class Robot(Thread):
             posY = -1
             while(placed<len(self.robotList)):
                 lowest = 99999
-                for r2key in tempRobotList:
-                    #calc manhatttan distance from r2 to goal place
-                    #returns the distance or -1 if invalid
-                    dist = self.calcManhattanDistance(r2key, goalPlace, ringNum)
-                    
-                    if(dist != -1):
-                        if dist < lowest:
-                            lowest = dist
-                            lowestRobot = r2key
-                    else:
-                        invalidPlace = True
-                        break
+                i=-1
+                j=-1
+                if(goalPlace>3):
+                    #have a loop from -ringNum to ringNum for x and y
+                    #find what the x and y the goal place corespond to
 
+                    #bug here returns none type
+                    tempGoalPlace = 0
+                    foundRingPlace = False
+                    ringNumber = 1
+                    for i in range(self.goalX-ringNumber,self.goalX+ringNumber):
+                        for j in range(self.goalY-ringNumber,self.goalY+ringNumber):
+                            #calculate manhattan distance for each robot to here
+                            if not(i == self.goalX or j == self.goalY) and tempGoalPlace == goalPlace-4:
+                                #bounds checks
+                                if (i < 0 or i > self.numRobots) or (j < 0 or j > self.numRobots):
+                                    invalidPlace = True
+                                logging.info("Found ring place -> x="+str(i)+" y="+str(j))
+                                foundRingPlace = True
+                                break
+                            tempGoalPlace +=1
+                        if(foundRingPlace):
+                            break
                 if not invalidPlace:
-                    placed+=1
-                    self.robotPlacement.append([lowestRobot, posX, posY])
-                    logging.info(tempRobotList)
-                    del tempRobotList[lowestRobot]
-                    logging.info("tempRobotList after del "+str(tempRobotList))
-                    logging.info(str(lowestRobot) + " is the lowest robot" + str(lowest) + " for space number" +str(goalPlace ))
+                    for r2key in tempRobotList:
+                        #calc manhatttan distance from r2 to goal place
+                        #returns the distance or -1 if invalid
+                        dist = self.calcManhattanDistance(r2key, goalPlace, ringNum, i, j)
+                    
+                        if(dist != -1):
+                            if dist < lowest:
+                                lowest = dist
+                                lowestRobot = r2key
+                        else:
+                            invalidPlace = True
+                            break
+
+                    if not invalidPlace:
+                        placed+=1
+                        self.robotPlacement.append([lowestRobot, posX, posY])
+                        logging.info(tempRobotList)
+                        del tempRobotList[lowestRobot]
+                        logging.info("tempRobotList after del "+str(tempRobotList))
+                        logging.info(str(lowestRobot) + " is the lowest robot with distance " + str(lowest) + " for space number" +str(goalPlace ))
                 
                 goalPlace+=1    
                 if(goalPlace == 8*ringNum):
@@ -134,7 +165,7 @@ class Robot(Thread):
         self.move("d")
     
 
-    def calcManhattanDistance(self, robot, goalPlace, ringNumber):
+    def calcManhattanDistance(self, robot, goalPlace, ringNumber, i, j):
         if(goalPlace == 0):
             #top
             pos = [self.goalX,self.goalY-ringNumber]
@@ -161,20 +192,7 @@ class Robot(Thread):
             return self.calcBetweenTwoSpaces(self.goalX+ringNumber, self.goalY, self.robotList[robot][0], self.robotList[robot][1])
         else:
             #we want to do the ring now 
-            #have a loop from -ringNum to ringNum for x and y
-            #find what the x and y the goal place corespond to
-
-            #bug here returns none type
-            tempGoalPlace = 0
-            for i in range(self.goalX-ringNumber,self.goalX+ringNumber):
-                for j in range(self.goalY-ringNumber,self.goalY+ringNumber):
-                    #calculate manhattan distance for each robot to here
-                    if not(i == self.goalX or j == self.goalY) and tempGoalPlace == goalPlace-4:
-                        #bounds checks
-                        if (i < 0 or i > self.numRobots) or (j < 0 or j > self.numRobots):
-                            return -1
-                        return self.calcBetweenTwoSpaces(i,j, self.robotList[robot][0], self.robotList[robot][1])
-                    tempGoalPlace +=1
+            return self.calcBetweenTwoSpaces(i,j, self.robotList[robot][0], self.robotList[robot][1])
 
     def calcBetweenTwoSpaces(self, targetX, targetY, rx, ry):
         distance = abs(targetX-rx) + abs(targetY-ry)
@@ -192,20 +210,23 @@ class Robot(Thread):
         self.network.broadcastMessage(message)
         #Wait for the messages for the election are recieved
         while(self.queue.qsize()!=(self.numRobots -1)):
-            time.sleep(1)
+            time.sleep(0.5)
         #logging.info(str(self.queue.qsize()) +" queue size")
         self.electLeader()
         logging.info('Leader elected!')
         if(self.isLeader):
             logging.info(str(self.robotID) + " is the leader!")
-
+        
         self.network.broadcastMessage([self.robotID, "position", [self.x,self.y]])
         time.sleep(1)
 
         while(self.alive):
-            self.logSelf("start")
-
+            self.logSelf("start while")
             if(self.isLeader):
+                #Wait for recieving the positions of all robots
+                while(len(self.robotList)<self.numRobots-1):
+                    time.sleep(0.5)
+                    logging.info("robotList = "+str(self.robotList))
                 #Leader issue commands to other robots through the network
                 #This also moves the leader
                 self.sendCommands()
