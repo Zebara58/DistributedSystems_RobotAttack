@@ -43,24 +43,24 @@ class Robot(Thread):
     def recieveMessage(self, message):
         logging.info("Robot"+str(self.robotID)+" recieved message! - "+str(message))
 
-        if(not self.leaderElected):
-            self.logSelf("Waiting for leader to be elected")
-            time.sleep(0.5)
-
         if message[1] == "Elect leader":
             self.queue.put(message[0])
         elif message[1] == "Move":
             self.moveQueue.put(message[0])
-        elif (self.isLeader):  
-            if(not self.goalFound and message[1] =="goal"):
-                self.goalX = message[0][0]
-                self.goalY = message[0][1]
-                self.logSelf("Leader found goal at "+str(self.goalX) +" " + str(self.goalY))
-            elif(message[1] == "position"):
-                mesX = message[2][0]
-                mesY = message[2][1]
-                self.matrix[mesX][mesY] = str(message[0])
-                self.robotList[str(message[0])] = [mesX,mesY]
+        else:
+            while(not self.leaderElected):
+                self.logSelf("Waiting for leader to be elected")
+                time.sleep(0.5)
+            if(self.isLeader):  
+                if(not self.goalFound and message[1] =="goal"):
+                    self.goalX = message[0][0]
+                    self.goalY = message[0][1]
+                    self.logSelf("Leader found goal at "+str(self.goalX) +" " + str(self.goalY))
+                elif(message[1] == "position"):
+                    mesX = message[2][0]
+                    mesY = message[2][1]
+                    self.matrix[mesX][mesY] = str(message[0])
+                    self.robotList[str(message[0])] = [mesX,mesY]
         self.logSelf("finished recieving message - "+str(message))
     def robotConnectToNetwork(self, Network):
         self.network = Network
