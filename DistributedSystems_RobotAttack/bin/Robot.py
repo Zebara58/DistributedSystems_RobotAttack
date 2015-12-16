@@ -110,39 +110,43 @@ class Robot(Thread):
                 j=-1
 
                 #check if robot is in goal space
-                #gX = self.goalX
-                #gY = self.goalY -1
-                #if(gY>-1 and self.matrix[gX][gY]!="0"):
-                #    if self.matrix[gX][gY] in tempRobotList.keys():
-                #        del tempRobotList[self.matrix[gX][gY]]
-                #        self.robotPlacement.append([0, gX, gY])
-                #        placed+=1
-                #    invalidPlace= True
-                    
-                #gX = self.goalX
-                #gY = self.goalY +1
-                #if(gY<self.ySize and self.matrix[gX][gY]!="0"):
-                #    if self.matrix[gX][gY] in tempRobotList.keys():
-                #        del tempRobotList[self.matrix[gX][gY]]
-                #        self.robotPlacement.append([0, gX, gY])
-                #        placed+=1
-                #    invalidPlace= True
-                #gX = self.goalX -1
-                #gY = self.goalY
-                #if(gX>-1 and self.matrix[gX][gY]!="0"):
-                #    if self.matrix[gX][gY] in tempRobotList.keys():
-                #        del tempRobotList[self.matrix[gX][gY]]
-                #        self.robotPlacement.append([0, gX, gY])
-                #        placed+=1
-                #    invalidPlace= True
-                #gX = self.goalX +1
-                #gY = self.goalY
-                #if(gX<self.xSize and self.matrix[gX][gY]!="0"):
-                #    if self.matrix[gX][gY] in tempRobotList.keys():
-                #        del tempRobotList[self.matrix[gX][gY]]
-                #        self.robotPlacement.append([0, gX, gY])
-                #        placed+=1
-                #    invalidPlace= True
+                if(goalPlace==0):
+                    gX = self.goalX
+                    gY = self.goalY -1
+                    if(gY>-1 and self.matrix[gX][gY]!="0"):
+                        if self.matrix[gX][gY] in tempRobotList.keys():
+                            del tempRobotList[self.matrix[gX][gY]]
+                            self.robotPlacement.append([0, gX, gY])
+                            placed+=1
+                        invalidPlace= True
+                elif(goalPlace == 1):     
+                    gX = self.goalX
+                    gY = self.goalY +1
+                    if(gY<self.ySize and self.matrix[gX][gY]!="0"):
+                        if self.matrix[gX][gY] in tempRobotList.keys():
+                            del tempRobotList[self.matrix[gX][gY]]
+                            self.robotPlacement.append([0, gX, gY])
+                            placed+=1
+                        invalidPlace= True
+
+                elif(goalPlace == 2):
+                    gX = self.goalX -1
+                    gY = self.goalY
+                    if(gX>-1 and self.matrix[gX][gY]!="0"):
+                        if self.matrix[gX][gY] in tempRobotList.keys():
+                            del tempRobotList[self.matrix[gX][gY]]
+                            self.robotPlacement.append([0, gX, gY])
+                            placed+=1
+                        invalidPlace= True
+                elif(goalPlace == 3):
+                    gX = self.goalX +1
+                    gY = self.goalY
+                    if(gX<self.xSize and self.matrix[gX][gY]!="0"):
+                        if self.matrix[gX][gY] in tempRobotList.keys():
+                            del tempRobotList[self.matrix[gX][gY]]
+                            self.robotPlacement.append([0, gX, gY])
+                            placed+=1
+                        invalidPlace= True
 
                     
 
