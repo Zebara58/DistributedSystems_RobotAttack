@@ -32,13 +32,13 @@ if __name__ == '__main__':
 
     os.remove("robotattack.log");
 
-    xSize = 8
-    ySize = 8
+    xSize = 6
+    ySize = 6
 
     condition = threading.Condition()
     m = Map(xSize, ySize)
 
-    numRobots = 10
+    numRobots = 5
     rules = Rules(numRobots, m, condition)
     print("before rules")
     rules.start()
@@ -49,7 +49,7 @@ if __name__ == '__main__':
         uniqueIDfound = False
         
         while not uniqueIDfound:
-            newID = random.randint(0, 99)
+            newID = random.randint(1, 99)
             if newID not in robotIDs:
                 uniqueIDfound = True
         robotIDs.append(newID)
