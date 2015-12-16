@@ -4,6 +4,7 @@ import threading
 import time
 import logging
 from queue import *
+
 class Robot(Thread):
     def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition, numRobots):
         #Intialize
@@ -162,7 +163,7 @@ class Robot(Thread):
                                 #calculate position
                                 if tempGoalPlace+4 == goalPlace:
                                     #bounds checks
-                                    if (i == self.goalX or j == self.goalY) or (i < 0 or i >= self.numRobots) or (j < 0 or j >= self.numRobots) or (self.mainMap.matrix[i][j]!="0"):
+                                    if (i == self.goalX or j == self.goalY) or (i < 0 or i >= self.xSize) or (j < 0 or j >= self.ySize) or (self.mainMap.matrix[i][j]!="0"):
                                         invalidPlace = True
                                     logging.info("Found ring place -> x="+str(i)+" y="+str(j))
                                     foundRingPlace = True
@@ -173,7 +174,7 @@ class Robot(Thread):
                                 #calculate position
                                 if tempGoalPlace+4 == goalPlace:
                                     #bounds checks
-                                    if (i == self.goalX or j == self.goalY) or (i < 0 or i > self.numRobots) or (j < 0 or j > self.numRobots) or (self.mainMap.matrix[i][j]!="0"):
+                                    if (i == self.goalX or j == self.goalY) or (i < 0 or i >= self.xSize) or (j < 0 or j >= self.ySize) or (self.mainMap.matrix[i][j]!="0"):
                                         invalidPlace = True
                                     logging.info("Found ring place -> x="+str(i)+" y="+str(j))
                                     foundRingPlace = True
@@ -254,6 +255,11 @@ class Robot(Thread):
 
     def calcBetweenTwoSpaces(self, targetX, targetY, rx, ry):
         distance = abs(targetX-rx) + abs(targetY-ry)
+
+        #Heuristic so that robots are assigned to a closer position
+        distanceToGoal = abs(self.goalX-rx) + abs(self.goalY-ry)
+        if(distanceToGoal<=distance):
+            return distance*999
         return distance
             
     def logSelf(self, m):
