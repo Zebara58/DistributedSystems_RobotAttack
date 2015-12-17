@@ -20,7 +20,7 @@ class Rules(Thread):
         while(not gameOver):
             if(self.notifyA==self.numR):
                 #logging.info("notifyA limit reached!")
-                time.sleep(3)
+                time.sleep(1)
                 self.notifyA=0
                 with self.cv:
                     self.cv.acquire()

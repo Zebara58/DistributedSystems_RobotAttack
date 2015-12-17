@@ -328,7 +328,7 @@ class Robot(Thread):
                 #reset yMove
                 roundNum = roundNumOrig
                 logging.info("tryMoveVert failed")
-                return -1
+                return -1, roundNum
             else:
                 roundNum+=1
                 path.append([roundNum, xMove, yMove])
