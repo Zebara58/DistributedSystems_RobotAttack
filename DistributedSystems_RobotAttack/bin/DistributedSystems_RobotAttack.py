@@ -38,7 +38,7 @@ if __name__ == '__main__':
     condition = threading.Condition()
     m = Map(xSize, ySize)
 
-    numRobots = 5
+    numRobots = 2
     rules = Rules(numRobots, m, condition)
     print("before rules")
     rules.start()

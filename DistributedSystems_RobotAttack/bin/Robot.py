@@ -4,6 +4,7 @@ import threading
 import time
 import logging
 from queue import *
+import random
 
 class Robot(Thread):
     def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition, numRobots):
@@ -84,7 +85,6 @@ class Robot(Thread):
 
         if(lowest == self.robotID):
             self.isLeader = True
-            self.pathList = []
             self.robotPlacement = []
             self.determineQuadrants()
         self.leaderElected = True
@@ -101,65 +101,61 @@ class Robot(Thread):
             ringNum = 1
             lowestRobot = self
 
-            #only run if robotPlacement is empty
-            if(len(self.robotPlacement)==0):
-                logging.info("Running robotPlacement filling!")
+            self.robotList[str(self.robotID)] = [self.x,self.y]
+            #logging.info("robotList = "+str(self.robotList))
 
-                self.robotList[str(self.robotID)] = [self.x,self.y]
-                #logging.info("robotList = "+str(self.robotList))
+
+            #only run if robotPlacement is empty
+            #if(len(self.robotPlacement)==0):
+            self.robotPlacement = []
+            if(True):
+                logging.info("Running robotPlacement filling!")
             
                 tempRobotList = deepcopy(self.robotList)
                 #logging.info("robotList deepcopy= "+str(tempRobotList))
-                invalidPlace = False
+
+                #check if robot is in goal space
+                gX = self.goalX
+                gY = self.goalY -1
+                if(gY>-1 and self.matrix[gX][gY]!="0"):
+                    if self.matrix[gX][gY] in tempRobotList.keys():
+                        del tempRobotList[self.matrix[gX][gY]]
+                        self.robotPlacement.append([self.matrix[gX][gY], gX, gY, 0])
+                        placed+=1
+   
+                gX = self.goalX
+                gY = self.goalY +1
+                if(gY<self.ySize and self.matrix[gX][gY]!="0"):
+                    if self.matrix[gX][gY] in tempRobotList.keys():
+                        del tempRobotList[self.matrix[gX][gY]]
+                        self.robotPlacement.append([self.matrix[gX][gY], gX, gY, 0])
+                        placed+=1
+
+
+                gX = self.goalX -1
+                gY = self.goalY
+                if(gX>-1 and self.matrix[gX][gY]!="0"):
+                    if self.matrix[gX][gY] in tempRobotList.keys():
+                        del tempRobotList[self.matrix[gX][gY]]
+                        self.robotPlacement.append([self.matrix[gX][gY], gX, gY, 0])
+                        placed+=1
+
+                gX = self.goalX +1
+                gY = self.goalY
+                if(gX<self.xSize and self.matrix[gX][gY]!="0"):
+                    if self.matrix[gX][gY] in tempRobotList.keys():
+                        del tempRobotList[self.matrix[gX][gY]]
+                        self.robotPlacement.append([self.matrix[gX][gY], gX, gY, 0])
+                        placed+=1
+                
+                invalidPlace= False
 
                 while(placed<len(self.robotList)):
                     lowest = 99999
                     i=-1
                     j=-1
 
-                    #check if robot is in goal space
-                    if(ringNum==1):
-                        if(goalPlace==0):
-                            gX = self.goalX
-                            gY = self.goalY -1
-                            if(gY>-1 and self.matrix[gX][gY]!="0"):
-                                if self.matrix[gX][gY] in tempRobotList.keys():
-                                    del tempRobotList[self.matrix[gX][gY]]
-                                    self.robotPlacement.append([self.matrix[gX][gY], gX, gY])
-                                    placed+=1
-                                invalidPlace= True
-                        elif(goalPlace == 1):     
-                            gX = self.goalX
-                            gY = self.goalY +1
-                            if(gY<self.ySize and self.matrix[gX][gY]!="0"):
-                                if self.matrix[gX][gY] in tempRobotList.keys():
-                                    del tempRobotList[self.matrix[gX][gY]]
-                                    self.robotPlacement.append([self.matrix[gX][gY], gX, gY])
-                                    placed+=1
-                                invalidPlace= True
-
-                        elif(goalPlace == 2):
-                            gX = self.goalX -1
-                            gY = self.goalY
-                            if(gX>-1 and self.matrix[gX][gY]!="0"):
-                                if self.matrix[gX][gY] in tempRobotList.keys():
-                                    del tempRobotList[self.matrix[gX][gY]]
-                                    self.robotPlacement.append([self.matrix[gX][gY], gX, gY])
-                                    placed+=1
-                                invalidPlace= True
-                        elif(goalPlace == 3):
-                            gX = self.goalX +1
-                            gY = self.goalY
-                            if(gX<self.xSize and self.matrix[gX][gY]!="0"):
-                                if self.matrix[gX][gY] in tempRobotList.keys():
-                                    del tempRobotList[self.matrix[gX][gY]]
-                                    self.robotPlacement.append([self.matrix[gX][gY], gX, gY])
-                                    placed+=1
-                                invalidPlace= True
-
-                    
-
-                    if((not invalidPlace) and goalPlace>3):
+                    if(goalPlace>3):
                         #have a loop from -ringNum to ringNum for x and y
                         #find what the x and y the goal place corespond to
                         tempGoalPlace = 0
@@ -241,7 +237,7 @@ class Robot(Thread):
 
                         if not invalidPlace:
                             placed+=1
-                            self.robotPlacement.append([lowestRobot, i, j])
+                            self.robotPlacement.append([lowestRobot, i, j, lowest])
                             #logging.info(tempRobotList)
                             del tempRobotList[lowestRobot]
                             #logging.info("tempRobotList after del "+str(tempRobotList))
@@ -258,17 +254,94 @@ class Robot(Thread):
             #self.network.broadcastMessage(message)
             #self.move("d")
         logging.info("robotPlacement = "+str(self.robotPlacement))
-        for robotP in self.robotPlacement:
-            tempRL = self.robotList[robotP[0]]
-            self.findMoveAndSend(robotP[0], robotP[1],robotP[2], tempRL[0], tempRL[1])
-        
-    def findMoveAndSend(self, id, destX, destY, curX, curY):
-        logging.info("MoveAndSend - id:"+str(id)+" destx:" +str(destX)+" destY:"+str(destY)+" curX:"+str(curX)+" curY:"+str(curY))
         self.pathList = []
         self.robotsMoved = []
+
+        #sort robotPlacement by distance
+        self.robotPlacement = self.quickSort(self.robotPlacement)
+        logging.info("robotPlacement after sort = "+str(self.robotPlacement))
+
+        for robotP in self.robotPlacement:
+            tempRL = self.robotList[robotP[0]]
+            self.destinationList = []
+            self.calculatePathAndSend(robotP[0], robotP[1],robotP[2], tempRL[0], tempRL[1])
+
+    #Source: http://stackoverflow.com/questions/18262306/quick-sort-with-python
+    def quickSort(self, array):
+        less = []
+        equal = []
+        greater = []
+
+        if len(array) > 1:
+            pivot = array[0][3]
+            for x in array:
+                if x[3] < pivot:
+                    less.append(x)
+                if x[3] == pivot:
+                    equal.append(x)
+                if x[3] > pivot:
+                    greater.append(x)
+            # Don't forget to return something!
+            return self.quickSort(less)+equal+self.quickSort(greater)  # Just use the + operator to join lists
+        # Note that you want equal ^^^^^ not pivot
+        else:  # You need to hande the part at the end of the recursion - when you only have one element in your array, just return the array.
+            return array
+
+    #if you can't move vertically to the position y, then reduce yMove by 1
+    #alters path
+    def tryMoveVert(self, xMove, yMove, destY, moveDown, roundNum, path, pathStr):
+        while(yMove!=destY):
+            if(moveDown):
+                yMove+=1
+            else:
+                yMove-=1
+            pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
+            pStr2 = str(xMove)+" "+str(yMove)
+            #if(self.matrix[xMove][yMove] != "0"):
+            if(pStr in self.pathList or pStr2 in self.destinationList):
+                #reset yMove
+                roundNum-=1
+                if(moveDown):
+                    yMove-=1
+                else:
+                    yMove+=1
+                break
+            else:
+                roundNum+=1
+                path.append([roundNum, xMove, yMove])
+                pathStr.append(str(roundNum)+" "+str(xMove)+" "+str(yMove))
+        logging.info("tryMoveVert finished and got ["+str(xMove)+" "+str(yMove)+"]")
+        return yMove, roundNum
+    #if you can't move horizontally to the position, then reset xMove completely
+    #alters path
+    def tryMoveHor(self, xMove, yMove, destX, moveRight, roundNum, path, pathStr):	
+        roundNumOrig = roundNum
+        while(xMove!=destX):
+            if(moveRight):
+                xMove+=1
+            else:
+                xMove-=1
+            #if(self.matrix[xMove][yMove] != "0"):
+            pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
+            pStr2 = str(xMove)+" "+str(yMove)
+            if(pStr in self.pathList or pStr2 in self.destinationList):
+                #reset yMove
+                roundNum = roundNumOrig
+                logging.info("tryMoveVert failed")
+                return -1
+            else:
+                roundNum+=1
+                path.append([roundNum, xMove, yMove])
+                pathStr.append(str(roundNum)+" "+str(xMove)+" "+str(yMove))
+        logging.info("tryMoveHor succeeded and got ["+str(xMove)+" "+str(yMove)+"]")
+        return xMove, roundNum
+
+    def calculatePathAndSend(self, id, destX, destY, curX, curY):
+        logging.info("MoveAndSend - id:"+str(id)+" destx:" +str(destX)+" destY:"+str(destY)+" curX:"+str(curX)+" curY:"+str(curY))
         pathStr = ""
         validPath = False
         path = []
+        pathStr = []
         xMove = curX
         yMove = curY
         #move down
@@ -280,206 +353,187 @@ class Robot(Thread):
         moveRight = False
         if(destX>curX):
             moveRight = True
-
-        #simple case where you only need to go one direction 
-        if(destX==curX and destY == curY):
-            #no move
-            logging.info("no move")
-            pathStr = str(xMove)+" "+str(yMove)
-            if(str(self.robotID) == id):
-                self.move("n")
-            else:
-                self.network.broadcastMessage([id,"Move","n"])
-        elif(destY==curY):
-            if(moveRight):
-                logging.info("right move")
-                pathStr = str(xMove+1)+" "+str(yMove)
-                if(str(self.robotID) == id):
-                    self.move("r")
-                else:
-                    self.network.broadcastMessage([id,"Move","r"])
-            else:
-                logging.info("left move")
-                pathStr = str(xMove-1)+" "+str(yMove)
-                if(str(self.robotID) == id):
-                    self.move("l")
-                else:
-                    self.network.broadcastMessage([id,"Move","l"])
-        elif(destX==curX):
-            if(moveDown):
-                logging.info("down move")
-                pathStr = str(xMove)+" "+str(yMove+1)
-                if(str(self.robotID) == id):
-                    self.move("d")
-                else:
-                    self.network.broadcastMessage([id,"Move","d"])
-            else:
-                logging.info("up move")
-                pathStr = str(xMove)+" "+str(yMove-1)
-                if(str(self.robotID) == id):
-                    self.move("u")
-                else:
-                    self.network.broadcastMessage([id,"Move","u"])
-        else:
-            #DEBUGGING always move down
-            #yMove +=1
-            #pathStr = str(xMove)+" "+str(yMove)
-            #if(str(self.robotID) == id):
-            #    self.move("d")
-            #else:
-            #    self.network.broadcastMessage([id,"Move","d"])
-
-            #consider both directions
-
-            #move down to destination level
-            if(moveDown):
-                yMove +=1
-                pathStr = str(xMove)+" "+str(yMove)
             
-                if(pathStr in self.pathList):
-                    #down path blocked so take a left or right
+		#Calculate path
+        prevX = xMove
+        prevY = yMove
 
-                    #reset yMove
-                    yMove -= 1
+        roundNum = 1
 
-                    if(moveRight):
-                        xMove +=1
-                    else:
-                        xMove -=1
-                    pathStr = str(xMove)+" "+str(yMove)
-                    #Don't check board spot if filled or exists in path list. Just DO IT!
-                    if(moveRight):
-                        if(str(self.robotID) == id):
-                            self.move("r")
-                        else:
-                            self.network.broadcastMessage([id,"Move","r"])
-                    else:
-                        if(str(self.robotID) == id):
-                            self.move("l")
-                        else:
-                            self.network.broadcastMessage([id,"Move","l"])
-                else:
-                    #check if the space is filled and if that robot has already moved
-                    #since we can't know current positions we have to assume that the robots 
-                    #   followed commands and moved already
-                    if(self.matrix[xMove][yMove]!="0"):
-                        if(self.matrix[xMove][yMove] in self.robotsMoved):
-                            if(str(self.robotID) == id):
-                                self.move("d")
-                            else:
-                                self.network.broadcastMessage([id,"Move","d"])
-                        else:
-                            #Try left or right since the robot hasn't moved yet
+        savePathVertSet = False
+        savePathVert = []
+        savePathRound = 1
+        savePathY = curY
 
-                            #reset yMove
-                            yMove -= 1
+        xCouldMove = True
+        while(not validPath):
+            logging.info("Starting 'L' path for robot:"+str(id))  
+            if(xCouldMove):
+                yMove, roundNum = self.tryMoveVert(xMove, yMove, destY, moveDown, roundNum, path, pathStr)
+            xMove, roundNum = self.tryMoveHor(xMove, yMove, destX, moveRight, roundNum, path, pathStr)
 
-                            if(moveRight):
-                                xMove +=1
-                            else:
-                                xMove -=1
-                            pathStr = str(xMove)+" "+str(yMove)
-                            #Don't check board spot if filled or exists in path list. Just DO IT!
-                            if(moveRight):
-                                if(str(self.robotID) == id):
-                                    self.move("r")
-                                else:
-                                    self.network.broadcastMessage([id,"Move","r"])
-                            else:
-                                if(str(self.robotID) == id):
-                                    self.move("l")
-                                else:
-                                    self.network.broadcastMessage([id,"Move","l"])
-                    else:
-                        if(str(self.robotID) == id):
-                            self.move("d")
-                        else:
-                            self.network.broadcastMessage([id,"Move","d"])
-            else:
+            if(xMove == destX and yMove == destY):
+                validPath = True
+                self.destinationList.append(str(xMove)+ " "+str(yMove))
+                break
+            elif((prevX==xMove and prevY == yMove) or yMove<0):
+                logging.error("No valid 'L' path for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so try arc path!")
+                vaildPath = False
+                break
+            elif(xMove == -1):
+                #couldn't get to goal with horizontal so backtrack
+
+                #save path for later before reset by 1
+                if(not savePathVertSet):
+                    savePathVert = path
+                    savePathRound = roundNum
+                    savePathY = yMove
+                    savePathVertSet = True
+
                 yMove -=1
-                pathStr = str(xMove)+" "+str(yMove)
-                if(pathStr in self.pathList):
-                    #reset yMove
-                    yMove += 1
+                if(yMove<0):
+                    logging.error("No valid path #2 for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so try arc path!")
+                    vaildPath = False
+                    yMove = 0
+                    break
+                roundNum -=1
+                xMove = prevX
+                prevY = yMove
+                xCouldMove = False
+                del path[len(path)-1]
+                del pathStr[len(path)-1]
+            else:
+                #do vertical again since xMove got to destX
+                prevX = xMove
+                prevY = yMove
+                xCouldMove = True
 
-                    if(moveRight):
-                        xMove +=1
-                    else:
-                        xMove -=1
-                    pathStr = str(xMove)+" "+str(yMove)
-                    #Don't check board spot if filled or exists in path list. Just DO IT!
-                    if(moveRight):
-                        if(str(self.robotID) == id):
-                            self.move("r")
-                        else:
-                            self.network.broadcastMessage([id,"Move","r"])
-                    else:
-                        if(str(self.robotID) == id):
-                            self.move("l")
-                        else:
-                            self.network.broadcastMessage([id,"Move","l"])
+        #if(not validPath):
+        #    logging.info("Starting arc path past depth to dest Y for robot:"+str(id))
+        #    #start moving past the goal and checking
+        #    xMove = curX
+            
+        #    #restore max vert path
+        #    path = savePathVert
+        #    roundNum = savePathRound
+        #    yMove = savePathY
+
+        #    xCouldMove =True
+        #    validPath = False
+
+        #    xPrev = xMove
+        #    yPrev = yMove
+        #    while(not validPath):
+        #        if(moveDown):
+        #            yMove+=1
+        #        else:
+        #            yMove-=1
+
+        #        if(yMove<0 or yMove>self.ySize):
+        #            logging.error("No valid arc path past depth due to going off board for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so do nothing")
+        #            vaildPath = False
+        #            break
+
+        #        pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
+        #        pStr2 = str(xMove)+" "+str(yMove)
+        #        #if(self.matrix[xMove][yMove] != "0"):
+        #        if(pStr in self.pathList or pStr2 in self.destinationList):
+        #            #reset yMove
+        #            if(moveDown):
+        #                yMove-=1
+        #            else:
+        #                yMove+=1
+        #            logging.error("No valid arc path past depth due to collision for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so do nothing")
+        #            vaildPath = False
+        #            break
+        #        else:
+        #            roundNum+=1
+        #            path.append([roundNum, xMove, yMove])
+        #            pathStr.append(str(roundNum)+" "+str(xMove)+" "+str(yMove))
+
+        #        xMove, roundNum = self.tryMoveHor(xMove, yMove, destX, moveRight, roundNum, path, pathStr)
+
+        #        if(xMove==-1):
+        #            validPath = False
+        #        else:
+        #            #xMove made it to the destX so try moving up to goal (arc to goal from 'L')
+        #            yMove, roundNum = tryMoveVert(self, xMove, yMove, destY, not moveDown, roundNum, path)
+        #            if(yMove == destY):
+        #                validPath = True
+        #            break
+
+        if(validPath):
+            for p in pathStr:
+                self.pathList.append(p)
+
+
+
+        if(not validPath):
+            logging.info("Do nothing path for robot:"+str(id)+"!")
+            self.moveBroadcast(curX, curY, id, "n") 
+            self.pathList.append(str(1)+ " "+str(curX)+" "+str(curY))
+      #      #Try looking for a path in the less efficient direction
+      #      logging.info("For robot:"+str(id)+" checking less efficient direction")
+      #      validPath = False
+      #      path = []
+      #      xMove = curX
+      #      yMove = curY
+      #      #move down
+      #      pickRandom = False
+
+      #      #Do opposite 
+      #      moveDown = not moveDown
+            
+		    ##Calculate path
+      #      #do opposite direction
+
+
+      #      
+      #      #pickI = random.randint(0,1)
+      #      #if(pickI==0):
+      #      #    if(moveDown):
+      #      #        pathStr = self.moveBroadcast(xMove, yMove, id, "d")
+      #      #    else:
+      #      #        pathStr = self.moveBroadcast(xMove, yMove, id, "u")
+      #      #else:
+      #      #    if(moveRight):
+      #      #        pathStr = self.moveBroadcast(xMove, yMove, id, "r")
+      #      #    else:
+      #      #        pathStr = self.moveBroadcast(xMove, yMove, id, "l")
+        if(validPath):
+            #determine direction from first move
+            logging.info("Path found! - "+str(path))
+            if(len(path)==0):
+                pathStr = self.moveBroadcast(xMove, yMove, id, "n")
+            elif(moveDown):
+                if(path[0][2]>curY):
+                    pathStr = self.moveBroadcast(xMove, yMove, id, "d")
+                elif(path[0][1]>curX):
+                    pathStr = self.moveBroadcast(xMove, yMove, id, "r")
                 else:
-                    #check if the space is filled and if that robot has already moved
-                    #since we can't know current positions we have to assume that the robots 
-                    #   followed commands and moved already
-                    if(self.matrix[xMove][yMove]!="0"):
-                        if(self.matrix[xMove][yMove] in self.robotsMoved):
-                            if(str(self.robotID) == id):
-                                self.move("u")
-                            else:
-                                self.network.broadcastMessage([id,"Move","u"])
-                        else:
-                            #Try left or right since the robot hasn't moved yet
+                    pathStr = self.moveBroadcast(xMove, yMove, id, "l")
+            else:
+                if(path[0][2]<curY):
+                    pathStr = self.moveBroadcast(xMove, yMove, id, "u")
+                elif(path[0][1]>curX):
+                    pathStr = self.moveBroadcast(xMove, yMove, id, "r")
+                else:
+                    pathStr = self.moveBroadcast(xMove, yMove, id, "l")
 
-                            #reset yMove
-                            yMove -= 1
-
-                            if(moveRight):
-                                xMove +=1
-                            else:
-                                xMove -=1
-                            pathStr = str(xMove)+" "+str(yMove)
-                            #Don't check board spot if filled or exists in path list. Just DO IT!
-                            if(moveRight):
-                                if(str(self.robotID) == id):
-                                    self.move("r")
-                                else:
-                                    self.network.broadcastMessage([id,"Move","r"])
-                            else:
-                                if(str(self.robotID) == id):
-                                    self.move("l")
-                                else:
-                                    self.network.broadcastMessage([id,"Move","l"])
-                    else:
-                        if(str(self.robotID) == id):
-                            self.move("u")
-                        else:
-                            self.network.broadcastMessage([id,"Move","u"])
-        
-        #Finished so append to pathList and to robotsMoved
-        logging.info("sent command for id:"+str(id)+" for pathStr:"+pathStr)
-        self.robotsMoved.append(id)
-        if(pathStr in self.pathList):
-            logging.info("Tried to add already existing path to past list.")
+    def moveBroadcast(self, xMove, yMove, id, dir):
+        logging.info(str(dir)+" move")
+        pathStr = str(xMove)+" "+str(yMove)
+        if(str(self.robotID) == id):
+            self.move(dir)
         else:
-            self.pathList.append(pathStr)
+            self.network.broadcastMessage([id,"Move",dir])
 
-
-            #for i in range(curY, destY+1):
-            #    yMove -=1
-            #    pathStr = str(id)+" "+str(xMove)+" "+str(yMove)
-
-            #    #down path blocked
-            #    if(pathStr in self.pathList):
-            #        yMove += 1
-            #        if(moveRight):
-            #            xMove +=1
-            #        else:
-            #            xMove +=1
-            #        pathStr = str(id)+" "+str(xMove)+" "+str(yMove)
-            #        if(pathStr in self.pathList):
-            #    path.append([destX, 
-        #while(not validPath):
+    def moveBroadcast2(self, id, dir):
+        logging.info(str(dir)+" move")
+        if(str(self.robotID) == id):
+            self.move(dir)
+        else:
+            self.network.broadcastMessage([id,"Move",dir])
 
     def calcBetweenTwoSpaces(self, targetX, targetY, rx, ry):
         distance = abs(targetX-rx) + abs(targetY-ry)
@@ -487,7 +541,7 @@ class Robot(Thread):
         #Heuristic so that robots are assigned to a closer position
         distanceToGoal = abs(self.goalX-rx) + abs(self.goalY-ry)
         if(distanceToGoal<=distance):
-            return distance*999
+            return distance*2
         return distance
             
     def logSelf(self, m):
@@ -519,9 +573,13 @@ class Robot(Thread):
                 while(len(self.robotList)<self.numRobots-1):
                     time.sleep(0.005)
                     #logging.info("robotList = "+str(self.robotList))
+
                 #Leader issue commands to other robots through the network
                 #This also moves the leader
                 self.sendCommands()
+
+                #reset robotList
+                self.robotList = {}
             else:
                 #Wait to recieve command from leader
                 while(self.moveQueue.empty()):
@@ -556,31 +614,28 @@ class Robot(Thread):
                 if(self.matrix[self.x+1][self.y]=='0'):
                     self.matrix[self.x][self.y] = '0'
                     self.x = self.x+1
-                    self.matrix[self.x][self.y] = str(self.robotID)
 
         elif(dir=="l"):
             if(self.x!=0):
                 if(self.matrix[self.x-1][self.y]=='0'):
                     self.matrix[self.x][self.y] = '0'
                     self.x = self.x-1
-                    self.matrix[self.x][self.y] = str(self.robotID)
-
+                    
         elif(dir=="d"):
             if(self.y!=self.ySize-1):
                 if(self.matrix[self.x][self.y+1]=='0'):
                     self.matrix[self.x][self.y] = '0'
                     self.y = self.y+1
-                    self.matrix[self.x][self.y] = str(self.robotID)
 
         elif(dir=="u"):
             if(self.y!=0):
                 if(self.matrix[self.x][self.y-1]=='0'):
                     self.matrix[self.x][self.y] = '0'
                     self.y = self.y-1
-                    self.matrix[self.x][self.y] = str(self.robotID)
 
         #m.getLock()
-        self.mainMap.update(self.x, self.y, prevLocX, prevLocY, self.robotID)
+        if(self.mainMap.update(self.x, self.y, prevLocX, prevLocY, self.robotID)):
+            self.matrix[self.x][self.y] = str(self.robotID)
         #m.releaseLock()
         #self.wait()
 

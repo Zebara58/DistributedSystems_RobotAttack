@@ -37,7 +37,11 @@ class Map:
     #    self.lock.release()
 
     def update(self, curX, curY, prevX, prevY, id):
-        self.matrix[prevX][prevY] = '0'
-        #check for malicious robot location here
-        self.matrix[curX][curY] = id
-        logging.info("update for "+str(id)+" curX-"+str(curX)+"  curY-"+str(curY)+ "  prevX-"+str(prevX)+"  prevY-"+str(prevY))
+        if(self.matrix[curX][curY]=="0"):
+            self.matrix[prevX][prevY] = "0"
+            #check for malicious robot location here
+            self.matrix[curX][curY] = id
+            logging.info("update for "+str(id)+" curX-"+str(curX)+"  curY-"+str(curY)+ "  prevX-"+str(prevX)+"  prevY-"+str(prevY))
+            return True
+        else:
+            return False
