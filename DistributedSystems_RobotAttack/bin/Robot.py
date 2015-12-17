@@ -152,62 +152,159 @@ class Robot(Thread):
             invalidPlace= False
 
             #calculate positions list
+            posList = []
+            numAdded = 0
+            robotPlacementTemp = []
 
-            #ATTEMPT to move robots out of position to fill empty spot
             tempRobotList = []
             for rkey in self.robotList:
                 tempRobotList.append(rkey)
             tempRobotList2 = deepcopy(tempRobotList)
-
-            addedPos = 0
-            posList = []
-            top = [self.goalX, self.goalY-ringNum]
-            bot = [self.goalX, self.goalY+ringNum]
-            left = [self.goalX-ringNum, self.goalY]
-            right = [self.goalX+ringNum, self.goalY]
-            posList=[top, bot, left, right]
-
-            for pos in posList:
-                if(pos[0]<0 or pos[0]>self.xSize-1 or pos[1]<0 or pos[1]>self.ySize-1):
-                    posList.remove(pos)
-
-            posListOrig = posList
-            robotPlacementTemp = []
-            posListTemp = deepcopy(posList)
-            numberOfCrossPositions = len(posList)
-            addedPosTemp = addedPos
-            while(addedPosTemp<numberOfCrossPositions and addedPosTemp<self.numRobots):
-                lowestDist = 999999
-                lowestRobot = None
-                lowestPos = None
-                for r2key in tempRobotList:
-                    for pos in posListTemp:
-                        tempRL = self.robotList[r2key]
-                        dist= self.calcBetweenTwoSpaces(pos[0],pos[1], tempRL[0], tempRL[1])
-                        if(dist<lowestDist):
-                            lowestDist = dist
-                            lowestRobot = r2key
-                            lowestPos = pos
+            while(numAdded < self.numRobots):
+                #ATTEMPT to move robots out of position to fill empty spot
                 
-                addedPosTemp+=1
+                logging.info("starting loop again with numAdded ="+str(numAdded))
+                top = [self.goalX, self.goalY-ringNum]
+                bot = [self.goalX, self.goalY+ringNum]
+                left = [self.goalX-ringNum, self.goalY]
+                right = [self.goalX+ringNum, self.goalY]
+                posList=[top, bot, left, right]
 
-                robotPlacementTemp.append([lowestRobot, lowestPos[0], lowestPos[1], lowestDist])
+                for pos in posList:
+                    if(pos[0]<0 or pos[0]>self.xSize-1 or pos[1]<0 or pos[1]>self.ySize-1):
+                        posList.remove(pos)
 
-                #logging.info(tempRobotList)
-                tempRobotList.remove(lowestRobot)
-                posListTemp.remove(lowestPos)
-                #logging.info("tempRobotList after del "+str(tempRobotList))
-                logging.info("TEMP ADD "+str(lowestRobot) + " is the lowest robot with distance " + str(lowestDist) + " for space number " +str(addedPosTemp ) + " at location "+str(lowestPos[0])+", "+str(lowestPos[1]))
+
+                #calculate the cross poisitions and add them to robotPlacementTemp
+                posListOrig = posList
+
+                posListTemp = deepcopy(posList)
+                numberOfCrossPositions = len(posList)
+                #addedPosTemp = addedPos
+                addedPos = 0
+                while(addedPos<numberOfCrossPositions and numAdded<self.numRobots):
+                    lowestDist = 999999
+                    lowestRobot = None
+                    lowestPos = None
+                    for r2key in tempRobotList:
+                        for pos in posListTemp:
+                            tempRL = self.robotList[r2key]
+                            dist= self.calcBetweenTwoSpaces(pos[0],pos[1], tempRL[0], tempRL[1])
+                            if(dist<lowestDist):
+                                lowestDist = dist
+                                lowestRobot = r2key
+                                lowestPos = pos
+                
+                    addedPos+=1
+                    numAdded+=1
+
+                    robotPlacementTemp.append([lowestRobot, lowestPos[0], lowestPos[1], lowestDist])
+
+                    #logging.info(tempRobotList)
+                    tempRobotList.remove(lowestRobot)
+                    posListTemp.remove(lowestPos)
+                    #logging.info("tempRobotList after del "+str(tempRobotList))
+                    logging.info("TEMP ADD "+str(lowestRobot) + " is the lowest robot with distance " + str(lowestDist) + " for space number " +str(addedPos ) + " at location "+str(lowestPos[0])+", "+str(lowestPos[1]))
+
+                
+
+                #do ring spaces now
+
+                #fill up posListTemp with ring spaces
+                #have a loop from -ringNum to ringNum for x and y
+                #find what the x and y the goal place corespond to
+                #addedPos is the target space number
+                # 0 | 1 | 2
+                # 3 | G | 4
+                # 5 | 6 | 7
+                #the goal is to find what x and y addedPos corresponds to
+
+                posListTemp = []
+                tempCount = addedPos
+                while(addedPos < (8*ringNum) and tempCount<self.numRobots):
+                    tempAddedPos = 0
+                    invalidPlace = False
+                    foundRingPlace = False
+                    for j in range(self.goalY-ringNum,self.goalY+ringNum+1):
+                        if(j==self.goalY-ringNum or j == self.goalY+ringNum):
+                            for i in range(self.goalX-ringNum,self.goalX+ringNum+1):
+                                #calculate position
+                                if tempAddedPos == addedPos:
+                                    #bounds checks
+                                    if (i == self.goalX or j == self.goalY) or (i < 0 or i >= self.xSize) or (j < 0 or j >= self.ySize):
+                                        invalidPlace = True
+                                    #logging.info("Found ring place -> x="+str(i)+" y="+str(j))
+                                    foundRingPlace = True
+                                    break
+                                tempAddedPos +=1
+                        else:
+                            for i in [self.goalX-ringNum, self.goalX+ringNum]:
+                                #calculate position
+                                if tempAddedPos == addedPos:
+                                    #bounds checks
+                                    if (i == self.goalX or j == self.goalY) or (i < 0 or i >= self.xSize) or (j < 0 or j >= self.ySize):
+                                        invalidPlace = True
+                                    #logging.info("Found ring place -> x="+str(i)+" y="+str(j))
+                                    foundRingPlace = True
+                                    break
+                                tempAddedPos +=1
+                        if(foundRingPlace):
+                            break
+
+
+                    addedPos+=1
+                    if(foundRingPlace and not invalidPlace):
+                        #add to posListTemp and posList
+                        posListTemp.append([i,j])
+                        posList.append([i,j])
+                        tempCount+=1
+
+                #multiple of 8 placements in each ring
+                if(addedPos == (8*ringNum)):
+                    ringNum+=1
+                    addedPos = 0
+
+                             
+                #add  ring places to robotPlacementTemp
+                #this only runs if there are robots left to fill up the ring
+                logging.info("Starting add ring places to robotPlacementTemp with: tempRobotList="+str(tempRobotList)+ " posListTemp="+str(posListTemp))
+                while(len(posListTemp)>0 and len(tempRobotList)>0):
+                    lowestDist = 999999
+                    lowestRobot = None
+                    lowestPos = None
+                    logging.info("Ring posListTemp:"+str(posListTemp)+" tempRobotList:"+str(tempRobotList))
+                    for r2key in tempRobotList:
+                        for pos in posListTemp:
+                            tempRL = self.robotList[r2key]
+                            dist= self.calcBetweenTwoSpaces(pos[0],pos[1], tempRL[0], tempRL[1])
+                            if(dist<lowestDist):
+                                lowestDist = dist
+                                lowestRobot = r2key
+                                lowestPos = pos
+
+                    numAdded+=1
+
+                    robotPlacementTemp.append([lowestRobot, lowestPos[0], lowestPos[1], lowestDist])
+
+                    #logging.info(tempRobotList)
+                    tempRobotList.remove(lowestRobot)
+                    posListTemp.remove(lowestPos)
+                    #logging.info("tempRobotList after del "+str(tempRobotList))
+                    logging.info("TEMP ADD RING"+str(lowestRobot) + " is the lowest robot with distance " + str(lowestDist) + " at location "+str(lowestPos[0])+", "+str(lowestPos[1]))
+
+                invalidPlace = False
+                logging.info("done with ring - robotPlacementTemp="+str(robotPlacementTemp))
+
+                
 
             #this is done to ensure empty spaces are assigned first   
             logging.info("before sort desc robotPlacement "+str(robotPlacementTemp))
             robotPlacementTemp = sorted(robotPlacementTemp, key=lambda r: r[3], reverse = True)
             logging.info("after sort desc robotPlacement "+str(robotPlacementTemp))
 
-            
-            #CAUSES robots to move out of spot and back into spot
-            numberOfCrossPositions = len(posList)
-            while(addedPos<numberOfCrossPositions and addedPos<self.numRobots):
+            #CAUSES robots to move out of spot and back into spot if run more than once
+            addedPos = 0
+            while(len(robotPlacementTemp)>0 and addedPos<len(posList) and addedPos<self.numRobots):
                 lowestDist = 999999
                 lowestRobot = None
                 lowestPos = None
@@ -231,7 +328,8 @@ class Robot(Thread):
             #robots closer to position move first
             logging.info("before sort ascend robotPlacement "+str(self.robotPlacement))
             self.robotPlacement = sorted(self.robotPlacement, key=lambda r: r[3])
-            logging.info("after sort ascend robotPlacement "+str(self.robotPlacement))
+            logging.info("after sort ascend robotPlacement "+str(self.robotPlacement))  
+                
 
 
             #tempRobotList = deepcopy(self.robotList)
@@ -367,6 +465,8 @@ class Robot(Thread):
         for robotP in self.robotPlacement:
             tempRL = self.robotList[robotP[0]]
             self.calculatePathAndSend(robotP[0], robotP[1],robotP[2], tempRL[0], tempRL[1])
+            logging.info("pathList after moving robot:"+str(robotP[0])+" = "+str(self.pathList))
+        self.robotPlacement = []
         
     #if you can't move vertically to the position y, then reduce yMove by 1
     #alters path
@@ -597,6 +697,7 @@ class Robot(Thread):
             #determine direction from first move
             logging.info("Path found! - "+str(path))
             if(len(path)==0):
+                logging.info("path actually isn't found!")
                 pathStr = self.moveBroadcast(xMove, yMove, id, "n")
             else:
                 if(path[0][2]>curY):
@@ -628,10 +729,10 @@ class Robot(Thread):
     def calcBetweenTwoSpaces(self, targetX, targetY, rx, ry):
         distance = abs(targetX-rx) + abs(targetY-ry)
 
-        ##Heuristic so that robots are assigned to a closer position
-        #distanceToGoal = abs(self.goalX-rx) + abs(self.goalY-ry)
-        #if(distanceToGoal<=distance):
-        #    return distance*2
+        #Heuristic so that robots are assigned to a closer position
+        distanceToGoal = abs(self.goalX-rx) + abs(self.goalY-ry)
+        if(distanceToGoal<=distance):
+            return distance*4
         return distance
             
     def logSelf(self, m):
