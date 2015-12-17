@@ -28,6 +28,24 @@ if __name__ == '__main__':
     setStart = True
     badBots = False
 
+    userInputValid = False
+
+    while not userInputValid:
+        print("Please enter the scenario number, 1, 2, or 3:")
+        userInput = input()
+        if userInput == "1":
+            knowGoal = True
+            userInputValid = True
+        elif userInput == "2":
+            knowGoal = False
+            userInputValid = True
+        elif userInput == "3":
+            knowGoal = False
+            userInputValid = True
+        
+    print("Beginning Scenario: "+ str(userInput) + "\n")
+
+
 
 
     os.remove("robotattack.log");
