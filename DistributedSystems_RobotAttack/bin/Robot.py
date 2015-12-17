@@ -32,6 +32,7 @@ class Robot(Thread):
         self.goalY = -1
         self.robotList = {}
         self.leaderElected = False
+        self.robotPlacement = []
 
         #if(x!=0):
         #	self.matrix[x-1][y] = m[x-1][y]
@@ -85,7 +86,7 @@ class Robot(Thread):
 
         if(lowest == self.robotID):
             self.isLeader = True
-            self.robotPlacement = []
+            #self.robotPlacement = []
             self.determineQuadrants()
         self.leaderElected = True
 
@@ -95,22 +96,22 @@ class Robot(Thread):
     #Broadcast commands over the network to all robots
     #Move self      
     def sendCommands(self):
-        if self.goalFound:
+        self.robotList[str(self.robotID)] = [self.x,self.y]
+        #logging.info("robotList = "+str(self.robotList))
 
+        if self.goalFound and len(self.robotPlacement)==0:
+            self.robotIDsPlaced= []
             goalPlace = 0
             placed = 0
             ringNum = 1
             lowestRobot = self
-
-            self.robotList[str(self.robotID)] = [self.x,self.y]
-            #logging.info("robotList = "+str(self.robotList))
 
 
             self.robotPlacement = []
 
             logging.info("Running robotPlacement filling!")
             
-            tempRobotList = deepcopy(self.robotList)
+            
             #logging.info("robotList deepcopy= "+str(tempRobotList))
 
             #This causes issues with robots hogging spaces!
@@ -151,6 +152,13 @@ class Robot(Thread):
             invalidPlace= False
 
             #calculate positions list
+
+            #ATTEMPT to move robots out of position to fill empty spot
+            tempRobotList = []
+            for rkey in self.robotList:
+                tempRobotList.append(rkey)
+            tempRobotList2 = deepcopy(tempRobotList)
+
             addedPos = 0
             posList = []
             top = [self.goalX, self.goalY-ringNum]
@@ -158,12 +166,22 @@ class Robot(Thread):
             left = [self.goalX-ringNum, self.goalY]
             right = [self.goalX+ringNum, self.goalY]
             posList=[top, bot, left, right]
-            while(addedPos<4 and addedPos<self.numRobots):
+
+            for pos in posList:
+                if(pos[0]<0 or pos[0]>self.xSize-1 or pos[1]<0 or pos[1]>self.ySize-1):
+                    posList.remove(pos)
+
+            posListOrig = posList
+            robotPlacementTemp = []
+            posListTemp = deepcopy(posList)
+            numberOfCrossPositions = len(posList)
+            addedPosTemp = addedPos
+            while(addedPosTemp<numberOfCrossPositions and addedPosTemp<self.numRobots):
                 lowestDist = 999999
                 lowestRobot = None
                 lowestPos = None
                 for r2key in tempRobotList:
-                    for pos in posList:
+                    for pos in posListTemp:
                         tempRL = self.robotList[r2key]
                         dist= self.calcBetweenTwoSpaces(pos[0],pos[1], tempRL[0], tempRL[1])
                         if(dist<lowestDist):
@@ -171,17 +189,52 @@ class Robot(Thread):
                             lowestRobot = r2key
                             lowestPos = pos
                 
+                addedPosTemp+=1
+
+                robotPlacementTemp.append([lowestRobot, lowestPos[0], lowestPos[1], lowestDist])
+
+                #logging.info(tempRobotList)
+                tempRobotList.remove(lowestRobot)
+                posListTemp.remove(lowestPos)
+                #logging.info("tempRobotList after del "+str(tempRobotList))
+                logging.info("TEMP ADD "+str(lowestRobot) + " is the lowest robot with distance " + str(lowestDist) + " for space number " +str(addedPosTemp ) + " at location "+str(lowestPos[0])+", "+str(lowestPos[1]))
+
+            #this is done to ensure empty spaces are assigned first   
+            logging.info("before sort desc robotPlacement "+str(robotPlacementTemp))
+            robotPlacementTemp = sorted(robotPlacementTemp, key=lambda r: r[3], reverse = True)
+            logging.info("after sort desc robotPlacement "+str(robotPlacementTemp))
+
+            
+            #CAUSES robots to move out of spot and back into spot
+            numberOfCrossPositions = len(posList)
+            while(addedPos<numberOfCrossPositions and addedPos<self.numRobots):
+                lowestDist = 999999
+                lowestRobot = None
+                lowestPos = None
+                pos=robotPlacementTemp[0]
+                for robot in tempRobotList2:
+                    tempRL = self.robotList[robot]
+                    dist= self.calcBetweenTwoSpaces(pos[1],pos[2], tempRL[0], tempRL[1])
+                    if(dist<lowestDist):
+                        lowestDist = dist
+                        lowestRobot = robot
+                        lowestPos = [pos[1],pos[2]]
+                
                 addedPos+=1
 
                 self.robotPlacement.append([lowestRobot, lowestPos[0], lowestPos[1], lowestDist])
-                #logging.info(tempRobotList)
-                del tempRobotList[lowestRobot]
-                posList.remove(lowestPos)
-                #logging.info("tempRobotList after del "+str(tempRobotList))
+                self.robotIDsPlaced.append(lowestRobot)
+                del robotPlacementTemp[0]
+                tempRobotList2.remove(lowestRobot)
                 logging.info(str(lowestRobot) + " is the lowest robot with distance " + str(lowestDist) + " for space number " +str(addedPos ) + " at location "+str(lowestPos[0])+", "+str(lowestPos[1]))
 
+            #robots closer to position move first
+            logging.info("before sort ascend robotPlacement "+str(self.robotPlacement))
+            self.robotPlacement = sorted(self.robotPlacement, key=lambda r: r[3])
+            logging.info("after sort ascend robotPlacement "+str(self.robotPlacement))
 
 
+            #tempRobotList = deepcopy(self.robotList)
             #if(goalPlace>3):
             #    #have a loop from -ringNum to ringNum for x and y
             #    #find what the x and y the goal place corespond to
@@ -291,40 +344,30 @@ class Robot(Thread):
             #message = [self.robotID, "Move", "d"]
             #self.network.broadcastMessage(message)
             #self.move("d")
+
+
+        #assign unassigned robots to not move
+        for r in self.robotList.keys():
+            if(not r in self.robotIDsPlaced):
+                rx, ry = self.robotList[r]
+                rPTemp = [r, rx, ry, 0]
+                logging.info("This robot was not placed - "+str(rPTemp))
+                self.robotPlacement.append(rPTemp)
+            
+
         logging.info("robotPlacement = "+str(self.robotPlacement))
         self.pathList = []
         self.robotsMoved = []
 
-        #sort robotPlacement by distance
-        self.robotPlacement = self.quickSort(self.robotPlacement)
+        #sort robotPlacement by distance ascending
+        self.robotPlacement = sorted(self.robotPlacement, key=lambda r: r[3])
         logging.info("robotPlacement after sort = "+str(self.robotPlacement))
 
+        self.destinationList = []
         for robotP in self.robotPlacement:
             tempRL = self.robotList[robotP[0]]
-            self.destinationList = []
             self.calculatePathAndSend(robotP[0], robotP[1],robotP[2], tempRL[0], tempRL[1])
-
-    #Source: http://stackoverflow.com/questions/18262306/quick-sort-with-python
-    def quickSort(self, array):
-        less = []
-        equal = []
-        greater = []
-
-        if len(array) > 1:
-            pivot = array[0][3]
-            for x in array:
-                if x[3] < pivot:
-                    less.append(x)
-                if x[3] == pivot:
-                    equal.append(x)
-                if x[3] > pivot:
-                    greater.append(x)
-            # Don't forget to return something!
-            return self.quickSort(less)+equal+self.quickSort(greater)  # Just use the + operator to join lists
-        # Note that you want equal ^^^^^ not pivot
-        else:  # You need to hande the part at the end of the recursion - when you only have one element in your array, just return the array.
-            return array
-
+        
     #if you can't move vertically to the position y, then reduce yMove by 1
     #alters path
     def tryMoveVert(self, xMove, yMove, destY, moveDown, roundNum, path, pathStr):
@@ -336,7 +379,7 @@ class Robot(Thread):
             pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
             pStr2 = str(xMove)+" "+str(yMove)
             #if(self.matrix[xMove][yMove] != "0"):
-            if(pStr in self.pathList or pStr2 in self.destinationList or (xMove==self.goalX and yMove==self.goalY)):
+            if(pStr in self.pathList or pStr2 in self.destinationList or (xMove==self.goalX and yMove==self.goalY) or yMove<0 or yMove>self.ySize-1):
                 #reset yMove
                 roundNum-=1
                 if(moveDown):
@@ -521,7 +564,7 @@ class Robot(Thread):
                 moveDown = True
             path, pathStr, validPath, xMove, yMove = self.calcArcPath(moveDown, curX, curY, xMove, yMove, destX, destY, savePathVert, savePathRound, savePathY)
             if(not validPath):
-                path, pathStr, validPath, xMove, yMove = self.calcArcPath(self, not moveDown, curX, curY, xMove, yMove, destX, destY, savePathVert, savePathRound, savePathY)
+                path, pathStr, validPath, xMove, yMove = self.calcArcPath(not moveDown, curX, curY, xMove, yMove, destX, destY, savePathVert, savePathRound, savePathY)
         #repeat
 
         if(validPath):
@@ -555,21 +598,18 @@ class Robot(Thread):
             logging.info("Path found! - "+str(path))
             if(len(path)==0):
                 pathStr = self.moveBroadcast(xMove, yMove, id, "n")
-            elif(moveDown):
+            else:
                 if(path[0][2]>curY):
                     pathStr = self.moveBroadcast(xMove, yMove, id, "d")
                 elif(path[0][1]>curX):
                     pathStr = self.moveBroadcast(xMove, yMove, id, "r")
-                else:
-                    pathStr = self.moveBroadcast(xMove, yMove, id, "l")
-            else:
-                if(path[0][2]<curY):
+                elif(path[0][2]<curY):
                     pathStr = self.moveBroadcast(xMove, yMove, id, "u")
-                elif(path[0][1]>curX):
-                    pathStr = self.moveBroadcast(xMove, yMove, id, "r")
-                else:
+                elif(path[0][1]<curX):
                     pathStr = self.moveBroadcast(xMove, yMove, id, "l")
-
+                else:
+                    logging.error("Impossible case! try to determine direction from 'n'")
+                    pathStr = self.moveBroadcast(xMove, yMove, id, "n")
     def moveBroadcast(self, xMove, yMove, id, dir):
         logging.info(str(dir)+" move")
         pathStr = str(xMove)+" "+str(yMove)

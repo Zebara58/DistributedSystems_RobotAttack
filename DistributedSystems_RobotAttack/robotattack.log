@@ -1,136 +1,479 @@
 INFO:root:started!
 INFO:root:thread cv
-INFO:root:robot_81 started!
-INFO:root:Robot91 finished recieving message - [81, 'Elect leader']
-INFO:root:Robot18 finished recieving message - [81, 'Elect leader']
-INFO:root:robot_91 started!
-INFO:root:Robot81 finished recieving message - [91, 'Elect leader']
-INFO:root:Robot18 finished recieving message - [91, 'Elect leader']
-INFO:root:robot_18 started!
-INFO:root:Robot81 finished recieving message - [18, 'Elect leader']
-INFO:root:Robot91 Waiting for leader to be elected
-INFO:root:Robot91 finished recieving message - [18, 'Elect leader']
-INFO:root:Robot81 finished recieving message - [91, 'position', [3, 2]]
-INFO:root:Robot91 finished recieving message - [81, 'position', [4, 1]]
-INFO:root:18 is the leader!
-INFO:root:Robot18 finished recieving message - [91, 'position', [3, 2]]
-INFO:root:Robot18 finished recieving message - [81, 'position', [4, 1]]
-INFO:root:Robot81 finished recieving message - [18, 'position', [5, 2]]
-INFO:root:Robot91 start while
-INFO:root:Robot81 start while
-INFO:root:Robot91 finished recieving message - [18, 'position', [5, 2]]
-INFO:root:Robot18 start while
+INFO:root:robot_60 started!
+INFO:root:Robot5 finished recieving message - [60, 'Elect leader']
+INFO:root:Robot44 finished recieving message - [60, 'Elect leader']
+INFO:root:Robot17 finished recieving message - [60, 'Elect leader']
+INFO:root:robot_5 started!
+INFO:root:Robot60 finished recieving message - [5, 'Elect leader']
+INFO:root:Robot44 finished recieving message - [5, 'Elect leader']
+INFO:root:Robot17 finished recieving message - [5, 'Elect leader']
+INFO:root:robot_44 started!
+INFO:root:Robot60 finished recieving message - [44, 'Elect leader']
+INFO:root:Robot5 finished recieving message - [44, 'Elect leader']
+INFO:root:Robot17 finished recieving message - [44, 'Elect leader']
+INFO:root:robot_17 started!
+INFO:root:Robot60 finished recieving message - [17, 'Elect leader']
+INFO:root:Robot5 finished recieving message - [17, 'Elect leader']
+INFO:root:Robot44 finished recieving message - [17, 'Elect leader']
+INFO:root:Robot5 Waiting for leader to be elected
+INFO:root:5 is the leader!
+INFO:root:Robot60 finished recieving message - [44, 'position', [3, 0]]
+INFO:root:Robot60 finished recieving message - [17, 'position', [1, 3]]
+INFO:root:Robot5 finished recieving message - [60, 'position', [4, 2]]
+INFO:root:Robot60 finished recieving message - [5, 'position', [2, 3]]
+INFO:root:Robot5 finished recieving message - [44, 'position', [3, 0]]
+INFO:root:Robot5 finished recieving message - [17, 'position', [1, 3]]
+INFO:root:Robot44 finished recieving message - [60, 'position', [4, 2]]
+INFO:root:Robot44 finished recieving message - [5, 'position', [2, 3]]
+INFO:root:Robot17 finished recieving message - [44, 'position', [3, 0]]
+INFO:root:Robot44 finished recieving message - [17, 'position', [1, 3]]
+INFO:root:Robot17 finished recieving message - [60, 'position', [4, 2]]
+INFO:root:Robot17 finished recieving message - [5, 'position', [2, 3]]
+INFO:root:Robot44 start while
+INFO:root:Robot17 start while
+INFO:root:Robot60 start while
+INFO:root:Robot5 start while
 INFO:root:Running robotPlacement filling!
-INFO:root:18 is the lowest robot with distance 0 for space number 1 at location 5, 2
-INFO:root:81 is the lowest robot with distance 0 for space number 2 at location 4, 1
-INFO:root:91 is the lowest robot with distance 0 for space number 3 at location 3, 2
-INFO:root:robotPlacement = [['18', 5, 2, 0], ['81', 4, 1, 0], ['91', 3, 2, 0]]
-INFO:root:robotPlacement after sort = [['18', 5, 2, 0], ['81', 4, 1, 0], ['91', 3, 2, 0]]
-INFO:root:MoveAndSend - id:18 destx:5 destY:2 curX:5 curY:2
-INFO:root:Starting 'L' path for robot:18
-INFO:root:Calling MoveVert 'L' for robot:18 xMove:5 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [5 2]
-INFO:root:Path found! - []
-INFO:root:n move
-INFO:root:MoveAndSend - id:81 destx:4 destY:1 curX:4 curY:1
-INFO:root:Starting 'L' path for robot:81
-INFO:root:Calling MoveVert 'L' for robot:81 xMove:4 yMove:1 moveDown:True
+INFO:root:TEMP ADD 44 is the lowest robot with distance 0 for space number 1 at location 3, 0
+INFO:root:TEMP ADD 60 is the lowest robot with distance 1 for space number 2 at location 3, 2
+INFO:root:TEMP ADD 5 is the lowest robot with distance 2 for space number 3 at location 2, 1
+INFO:root:TEMP ADD 17 is the lowest robot with distance 5 for space number 4 at location 4, 1
+INFO:root:before sort desc robotPlacement [['44', 3, 0, 0], ['60', 3, 2, 1], ['5', 2, 1, 2], ['17', 4, 1, 5]]
+INFO:root:after sort desc robotPlacement [['17', 4, 1, 5], ['5', 2, 1, 2], ['60', 3, 2, 1], ['44', 3, 0, 0]]
+INFO:root:60 is the lowest robot with distance 1 for space number 1 at location 4, 1
+INFO:root:44 is the lowest robot with distance 2 for space number 2 at location 2, 1
+INFO:root:5 is the lowest robot with distance 2 for space number 3 at location 3, 2
+INFO:root:17 is the lowest robot with distance 5 for space number 4 at location 3, 0
+INFO:root:before sort ascend robotPlacement [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:after sort ascend robotPlacement [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:robotPlacement = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:robotPlacement after sort = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:MoveAndSend - id:60 destx:4 destY:1 curX:4 curY:2
+INFO:root:Starting 'L' path for robot:60
+INFO:root:Calling MoveVert 'L' for robot:60 xMove:4 yMove:2 moveDown:False
+INFO:root:tryMoveVert finished and got [4 1]
+INFO:root:Path found! - [[2, 4, 1]]
+INFO:root:u move
+INFO:root:Robot60 finished recieving message - ['60', 'Move', 'u']
+INFO:root:Robot60 About to move!
+INFO:root:Robot5 finished recieving message - ['60', 'Move', 'u']
+INFO:root:update for 60 curX-4  curY-1  prevX-4  prevY-2
+INFO:root:Robot44 finished recieving message - ['60', 'Move', 'u']
+INFO:root:Robot17 finished recieving message - ['60', 'Move', 'u']
+INFO:root:MoveAndSend - id:44 destx:2 destY:1 curX:3 curY:0
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:3 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [3 0]
+INFO:root:tryMoveHor succeeded and got [2 0]
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:2 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [2 1]
+INFO:root:Path found! - [[1, 2, 0], [2, 2, 1]]
+INFO:root:l move
+INFO:root:Robot60 finished recieving message - ['44', 'Move', 'l']
+INFO:root:Robot5 finished recieving message - ['44', 'Move', 'l']
+INFO:root:Robot44 finished recieving message - ['44', 'Move', 'l']
+INFO:root:Robot44 About to move!
+INFO:root:Robot17 finished recieving message - ['44', 'Move', 'l']
+INFO:root:update for 44 curX-2  curY-0  prevX-3  prevY-0
+INFO:root:MoveAndSend - id:5 destx:3 destY:2 curX:2 curY:3
+INFO:root:Starting 'L' path for robot:5
+INFO:root:Calling MoveVert 'L' for robot:5 xMove:2 yMove:3 moveDown:False
+INFO:root:tryMoveVert finished and got [2 2]
+INFO:root:tryMoveHor succeeded and got [3 2]
+INFO:root:Path found! - [[2, 2, 2], [3, 3, 2]]
+INFO:root:u move
+INFO:root:update for 5 curX-2  curY-2  prevX-2  prevY-3
+INFO:root:MoveAndSend - id:17 destx:3 destY:0 curX:1 curY:3
+INFO:root:Starting 'L' path for robot:17
+INFO:root:Calling MoveVert 'L' for robot:17 xMove:1 yMove:3 moveDown:False
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:tryMoveHor succeeded and got [3 0]
+INFO:root:Path found! - [[2, 1, 2], [3, 1, 1], [4, 1, 0], [5, 2, 0], [6, 3, 0]]
+INFO:root:u move
+INFO:root:Robot60 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot5 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot44 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot17 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot17 About to move!
+INFO:root:update for 17 curX-1  curY-2  prevX-1  prevY-3
+INFO:root:Robot5 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot60 finished recieving message - [5, 'position', [2, 2]]
+INFO:root:Robot60 finished recieving message - [44, 'position', [2, 0]]
+INFO:root:Robot60 finished recieving message - [17, 'position', [1, 2]]
+INFO:root:Robot44 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot44 finished recieving message - [5, 'position', [2, 2]]
+INFO:root:Robot5 finished recieving message - [44, 'position', [2, 0]]
+INFO:root:Robot5 finished recieving message - [17, 'position', [1, 2]]
+INFO:root:Robot17 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot17 finished recieving message - [5, 'position', [2, 2]]
+INFO:root:Robot17 finished recieving message - [44, 'position', [2, 0]]
+INFO:root:Robot44 finished recieving message - [17, 'position', [1, 2]]
+INFO:root:Robot60 start while
+INFO:root:Robot5 start while
+INFO:root:Robot44 start while
+INFO:root:Robot17 start while
+INFO:root:robotPlacement = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:robotPlacement after sort = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:MoveAndSend - id:60 destx:4 destY:1 curX:4 curY:1
+INFO:root:Starting 'L' path for robot:60
+INFO:root:Calling MoveVert 'L' for robot:60 xMove:4 yMove:1 moveDown:True
 INFO:root:tryMoveVert finished and got [4 1]
 INFO:root:Path found! - []
 INFO:root:n move
-INFO:root:Robot81 finished recieving message - ['81', 'Move', 'n']
-INFO:root:Robot81 About to move!
-INFO:root:Robot91 finished recieving message - ['81', 'Move', 'n']
-INFO:root:Robot18 finished recieving message - ['81', 'Move', 'n']
-INFO:root:MoveAndSend - id:91 destx:3 destY:2 curX:3 curY:2
-INFO:root:Starting 'L' path for robot:91
-INFO:root:Calling MoveVert 'L' for robot:91 xMove:3 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [3 2]
-INFO:root:Path found! - []
-INFO:root:n move
-INFO:root:Robot81 finished recieving message - ['91', 'Move', 'n']
-INFO:root:Robot91 finished recieving message - ['91', 'Move', 'n']
-INFO:root:Robot18 finished recieving message - ['91', 'Move', 'n']
-INFO:root:Robot91 About to move!
-INFO:root:Robot81 finished recieving message - [91, 'position', [3, 2]]
-INFO:root:Robot81 finished recieving message - [18, 'position', [5, 2]]
-INFO:root:Robot91 finished recieving message - [81, 'position', [4, 1]]
-INFO:root:Robot18 finished recieving message - [91, 'position', [3, 2]]
-INFO:root:Robot91 finished recieving message - [18, 'position', [5, 2]]
-INFO:root:Robot18 finished recieving message - [81, 'position', [4, 1]]
-INFO:root:Robot91 start while
-INFO:root:Robot18 start while
-INFO:root:Robot81 start while
-INFO:root:Running robotPlacement filling!
-INFO:root:18 is the lowest robot with distance 0 for space number 1 at location 5, 2
-INFO:root:81 is the lowest robot with distance 0 for space number 2 at location 4, 1
-INFO:root:91 is the lowest robot with distance 0 for space number 3 at location 3, 2
-INFO:root:robotPlacement = [['18', 5, 2, 0], ['81', 4, 1, 0], ['91', 3, 2, 0]]
-INFO:root:robotPlacement after sort = [['18', 5, 2, 0], ['81', 4, 1, 0], ['91', 3, 2, 0]]
-INFO:root:MoveAndSend - id:18 destx:5 destY:2 curX:5 curY:2
-INFO:root:Starting 'L' path for robot:18
-INFO:root:Calling MoveVert 'L' for robot:18 xMove:5 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [5 2]
-INFO:root:Path found! - []
-INFO:root:n move
-INFO:root:MoveAndSend - id:81 destx:4 destY:1 curX:4 curY:1
-INFO:root:Starting 'L' path for robot:81
-INFO:root:Calling MoveVert 'L' for robot:81 xMove:4 yMove:1 moveDown:True
+INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['60', 'Move', 'n']
+INFO:root:MoveAndSend - id:44 destx:2 destY:1 curX:2 curY:0
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:2 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [2 1]
+INFO:root:Robot60 About to move!
+INFO:root:Path found! - [[2, 2, 1]]
+INFO:root:d move
+INFO:root:Robot60 finished recieving message - ['44', 'Move', 'd']
+INFO:root:Robot5 finished recieving message - ['44', 'Move', 'd']
+INFO:root:Robot44 finished recieving message - ['44', 'Move', 'd']
+INFO:root:Robot44 About to move!
+INFO:root:Robot17 finished recieving message - ['44', 'Move', 'd']
+INFO:root:update for 44 curX-2  curY-1  prevX-2  prevY-0
+INFO:root:MoveAndSend - id:5 destx:3 destY:2 curX:2 curY:2
+INFO:root:Starting 'L' path for robot:5
+INFO:root:Calling MoveVert 'L' for robot:5 xMove:2 yMove:2 moveDown:True
+INFO:root:tryMoveVert finished and got [2 2]
+INFO:root:tryMoveHor succeeded and got [3 2]
+INFO:root:Path found! - [[2, 3, 2]]
+INFO:root:r move
+INFO:root:update for 5 curX-3  curY-2  prevX-2  prevY-2
+INFO:root:MoveAndSend - id:17 destx:3 destY:0 curX:1 curY:2
+INFO:root:Starting 'L' path for robot:17
+INFO:root:Calling MoveVert 'L' for robot:17 xMove:1 yMove:2 moveDown:False
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:tryMoveHor succeeded and got [3 0]
+INFO:root:Path found! - [[2, 1, 1], [3, 1, 0], [4, 2, 0], [5, 3, 0]]
+INFO:root:u move
+INFO:root:Robot60 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot5 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot44 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot17 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot17 About to move!
+INFO:root:update for 17 curX-1  curY-1  prevX-1  prevY-2
+INFO:root:Robot5 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot60 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot60 finished recieving message - [17, 'position', [1, 1]]
+INFO:root:Robot60 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot44 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot44 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot5 finished recieving message - [17, 'position', [1, 1]]
+INFO:root:Robot5 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot17 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot17 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot44 finished recieving message - [17, 'position', [1, 1]]
+INFO:root:Robot17 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot60 start while
+INFO:root:Robot5 start while
+INFO:root:Robot17 start while
+INFO:root:Robot44 start while
+INFO:root:robotPlacement = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:robotPlacement after sort = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:MoveAndSend - id:60 destx:4 destY:1 curX:4 curY:1
+INFO:root:Starting 'L' path for robot:60
+INFO:root:Calling MoveVert 'L' for robot:60 xMove:4 yMove:1 moveDown:True
 INFO:root:tryMoveVert finished and got [4 1]
 INFO:root:Path found! - []
 INFO:root:n move
-INFO:root:Robot81 finished recieving message - ['81', 'Move', 'n']
-INFO:root:Robot91 finished recieving message - ['81', 'Move', 'n']
-INFO:root:Robot18 finished recieving message - ['81', 'Move', 'n']
-INFO:root:MoveAndSend - id:91 destx:3 destY:2 curX:3 curY:2
-INFO:root:Starting 'L' path for robot:91
-INFO:root:Calling MoveVert 'L' for robot:91 xMove:3 yMove:2 moveDown:True
+INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot60 About to move!
+INFO:root:Robot5 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['60', 'Move', 'n']
+INFO:root:MoveAndSend - id:44 destx:2 destY:1 curX:2 curY:1
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:2 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [2 1]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot44 About to move!
+INFO:root:Robot17 finished recieving message - ['44', 'Move', 'n']
+INFO:root:MoveAndSend - id:5 destx:3 destY:2 curX:3 curY:2
+INFO:root:Starting 'L' path for robot:5
+INFO:root:Calling MoveVert 'L' for robot:5 xMove:3 yMove:2 moveDown:True
 INFO:root:tryMoveVert finished and got [3 2]
 INFO:root:Path found! - []
 INFO:root:n move
-INFO:root:Robot81 finished recieving message - ['91', 'Move', 'n']
-INFO:root:Robot91 finished recieving message - ['91', 'Move', 'n']
-INFO:root:Robot81 About to move!
-INFO:root:Robot91 About to move!
-INFO:root:Robot18 finished recieving message - ['91', 'Move', 'n']
-INFO:root:Robot91 finished recieving message - [81, 'position', [4, 1]]
-INFO:root:Robot18 finished recieving message - [81, 'position', [4, 1]]
-INFO:root:Robot81 start while
-INFO:root:Robot81 finished recieving message - [18, 'position', [5, 2]]
-INFO:root:Robot91 finished recieving message - [18, 'position', [5, 2]]
-INFO:root:Robot18 start while
-INFO:root:Robot81 finished recieving message - [91, 'position', [3, 2]]
-INFO:root:Robot18 finished recieving message - [91, 'position', [3, 2]]
-INFO:root:Robot91 start while
-INFO:root:Running robotPlacement filling!
-INFO:root:18 is the lowest robot with distance 0 for space number 1 at location 5, 2
-INFO:root:81 is the lowest robot with distance 0 for space number 2 at location 4, 1
-INFO:root:91 is the lowest robot with distance 0 for space number 3 at location 3, 2
-INFO:root:robotPlacement = [['18', 5, 2, 0], ['81', 4, 1, 0], ['91', 3, 2, 0]]
-INFO:root:robotPlacement after sort = [['18', 5, 2, 0], ['81', 4, 1, 0], ['91', 3, 2, 0]]
-INFO:root:MoveAndSend - id:18 destx:5 destY:2 curX:5 curY:2
-INFO:root:Starting 'L' path for robot:18
-INFO:root:Calling MoveVert 'L' for robot:18 xMove:5 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [5 2]
-INFO:root:Path found! - []
-INFO:root:n move
-INFO:root:MoveAndSend - id:81 destx:4 destY:1 curX:4 curY:1
-INFO:root:Starting 'L' path for robot:81
-INFO:root:Calling MoveVert 'L' for robot:81 xMove:4 yMove:1 moveDown:True
+INFO:root:MoveAndSend - id:17 destx:3 destY:0 curX:1 curY:1
+INFO:root:Starting 'L' path for robot:17
+INFO:root:Calling MoveVert 'L' for robot:17 xMove:1 yMove:1 moveDown:False
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:tryMoveHor succeeded and got [3 0]
+INFO:root:Path found! - [[2, 1, 0], [3, 2, 0], [4, 3, 0]]
+INFO:root:u move
+INFO:root:Robot60 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot5 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot44 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot17 finished recieving message - ['17', 'Move', 'u']
+INFO:root:Robot17 About to move!
+INFO:root:update for 17 curX-1  curY-0  prevX-1  prevY-1
+INFO:root:Robot5 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot60 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot44 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot60 finished recieving message - [17, 'position', [1, 0]]
+INFO:root:Robot60 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot44 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot17 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot5 finished recieving message - [17, 'position', [1, 0]]
+INFO:root:Robot5 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot17 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot60 start while
+INFO:root:Robot44 finished recieving message - [17, 'position', [1, 0]]
+INFO:root:Robot17 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot5 start while
+INFO:root:Robot17 start while
+INFO:root:Robot44 start while
+INFO:root:robotPlacement = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:robotPlacement after sort = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:MoveAndSend - id:60 destx:4 destY:1 curX:4 curY:1
+INFO:root:Starting 'L' path for robot:60
+INFO:root:Calling MoveVert 'L' for robot:60 xMove:4 yMove:1 moveDown:True
 INFO:root:tryMoveVert finished and got [4 1]
 INFO:root:Path found! - []
 INFO:root:n move
-INFO:root:Robot81 finished recieving message - ['81', 'Move', 'n']
-INFO:root:Robot91 finished recieving message - ['81', 'Move', 'n']
-INFO:root:Robot18 finished recieving message - ['81', 'Move', 'n']
-INFO:root:MoveAndSend - id:91 destx:3 destY:2 curX:3 curY:2
-INFO:root:Robot81 About to move!
-INFO:root:Starting 'L' path for robot:91
-INFO:root:Calling MoveVert 'L' for robot:91 xMove:3 yMove:2 moveDown:True
+INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot60 About to move!
+INFO:root:Robot5 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['60', 'Move', 'n']
+INFO:root:MoveAndSend - id:44 destx:2 destY:1 curX:2 curY:1
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:2 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [2 1]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot44 About to move!
+INFO:root:Robot17 finished recieving message - ['44', 'Move', 'n']
+INFO:root:MoveAndSend - id:5 destx:3 destY:2 curX:3 curY:2
+INFO:root:Starting 'L' path for robot:5
+INFO:root:Calling MoveVert 'L' for robot:5 xMove:3 yMove:2 moveDown:True
 INFO:root:tryMoveVert finished and got [3 2]
 INFO:root:Path found! - []
 INFO:root:n move
-INFO:root:Robot81 finished recieving message - ['91', 'Move', 'n']
-INFO:root:Robot91 finished recieving message - ['91', 'Move', 'n']
-INFO:root:Robot18 finished recieving message - ['91', 'Move', 'n']
-INFO:root:Robot91 About to move!
+INFO:root:MoveAndSend - id:17 destx:3 destY:0 curX:1 curY:0
+INFO:root:Starting 'L' path for robot:17
+INFO:root:Calling MoveVert 'L' for robot:17 xMove:1 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:tryMoveHor succeeded and got [3 0]
+INFO:root:Path found! - [[2, 2, 0], [3, 3, 0]]
+INFO:root:r move
+INFO:root:Robot60 finished recieving message - ['17', 'Move', 'r']
+INFO:root:Robot5 finished recieving message - ['17', 'Move', 'r']
+INFO:root:Robot44 finished recieving message - ['17', 'Move', 'r']
+INFO:root:Robot17 finished recieving message - ['17', 'Move', 'r']
+INFO:root:Robot17 About to move!
+INFO:root:update for 17 curX-2  curY-0  prevX-1  prevY-0
+INFO:root:Robot60 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot5 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot60 finished recieving message - [17, 'position', [2, 0]]
+INFO:root:Robot60 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot44 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot44 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot5 finished recieving message - [17, 'position', [2, 0]]
+INFO:root:Robot5 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot17 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot17 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot44 finished recieving message - [17, 'position', [2, 0]]
+INFO:root:Robot17 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot5 start while
+INFO:root:Robot60 start while
+INFO:root:Robot17 start while
+INFO:root:Robot44 start while
+INFO:root:robotPlacement = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:robotPlacement after sort = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:MoveAndSend - id:60 destx:4 destY:1 curX:4 curY:1
+INFO:root:Starting 'L' path for robot:60
+INFO:root:Calling MoveVert 'L' for robot:60 xMove:4 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [4 1]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot60 About to move!
+INFO:root:Robot44 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['60', 'Move', 'n']
+INFO:root:MoveAndSend - id:44 destx:2 destY:1 curX:2 curY:1
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:2 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [2 1]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['44', 'Move', 'n']
+INFO:root:MoveAndSend - id:5 destx:3 destY:2 curX:3 curY:2
+INFO:root:Starting 'L' path for robot:5
+INFO:root:Robot44 About to move!
+INFO:root:Calling MoveVert 'L' for robot:5 xMove:3 yMove:2 moveDown:True
+INFO:root:tryMoveVert finished and got [3 2]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:MoveAndSend - id:17 destx:3 destY:0 curX:2 curY:0
+INFO:root:Starting 'L' path for robot:17
+INFO:root:Calling MoveVert 'L' for robot:17 xMove:2 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [2 0]
+INFO:root:tryMoveHor succeeded and got [3 0]
+INFO:root:Path found! - [[2, 3, 0]]
+INFO:root:r move
+INFO:root:Robot60 finished recieving message - ['17', 'Move', 'r']
+INFO:root:Robot5 finished recieving message - ['17', 'Move', 'r']
+INFO:root:Robot44 finished recieving message - ['17', 'Move', 'r']
+INFO:root:Robot17 finished recieving message - ['17', 'Move', 'r']
+INFO:root:Robot17 About to move!
+INFO:root:update for 17 curX-3  curY-0  prevX-2  prevY-0
+INFO:root:Robot60 finished recieving message - [17, 'position', [3, 0]]
+INFO:root:Robot60 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot60 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot5 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot5 finished recieving message - [17, 'position', [3, 0]]
+INFO:root:Robot44 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot5 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot44 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot44 finished recieving message - [17, 'position', [3, 0]]
+INFO:root:Robot17 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot17 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot17 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot17 start while
+INFO:root:Robot5 start while
+INFO:root:Robot44 start while
+INFO:root:Robot60 start while
+INFO:root:robotPlacement = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:robotPlacement after sort = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:MoveAndSend - id:60 destx:4 destY:1 curX:4 curY:1
+INFO:root:Starting 'L' path for robot:60
+INFO:root:Calling MoveVert 'L' for robot:60 xMove:4 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [4 1]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot60 About to move!
+INFO:root:Robot44 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['60', 'Move', 'n']
+INFO:root:MoveAndSend - id:44 destx:2 destY:1 curX:2 curY:1
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:2 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [2 1]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot44 About to move!
+INFO:root:MoveAndSend - id:5 destx:3 destY:2 curX:3 curY:2
+INFO:root:Starting 'L' path for robot:5
+INFO:root:Calling MoveVert 'L' for robot:5 xMove:3 yMove:2 moveDown:True
+INFO:root:tryMoveVert finished and got [3 2]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:MoveAndSend - id:17 destx:3 destY:0 curX:3 curY:0
+INFO:root:Starting 'L' path for robot:17
+INFO:root:Calling MoveVert 'L' for robot:17 xMove:3 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [3 0]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['17', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['17', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['17', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['17', 'Move', 'n']
+INFO:root:Robot17 About to move!
+INFO:root:Robot5 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot60 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot60 finished recieving message - [17, 'position', [3, 0]]
+INFO:root:Robot60 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot44 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot5 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot5 finished recieving message - [17, 'position', [3, 0]]
+INFO:root:Robot44 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot17 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot17 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot44 finished recieving message - [17, 'position', [3, 0]]
+INFO:root:Robot17 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot60 start while
+INFO:root:Robot44 start while
+INFO:root:Robot17 start while
+INFO:root:Robot5 start while
+INFO:root:robotPlacement = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:robotPlacement after sort = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:MoveAndSend - id:60 destx:4 destY:1 curX:4 curY:1
+INFO:root:Starting 'L' path for robot:60
+INFO:root:Calling MoveVert 'L' for robot:60 xMove:4 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [4 1]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot60 About to move!
+INFO:root:Robot5 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['60', 'Move', 'n']
+INFO:root:MoveAndSend - id:44 destx:2 destY:1 curX:2 curY:1
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:2 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [2 1]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['44', 'Move', 'n']
+INFO:root:Robot44 About to move!
+INFO:root:MoveAndSend - id:5 destx:3 destY:2 curX:3 curY:2
+INFO:root:Starting 'L' path for robot:5
+INFO:root:Calling MoveVert 'L' for robot:5 xMove:3 yMove:2 moveDown:True
+INFO:root:tryMoveVert finished and got [3 2]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:MoveAndSend - id:17 destx:3 destY:0 curX:3 curY:0
+INFO:root:Starting 'L' path for robot:17
+INFO:root:Calling MoveVert 'L' for robot:17 xMove:3 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [3 0]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['17', 'Move', 'n']
+INFO:root:Robot5 finished recieving message - ['17', 'Move', 'n']
+INFO:root:Robot44 finished recieving message - ['17', 'Move', 'n']
+INFO:root:Robot17 finished recieving message - ['17', 'Move', 'n']
+INFO:root:Robot17 About to move!
+INFO:root:Robot60 finished recieving message - [17, 'position', [3, 0]]
+INFO:root:Robot5 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot60 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot60 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot5 finished recieving message - [17, 'position', [3, 0]]
+INFO:root:Robot44 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot44 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot5 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot44 finished recieving message - [17, 'position', [3, 0]]
+INFO:root:Robot17 finished recieving message - [60, 'position', [4, 1]]
+INFO:root:Robot17 finished recieving message - [5, 'position', [3, 2]]
+INFO:root:Robot17 finished recieving message - [44, 'position', [2, 1]]
+INFO:root:Robot17 start while
+INFO:root:Robot60 start while
+INFO:root:Robot5 start while
+INFO:root:Robot44 start while
+INFO:root:robotPlacement = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:robotPlacement after sort = [['60', 4, 1, 1], ['44', 2, 1, 2], ['5', 3, 2, 2], ['17', 3, 0, 5]]
+INFO:root:MoveAndSend - id:60 destx:4 destY:1 curX:4 curY:1
+INFO:root:Starting 'L' path for robot:60
+INFO:root:Calling MoveVert 'L' for robot:60 xMove:4 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [4 1]
+INFO:root:Path found! - []
+INFO:root:n move
+INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
+INFO:root:Robot60 About to move!
