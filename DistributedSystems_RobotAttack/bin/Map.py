@@ -1,6 +1,8 @@
 ﻿import logging
 import random
+import threading
 class Map:
+    
     def __init__(self, xSize, ySize):
         self.matrix = [['0' for x in range(xSize)] for y in range(ySize)]
         #self.matrix[3][3] = 1
@@ -15,6 +17,8 @@ class Map:
 
         self.matrix[ranX][ranY] = 'g'
         self.goal = [ranX,ranY]
+
+        self.lock = threading.Lock()
 
     def checkIfFilled(self, x, y):
         if self.matrix[x][y] == '0':
@@ -37,12 +41,16 @@ class Map:
     #    self.lock.release()
 
     def update(self, curX, curY, prevX, prevY, id):
-
-        if(self.matrix[curX][curY]=="0"):
-            self.matrix[prevX][prevY] = "0"
-            #check for malicious robot location here
-            self.matrix[curX][curY] = id
-            logging.info("update for "+str(id)+" curX-"+str(curX)+"  curY-"+str(curY)+ "  prevX-"+str(prevX)+"  prevY-"+str(prevY))
-            return True
-        else:
-            return False
+        self.lock.acquire(True)
+        try:  
+    
+            if(self.matrix[curX][curY]=="0"):
+                self.matrix[prevX][prevY] = "0"
+                #check for malicious robot location here
+                self.matrix[curX][curY] = id
+                logging.info("update for "+str(id)+" curX-"+str(curX)+"  curY-"+str(curY)+ "  prevX-"+str(prevX)+"  prevY-"+str(prevY))
+                return True
+            else:
+                return False
+        finally:
+            self.lock.release()
