@@ -15,7 +15,7 @@ class Map:
 
         self.matrix[ranX][ranY] = 'g'
         self.goal = [ranX,ranY]
-        
+
     def checkIfFilled(self, x, y):
         if self.matrix[x][y] == '0':
             return False
@@ -37,6 +37,7 @@ class Map:
     #    self.lock.release()
 
     def update(self, curX, curY, prevX, prevY, id):
+
         if(self.matrix[curX][curY]=="0"):
             self.matrix[prevX][prevY] = "0"
             #check for malicious robot location here
