@@ -87,11 +87,20 @@ class Robot(Thread):
         if(lowest == self.robotID):
             self.isLeader = True
             #self.robotPlacement = []
-            self.determineQuadrants()
+            if(not self.goalFound):
+                self.determineQuadrants()
         self.leaderElected = True
 
     def determineQuadrants(self):
-        blar = "blark"
+        blarg =1
+        #if(self.xSize % 2 == 0):
+        #    #if even board horizontal size, then
+        #    leftSideHorizontalSize = 0 to self.xSize/2 -1
+	       # rightSideHorizontalSize = mapX/2  to right end
+        #else #is odd
+	       # leftSideHorizontalSize = 0 to ceiling(mapX/2)
+	       # rightSideHorizontalSize = leftSideHorizontalSize+1 to right end
+
         
     #Broadcast commands over the network to all robots
     #Move self      
@@ -221,6 +230,7 @@ class Robot(Thread):
 
                 posListTemp = []
                 tempCount = addedPos
+                addedPos = 0
                 while(addedPos < (8*ringNum) and tempCount<self.numRobots):
                     tempAddedPos = 0
                     invalidPlace = False
