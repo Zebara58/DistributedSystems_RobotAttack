@@ -298,7 +298,7 @@ class Robot(Thread):
             pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
             pStr2 = str(xMove)+" "+str(yMove)
             #if(self.matrix[xMove][yMove] != "0"):
-            if(pStr in self.pathList or pStr2 in self.destinationList):
+            if(pStr in self.pathList or pStr2 in self.destinationList or (xMove==self.goalX and yMove==self.goalY)):
                 #reset yMove
                 roundNum-=1
                 if(moveDown):
@@ -324,7 +324,7 @@ class Robot(Thread):
             #if(self.matrix[xMove][yMove] != "0"):
             pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
             pStr2 = str(xMove)+" "+str(yMove)
-            if(pStr in self.pathList or pStr2 in self.destinationList):
+            if(pStr in self.pathList or pStr2 in self.destinationList or (xMove==self.goalX and yMove==self.goalY)):
                 #reset yMove
                 roundNum = roundNumOrig
                 logging.info("tryMoveVert failed")
@@ -335,6 +335,64 @@ class Robot(Thread):
                 pathStr.append(str(roundNum)+" "+str(xMove)+" "+str(yMove))
         logging.info("tryMoveHor succeeded and got ["+str(xMove)+" "+str(yMove)+"]")
         return xMove, roundNum
+
+    def calcArcPath(self, moveDown, curX, curY, xMove, yMove, destX, destY, savePathVert, savePathRound, savePathY):
+        logging.info("Starting arc path past depth to dest Y for robot:"+str(id))
+        #start moving past the goal and checking
+        xMove = curX
+            
+        #restore max vert path
+        path = savePathVert
+        roundNum = savePathRound
+        yMove = savePathY
+
+        xCouldMove =True
+        validPath = False
+        path = []
+        pathStr = []
+
+        xPrev = xMove
+        yPrev = yMove
+        while(not validPath):
+            if(moveDown):
+                yMove+=1
+            else:
+                yMove-=1
+
+            if(yMove<0 or yMove>self.ySize):
+                logging.error("No valid arc path past depth due to going off board for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so do nothing")
+                vaildPath = False
+                break
+
+            pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
+            pStr2 = str(xMove)+" "+str(yMove)
+            #if(self.matrix[xMove][yMove] != "0"):
+            if(pStr in self.pathList or pStr2 in self.destinationList or (xMove==self.goalX and yMove==self.goalY)):
+                #reset yMove
+                if(moveDown):
+                    yMove-=1
+                else:
+                    yMove+=1
+                logging.error("No valid arc path past depth due to collision for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so do nothing")
+                vaildPath = False
+                break
+            else:
+                roundNum+=1
+                path.append([roundNum, xMove, yMove])
+                pathStr.append(str(roundNum)+" "+str(xMove)+" "+str(yMove))
+
+            xMove, roundNum = self.tryMoveHor(xMove, yMove, destX, moveRight, roundNum, path, pathStr)
+
+            if(xMove==-1):
+                validPath = False
+            else:
+                #xMove made it to the destX so try moving up to goal (arc to goal from 'L')
+                logging.info("Calling MoveVert arcPath for robot:"+str(id)+" xMove:"+str(xMove)+" yMove:"+str(yMove)+" not moveDown:"+str(moveDown))
+                yMove, roundNum = self.tryMoveVert(self, xMove, yMove, destY, not moveDown, roundNum, path, pathStr)
+                if(yMove == destY):
+                    validPath = True
+                break
+        return path, pathStr, validPath, xMove, yMove
 
     def calculatePathAndSend(self, id, destX, destY, curX, curY):
         logging.info("MoveAndSend - id:"+str(id)+" destx:" +str(destX)+" destY:"+str(destY)+" curX:"+str(curX)+" curY:"+str(curY))
@@ -369,14 +427,20 @@ class Robot(Thread):
         while(not validPath):
             logging.info("Starting 'L' path for robot:"+str(id))  
             if(xCouldMove):
+                if(destY<yMove):
+                    moveDown = False
+                else:
+                    moveDown = True
+                logging.info("Calling MoveVert 'L' for robot:"+str(id)+" xMove:"+str(xMove)+" yMove:"+str(yMove)+" moveDown:"+str(moveDown))
                 yMove, roundNum = self.tryMoveVert(xMove, yMove, destY, moveDown, roundNum, path, pathStr)
-            xMove, roundNum = self.tryMoveHor(xMove, yMove, destX, moveRight, roundNum, path, pathStr)
+            if(xMove!=destX):
+                xMove, roundNum = self.tryMoveHor(xMove, yMove, destX, moveRight, roundNum, path, pathStr)
 
             if(xMove == destX and yMove == destY):
                 validPath = True
                 self.destinationList.append(str(xMove)+ " "+str(yMove))
                 break
-            elif((prevX==xMove and prevY == yMove) or yMove<0):
+            elif((prevX==xMove and prevY == yMove) or yMove<0 or yMove>self.ySize-1):
                 logging.error("No valid 'L' path for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so try arc path!")
                 vaildPath = False
                 break
@@ -403,64 +467,22 @@ class Robot(Thread):
                 del path[len(path)-1]
                 del pathStr[len(path)-1]
             else:
-                #do vertical again since xMove got to destX
+                #do vertical again since xMove got to destX (this is a zig zag)
                 prevX = xMove
                 prevY = yMove
                 xCouldMove = True
 
-        #if(not validPath):
-        #    logging.info("Starting arc path past depth to dest Y for robot:"+str(id))
-        #    #start moving past the goal and checking
-        #    xMove = curX
-            
-        #    #restore max vert path
-        #    path = savePathVert
-        #    roundNum = savePathRound
-        #    yMove = savePathY
-
-        #    xCouldMove =True
-        #    validPath = False
-
-        #    xPrev = xMove
-        #    yPrev = yMove
-        #    while(not validPath):
-        #        if(moveDown):
-        #            yMove+=1
-        #        else:
-        #            yMove-=1
-
-        #        if(yMove<0 or yMove>self.ySize):
-        #            logging.error("No valid arc path past depth due to going off board for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so do nothing")
-        #            vaildPath = False
-        #            break
-
-        #        pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
-        #        pStr2 = str(xMove)+" "+str(yMove)
-        #        #if(self.matrix[xMove][yMove] != "0"):
-        #        if(pStr in self.pathList or pStr2 in self.destinationList):
-        #            #reset yMove
-        #            if(moveDown):
-        #                yMove-=1
-        #            else:
-        #                yMove+=1
-        #            logging.error("No valid arc path past depth due to collision for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so do nothing")
-        #            vaildPath = False
-        #            break
-        #        else:
-        #            roundNum+=1
-        #            path.append([roundNum, xMove, yMove])
-        #            pathStr.append(str(roundNum)+" "+str(xMove)+" "+str(yMove))
-
-        #        xMove, roundNum = self.tryMoveHor(xMove, yMove, destX, moveRight, roundNum, path, pathStr)
-
-        #        if(xMove==-1):
-        #            validPath = False
-        #        else:
-        #            #xMove made it to the destX so try moving up to goal (arc to goal from 'L')
-        #            yMove, roundNum = tryMoveVert(self, xMove, yMove, destY, not moveDown, roundNum, path)
-        #            if(yMove == destY):
-        #                validPath = True
-        #            break
+        if(not validPath):
+            if(destY>curY):
+                #move up for arc
+                moveDown = False
+            else:
+                #move down for arc
+                moveDown = True
+            path, pathStr, validPath, xMove, yMove = calcArcPath(self, moveDown, curX, curY, xMove, yMove, destX, destY, savePathVert, savePathRound, savePathY)
+            if(not validPath):
+                path, pathStr, validPath, xMove, yMove = calcArcPath(self, not moveDown, curX, curY, xMove, yMove, destX, destY, savePathVert, savePathRound, savePathY)
+        #repeat
 
         if(validPath):
             for p in pathStr:
@@ -470,25 +492,13 @@ class Robot(Thread):
 
         if(not validPath):
             logging.info("Do nothing path for robot:"+str(id)+"!")
+
+            path =[]
+            pathStr=[]
+
             self.moveBroadcast(curX, curY, id, "n") 
             self.pathList.append(str(1)+ " "+str(curX)+" "+str(curY))
-      #      #Try looking for a path in the less efficient direction
-      #      logging.info("For robot:"+str(id)+" checking less efficient direction")
-      #      validPath = False
-      #      path = []
-      #      xMove = curX
-      #      yMove = curY
-      #      #move down
-      #      pickRandom = False
 
-      #      #Do opposite 
-      #      moveDown = not moveDown
-            
-		    ##Calculate path
-      #      #do opposite direction
-
-
-      #      
       #      #pickI = random.randint(0,1)
       #      #if(pickI==0):
       #      #    if(moveDown):
