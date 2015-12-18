@@ -3,7 +3,7 @@ import random
 import threading
 class Map:
     
-    def __init__(self, xSize, ySize):
+    def __init__(self, xSize, ySize, goalX, goalY):
         self.matrix = [["0" for x in range(xSize)] for y in range(ySize)]
         #self.matrix[3][3] = 1
         #self.matrix[1][0] = 1

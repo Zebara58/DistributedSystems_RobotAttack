@@ -89,7 +89,8 @@ if __name__ == '__main__':
         goalY = int(input())
 
 
-    os.remove("robotattack.log");
+    if(os._exists("robotattack.log")):
+        os.remove("robotattack.log");
 
     #xSize = 5
     #ySize = 5

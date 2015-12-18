@@ -37,6 +37,7 @@ class Robot(Thread):
         self.leaderElected = False
         self.robotPlacement = []
         self.cipherDistance = cipherDistance
+        self.firstRunOf = True
 
         #CONFIGURATION for pathing
         self.sortAscendAfter = True
@@ -68,17 +69,19 @@ class Robot(Thread):
                 time.sleep(0.005)
             if(self.isLeader):
                 #incoming string will either be "position" or encrypted goal message
+                splitString = ""
+                if(len(message)>3):
+                    splitString = str.split(message)
                 if message[1] != "position":
                     #decrypt goal message here
-                    decryptedStr = decryptedStr(cipherDistance, message[1])
-                    #split decrypted message
-                    splitString = str.split(decryptedStr)
+                    decryptedStr = decrypt(self.cipherDistance, splitString[2])
 
                     #shifted this if statement one tab right when adding encryption
-                    if(not self.goalFound and splitString[2] =="goal"):
-                        self.goalX = splitString[0]
-                        self.goalY = splitString[1]
+                    if(not self.goalFound and decryptedStr =="goal"):
+                        self.goalX = int(splitString[0])
+                        self.goalY = int(splitString[1])
                         self.logSelf("Leader found goal at "+str(self.goalX) +" " + str(self.goalY))
+                        self.goalFound = True
 
                 elif(message[1] == "position"):
                     mesX = message[2][0]
@@ -185,10 +188,10 @@ class Robot(Thread):
         #logging.info("robotList = "+str(self.robotList))
 
         
-        firstRunOf = True
-        if(self.goalFound and firstRunOf):
+        
+        if(self.goalFound and self.firstRunOf):
             self.robotPlacement = []
-            firstRunOf = False
+            self.firstRunOf = False
         if self.goalFound and len(self.robotPlacement)==0:
 
             self.robotIDsPlaced= []
@@ -931,16 +934,16 @@ class Robot(Thread):
 
         if not self.goalFound:
             if(self.x!=0 and self.matrix[self.x-1][self.y] == 'g'):
-                self.network.broadcastMessage(encrypt(cipherDistance, str(self.x-1)+" "+str(self.y)+ " goal"))
+                self.network.broadcastMessage(encrypt(self.cipherDistance, str(self.x-1)+" "+str(self.y)+ " goal"))
                 self.goalFound = True
             elif(self.x!=self.xSize-1 and self.matrix[self.x+1][self.y] == 'g'):
-                self.network.broadcastMessage(encrypt(cipherDistance, str(self.x+1) + " " +str(self.y)+ " goal"))
+                self.network.broadcastMessage(encrypt(self.cipherDistance, str(self.x+1) + " " +str(self.y)+ " goal"))
                 self.goalFound = True
             elif(self.y!=0 and self.matrix[self.x][self.y-1] == 'g'):
-                self.network.broadcastMessage(encrypt(cipherDistance, str(self.x) + " " + str(self.y-1) + " goal"))
+                self.network.broadcastMessage(encrypt(self.cipherDistance, str(self.x) + " " + str(self.y-1) + " goal"))
                 self.goalFound = True
             elif(self.y!=self.ySize-1 and self.matrix[self.x][self.y+1] == 'g'):
-                self.network.broadcastMessage(encrypt(cipherDistance, str(self.x) + " " +str(self.y+1) + " goal"))
+                self.network.broadcastMessage(encrypt(self.cipherDistance, str(self.x) + " " +str(self.y+1) + " goal"))
                 self.goalFound = True
 
     def printKnowledge(self):
