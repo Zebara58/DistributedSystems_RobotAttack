@@ -3,20 +3,21 @@ import random
 import threading
 class Map:
     
-    def __init__(self, xSize, ySize):
+    def __init__(self, xSize, ySize, goalX, goalY):
         self.matrix = [['0' for x in range(xSize)] for y in range(ySize)]
         #self.matrix[3][3] = 1
         #self.matrix[1][0] = 1
         #self.lock = threading.Lock()
         self.xSize = xSize
         self.ySize = ySize
+        self.goalX = goalX
+        self.goalY = goalY
 
         #set goal
-        ranX = random.randint(0,xSize-1)
-        ranY = random.randint(0,ySize-1)
 
-        self.matrix[ranX][ranY] = 'g'
-        self.goal = [ranX,ranY]
+
+        self.matrix[self.goalX][self.goalY] = 'g'
+        self.goal = [self.goalX,self.goalY]
 
         self.lock = threading.Lock()
 

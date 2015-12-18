@@ -1,1179 +1,680 @@
 INFO:root:started!
 INFO:root:thread cv
-INFO:root:robot_60 started!
-INFO:root:Robot95 finished recieving message - [60, 'Elect leader']
-INFO:root:Robot21 finished recieving message - [60, 'Elect leader']
-INFO:root:Robot85 finished recieving message - [60, 'Elect leader']
-INFO:root:robot_95 started!
-INFO:root:Robot46 finished recieving message - [60, 'Elect leader']
-INFO:root:Robot60 finished recieving message - [95, 'Elect leader']
-INFO:root:robot_21 started!
-INFO:root:robot_85 started!
-INFO:root:Robot21 finished recieving message - [95, 'Elect leader']
-INFO:root:Robot60 finished recieving message - [21, 'Elect leader']
-INFO:root:Robot60 finished recieving message - [85, 'Elect leader']
-INFO:root:robot_46 started!
-INFO:root:Robot85 finished recieving message - [95, 'Elect leader']
-INFO:root:Robot95 finished recieving message - [21, 'Elect leader']
-INFO:root:Robot95 finished recieving message - [85, 'Elect leader']
-INFO:root:Robot60 finished recieving message - [46, 'Elect leader']
-INFO:root:Robot95 Waiting for leader to be elected
-INFO:root:Robot46 finished recieving message - [95, 'Elect leader']
-INFO:root:Robot85 finished recieving message - [21, 'Elect leader']
-INFO:root:Robot21 finished recieving message - [85, 'Elect leader']
-INFO:root:Robot95 finished recieving message - [46, 'Elect leader']
-INFO:root:Robot95 Waiting for leader to be elected
-INFO:root:Robot60 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot46 finished recieving message - [21, 'Elect leader']
-INFO:root:Robot46 finished recieving message - [85, 'Elect leader']
-INFO:root:Robot21 finished recieving message - [46, 'Elect leader']
-INFO:root:Robot95 finished recieving message - [60, 'position', [1, 1]]
-INFO:root:Robot21 Waiting for leader to be elected
-INFO:root:21 is the leader!
-INFO:root:Robot85 finished recieving message - [46, 'Elect leader']
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [1, 1]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot60 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot60 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [1, 1]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [1, 1]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot95 start while
-INFO:root:Robot60 start while
-INFO:root:Robot21 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot85 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot85 start while
-INFO:root:Robot21 start while
-INFO:root:Robot46 start while
+INFO:root:robot_50 started!
+INFO:root:Robot87 finished recieving message - [50, 'Elect leader']
+INFO:root:robot_87 started!
+INFO:root:Robot50 finished recieving message - [87, 'Elect leader']
+INFO:root:50 is the leader!
+INFO:root:Robot50 finished recieving message - [87, 'position', [1, 3]]
+INFO:root:Robot87 finished recieving message - [50, 'position', [3, 1]]
+INFO:root:Robot87 start while
+INFO:root:Robot50 start while
 INFO:root:Running robotPlacement filling!
 INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 95 is the lowest robot with distance 0 for space number 1 at location 1, 3
-INFO:root:TEMP ADD 60 is the lowest robot with distance 0 for space number 2 at location 1, 1
-INFO:root:TEMP ADD 46 is the lowest robot with distance 0 for space number 3 at location 2, 2
-INFO:root:TEMP ADD 85 is the lowest robot with distance 12 for space number 4 at location 0, 2
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['21'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['21']
-INFO:root:TEMP ADD RING21 is the lowest robot with distance 24 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['95', 1, 3, 0], ['60', 1, 1, 0], ['46', 2, 2, 0], ['85', 0, 2, 12], ['21', 0, 1, 24]]
-INFO:root:before sort desc robotPlacement [['95', 1, 3, 0], ['60', 1, 1, 0], ['46', 2, 2, 0], ['85', 0, 2, 12], ['21', 0, 1, 24]]
-INFO:root:after sort desc robotPlacement [['21', 0, 1, 24], ['85', 0, 2, 12], ['95', 1, 3, 0], ['60', 1, 1, 0], ['46', 2, 2, 0]]
-INFO:root:60 is the lowest robot with distance 4 for space number 1 at location 0, 1
-INFO:root:95 is the lowest robot with distance 8 for space number 2 at location 0, 2
-INFO:root:85 is the lowest robot with distance 1 for space number 3 at location 1, 3
-INFO:root:46 is the lowest robot with distance 8 for space number 4 at location 1, 1
-INFO:root:21 is the lowest robot with distance 3 for space number 5 at location 2, 2
-INFO:root:before sort ascend robotPlacement [['60', 0, 1, 4], ['95', 0, 2, 8], ['85', 1, 3, 1], ['46', 1, 1, 8], ['21', 2, 2, 3]]
-INFO:root:after sort ascend robotPlacement [['85', 1, 3, 1], ['21', 2, 2, 3], ['60', 0, 1, 4], ['95', 0, 2, 8], ['46', 1, 1, 8]]
-INFO:root:robotPlacement = [['85', 1, 3, 1], ['21', 2, 2, 3], ['60', 0, 1, 4], ['95', 0, 2, 8], ['46', 1, 1, 8]]
-INFO:root:robotPlacement after sort = [['85', 1, 3, 1], ['21', 2, 2, 3], ['60', 0, 1, 4], ['95', 0, 2, 8], ['46', 1, 1, 8]]
-INFO:root:MoveAndSend - id:85 destx:1 destY:3 curX:1 curY:4
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:4 moveDown:False
+INFO:root:TEMP ADD 50 is the lowest robot with distance 1 for space number 1 at location 3, 2
+INFO:root:TEMP ADD 87 is the lowest robot with distance 1 for space number 2 at location 2, 3
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['50', 3, 2, 1], ['87', 2, 3, 1]]
+INFO:root:before sort desc robotPlacement [['50', 3, 2, 1], ['87', 2, 3, 1]]
+INFO:root:after sort desc robotPlacement [['50', 3, 2, 1], ['87', 2, 3, 1]]
+INFO:root:50 is the lowest robot with distance 1 for space number 1 at location 3, 2
+INFO:root:87 is the lowest robot with distance 1 for space number 2 at location 2, 3
+INFO:root:before sort ascend robotPlacement [['50', 3, 2, 1], ['87', 2, 3, 1]]
+INFO:root:after sort ascend robotPlacement [['50', 3, 2, 1], ['87', 2, 3, 1]]
+INFO:root:robotPlacement = [['50', 3, 2, 1], ['87', 2, 3, 1]]
+INFO:root:robotPlacement after sort = [['50', 3, 2, 1], ['87', 2, 3, 1]]
+INFO:root:MoveAndSend - id:50 destx:3 destY:2 curX:3 curY:1
+INFO:root:Starting 'L' path for robot:50
+INFO:root:Calling MoveVert 'L' for robot:50 xMove:3 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [3 2]
+INFO:root:Path found! - [[2, 3, 2]]
+INFO:root:d move
+INFO:root:update for 50 curX-3  curY-2  prevX-3  prevY-1
+INFO:root:pathList after moving robot:50 = ['2 3 2']
+INFO:root:MoveAndSend - id:87 destx:2 destY:3 curX:1 curY:3
+INFO:root:Starting 'L' path for robot:87
+INFO:root:Calling MoveVert 'L' for robot:87 xMove:1 yMove:3 moveDown:True
 INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Path found! - [[2, 1, 3]]
+INFO:root:tryMoveHor succeeded and got [2 3]
+INFO:root:Path found! - [[2, 2, 3]]
+INFO:root:r move
+INFO:root:Robot50 finished recieving message - ['87', 'Move', 'r']
+INFO:root:Robot87 finished recieving message - ['87', 'Move', 'r']
+INFO:root:Robot87 About to move!
+INFO:root:pathList after moving robot:87 = ['2 3 2', '2 2 3']
+INFO:root:update for 87 curX-2  curY-3  prevX-1  prevY-3
+INFO:root:Robot50 finished recieving message - [87, 'position', [2, 3]]
+INFO:root:Robot87 finished recieving message - [50, 'position', [3, 2]]
+INFO:root:Robot87 start while
+INFO:root:Robot50 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 50 is the lowest robot with distance 0 for space number 1 at location 3, 2
+INFO:root:TEMP ADD 87 is the lowest robot with distance 0 for space number 2 at location 2, 3
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:before sort desc robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:after sort desc robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:50 is the lowest robot with distance 0 for space number 1 at location 3, 2
+INFO:root:87 is the lowest robot with distance 0 for space number 2 at location 2, 3
+INFO:root:before sort ascend robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:after sort ascend robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:robotPlacement = [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:robotPlacement after sort = [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:MoveAndSend - id:50 destx:3 destY:2 curX:3 curY:2
+INFO:root:Starting 'L' path for robot:50
+INFO:root:Calling MoveVert 'L' for robot:50 xMove:3 yMove:2 moveDown:True
+INFO:root:tryMoveVert finished and got [3 2]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:50 = []
+INFO:root:MoveAndSend - id:87 destx:2 destY:3 curX:2 curY:3
+INFO:root:Starting 'L' path for robot:87
+INFO:root:Calling MoveVert 'L' for robot:87 xMove:2 yMove:3 moveDown:True
+INFO:root:tryMoveVert finished and got [2 3]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot50 finished recieving message - ['87', 'Move', 'n']
+INFO:root:Robot87 finished recieving message - ['87', 'Move', 'n']
+INFO:root:pathList after moving robot:87 = []
+INFO:root:Robot87 About to move!
+INFO:root:Robot50 finished recieving message - [87, 'position', [2, 3]]
+INFO:root:Robot87 finished recieving message - [50, 'position', [3, 2]]
+INFO:root:Robot87 start while
+INFO:root:Robot50 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 50 is the lowest robot with distance 0 for space number 1 at location 3, 2
+INFO:root:TEMP ADD 87 is the lowest robot with distance 0 for space number 2 at location 2, 3
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:before sort desc robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:after sort desc robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:50 is the lowest robot with distance 0 for space number 1 at location 3, 2
+INFO:root:87 is the lowest robot with distance 0 for space number 2 at location 2, 3
+INFO:root:before sort ascend robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:after sort ascend robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:robotPlacement = [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:robotPlacement after sort = [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:MoveAndSend - id:50 destx:3 destY:2 curX:3 curY:2
+INFO:root:Starting 'L' path for robot:50
+INFO:root:Calling MoveVert 'L' for robot:50 xMove:3 yMove:2 moveDown:True
+INFO:root:tryMoveVert finished and got [3 2]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:50 = []
+INFO:root:MoveAndSend - id:87 destx:2 destY:3 curX:2 curY:3
+INFO:root:Starting 'L' path for robot:87
+INFO:root:Calling MoveVert 'L' for robot:87 xMove:2 yMove:3 moveDown:True
+INFO:root:tryMoveVert finished and got [2 3]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot50 finished recieving message - ['87', 'Move', 'n']
+INFO:root:Robot87 finished recieving message - ['87', 'Move', 'n']
+INFO:root:pathList after moving robot:87 = []
+INFO:root:Robot87 About to move!
+INFO:root:Robot87 finished recieving message - [50, 'position', [3, 2]]
+INFO:root:Robot50 finished recieving message - [87, 'position', [2, 3]]
+INFO:root:Robot50 start while
+INFO:root:Robot87 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 50 is the lowest robot with distance 0 for space number 1 at location 3, 2
+INFO:root:TEMP ADD 87 is the lowest robot with distance 0 for space number 2 at location 2, 3
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:before sort desc robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:after sort desc robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:50 is the lowest robot with distance 0 for space number 1 at location 3, 2
+INFO:root:87 is the lowest robot with distance 0 for space number 2 at location 2, 3
+INFO:root:before sort ascend robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:after sort ascend robotPlacement [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:robotPlacement = [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:robotPlacement after sort = [['50', 3, 2, 0], ['87', 2, 3, 0]]
+INFO:root:MoveAndSend - id:50 destx:3 destY:2 curX:3 curY:2
+INFO:root:Starting 'L' path for robot:50
+INFO:root:Calling MoveVert 'L' for robot:50 xMove:3 yMove:2 moveDown:True
+INFO:root:tryMoveVert finished and got [3 2]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:50 = []
+INFO:root:MoveAndSend - id:87 destx:2 destY:3 curX:2 curY:3
+INFO:root:Starting 'L' path for robot:87
+INFO:root:Calling MoveVert 'L' for robot:87 xMove:2 yMove:3 moveDown:True
+INFO:root:tryMoveVert finished and got [2 3]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot50 finished recieving message - ['87', 'Move', 'n']
+INFO:root:Robot87 finished recieving message - ['87', 'Move', 'n']
+INFO:root:pathList after moving robot:87 = []
+INFO:root:Robot87 About to move!
+INFO:root:started!
+INFO:root:thread cv
+INFO:root:robot_39 started!
+INFO:root:Robot52 finished recieving message - [39, 'Elect leader']
+INFO:root:robot_52 started!
+INFO:root:Robot39 finished recieving message - [52, 'Elect leader']
+INFO:root:39 is the leader!
+INFO:root:Robot39 finished recieving message - [52, 'position', [1, 1]]
+INFO:root:Robot52 finished recieving message - [39, 'position', [4, 2]]
+INFO:root:Robot52 start while
+INFO:root:Robot39 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 52 is the lowest robot with distance 1 for space number 1 at location 0, 1
+INFO:root:TEMP ADD 39 is the lowest robot with distance 5 for space number 2 at location 1, 0
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['52', 0, 1, 1], ['39', 1, 0, 5]]
+INFO:root:before sort desc robotPlacement [['52', 0, 1, 1], ['39', 1, 0, 5]]
+INFO:root:after sort desc robotPlacement [['39', 1, 0, 5], ['52', 0, 1, 1]]
+INFO:root:52 is the lowest robot with distance 1 for space number 1 at location 1, 0
+INFO:root:39 is the lowest robot with distance 5 for space number 2 at location 0, 1
+INFO:root:before sort ascend robotPlacement [['52', 1, 0, 1], ['39', 0, 1, 5]]
+INFO:root:after sort ascend robotPlacement [['52', 1, 0, 1], ['39', 0, 1, 5]]
+INFO:root:robotPlacement = [['52', 1, 0, 1], ['39', 0, 1, 5]]
+INFO:root:robotPlacement after sort = [['52', 1, 0, 1], ['39', 0, 1, 5]]
+INFO:root:MoveAndSend - id:52 destx:1 destY:0 curX:1 curY:1
+INFO:root:Starting 'L' path for robot:52
+INFO:root:Calling MoveVert 'L' for robot:52 xMove:1 yMove:1 moveDown:False
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:Path found! - [[2, 1, 0]]
 INFO:root:u move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'u']
-INFO:root:pathList after moving robot:85 = ['2 1 3']
-INFO:root:MoveAndSend - id:21 destx:2 destY:2 curX:4 curY:3
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:4 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [4 2]
-INFO:root:tryMoveHor succeeded and got [2 2]
-INFO:root:Path found! - [[2, 4, 2], [3, 3, 2], [4, 2, 2]]
+INFO:root:Robot39 finished recieving message - ['52', 'Move', 'u']
+INFO:root:Robot52 finished recieving message - ['52', 'Move', 'u']
+INFO:root:pathList after moving robot:52 = ['2 1 0']
+INFO:root:Robot52 About to move!
+INFO:root:MoveAndSend - id:39 destx:0 destY:1 curX:4 curY:2
+INFO:root:update for 52 curX-1  curY-0  prevX-1  prevY-1
+INFO:root:Starting 'L' path for robot:39
+INFO:root:Calling MoveVert 'L' for robot:39 xMove:4 yMove:2 moveDown:False
+INFO:root:tryMoveVert finished and got [4 1]
+INFO:root:tryMoveHor succeeded and got [0 1]
+INFO:root:Path found! - [[2, 4, 1], [3, 3, 1], [4, 2, 1], [5, 1, 1], [6, 0, 1]]
 INFO:root:u move
-INFO:root:update for 21 curX-4  curY-2  prevX-4  prevY-3
-INFO:root:pathList after moving robot:21 = ['2 1 3', '2 4 2', '3 3 2', '4 2 2']
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:1 curY:1
-INFO:root:Starting 'L' path for robot:60
-INFO:root:Robot85 About to move!
-INFO:root:Calling MoveVert 'L' for robot:60 xMove:1 yMove:1 moveDown:True
+INFO:root:update for 39 curX-4  curY-1  prevX-4  prevY-2
+INFO:root:pathList after moving robot:39 = ['2 1 0', '2 4 1', '3 3 1', '4 2 1', '5 1 1', '6 0 1']
+INFO:root:Robot39 finished recieving message - [52, 'position', [1, 0]]
+INFO:root:Robot52 finished recieving message - [39, 'position', [4, 1]]
+INFO:root:Robot52 start while
+INFO:root:Robot39 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 52 is the lowest robot with distance 0 for space number 1 at location 1, 0
+INFO:root:TEMP ADD 39 is the lowest robot with distance 4 for space number 2 at location 0, 1
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['52', 1, 0, 0], ['39', 0, 1, 4]]
+INFO:root:before sort desc robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 4]]
+INFO:root:after sort desc robotPlacement [['39', 0, 1, 4], ['52', 1, 0, 0]]
+INFO:root:39 is the lowest robot with distance 4 for space number 1 at location 0, 1
+INFO:root:52 is the lowest robot with distance 0 for space number 2 at location 1, 0
+INFO:root:before sort ascend robotPlacement [['39', 0, 1, 4], ['52', 1, 0, 0]]
+INFO:root:after sort ascend robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 4]]
+INFO:root:robotPlacement = [['52', 1, 0, 0], ['39', 0, 1, 4]]
+INFO:root:robotPlacement after sort = [['52', 1, 0, 0], ['39', 0, 1, 4]]
+INFO:root:MoveAndSend - id:52 destx:1 destY:0 curX:1 curY:0
+INFO:root:Starting 'L' path for robot:52
+INFO:root:Calling MoveVert 'L' for robot:52 xMove:1 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot39 finished recieving message - ['52', 'Move', 'n']
+INFO:root:Robot52 finished recieving message - ['52', 'Move', 'n']
+INFO:root:pathList after moving robot:52 = []
+INFO:root:MoveAndSend - id:39 destx:0 destY:1 curX:4 curY:1
+INFO:root:Starting 'L' path for robot:39
+INFO:root:Calling MoveVert 'L' for robot:39 xMove:4 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [4 1]
+INFO:root:tryMoveHor succeeded and got [0 1]
+INFO:root:Path found! - [[2, 3, 1], [3, 2, 1], [4, 1, 1], [5, 0, 1]]
+INFO:root:l move
+INFO:root:update for 39 curX-3  curY-1  prevX-4  prevY-1
+INFO:root:Robot52 About to move!
+INFO:root:pathList after moving robot:39 = ['2 3 1', '3 2 1', '4 1 1', '5 0 1']
+INFO:root:Robot39 finished recieving message - [52, 'position', [1, 0]]
+INFO:root:Robot52 finished recieving message - [39, 'position', [3, 1]]
+INFO:root:Robot52 start while
+INFO:root:Robot39 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 52 is the lowest robot with distance 0 for space number 1 at location 1, 0
+INFO:root:TEMP ADD 39 is the lowest robot with distance 3 for space number 2 at location 0, 1
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['52', 1, 0, 0], ['39', 0, 1, 3]]
+INFO:root:before sort desc robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 3]]
+INFO:root:after sort desc robotPlacement [['39', 0, 1, 3], ['52', 1, 0, 0]]
+INFO:root:39 is the lowest robot with distance 3 for space number 1 at location 0, 1
+INFO:root:52 is the lowest robot with distance 0 for space number 2 at location 1, 0
+INFO:root:before sort ascend robotPlacement [['39', 0, 1, 3], ['52', 1, 0, 0]]
+INFO:root:after sort ascend robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 3]]
+INFO:root:robotPlacement = [['52', 1, 0, 0], ['39', 0, 1, 3]]
+INFO:root:robotPlacement after sort = [['52', 1, 0, 0], ['39', 0, 1, 3]]
+INFO:root:MoveAndSend - id:52 destx:1 destY:0 curX:1 curY:0
+INFO:root:Starting 'L' path for robot:52
+INFO:root:Calling MoveVert 'L' for robot:52 xMove:1 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot39 finished recieving message - ['52', 'Move', 'n']
+INFO:root:Robot52 finished recieving message - ['52', 'Move', 'n']
+INFO:root:pathList after moving robot:52 = []
+INFO:root:MoveAndSend - id:39 destx:0 destY:1 curX:3 curY:1
+INFO:root:Starting 'L' path for robot:39
+INFO:root:Calling MoveVert 'L' for robot:39 xMove:3 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [3 1]
+INFO:root:Robot52 About to move!
+INFO:root:tryMoveHor succeeded and got [0 1]
+INFO:root:Path found! - [[2, 2, 1], [3, 1, 1], [4, 0, 1]]
+INFO:root:l move
+INFO:root:update for 39 curX-2  curY-1  prevX-3  prevY-1
+INFO:root:pathList after moving robot:39 = ['2 2 1', '3 1 1', '4 0 1']
+INFO:root:Robot39 finished recieving message - [52, 'position', [1, 0]]
+INFO:root:Robot52 finished recieving message - [39, 'position', [2, 1]]
+INFO:root:Robot52 start while
+INFO:root:Robot39 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 52 is the lowest robot with distance 0 for space number 1 at location 1, 0
+INFO:root:TEMP ADD 39 is the lowest robot with distance 2 for space number 2 at location 0, 1
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['52', 1, 0, 0], ['39', 0, 1, 2]]
+INFO:root:before sort desc robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 2]]
+INFO:root:after sort desc robotPlacement [['39', 0, 1, 2], ['52', 1, 0, 0]]
+INFO:root:39 is the lowest robot with distance 2 for space number 1 at location 0, 1
+INFO:root:52 is the lowest robot with distance 0 for space number 2 at location 1, 0
+INFO:root:before sort ascend robotPlacement [['39', 0, 1, 2], ['52', 1, 0, 0]]
+INFO:root:after sort ascend robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 2]]
+INFO:root:robotPlacement = [['52', 1, 0, 0], ['39', 0, 1, 2]]
+INFO:root:robotPlacement after sort = [['52', 1, 0, 0], ['39', 0, 1, 2]]
+INFO:root:MoveAndSend - id:52 destx:1 destY:0 curX:1 curY:0
+INFO:root:Starting 'L' path for robot:52
+INFO:root:Calling MoveVert 'L' for robot:52 xMove:1 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot39 finished recieving message - ['52', 'Move', 'n']
+INFO:root:Robot52 finished recieving message - ['52', 'Move', 'n']
+INFO:root:pathList after moving robot:52 = []
+INFO:root:MoveAndSend - id:39 destx:0 destY:1 curX:2 curY:1
+INFO:root:Starting 'L' path for robot:39
+INFO:root:Calling MoveVert 'L' for robot:39 xMove:2 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [2 1]
+INFO:root:tryMoveHor succeeded and got [0 1]
+INFO:root:Path found! - [[2, 1, 1], [3, 0, 1]]
+INFO:root:l move
+INFO:root:update for 39 curX-1  curY-1  prevX-2  prevY-1
+INFO:root:pathList after moving robot:39 = ['2 1 1', '3 0 1']
+INFO:root:Robot52 About to move!
+INFO:root:Robot52 finished recieving message - [39, 'position', [1, 1]]
+INFO:root:Robot39 finished recieving message - [52, 'position', [1, 0]]
+INFO:root:Robot39 start while
+INFO:root:Robot52 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 52 is the lowest robot with distance 0 for space number 1 at location 1, 0
+INFO:root:TEMP ADD 39 is the lowest robot with distance 1 for space number 2 at location 0, 1
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['52', 1, 0, 0], ['39', 0, 1, 1]]
+INFO:root:before sort desc robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 1]]
+INFO:root:after sort desc robotPlacement [['39', 0, 1, 1], ['52', 1, 0, 0]]
+INFO:root:39 is the lowest robot with distance 1 for space number 1 at location 0, 1
+INFO:root:52 is the lowest robot with distance 0 for space number 2 at location 1, 0
+INFO:root:before sort ascend robotPlacement [['39', 0, 1, 1], ['52', 1, 0, 0]]
+INFO:root:after sort ascend robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 1]]
+INFO:root:robotPlacement = [['52', 1, 0, 0], ['39', 0, 1, 1]]
+INFO:root:robotPlacement after sort = [['52', 1, 0, 0], ['39', 0, 1, 1]]
+INFO:root:MoveAndSend - id:52 destx:1 destY:0 curX:1 curY:0
+INFO:root:Starting 'L' path for robot:52
+INFO:root:Calling MoveVert 'L' for robot:52 xMove:1 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot39 finished recieving message - ['52', 'Move', 'n']
+INFO:root:Robot52 finished recieving message - ['52', 'Move', 'n']
+INFO:root:pathList after moving robot:52 = []
+INFO:root:Robot52 About to move!
+INFO:root:MoveAndSend - id:39 destx:0 destY:1 curX:1 curY:1
+INFO:root:Starting 'L' path for robot:39
+INFO:root:Calling MoveVert 'L' for robot:39 xMove:1 yMove:1 moveDown:True
 INFO:root:tryMoveVert finished and got [1 1]
 INFO:root:tryMoveHor succeeded and got [0 1]
 INFO:root:Path found! - [[2, 0, 1]]
 INFO:root:l move
-INFO:root:Robot60 finished recieving message - ['60', 'Move', 'l']
-INFO:root:Robot60 About to move!
-INFO:root:Robot95 finished recieving message - ['60', 'Move', 'l']
-INFO:root:update for 60 curX-0  curY-1  prevX-1  prevY-1
-INFO:root:Robot21 finished recieving message - ['60', 'Move', 'l']
-INFO:root:Robot85 finished recieving message - ['60', 'Move', 'l']
-INFO:root:Robot46 finished recieving message - ['60', 'Move', 'l']
-INFO:root:pathList after moving robot:60 = ['2 1 3', '2 4 2', '3 3 2', '4 2 2', '2 0 1']
-INFO:root:MoveAndSend - id:95 destx:0 destY:2 curX:1 curY:3
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:1 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:tryMoveHor succeeded and got [0 3]
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:0 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - [[1, 0, 3], [2, 0, 2]]
-INFO:root:l move
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'l']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'l']
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'l']
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'l']
-INFO:root:Robot95 About to move!
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'l']
-INFO:root:update for 95 curX-0  curY-3  prevX-1  prevY-3
-INFO:root:pathList after moving robot:95 = ['2 1 3', '2 4 2', '3 3 2', '4 2 2', '2 0 1', '1 0 3', '2 0 2']
-INFO:root:MoveAndSend - id:46 destx:1 destY:1 curX:2 curY:2
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:2 yMove:2 moveDown:False
-INFO:root:tryMoveVert finished and got [2 1]
-INFO:root:tryMoveHor succeeded and got [1 1]
-INFO:root:Path found! - [[2, 2, 1], [3, 1, 1]]
-INFO:root:u move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot46 About to move!
-INFO:root:pathList after moving robot:46 = ['2 1 3', '2 4 2', '3 3 2', '4 2 2', '2 0 1', '1 0 3', '2 0 2', '2 2 1', '3 1 1']
-INFO:root:update for 46 curX-2  curY-1  prevX-2  prevY-2
-INFO:root:Robot60 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot60 finished recieving message - [95, 'position', [0, 3]]
-INFO:root:Robot60 finished recieving message - [46, 'position', [2, 1]]
-INFO:root:Robot95 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [0, 3]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [2, 1]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [0, 3]]
-INFO:root:Robot21 finished recieving message - [46, 'position', [2, 1]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [0, 3]]
-INFO:root:Robot85 finished recieving message - [46, 'position', [2, 1]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot21 start while
-INFO:root:Robot95 start while
-INFO:root:Robot46 start while
-INFO:root:Robot60 start while
-INFO:root:Robot85 start while
+INFO:root:update for 39 curX-0  curY-1  prevX-1  prevY-1
+INFO:root:pathList after moving robot:39 = ['2 0 1']
+INFO:root:Robot39 finished recieving message - [52, 'position', [1, 0]]
+INFO:root:Robot52 finished recieving message - [39, 'position', [0, 1]]
+INFO:root:Robot52 start while
+INFO:root:Robot39 start while
 INFO:root:Running robotPlacement filling!
 INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 46 is the lowest robot with distance 1 for space number 1 at location 1, 1
-INFO:root:TEMP ADD 85 is the lowest robot with distance 1 for space number 2 at location 1, 3
-INFO:root:TEMP ADD 60 is the lowest robot with distance 1 for space number 3 at location 0, 2
-INFO:root:TEMP ADD 21 is the lowest robot with distance 2 for space number 4 at location 2, 2
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['95'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['95']
-INFO:root:TEMP ADD RING95 is the lowest robot with distance 8 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['46', 1, 1, 1], ['85', 1, 3, 1], ['60', 0, 2, 1], ['21', 2, 2, 2], ['95', 0, 1, 8]]
-INFO:root:before sort desc robotPlacement [['46', 1, 1, 1], ['85', 1, 3, 1], ['60', 0, 2, 1], ['21', 2, 2, 2], ['95', 0, 1, 8]]
-INFO:root:after sort desc robotPlacement [['95', 0, 1, 8], ['21', 2, 2, 2], ['46', 1, 1, 1], ['85', 1, 3, 1], ['60', 0, 2, 1]]
-INFO:root:60 is the lowest robot with distance 0 for space number 1 at location 0, 1
-INFO:root:46 is the lowest robot with distance 1 for space number 2 at location 2, 2
-INFO:root:85 is the lowest robot with distance 12 for space number 3 at location 1, 1
-INFO:root:95 is the lowest robot with distance 1 for space number 4 at location 1, 3
-INFO:root:21 is the lowest robot with distance 16 for space number 5 at location 0, 2
-INFO:root:before sort ascend robotPlacement [['60', 0, 1, 0], ['46', 2, 2, 1], ['85', 1, 1, 12], ['95', 1, 3, 1], ['21', 0, 2, 16]]
-INFO:root:after sort ascend robotPlacement [['60', 0, 1, 0], ['46', 2, 2, 1], ['95', 1, 3, 1], ['85', 1, 1, 12], ['21', 0, 2, 16]]
-INFO:root:robotPlacement = [['60', 0, 1, 0], ['46', 2, 2, 1], ['95', 1, 3, 1], ['85', 1, 1, 12], ['21', 0, 2, 16]]
-INFO:root:robotPlacement after sort = [['60', 0, 1, 0], ['46', 2, 2, 1], ['95', 1, 3, 1], ['85', 1, 1, 12], ['21', 0, 2, 16]]
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:0 curY:1
-INFO:root:Starting 'L' path for robot:60
-INFO:root:Calling MoveVert 'L' for robot:60 xMove:0 yMove:1 moveDown:True
+INFO:root:TEMP ADD 52 is the lowest robot with distance 0 for space number 1 at location 1, 0
+INFO:root:TEMP ADD 39 is the lowest robot with distance 0 for space number 2 at location 0, 1
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['52', 1, 0, 0], ['39', 0, 1, 0]]
+INFO:root:before sort desc robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 0]]
+INFO:root:after sort desc robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 0]]
+INFO:root:52 is the lowest robot with distance 0 for space number 1 at location 1, 0
+INFO:root:39 is the lowest robot with distance 0 for space number 2 at location 0, 1
+INFO:root:before sort ascend robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 0]]
+INFO:root:after sort ascend robotPlacement [['52', 1, 0, 0], ['39', 0, 1, 0]]
+INFO:root:robotPlacement = [['52', 1, 0, 0], ['39', 0, 1, 0]]
+INFO:root:robotPlacement after sort = [['52', 1, 0, 0], ['39', 0, 1, 0]]
+INFO:root:MoveAndSend - id:52 destx:1 destY:0 curX:1 curY:0
+INFO:root:Starting 'L' path for robot:52
+INFO:root:Calling MoveVert 'L' for robot:52 xMove:1 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot39 finished recieving message - ['52', 'Move', 'n']
+INFO:root:Robot52 finished recieving message - ['52', 'Move', 'n']
+INFO:root:Robot52 About to move!
+INFO:root:pathList after moving robot:52 = []
+INFO:root:MoveAndSend - id:39 destx:0 destY:1 curX:0 curY:1
+INFO:root:Starting 'L' path for robot:39
+INFO:root:Calling MoveVert 'L' for robot:39 xMove:0 yMove:1 moveDown:True
 INFO:root:tryMoveVert finished and got [0 1]
 INFO:root:Path found! - []
 INFO:root:path actually isn't found!
 INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot60 About to move!
-INFO:root:Robot95 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['60', 'Move', 'n']
-INFO:root:pathList after moving robot:60 = []
-INFO:root:MoveAndSend - id:46 destx:2 destY:2 curX:2 curY:1
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:2 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [2 2]
-INFO:root:Path found! - [[2, 2, 2]]
+INFO:root:pathList after moving robot:39 = []
+INFO:root:started!
+INFO:root:thread cv
+INFO:root:robot_93 started!
+INFO:root:Robot67 finished recieving message - [93, 'Elect leader']
+INFO:root:robot_67 started!
+INFO:root:Robot93 finished recieving message - [67, 'Elect leader']
+INFO:root:Robot67 Waiting for leader to be elected
+INFO:root:67 is the leader!
+INFO:root:Robot67 finished recieving message - [93, 'position', [2, 4]]
+INFO:root:Robot93 finished recieving message - [67, 'position', [0, 1]]
+INFO:root:Robot93 start while
+INFO:root:Robot67 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 67 is the lowest robot with distance 0 for space number 1 at location 0, 1
+INFO:root:TEMP ADD 93 is the lowest robot with distance 5 for space number 2 at location 1, 0
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['67', 0, 1, 0], ['93', 1, 0, 5]]
+INFO:root:before sort desc robotPlacement [['67', 0, 1, 0], ['93', 1, 0, 5]]
+INFO:root:after sort desc robotPlacement [['93', 1, 0, 5], ['67', 0, 1, 0]]
+INFO:root:93 is the lowest robot with distance 5 for space number 1 at location 1, 0
+INFO:root:67 is the lowest robot with distance 0 for space number 2 at location 0, 1
+INFO:root:before sort ascend robotPlacement [['93', 1, 0, 5], ['67', 0, 1, 0]]
+INFO:root:after sort ascend robotPlacement [['67', 0, 1, 0], ['93', 1, 0, 5]]
+INFO:root:robotPlacement = [['67', 0, 1, 0], ['93', 1, 0, 5]]
+INFO:root:robotPlacement after sort = [['67', 0, 1, 0], ['93', 1, 0, 5]]
+INFO:root:MoveAndSend - id:67 destx:0 destY:1 curX:0 curY:1
+INFO:root:Starting 'L' path for robot:67
+INFO:root:Calling MoveVert 'L' for robot:67 xMove:0 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [0 1]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:67 = []
+INFO:root:MoveAndSend - id:93 destx:1 destY:0 curX:2 curY:4
+INFO:root:Starting 'L' path for robot:93
+INFO:root:Calling MoveVert 'L' for robot:93 xMove:2 yMove:4 moveDown:False
+INFO:root:tryMoveVert finished and got [2 0]
+INFO:root:tryMoveHor succeeded and got [1 0]
+INFO:root:Path found! - [[2, 2, 3], [3, 2, 2], [4, 2, 1], [5, 2, 0], [6, 1, 0]]
+INFO:root:u move
+INFO:root:Robot93 finished recieving message - ['93', 'Move', 'u']
+INFO:root:Robot93 About to move!
+INFO:root:Robot67 finished recieving message - ['93', 'Move', 'u']
+INFO:root:update for 93 curX-2  curY-3  prevX-2  prevY-4
+INFO:root:pathList after moving robot:93 = ['2 2 3', '3 2 2', '4 2 1', '5 2 0', '6 1 0']
+INFO:root:Robot67 finished recieving message - [93, 'position', [2, 3]]
+INFO:root:Robot93 finished recieving message - [67, 'position', [0, 1]]
+INFO:root:Robot93 start while
+INFO:root:Robot67 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 67 is the lowest robot with distance 0 for space number 1 at location 0, 1
+INFO:root:TEMP ADD 93 is the lowest robot with distance 4 for space number 2 at location 1, 0
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['67', 0, 1, 0], ['93', 1, 0, 4]]
+INFO:root:before sort desc robotPlacement [['67', 0, 1, 0], ['93', 1, 0, 4]]
+INFO:root:after sort desc robotPlacement [['93', 1, 0, 4], ['67', 0, 1, 0]]
+INFO:root:93 is the lowest robot with distance 4 for space number 1 at location 1, 0
+INFO:root:67 is the lowest robot with distance 0 for space number 2 at location 0, 1
+INFO:root:before sort ascend robotPlacement [['93', 1, 0, 4], ['67', 0, 1, 0]]
+INFO:root:after sort ascend robotPlacement [['67', 0, 1, 0], ['93', 1, 0, 4]]
+INFO:root:robotPlacement = [['67', 0, 1, 0], ['93', 1, 0, 4]]
+INFO:root:robotPlacement after sort = [['67', 0, 1, 0], ['93', 1, 0, 4]]
+INFO:root:MoveAndSend - id:67 destx:0 destY:1 curX:0 curY:1
+INFO:root:Starting 'L' path for robot:67
+INFO:root:Calling MoveVert 'L' for robot:67 xMove:0 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [0 1]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:67 = []
+INFO:root:MoveAndSend - id:93 destx:1 destY:0 curX:2 curY:3
+INFO:root:Starting 'L' path for robot:93
+INFO:root:Calling MoveVert 'L' for robot:93 xMove:2 yMove:3 moveDown:False
+INFO:root:tryMoveVert finished and got [2 0]
+INFO:root:tryMoveHor succeeded and got [1 0]
+INFO:root:Path found! - [[2, 2, 2], [3, 2, 1], [4, 2, 0], [5, 1, 0]]
+INFO:root:u move
+INFO:root:Robot93 finished recieving message - ['93', 'Move', 'u']
+INFO:root:Robot93 About to move!
+INFO:root:Robot67 finished recieving message - ['93', 'Move', 'u']
+INFO:root:update for 93 curX-2  curY-2  prevX-2  prevY-3
+INFO:root:pathList after moving robot:93 = ['2 2 2', '3 2 1', '4 2 0', '5 1 0']
+INFO:root:Robot67 finished recieving message - [93, 'position', [2, 2]]
+INFO:root:Robot93 finished recieving message - [67, 'position', [0, 1]]
+INFO:root:Robot93 start while
+INFO:root:Robot67 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:started!
+INFO:root:thread cv
+INFO:root:robot_12 started!
+INFO:root:Robot86 finished recieving message - [12, 'Elect leader']
+INFO:root:robot_86 started!
+INFO:root:Robot12 finished recieving message - [86, 'Elect leader']
+INFO:root:12 is the leader!
+INFO:root:Robot12 finished recieving message - [86, 'position', [0, 2]]
+INFO:root:Robot86 finished recieving message - [12, 'position', [1, 5]]
+INFO:root:Robot86 start while
+INFO:root:Robot12 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 86 is the lowest robot with distance 1 for space number 1 at location 0, 1
+INFO:root:TEMP ADD 12 is the lowest robot with distance 5 for space number 2 at location 1, 0
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['86', 0, 1, 1], ['12', 1, 0, 5]]
+INFO:root:before sort desc robotPlacement [['86', 0, 1, 1], ['12', 1, 0, 5]]
+INFO:root:after sort desc robotPlacement [['12', 1, 0, 5], ['86', 0, 1, 1]]
+INFO:root:12 is the lowest robot with distance 5 for space number 1 at location 1, 0
+INFO:root:86 is the lowest robot with distance 1 for space number 2 at location 0, 1
+INFO:root:before sort ascend robotPlacement [['12', 1, 0, 5], ['86', 0, 1, 1]]
+INFO:root:after sort ascend robotPlacement [['86', 0, 1, 1], ['12', 1, 0, 5]]
+INFO:root:robotPlacement = [['86', 0, 1, 1], ['12', 1, 0, 5]]
+INFO:root:robotPlacement after sort = [['86', 0, 1, 1], ['12', 1, 0, 5]]
+INFO:root:MoveAndSend - id:86 destx:0 destY:1 curX:0 curY:2
+INFO:root:Starting 'L' path for robot:86
+INFO:root:Calling MoveVert 'L' for robot:86 xMove:0 yMove:2 moveDown:False
+INFO:root:tryMoveVert finished and got [0 1]
+INFO:root:Path found! - [[2, 0, 1]]
+INFO:root:u move
+INFO:root:Robot12 finished recieving message - ['86', 'Move', 'u']
+INFO:root:Robot86 finished recieving message - ['86', 'Move', 'u']
+INFO:root:Robot86 About to move!
+INFO:root:pathList after moving robot:86 = ['2 0 1']
+INFO:root:update for 86 curX-0  curY-1  prevX-0  prevY-2
+INFO:root:MoveAndSend - id:12 destx:1 destY:0 curX:1 curY:5
+INFO:root:Starting 'L' path for robot:12
+INFO:root:Calling MoveVert 'L' for robot:12 xMove:1 yMove:5 moveDown:False
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:Path found! - [[2, 1, 4], [3, 1, 3], [4, 1, 2], [5, 1, 1], [6, 1, 0]]
+INFO:root:u move
+INFO:root:update for 12 curX-1  curY-4  prevX-1  prevY-5
+INFO:root:pathList after moving robot:12 = ['2 0 1', '2 1 4', '3 1 3', '4 1 2', '5 1 1', '6 1 0']
+INFO:root:Robot86 finished recieving message - [12, 'position', [1, 4]]
+INFO:root:Robot12 finished recieving message - [86, 'position', [0, 1]]
+INFO:root:Robot12 start while
+INFO:root:Robot86 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 86 is the lowest robot with distance 0 for space number 1 at location 0, 1
+INFO:root:TEMP ADD 12 is the lowest robot with distance 4 for space number 2 at location 1, 0
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['86', 0, 1, 0], ['12', 1, 0, 4]]
+INFO:root:before sort desc robotPlacement [['86', 0, 1, 0], ['12', 1, 0, 4]]
+INFO:root:after sort desc robotPlacement [['12', 1, 0, 4], ['86', 0, 1, 0]]
+INFO:root:12 is the lowest robot with distance 4 for space number 1 at location 1, 0
+INFO:root:86 is the lowest robot with distance 0 for space number 2 at location 0, 1
+INFO:root:before sort ascend robotPlacement [['12', 1, 0, 4], ['86', 0, 1, 0]]
+INFO:root:after sort ascend robotPlacement [['86', 0, 1, 0], ['12', 1, 0, 4]]
+INFO:root:robotPlacement = [['86', 0, 1, 0], ['12', 1, 0, 4]]
+INFO:root:robotPlacement after sort = [['86', 0, 1, 0], ['12', 1, 0, 4]]
+INFO:root:MoveAndSend - id:86 destx:0 destY:1 curX:0 curY:1
+INFO:root:Starting 'L' path for robot:86
+INFO:root:Calling MoveVert 'L' for robot:86 xMove:0 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [0 1]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot12 finished recieving message - ['86', 'Move', 'n']
+INFO:root:Robot86 finished recieving message - ['86', 'Move', 'n']
+INFO:root:pathList after moving robot:86 = []
+INFO:root:Robot86 About to move!
+INFO:root:MoveAndSend - id:12 destx:1 destY:0 curX:1 curY:4
+INFO:root:Starting 'L' path for robot:12
+INFO:root:Calling MoveVert 'L' for robot:12 xMove:1 yMove:4 moveDown:False
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:Path found! - [[2, 1, 3], [3, 1, 2], [4, 1, 1], [5, 1, 0]]
+INFO:root:u move
+INFO:root:update for 12 curX-1  curY-3  prevX-1  prevY-4
+INFO:root:pathList after moving robot:12 = ['2 1 3', '3 1 2', '4 1 1', '5 1 0']
+INFO:root:Robot12 finished recieving message - [86, 'position', [0, 1]]
+INFO:root:Robot86 start while
+INFO:root:Robot86 finished recieving message - [12, 'position', [1, 3]]
+INFO:root:Robot12 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 86 is the lowest robot with distance 0 for space number 1 at location 0, 1
+INFO:root:TEMP ADD 12 is the lowest robot with distance 3 for space number 2 at location 1, 0
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['86', 0, 1, 0], ['12', 1, 0, 3]]
+INFO:root:before sort desc robotPlacement [['86', 0, 1, 0], ['12', 1, 0, 3]]
+INFO:root:after sort desc robotPlacement [['12', 1, 0, 3], ['86', 0, 1, 0]]
+INFO:root:12 is the lowest robot with distance 3 for space number 1 at location 1, 0
+INFO:root:86 is the lowest robot with distance 0 for space number 2 at location 0, 1
+INFO:root:before sort ascend robotPlacement [['12', 1, 0, 3], ['86', 0, 1, 0]]
+INFO:root:after sort ascend robotPlacement [['86', 0, 1, 0], ['12', 1, 0, 3]]
+INFO:root:robotPlacement = [['86', 0, 1, 0], ['12', 1, 0, 3]]
+INFO:root:robotPlacement after sort = [['86', 0, 1, 0], ['12', 1, 0, 3]]
+INFO:root:MoveAndSend - id:86 destx:0 destY:1 curX:0 curY:1
+INFO:root:Starting 'L' path for robot:86
+INFO:root:Calling MoveVert 'L' for robot:86 xMove:0 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [0 1]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot12 finished recieving message - ['86', 'Move', 'n']
+INFO:root:Robot86 finished recieving message - ['86', 'Move', 'n']
+INFO:root:Robot86 About to move!
+INFO:root:pathList after moving robot:86 = []
+INFO:root:MoveAndSend - id:12 destx:1 destY:0 curX:1 curY:3
+INFO:root:Starting 'L' path for robot:12
+INFO:root:Calling MoveVert 'L' for robot:12 xMove:1 yMove:3 moveDown:False
+INFO:root:tryMoveVert finished and got [1 0]
+INFO:root:Path found! - [[2, 1, 2], [3, 1, 1], [4, 1, 0]]
+INFO:root:u move
+INFO:root:update for 12 curX-1  curY-2  prevX-1  prevY-3
+INFO:root:pathList after moving robot:12 = ['2 1 2', '3 1 1', '4 1 0']
+INFO:root:started!
+INFO:root:thread cv
+INFO:root:robot_42 started!
+INFO:root:Robot68 finished recieving message - [42, 'Elect leader']
+INFO:root:robot_68 started!
+INFO:root:Robot42 finished recieving message - [68, 'Elect leader']
+INFO:root:42 is the leader!
+INFO:root:Robot42 finished recieving message - [68, 'position', [9, 1]]
+INFO:root:Robot68 finished recieving message - [42, 'position', [2, 4]]
+INFO:root:Robot68 start while
+INFO:root:Robot42 start while
+INFO:root:Running robotPlacement filling!
+INFO:root:starting loop again with numAdded =0
+INFO:root:TEMP ADD 68 is the lowest robot with distance 7 for space number 1 at location 9, 8
+INFO:root:TEMP ADD 42 is the lowest robot with distance 11 for space number 2 at location 8, 9
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['68', 9, 8, 7], ['42', 8, 9, 11]]
+INFO:root:before sort desc robotPlacement [['68', 9, 8, 7], ['42', 8, 9, 11]]
+INFO:root:after sort desc robotPlacement [['42', 8, 9, 11], ['68', 9, 8, 7]]
+INFO:root:42 is the lowest robot with distance 11 for space number 1 at location 8, 9
+INFO:root:68 is the lowest robot with distance 7 for space number 2 at location 9, 8
+INFO:root:before sort ascend robotPlacement [['42', 8, 9, 11], ['68', 9, 8, 7]]
+INFO:root:after sort ascend robotPlacement [['68', 9, 8, 7], ['42', 8, 9, 11]]
+INFO:root:robotPlacement = [['68', 9, 8, 7], ['42', 8, 9, 11]]
+INFO:root:robotPlacement after sort = [['68', 9, 8, 7], ['42', 8, 9, 11]]
+INFO:root:MoveAndSend - id:68 destx:9 destY:8 curX:9 curY:1
+INFO:root:Starting 'L' path for robot:68
+INFO:root:Calling MoveVert 'L' for robot:68 xMove:9 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [9 8]
+INFO:root:Path found! - [[2, 9, 2], [3, 9, 3], [4, 9, 4], [5, 9, 5], [6, 9, 6], [7, 9, 7], [8, 9, 8]]
 INFO:root:d move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'd']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'd']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'd']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'd']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'd']
-INFO:root:pathList after moving robot:46 = ['2 2 2']
-INFO:root:MoveAndSend - id:95 destx:1 destY:3 curX:0 curY:3
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:0 yMove:3 moveDown:True
-INFO:root:tryMoveVert finished and got [0 3]
-INFO:root:tryMoveHor succeeded and got [1 3]
-INFO:root:Path found! - [[2, 1, 3]]
-INFO:root:Robot46 About to move!
-INFO:root:r move
-INFO:root:update for 46 curX-2  curY-2  prevX-2  prevY-1
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'r']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'r']
-INFO:root:Robot95 About to move!
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'r']
-INFO:root:update for 95 curX-1  curY-3  prevX-0  prevY-3
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'r']
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'r']
-INFO:root:pathList after moving robot:95 = ['2 2 2', '2 1 3']
-INFO:root:MoveAndSend - id:85 destx:1 destY:1 curX:1 curY:4
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:4 moveDown:False
-INFO:root:tryMoveVert finished and got [1 4]
-ERROR:root:No valid 'L' path for robot:85! Stuck on [1, 4] so try arc path!
-INFO:root:Starting arc path past depth to dest Y for robot:<built-in function id>
-INFO:root:tryMoveHor succeeded and got [1 5]
-INFO:root:Calling MoveVert arcPath for robot:<built-in function id> xMove:1 yMove:5 not moveDown:True
-INFO:root:tryMoveVert finished and got [1 4]
-INFO:root:Starting arc path past depth to dest Y for robot:<built-in function id>
-ERROR:root:No valid arc path past depth due to collision for robot:<built-in function id>! Stuck on [1, 4] so do nothing
-INFO:root:Do nothing path for robot:85!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 About to move!
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'n']
-INFO:root:pathList after moving robot:85 = ['2 2 2', '2 1 3', '1 1 4']
-INFO:root:MoveAndSend - id:21 destx:0 destY:2 curX:4 curY:2
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:4 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [4 2]
-INFO:root:tryMoveVert failed
-INFO:root:Starting 'L' path for robot:21
-INFO:root:tryMoveVert failed
-INFO:root:Starting 'L' path for robot:21
-INFO:root:tryMoveHor succeeded and got [0 0]
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:0 yMove:0 moveDown:True
-INFO:root:tryMoveVert finished and got [0 0]
-ERROR:root:No valid 'L' path for robot:21! Stuck on [0, 0] so try arc path!
-INFO:root:Starting arc path past depth to dest Y for robot:<built-in function id>
-INFO:root:tryMoveVert failed
-INFO:root:tryMoveHor succeeded and got [0 4]
-INFO:root:Calling MoveVert arcPath for robot:<built-in function id> xMove:0 yMove:4 not moveDown:True
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - [[2, 4, 3], [3, 3, 3], [4, 2, 3], [3, -1, 4], [4, 0, 4], [5, 0, 3], [6, 0, 2]]
+INFO:root:Robot42 finished recieving message - ['68', 'Move', 'd']
+INFO:root:Robot68 finished recieving message - ['68', 'Move', 'd']
+INFO:root:Robot68 About to move!
+INFO:root:pathList after moving robot:68 = ['2 9 2', '3 9 3', '4 9 4', '5 9 5', '6 9 6', '7 9 7', '8 9 8']
+INFO:root:update for 68 curX-9  curY-2  prevX-9  prevY-1
+INFO:root:MoveAndSend - id:42 destx:8 destY:9 curX:2 curY:4
+INFO:root:Starting 'L' path for robot:42
+INFO:root:Calling MoveVert 'L' for robot:42 xMove:2 yMove:4 moveDown:True
+INFO:root:tryMoveVert finished and got [2 9]
+INFO:root:tryMoveHor succeeded and got [8 9]
+INFO:root:Path found! - [[2, 2, 5], [3, 2, 6], [4, 2, 7], [5, 2, 8], [6, 2, 9], [7, 3, 9], [8, 4, 9], [9, 5, 9], [10, 6, 9], [11, 7, 9], [12, 8, 9]]
 INFO:root:d move
-INFO:root:update for 21 curX-4  curY-3  prevX-4  prevY-2
-INFO:root:pathList after moving robot:21 = ['2 2 2', '2 1 3', '1 1 4', '2 4 3', '3 3 3', '4 2 3', '3 -1 4', '4 0 4', '5 0 3', '6 0 2']
-INFO:root:Robot60 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot60 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot60 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot95 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot21 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot85 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot95 start while
-INFO:root:Robot46 start while
-INFO:root:Robot85 start while
-INFO:root:Robot21 start while
-INFO:root:Robot60 start while
+INFO:root:update for 42 curX-2  curY-5  prevX-2  prevY-4
+INFO:root:pathList after moving robot:42 = ['2 9 2', '3 9 3', '4 9 4', '5 9 5', '6 9 6', '7 9 7', '8 9 8', '2 2 5', '3 2 6', '4 2 7', '5 2 8', '6 2 9', '7 3 9', '8 4 9', '9 5 9', '10 6 9', '11 7 9', '12 8 9']
+INFO:root:Robot42 finished recieving message - [68, 'position', [9, 2]]
+INFO:root:Robot68 finished recieving message - [42, 'position', [2, 5]]
+INFO:root:Robot68 start while
+INFO:root:Robot42 start while
 INFO:root:Running robotPlacement filling!
 INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 46 is the lowest robot with distance 0 for space number 1 at location 2, 2
-INFO:root:TEMP ADD 95 is the lowest robot with distance 0 for space number 2 at location 1, 3
-INFO:root:TEMP ADD 60 is the lowest robot with distance 1 for space number 3 at location 1, 1
-INFO:root:TEMP ADD 85 is the lowest robot with distance 12 for space number 4 at location 0, 2
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['21'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['21']
-INFO:root:TEMP ADD RING21 is the lowest robot with distance 24 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['46', 2, 2, 0], ['95', 1, 3, 0], ['60', 1, 1, 1], ['85', 0, 2, 12], ['21', 0, 1, 24]]
-INFO:root:before sort desc robotPlacement [['46', 2, 2, 0], ['95', 1, 3, 0], ['60', 1, 1, 1], ['85', 0, 2, 12], ['21', 0, 1, 24]]
-INFO:root:after sort desc robotPlacement [['21', 0, 1, 24], ['85', 0, 2, 12], ['60', 1, 1, 1], ['46', 2, 2, 0], ['95', 1, 3, 0]]
-INFO:root:60 is the lowest robot with distance 0 for space number 1 at location 0, 1
-INFO:root:46 is the lowest robot with distance 8 for space number 2 at location 0, 2
-INFO:root:95 is the lowest robot with distance 8 for space number 3 at location 1, 1
-INFO:root:21 is the lowest robot with distance 3 for space number 4 at location 2, 2
-INFO:root:85 is the lowest robot with distance 1 for space number 5 at location 1, 3
-INFO:root:before sort ascend robotPlacement [['60', 0, 1, 0], ['46', 0, 2, 8], ['95', 1, 1, 8], ['21', 2, 2, 3], ['85', 1, 3, 1]]
-INFO:root:after sort ascend robotPlacement [['60', 0, 1, 0], ['85', 1, 3, 1], ['21', 2, 2, 3], ['46', 0, 2, 8], ['95', 1, 1, 8]]
-INFO:root:robotPlacement = [['60', 0, 1, 0], ['85', 1, 3, 1], ['21', 2, 2, 3], ['46', 0, 2, 8], ['95', 1, 1, 8]]
-INFO:root:robotPlacement after sort = [['60', 0, 1, 0], ['85', 1, 3, 1], ['21', 2, 2, 3], ['46', 0, 2, 8], ['95', 1, 1, 8]]
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:0 curY:1
-INFO:root:Starting 'L' path for robot:60
-INFO:root:Calling MoveVert 'L' for robot:60 xMove:0 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [0 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot60 About to move!
-INFO:root:Robot85 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['60', 'Move', 'n']
-INFO:root:pathList after moving robot:60 = []
-INFO:root:MoveAndSend - id:85 destx:1 destY:3 curX:1 curY:4
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:4 moveDown:False
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Path found! - [[2, 1, 3]]
-INFO:root:u move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'u']
-INFO:root:pathList after moving robot:85 = ['2 1 3']
-INFO:root:Robot85 About to move!
-INFO:root:MoveAndSend - id:21 destx:2 destY:2 curX:4 curY:3
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:4 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [4 2]
-INFO:root:tryMoveHor succeeded and got [2 2]
-INFO:root:Path found! - [[2, 4, 2], [3, 3, 2], [4, 2, 2]]
-INFO:root:u move
-INFO:root:update for 21 curX-4  curY-2  prevX-4  prevY-3
-INFO:root:pathList after moving robot:21 = ['2 1 3', '2 4 2', '3 3 2', '4 2 2']
-INFO:root:MoveAndSend - id:46 destx:0 destY:2 curX:2 curY:2
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:2 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [2 2]
-INFO:root:tryMoveVert failed
-ERROR:root:No valid path #2 for robot:46! Stuck on [-1, 1] so try arc path!
-INFO:root:Starting arc path past depth to dest Y for robot:<built-in function id>
-INFO:root:tryMoveVert failed
-INFO:root:tryMoveHor succeeded and got [0 4]
-INFO:root:Calling MoveVert arcPath for robot:<built-in function id> xMove:0 yMove:4 not moveDown:True
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - [[2, 2, 3], [3, -1, 4], [4, 0, 4], [5, 0, 3], [6, 0, 2]]
+INFO:root:TEMP ADD 68 is the lowest robot with distance 6 for space number 1 at location 9, 8
+INFO:root:TEMP ADD 42 is the lowest robot with distance 10 for space number 2 at location 8, 9
+INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=[] posListTemp=[]
+INFO:root:done with ring - robotPlacementTemp=[['68', 9, 8, 6], ['42', 8, 9, 10]]
+INFO:root:before sort desc robotPlacement [['68', 9, 8, 6], ['42', 8, 9, 10]]
+INFO:root:after sort desc robotPlacement [['42', 8, 9, 10], ['68', 9, 8, 6]]
+INFO:root:42 is the lowest robot with distance 10 for space number 1 at location 8, 9
+INFO:root:68 is the lowest robot with distance 6 for space number 2 at location 9, 8
+INFO:root:before sort ascend robotPlacement [['42', 8, 9, 10], ['68', 9, 8, 6]]
+INFO:root:after sort ascend robotPlacement [['68', 9, 8, 6], ['42', 8, 9, 10]]
+INFO:root:robotPlacement = [['68', 9, 8, 6], ['42', 8, 9, 10]]
+INFO:root:robotPlacement after sort = [['68', 9, 8, 6], ['42', 8, 9, 10]]
+INFO:root:MoveAndSend - id:68 destx:9 destY:8 curX:9 curY:2
+INFO:root:Starting 'L' path for robot:68
+INFO:root:Calling MoveVert 'L' for robot:68 xMove:9 yMove:2 moveDown:True
+INFO:root:tryMoveVert finished and got [9 8]
+INFO:root:Path found! - [[2, 9, 3], [3, 9, 4], [4, 9, 5], [5, 9, 6], [6, 9, 7], [7, 9, 8]]
 INFO:root:d move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'd']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'd']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'd']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'd']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'd']
-INFO:root:Robot46 About to move!
-INFO:root:pathList after moving robot:46 = ['2 1 3', '2 4 2', '3 3 2', '4 2 2', '2 2 3', '3 -1 4', '4 0 4', '5 0 3', '6 0 2']
-INFO:root:update for 46 curX-2  curY-3  prevX-2  prevY-2
-INFO:root:MoveAndSend - id:95 destx:1 destY:1 curX:1 curY:3
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:1 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [1 3]
-ERROR:root:No valid 'L' path for robot:95! Stuck on [1, 3] so try arc path!
-INFO:root:Starting arc path past depth to dest Y for robot:<built-in function id>
-INFO:root:tryMoveHor succeeded and got [1 4]
-INFO:root:Calling MoveVert arcPath for robot:<built-in function id> xMove:1 yMove:4 not moveDown:True
-INFO:root:tryMoveVert finished and got [1 4]
-INFO:root:Starting arc path past depth to dest Y for robot:<built-in function id>
-ERROR:root:No valid arc path past depth due to collision for robot:<built-in function id>! Stuck on [1, 3] so do nothing
-INFO:root:Do nothing path for robot:95!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 About to move!
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'n']
-INFO:root:pathList after moving robot:95 = ['2 1 3', '2 4 2', '3 3 2', '4 2 2', '2 2 3', '3 -1 4', '4 0 4', '5 0 3', '6 0 2', '1 1 3']
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot60 finished recieving message - [46, 'position', [2, 3]]
-INFO:root:Robot95 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot60 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot60 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [2, 3]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot21 finished recieving message - [46, 'position', [2, 3]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot85 finished recieving message - [46, 'position', [2, 3]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [1, 3]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot85 start while
-INFO:root:Robot46 start while
-INFO:root:Robot60 start while
-INFO:root:Robot95 start while
-INFO:root:Robot21 start while
-INFO:root:Running robotPlacement filling!
-INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 95 is the lowest robot with distance 0 for space number 1 at location 1, 3
-INFO:root:TEMP ADD 60 is the lowest robot with distance 1 for space number 2 at location 1, 1
-INFO:root:TEMP ADD 46 is the lowest robot with distance 1 for space number 3 at location 2, 2
-INFO:root:TEMP ADD 85 is the lowest robot with distance 12 for space number 4 at location 0, 2
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['21'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['21']
-INFO:root:TEMP ADD RING21 is the lowest robot with distance 20 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['95', 1, 3, 0], ['60', 1, 1, 1], ['46', 2, 2, 1], ['85', 0, 2, 12], ['21', 0, 1, 20]]
-INFO:root:before sort desc robotPlacement [['95', 1, 3, 0], ['60', 1, 1, 1], ['46', 2, 2, 1], ['85', 0, 2, 12], ['21', 0, 1, 20]]
-INFO:root:after sort desc robotPlacement [['21', 0, 1, 20], ['85', 0, 2, 12], ['60', 1, 1, 1], ['46', 2, 2, 1], ['95', 1, 3, 0]]
-INFO:root:60 is the lowest robot with distance 0 for space number 1 at location 0, 1
-INFO:root:95 is the lowest robot with distance 8 for space number 2 at location 0, 2
-INFO:root:85 is the lowest robot with distance 12 for space number 3 at location 1, 1
-INFO:root:46 is the lowest robot with distance 1 for space number 4 at location 2, 2
-INFO:root:21 is the lowest robot with distance 16 for space number 5 at location 1, 3
-INFO:root:before sort ascend robotPlacement [['60', 0, 1, 0], ['95', 0, 2, 8], ['85', 1, 1, 12], ['46', 2, 2, 1], ['21', 1, 3, 16]]
-INFO:root:after sort ascend robotPlacement [['60', 0, 1, 0], ['46', 2, 2, 1], ['95', 0, 2, 8], ['85', 1, 1, 12], ['21', 1, 3, 16]]
-INFO:root:robotPlacement = [['60', 0, 1, 0], ['46', 2, 2, 1], ['95', 0, 2, 8], ['85', 1, 1, 12], ['21', 1, 3, 16]]
-INFO:root:robotPlacement after sort = [['60', 0, 1, 0], ['46', 2, 2, 1], ['95', 0, 2, 8], ['85', 1, 1, 12], ['21', 1, 3, 16]]
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:0 curY:1
-INFO:root:Starting 'L' path for robot:60
-INFO:root:Calling MoveVert 'L' for robot:60 xMove:0 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [0 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot60 About to move!
-INFO:root:Robot21 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['60', 'Move', 'n']
-INFO:root:pathList after moving robot:60 = []
-INFO:root:MoveAndSend - id:46 destx:2 destY:2 curX:2 curY:3
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:2 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [2 2]
-INFO:root:Path found! - [[2, 2, 2]]
-INFO:root:u move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot46 About to move!
-INFO:root:pathList after moving robot:46 = ['2 2 2']
-INFO:root:update for 46 curX-2  curY-2  prevX-2  prevY-3
-INFO:root:MoveAndSend - id:95 destx:0 destY:2 curX:1 curY:3
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:1 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:tryMoveHor succeeded and got [0 3]
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:0 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - [[1, 0, 3], [2, 0, 2]]
-INFO:root:l move
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'l']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'l']
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'l']
-INFO:root:Robot95 About to move!
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'l']
-INFO:root:update for 95 curX-0  curY-3  prevX-1  prevY-3
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'l']
-INFO:root:pathList after moving robot:95 = ['2 2 2', '1 0 3', '2 0 2']
-INFO:root:MoveAndSend - id:85 destx:1 destY:1 curX:1 curY:4
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:4 moveDown:False
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [1 3]
-ERROR:root:No valid 'L' path for robot:85! Stuck on [1, 3] so try arc path!
-INFO:root:Starting arc path past depth to dest Y for robot:<built-in function id>
-INFO:root:tryMoveHor succeeded and got [1 5]
-INFO:root:Calling MoveVert arcPath for robot:<built-in function id> xMove:1 yMove:5 not moveDown:True
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Starting arc path past depth to dest Y for robot:<built-in function id>
-INFO:root:tryMoveHor succeeded and got [1 3]
-INFO:root:Calling MoveVert arcPath for robot:<built-in function id> xMove:1 yMove:3 not moveDown:False
-INFO:root:tryMoveVert finished and got [1 4]
-INFO:root:Do nothing path for robot:85!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 About to move!
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'n']
-INFO:root:pathList after moving robot:85 = ['2 2 2', '1 0 3', '2 0 2', '1 1 4']
-INFO:root:MoveAndSend - id:21 destx:1 destY:3 curX:4 curY:2
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:4 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [4 3]
-INFO:root:tryMoveHor succeeded and got [1 3]
-INFO:root:Path found! - [[2, 4, 3], [3, 3, 3], [4, 2, 3], [5, 1, 3]]
+INFO:root:Robot42 finished recieving message - ['68', 'Move', 'd']
+INFO:root:Robot68 finished recieving message - ['68', 'Move', 'd']
+INFO:root:pathList after moving robot:68 = ['2 9 3', '3 9 4', '4 9 5', '5 9 6', '6 9 7', '7 9 8']
+INFO:root:Robot68 About to move!
+INFO:root:MoveAndSend - id:42 destx:8 destY:9 curX:2 curY:5
+INFO:root:update for 68 curX-9  curY-3  prevX-9  prevY-2
+INFO:root:Starting 'L' path for robot:42
+INFO:root:Calling MoveVert 'L' for robot:42 xMove:2 yMove:5 moveDown:True
+INFO:root:tryMoveVert finished and got [2 9]
+INFO:root:tryMoveHor succeeded and got [8 9]
+INFO:root:Path found! - [[2, 2, 6], [3, 2, 7], [4, 2, 8], [5, 2, 9], [6, 3, 9], [7, 4, 9], [8, 5, 9], [9, 6, 9], [10, 7, 9], [11, 8, 9]]
 INFO:root:d move
-INFO:root:update for 21 curX-4  curY-3  prevX-4  prevY-2
-INFO:root:pathList after moving robot:21 = ['2 2 2', '1 0 3', '2 0 2', '1 1 4', '2 4 3', '3 3 3', '4 2 3', '5 1 3']
-INFO:root:Robot60 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot60 finished recieving message - [95, 'position', [0, 3]]
-INFO:root:Robot95 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot60 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [0, 3]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot21 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [0, 3]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot85 finished recieving message - [46, 'position', [2, 2]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [0, 3]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot46 start while
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 4]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [4, 3]]
-INFO:root:Robot95 start while
-INFO:root:Robot60 start while
-INFO:root:Robot85 start while
-INFO:root:Robot21 start while
-INFO:root:Running robotPlacement filling!
-INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 46 is the lowest robot with distance 0 for space number 1 at location 2, 2
-INFO:root:TEMP ADD 85 is the lowest robot with distance 1 for space number 2 at location 1, 3
-INFO:root:TEMP ADD 60 is the lowest robot with distance 1 for space number 3 at location 1, 1
-INFO:root:TEMP ADD 95 is the lowest robot with distance 1 for space number 4 at location 0, 2
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['21'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['21']
-INFO:root:TEMP ADD RING21 is the lowest robot with distance 24 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['46', 2, 2, 0], ['85', 1, 3, 1], ['60', 1, 1, 1], ['95', 0, 2, 1], ['21', 0, 1, 24]]
-INFO:root:before sort desc robotPlacement [['46', 2, 2, 0], ['85', 1, 3, 1], ['60', 1, 1, 1], ['95', 0, 2, 1], ['21', 0, 1, 24]]
-INFO:root:after sort desc robotPlacement [['21', 0, 1, 24], ['85', 1, 3, 1], ['60', 1, 1, 1], ['95', 0, 2, 1], ['46', 2, 2, 0]]
-INFO:root:60 is the lowest robot with distance 0 for space number 1 at location 0, 1
-INFO:root:85 is the lowest robot with distance 1 for space number 2 at location 1, 3
-INFO:root:46 is the lowest robot with distance 8 for space number 3 at location 1, 1
-INFO:root:95 is the lowest robot with distance 1 for space number 4 at location 0, 2
-INFO:root:21 is the lowest robot with distance 3 for space number 5 at location 2, 2
-INFO:root:before sort ascend robotPlacement [['60', 0, 1, 0], ['85', 1, 3, 1], ['46', 1, 1, 8], ['95', 0, 2, 1], ['21', 2, 2, 3]]
-INFO:root:after sort ascend robotPlacement [['60', 0, 1, 0], ['85', 1, 3, 1], ['95', 0, 2, 1], ['21', 2, 2, 3], ['46', 1, 1, 8]]
-INFO:root:robotPlacement = [['60', 0, 1, 0], ['85', 1, 3, 1], ['95', 0, 2, 1], ['21', 2, 2, 3], ['46', 1, 1, 8]]
-INFO:root:robotPlacement after sort = [['60', 0, 1, 0], ['85', 1, 3, 1], ['95', 0, 2, 1], ['21', 2, 2, 3], ['46', 1, 1, 8]]
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:0 curY:1
-INFO:root:Starting 'L' path for robot:60
-INFO:root:Calling MoveVert 'L' for robot:60 xMove:0 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [0 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['60', 'Move', 'n']
-INFO:root:pathList after moving robot:60 = []
-INFO:root:Robot60 About to move!
-INFO:root:MoveAndSend - id:85 destx:1 destY:3 curX:1 curY:4
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:4 moveDown:False
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Path found! - [[2, 1, 3]]
-INFO:root:u move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'u']
-INFO:root:Robot85 About to move!
-INFO:root:pathList after moving robot:85 = ['2 1 3']
-INFO:root:update for 85 curX-1  curY-3  prevX-1  prevY-4
-INFO:root:MoveAndSend - id:95 destx:0 destY:2 curX:0 curY:3
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:0 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - [[2, 0, 2]]
-INFO:root:u move
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'u']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'u']
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'u']
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'u']
-INFO:root:Robot95 About to move!
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'u']
-INFO:root:update for 95 curX-0  curY-2  prevX-0  prevY-3
-INFO:root:pathList after moving robot:95 = ['2 1 3', '2 0 2']
-INFO:root:MoveAndSend - id:21 destx:2 destY:2 curX:4 curY:3
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:4 yMove:3 moveDown:False
-INFO:root:tryMoveVert finished and got [4 2]
-INFO:root:tryMoveHor succeeded and got [2 2]
-INFO:root:Path found! - [[2, 4, 2], [3, 3, 2], [4, 2, 2]]
-INFO:root:u move
-INFO:root:update for 21 curX-4  curY-2  prevX-4  prevY-3
-INFO:root:pathList after moving robot:21 = ['2 1 3', '2 0 2', '2 4 2', '3 3 2', '4 2 2']
-INFO:root:MoveAndSend - id:46 destx:1 destY:1 curX:2 curY:2
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:2 yMove:2 moveDown:False
-INFO:root:tryMoveVert finished and got [2 1]
-INFO:root:tryMoveHor succeeded and got [1 1]
-INFO:root:Path found! - [[2, 2, 1], [3, 1, 1]]
-INFO:root:u move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'u']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'u']
-INFO:root:pathList after moving robot:46 = ['2 1 3', '2 0 2', '2 4 2', '3 3 2', '4 2 2', '2 2 1', '3 1 1']
-INFO:root:Robot46 About to move!
-INFO:root:update for 46 curX-2  curY-1  prevX-2  prevY-2
-INFO:root:Robot60 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot95 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot60 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot60 finished recieving message - [46, 'position', [2, 1]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [2, 1]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [4, 2]]
-INFO:root:Robot21 finished recieving message - [46, 'position', [2, 1]]
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot21 start while
-INFO:root:Robot85 finished recieving message - [46, 'position', [2, 1]]
-INFO:root:Robot85 start while
-INFO:root:Robot60 start while
-INFO:root:Robot95 start while
-INFO:root:Running robotPlacement filling!
-INFO:root:Robot46 start while
-INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 85 is the lowest robot with distance 0 for space number 1 at location 1, 3
-INFO:root:TEMP ADD 95 is the lowest robot with distance 0 for space number 2 at location 0, 2
-INFO:root:TEMP ADD 60 is the lowest robot with distance 1 for space number 3 at location 1, 1
-INFO:root:TEMP ADD 46 is the lowest robot with distance 1 for space number 4 at location 2, 2
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['21'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['21']
-INFO:root:TEMP ADD RING21 is the lowest robot with distance 20 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 1, 1, 1], ['46', 2, 2, 1], ['21', 0, 1, 20]]
-INFO:root:before sort desc robotPlacement [['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 1, 1, 1], ['46', 2, 2, 1], ['21', 0, 1, 20]]
-INFO:root:after sort desc robotPlacement [['21', 0, 1, 20], ['60', 1, 1, 1], ['46', 2, 2, 1], ['85', 1, 3, 0], ['95', 0, 2, 0]]
-INFO:root:60 is the lowest robot with distance 0 for space number 1 at location 0, 1
-INFO:root:46 is the lowest robot with distance 1 for space number 2 at location 1, 1
-INFO:root:21 is the lowest robot with distance 2 for space number 3 at location 2, 2
-INFO:root:85 is the lowest robot with distance 0 for space number 4 at location 1, 3
-INFO:root:95 is the lowest robot with distance 0 for space number 5 at location 0, 2
-INFO:root:before sort ascend robotPlacement [['60', 0, 1, 0], ['46', 1, 1, 1], ['21', 2, 2, 2], ['85', 1, 3, 0], ['95', 0, 2, 0]]
-INFO:root:after sort ascend robotPlacement [['60', 0, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 1], ['21', 2, 2, 2]]
-INFO:root:robotPlacement = [['60', 0, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 1], ['21', 2, 2, 2]]
-INFO:root:robotPlacement after sort = [['60', 0, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 1], ['21', 2, 2, 2]]
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:0 curY:1
-INFO:root:Starting 'L' path for robot:60
-INFO:root:Calling MoveVert 'L' for robot:60 xMove:0 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [0 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['60', 'Move', 'n']
-INFO:root:pathList after moving robot:60 = []
-INFO:root:MoveAndSend - id:85 destx:1 destY:3 curX:1 curY:3
-INFO:root:Robot60 About to move!
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:3 moveDown:True
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 About to move!
-INFO:root:pathList after moving robot:85 = []
-INFO:root:MoveAndSend - id:95 destx:0 destY:2 curX:0 curY:2
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:0 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 About to move!
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'n']
-INFO:root:pathList after moving robot:95 = []
-INFO:root:MoveAndSend - id:46 destx:1 destY:1 curX:2 curY:1
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:2 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [2 1]
-INFO:root:tryMoveHor succeeded and got [1 1]
-INFO:root:Path found! - [[2, 1, 1]]
-INFO:root:l move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'l']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'l']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'l']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'l']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'l']
-INFO:root:pathList after moving robot:46 = ['2 1 1']
-INFO:root:MoveAndSend - id:21 destx:2 destY:2 curX:4 curY:2
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:4 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [4 2]
-INFO:root:tryMoveHor succeeded and got [2 2]
-INFO:root:Path found! - [[2, 3, 2], [3, 2, 2]]
-INFO:root:l move
-INFO:root:update for 21 curX-3  curY-2  prevX-4  prevY-2
-INFO:root:pathList after moving robot:21 = ['2 1 1', '2 3 2', '3 2 2']
-INFO:root:Robot46 About to move!
-INFO:root:update for 46 curX-1  curY-1  prevX-2  prevY-1
-INFO:root:Robot60 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot60 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot95 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot60 finished recieving message - [21, 'position', [3, 2]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [3, 2]]
-INFO:root:Robot21 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [3, 2]]
-INFO:root:Robot85 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [3, 2]]
-INFO:root:Robot46 start while
-INFO:root:Robot95 start while
-INFO:root:Robot85 start while
-INFO:root:Robot60 start while
-INFO:root:Robot21 start while
-INFO:root:Running robotPlacement filling!
-INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 46 is the lowest robot with distance 0 for space number 1 at location 1, 1
-INFO:root:TEMP ADD 85 is the lowest robot with distance 0 for space number 2 at location 1, 3
-INFO:root:TEMP ADD 95 is the lowest robot with distance 0 for space number 3 at location 0, 2
-INFO:root:TEMP ADD 21 is the lowest robot with distance 1 for space number 4 at location 2, 2
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['60'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['60']
-INFO:root:TEMP ADD RING60 is the lowest robot with distance 0 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['21', 2, 2, 1], ['60', 0, 1, 0]]
-INFO:root:before sort desc robotPlacement [['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['21', 2, 2, 1], ['60', 0, 1, 0]]
-INFO:root:after sort desc robotPlacement [['21', 2, 2, 1], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:21 is the lowest robot with distance 1 for space number 1 at location 2, 2
-INFO:root:46 is the lowest robot with distance 0 for space number 2 at location 1, 1
-INFO:root:85 is the lowest robot with distance 0 for space number 3 at location 1, 3
-INFO:root:95 is the lowest robot with distance 0 for space number 4 at location 0, 2
-INFO:root:60 is the lowest robot with distance 0 for space number 5 at location 0, 1
-INFO:root:before sort ascend robotPlacement [['21', 2, 2, 1], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:after sort ascend robotPlacement [['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0], ['21', 2, 2, 1]]
-INFO:root:robotPlacement = [['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0], ['21', 2, 2, 1]]
-INFO:root:robotPlacement after sort = [['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0], ['21', 2, 2, 1]]
-INFO:root:MoveAndSend - id:46 destx:1 destY:1 curX:1 curY:1
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:1 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [1 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'n']
-INFO:root:pathList after moving robot:46 = []
-INFO:root:MoveAndSend - id:85 destx:1 destY:3 curX:1 curY:3
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:3 moveDown:True
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:Robot46 About to move!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 About to move!
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'n']
-INFO:root:pathList after moving robot:85 = []
-INFO:root:MoveAndSend - id:95 destx:0 destY:2 curX:0 curY:2
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:0 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'n']
-INFO:root:pathList after moving robot:95 = []
-INFO:root:Robot95 About to move!
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:0 curY:1
-INFO:root:Starting 'L' path for robot:60
-INFO:root:Calling MoveVert 'L' for robot:60 xMove:0 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [0 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot60 About to move!
-INFO:root:Robot95 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['60', 'Move', 'n']
-INFO:root:pathList after moving robot:60 = []
-INFO:root:MoveAndSend - id:21 destx:2 destY:2 curX:3 curY:2
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:3 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [3 2]
-INFO:root:tryMoveHor succeeded and got [2 2]
-INFO:root:Path found! - [[2, 2, 2]]
-INFO:root:l move
-INFO:root:update for 21 curX-2  curY-2  prevX-3  prevY-2
-INFO:root:pathList after moving robot:21 = ['2 2 2']
-INFO:root:Robot60 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot60 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot60 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot95 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot21 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot85 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot95 start while
-INFO:root:Robot46 start while
-INFO:root:Robot85 start while
-INFO:root:Robot21 start while
-INFO:root:Robot60 start while
-INFO:root:Running robotPlacement filling!
-INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 21 is the lowest robot with distance 0 for space number 1 at location 2, 2
-INFO:root:TEMP ADD 46 is the lowest robot with distance 0 for space number 2 at location 1, 1
-INFO:root:TEMP ADD 85 is the lowest robot with distance 0 for space number 3 at location 1, 3
-INFO:root:TEMP ADD 95 is the lowest robot with distance 0 for space number 4 at location 0, 2
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['60'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['60']
-INFO:root:TEMP ADD RING60 is the lowest robot with distance 0 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:before sort desc robotPlacement [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:after sort desc robotPlacement [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:21 is the lowest robot with distance 0 for space number 1 at location 2, 2
-INFO:root:46 is the lowest robot with distance 0 for space number 2 at location 1, 1
-INFO:root:85 is the lowest robot with distance 0 for space number 3 at location 1, 3
-INFO:root:95 is the lowest robot with distance 0 for space number 4 at location 0, 2
-INFO:root:60 is the lowest robot with distance 0 for space number 5 at location 0, 1
-INFO:root:before sort ascend robotPlacement [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:after sort ascend robotPlacement [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:robotPlacement = [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:robotPlacement after sort = [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:MoveAndSend - id:21 destx:2 destY:2 curX:2 curY:2
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:2 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [2 2]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:pathList after moving robot:21 = []
-INFO:root:MoveAndSend - id:46 destx:1 destY:1 curX:1 curY:1
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:1 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [1 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'n']
-INFO:root:pathList after moving robot:46 = []
-INFO:root:MoveAndSend - id:85 destx:1 destY:3 curX:1 curY:3
-INFO:root:Robot46 About to move!
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:3 moveDown:True
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 About to move!
-INFO:root:pathList after moving robot:85 = []
-INFO:root:MoveAndSend - id:95 destx:0 destY:2 curX:0 curY:2
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:0 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 About to move!
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'n']
-INFO:root:pathList after moving robot:95 = []
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:0 curY:1
-INFO:root:Starting 'L' path for robot:60
-INFO:root:Calling MoveVert 'L' for robot:60 xMove:0 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [0 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot60 About to move!
-INFO:root:Robot95 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['60', 'Move', 'n']
-INFO:root:pathList after moving robot:60 = []
-INFO:root:Robot95 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot60 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot60 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot60 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot21 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot85 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot60 start while
-INFO:root:Robot85 start while
-INFO:root:Robot46 start while
-INFO:root:Robot95 start while
-INFO:root:Robot21 start while
-INFO:root:Running robotPlacement filling!
-INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 21 is the lowest robot with distance 0 for space number 1 at location 2, 2
-INFO:root:TEMP ADD 85 is the lowest robot with distance 0 for space number 2 at location 1, 3
-INFO:root:TEMP ADD 95 is the lowest robot with distance 0 for space number 3 at location 0, 2
-INFO:root:TEMP ADD 46 is the lowest robot with distance 0 for space number 4 at location 1, 1
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['60'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['60']
-INFO:root:TEMP ADD RING60 is the lowest robot with distance 0 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['21', 2, 2, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 0], ['60', 0, 1, 0]]
-INFO:root:before sort desc robotPlacement [['21', 2, 2, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 0], ['60', 0, 1, 0]]
-INFO:root:after sort desc robotPlacement [['21', 2, 2, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 0], ['60', 0, 1, 0]]
-INFO:root:21 is the lowest robot with distance 0 for space number 1 at location 2, 2
-INFO:root:85 is the lowest robot with distance 0 for space number 2 at location 1, 3
-INFO:root:95 is the lowest robot with distance 0 for space number 3 at location 0, 2
-INFO:root:46 is the lowest robot with distance 0 for space number 4 at location 1, 1
-INFO:root:60 is the lowest robot with distance 0 for space number 5 at location 0, 1
-INFO:root:before sort ascend robotPlacement [['21', 2, 2, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 0], ['60', 0, 1, 0]]
-INFO:root:after sort ascend robotPlacement [['21', 2, 2, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 0], ['60', 0, 1, 0]]
-INFO:root:robotPlacement = [['21', 2, 2, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 0], ['60', 0, 1, 0]]
-INFO:root:robotPlacement after sort = [['21', 2, 2, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['46', 1, 1, 0], ['60', 0, 1, 0]]
-INFO:root:MoveAndSend - id:21 destx:2 destY:2 curX:2 curY:2
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:2 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [2 2]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:pathList after moving robot:21 = []
-INFO:root:MoveAndSend - id:85 destx:1 destY:3 curX:1 curY:3
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:3 moveDown:True
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 About to move!
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'n']
-INFO:root:pathList after moving robot:85 = []
-INFO:root:MoveAndSend - id:95 destx:0 destY:2 curX:0 curY:2
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:0 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'n']
-INFO:root:pathList after moving robot:95 = []
-INFO:root:Robot95 About to move!
-INFO:root:MoveAndSend - id:46 destx:1 destY:1 curX:1 curY:1
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:1 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [1 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'n']
-INFO:root:pathList after moving robot:46 = []
-INFO:root:Robot46 About to move!
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:0 curY:1
-INFO:root:Starting 'L' path for robot:60
-INFO:root:Calling MoveVert 'L' for robot:60 xMove:0 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [0 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot60 About to move!
-INFO:root:Robot95 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['60', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['60', 'Move', 'n']
-INFO:root:pathList after moving robot:60 = []
-INFO:root:Robot60 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot95 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot60 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot60 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot60 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot95 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot21 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot95 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot21 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot95 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot85 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot85 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot21 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot85 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot21 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot46 finished recieving message - [21, 'position', [2, 2]]
-INFO:root:Robot46 finished recieving message - [60, 'position', [0, 1]]
-INFO:root:Robot85 finished recieving message - [46, 'position', [1, 1]]
-INFO:root:Robot46 finished recieving message - [95, 'position', [0, 2]]
-INFO:root:Robot46 finished recieving message - [85, 'position', [1, 3]]
-INFO:root:Robot21 start while
-INFO:root:Robot60 start while
-INFO:root:Robot46 start while
-INFO:root:Robot95 start while
-INFO:root:Robot85 start while
-INFO:root:Running robotPlacement filling!
-INFO:root:starting loop again with numAdded =0
-INFO:root:TEMP ADD 21 is the lowest robot with distance 0 for space number 1 at location 2, 2
-INFO:root:TEMP ADD 46 is the lowest robot with distance 0 for space number 2 at location 1, 1
-INFO:root:TEMP ADD 85 is the lowest robot with distance 0 for space number 3 at location 1, 3
-INFO:root:TEMP ADD 95 is the lowest robot with distance 0 for space number 4 at location 0, 2
-INFO:root:Starting add ring places to robotPlacementTemp with: tempRobotList=['60'] posListTemp=[[0, 1]]
-INFO:root:Ring posListTemp:[[0, 1]] tempRobotList:['60']
-INFO:root:TEMP ADD RING60 is the lowest robot with distance 0 at location 0, 1
-INFO:root:done with ring - robotPlacementTemp=[['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:before sort desc robotPlacement [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:after sort desc robotPlacement [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:21 is the lowest robot with distance 0 for space number 1 at location 2, 2
-INFO:root:46 is the lowest robot with distance 0 for space number 2 at location 1, 1
-INFO:root:85 is the lowest robot with distance 0 for space number 3 at location 1, 3
-INFO:root:95 is the lowest robot with distance 0 for space number 4 at location 0, 2
-INFO:root:60 is the lowest robot with distance 0 for space number 5 at location 0, 1
-INFO:root:before sort ascend robotPlacement [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:after sort ascend robotPlacement [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:robotPlacement = [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:robotPlacement after sort = [['21', 2, 2, 0], ['46', 1, 1, 0], ['85', 1, 3, 0], ['95', 0, 2, 0], ['60', 0, 1, 0]]
-INFO:root:MoveAndSend - id:21 destx:2 destY:2 curX:2 curY:2
-INFO:root:Starting 'L' path for robot:21
-INFO:root:Calling MoveVert 'L' for robot:21 xMove:2 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [2 2]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:pathList after moving robot:21 = []
-INFO:root:MoveAndSend - id:46 destx:1 destY:1 curX:1 curY:1
-INFO:root:Starting 'L' path for robot:46
-INFO:root:Calling MoveVert 'L' for robot:46 xMove:1 yMove:1 moveDown:True
-INFO:root:tryMoveVert finished and got [1 1]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['46', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['46', 'Move', 'n']
-INFO:root:pathList after moving robot:46 = []
-INFO:root:Robot46 About to move!
-INFO:root:MoveAndSend - id:85 destx:1 destY:3 curX:1 curY:3
-INFO:root:Starting 'L' path for robot:85
-INFO:root:Calling MoveVert 'L' for robot:85 xMove:1 yMove:3 moveDown:True
-INFO:root:tryMoveVert finished and got [1 3]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 finished recieving message - ['85', 'Move', 'n']
-INFO:root:Robot85 About to move!
-INFO:root:Robot46 finished recieving message - ['85', 'Move', 'n']
-INFO:root:pathList after moving robot:85 = []
-INFO:root:MoveAndSend - id:95 destx:0 destY:2 curX:0 curY:2
-INFO:root:Starting 'L' path for robot:95
-INFO:root:Calling MoveVert 'L' for robot:95 xMove:0 yMove:2 moveDown:True
-INFO:root:tryMoveVert finished and got [0 2]
-INFO:root:Path found! - []
-INFO:root:path actually isn't found!
-INFO:root:n move
-INFO:root:Robot60 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot21 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot95 About to move!
-INFO:root:Robot85 finished recieving message - ['95', 'Move', 'n']
-INFO:root:Robot46 finished recieving message - ['95', 'Move', 'n']
-INFO:root:pathList after moving robot:95 = []
-INFO:root:MoveAndSend - id:60 destx:0 destY:1 curX:0 curY:1
+INFO:root:update for 42 curX-2  curY-6  prevX-2  prevY-5
+INFO:root:pathList after moving robot:42 = ['2 9 3', '3 9 4', '4 9 5', '5 9 6', '6 9 7', '7 9 8', '2 2 6', '3 2 7', '4 2 8', '5 2 9', '6 3 9', '7 4 9', '8 5 9', '9 6 9', '10 7 9', '11 8 9']
