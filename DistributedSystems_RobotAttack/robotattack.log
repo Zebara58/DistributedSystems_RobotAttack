@@ -678,3 +678,149 @@ INFO:root:Path found! - [[2, 2, 6], [3, 2, 7], [4, 2, 8], [5, 2, 9], [6, 3, 9], 
 INFO:root:d move
 INFO:root:update for 42 curX-2  curY-6  prevX-2  prevY-5
 INFO:root:pathList after moving robot:42 = ['2 9 3', '3 9 4', '4 9 5', '5 9 6', '6 9 7', '7 9 8', '2 2 6', '3 2 7', '4 2 8', '5 2 9', '6 3 9', '7 4 9', '8 5 9', '9 6 9', '10 7 9', '11 8 9']
+INFO:root:started!
+INFO:root:thread cv
+INFO:root:started!
+INFO:root:thread cv
+INFO:root:robot_37 started!
+INFO:root:Robot78 finished recieving message - [37, 'Elect leader']
+INFO:root:robot_78 started!
+INFO:root:Robot37 finished recieving message - [78, 'Elect leader']
+INFO:root:37 is the leader!
+INFO:root:Robot37 finished recieving message - [78, 'position', [4, 0]]
+INFO:root:Robot78 finished recieving message - [37, 'position', [1, 4]]
+INFO:root:Robot78 start while
+INFO:root:Robot37 start while
+INFO:root:This robot was not placed - ['78', 4, 0, 0]
+INFO:root:This robot was not placed - ['37', 1, 4, 0]
+INFO:root:robotPlacement = [['78', 4, 0, 0], ['37', 1, 4, 0]]
+INFO:root:robotPlacement after sort = [['78', 4, 0, 0], ['37', 1, 4, 0]]
+INFO:root:MoveAndSend - id:78 destx:4 destY:0 curX:4 curY:0
+INFO:root:Starting 'L' path for robot:78
+INFO:root:Calling MoveVert 'L' for robot:78 xMove:4 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [4 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot37 finished recieving message - ['78', 'Move', 'n']
+INFO:root:Robot78 finished recieving message - ['78', 'Move', 'n']
+INFO:root:pathList after moving robot:78 = []
+INFO:root:MoveAndSend - id:37 destx:1 destY:4 curX:1 curY:4
+INFO:root:Starting 'L' path for robot:37
+INFO:root:Calling MoveVert 'L' for robot:37 xMove:1 yMove:4 moveDown:True
+INFO:root:tryMoveVert finished and got [1 4]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:37 = []
+INFO:root:Robot78 About to move!
+INFO:root:Robot78 finished recieving message - [37, 'position', [1, 4]]
+INFO:root:Robot37 finished recieving message - [78, 'position', [4, 0]]
+INFO:root:Robot37 start while
+INFO:root:Robot78 start while
+INFO:root:This robot was not placed - ['78', 4, 0, 0]
+INFO:root:This robot was not placed - ['37', 1, 4, 0]
+INFO:root:robotPlacement = [['78', 4, 0, 0], ['37', 1, 4, 0]]
+INFO:root:robotPlacement after sort = [['78', 4, 0, 0], ['37', 1, 4, 0]]
+INFO:root:MoveAndSend - id:78 destx:4 destY:0 curX:4 curY:0
+INFO:root:Starting 'L' path for robot:78
+INFO:root:Calling MoveVert 'L' for robot:78 xMove:4 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [4 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot37 finished recieving message - ['78', 'Move', 'n']
+INFO:root:Robot78 finished recieving message - ['78', 'Move', 'n']
+INFO:root:Robot78 About to move!
+INFO:root:pathList after moving robot:78 = []
+INFO:root:MoveAndSend - id:37 destx:1 destY:4 curX:1 curY:4
+INFO:root:Starting 'L' path for robot:37
+INFO:root:Calling MoveVert 'L' for robot:37 xMove:1 yMove:4 moveDown:True
+INFO:root:tryMoveVert finished and got [1 4]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:37 = []
+INFO:root:started!
+INFO:root:thread cv
+INFO:root:robot_44 started!
+INFO:root:Robot83 finished recieving message - [44, 'Elect leader']
+INFO:root:robot_83 started!
+INFO:root:Robot44 finished recieving message - [83, 'Elect leader']
+INFO:root:Robot44 Waiting for leader to be elected
+INFO:root:44 is the leader!
+INFO:root:Robot44 finished recieving message - [83, 'position', [1, 1]]
+INFO:root:Robot83 finished recieving message - [44, 'position', [0, 0]]
+INFO:root:Robot83 start while
+INFO:root:Robot44 start while
+INFO:root:This robot was not placed - ['44', 0, 0, 0]
+INFO:root:This robot was not placed - ['83', 1, 1, 0]
+INFO:root:robotPlacement = [['44', 0, 0, 0], ['83', 1, 1, 0]]
+INFO:root:robotPlacement after sort = [['44', 0, 0, 0], ['83', 1, 1, 0]]
+INFO:root:MoveAndSend - id:44 destx:0 destY:0 curX:0 curY:0
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:0 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [0 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:44 = []
+INFO:root:MoveAndSend - id:83 destx:1 destY:1 curX:1 curY:1
+INFO:root:Starting 'L' path for robot:83
+INFO:root:Calling MoveVert 'L' for robot:83 xMove:1 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [1 1]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot44 finished recieving message - ['83', 'Move', 'n']
+INFO:root:Robot83 finished recieving message - ['83', 'Move', 'n']
+INFO:root:pathList after moving robot:83 = []
+INFO:root:Robot83 About to move!
+INFO:root:Robot44 finished recieving message - [83, 'position', [1, 1]]
+INFO:root:Robot83 finished recieving message - [44, 'position', [0, 0]]
+INFO:root:Robot83 start while
+INFO:root:Robot44 start while
+INFO:root:This robot was not placed - ['44', 0, 0, 0]
+INFO:root:This robot was not placed - ['83', 1, 1, 0]
+INFO:root:robotPlacement = [['44', 0, 0, 0], ['83', 1, 1, 0]]
+INFO:root:robotPlacement after sort = [['44', 0, 0, 0], ['83', 1, 1, 0]]
+INFO:root:MoveAndSend - id:44 destx:0 destY:0 curX:0 curY:0
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:0 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [0 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:44 = []
+INFO:root:MoveAndSend - id:83 destx:1 destY:1 curX:1 curY:1
+INFO:root:Starting 'L' path for robot:83
+INFO:root:Calling MoveVert 'L' for robot:83 xMove:1 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [1 1]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:Robot44 finished recieving message - ['83', 'Move', 'n']
+INFO:root:Robot83 finished recieving message - ['83', 'Move', 'n']
+INFO:root:pathList after moving robot:83 = []
+INFO:root:Robot83 About to move!
+INFO:root:Robot44 finished recieving message - [83, 'position', [1, 1]]
+INFO:root:Robot83 finished recieving message - [44, 'position', [0, 0]]
+INFO:root:Robot83 start while
+INFO:root:Robot44 start while
+INFO:root:This robot was not placed - ['44', 0, 0, 0]
+INFO:root:This robot was not placed - ['83', 1, 1, 0]
+INFO:root:robotPlacement = [['44', 0, 0, 0], ['83', 1, 1, 0]]
+INFO:root:robotPlacement after sort = [['44', 0, 0, 0], ['83', 1, 1, 0]]
+INFO:root:MoveAndSend - id:44 destx:0 destY:0 curX:0 curY:0
+INFO:root:Starting 'L' path for robot:44
+INFO:root:Calling MoveVert 'L' for robot:44 xMove:0 yMove:0 moveDown:True
+INFO:root:tryMoveVert finished and got [0 0]
+INFO:root:Path found! - []
+INFO:root:path actually isn't found!
+INFO:root:n move
+INFO:root:pathList after moving robot:44 = []
+INFO:root:MoveAndSend - id:83 destx:1 destY:1 curX:1 curY:1
+INFO:root:Starting 'L' path for robot:83
+INFO:root:Calling MoveVert 'L' for robot:83 xMove:1 yMove:1 moveDown:True
+INFO:root:tryMoveVert finished and got [1 1]
+INFO:root:Path found! - []

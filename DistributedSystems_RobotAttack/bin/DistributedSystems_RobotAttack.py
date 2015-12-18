@@ -127,17 +127,22 @@ if __name__ == '__main__':
 
         robotIDs.append(newID)
         #place robots on board if allowed
-        isFilled = True
-        while isFilled:
-            print("Robot "+str(newID) + " X starting location from 0 to "+str(xSize-1)+": ")
-            robotX = int(input())
-            print("Robot "+str(newID) + " Y starting location from 0 to "+str(xSize-1)+": ")
-            robotY = int(input())
-            isFilled = m.checkIfFilled(robotX, robotY)
-            #print("propLoc" + str(propositionalLocation))
-            if isFilled == True:
-                print("That location is already taken")
-        location = checkRobotPlacement(m)
+        if setStart:
+            isFilled = True
+            while isFilled:
+                print("Robot "+str(newID) + " X starting location from 0 to "+str(xSize-1)+": ")
+                robotX = int(input())
+                print("Robot "+str(newID) + " Y starting location from 0 to "+str(xSize-1)+": ")
+                robotY = int(input())
+                isFilled = m.checkIfFilled(robotX, robotY)
+                #print("propLoc" + str(propositionalLocation))
+                if isFilled == True:
+                    print("That location is already taken")
+                location = []
+                location.append(robotX)
+                location.append(robotY)
+        else:
+            location = checkRobotPlacement(m)
         r1 = Robot(location[0],location[1],xSize,ySize,m, newID, rules, condition, numRobots, cipherDistance)
         robots.append(r1)
     
