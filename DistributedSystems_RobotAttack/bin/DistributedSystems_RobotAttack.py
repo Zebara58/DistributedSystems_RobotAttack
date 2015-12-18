@@ -6,6 +6,8 @@ from Rules import Rules
 from Network import Network
 import os
 import random
+from cipher import *
+
 
 #Robot/malicious in matrix is 1
 #Empty spaces is 0
@@ -29,6 +31,8 @@ if __name__ == '__main__':
     badBots = False
 
     userInputValid = False
+
+
 
     while not userInputValid:
         print("Please enter the scenario number, 1, 2, or 3:")
@@ -56,6 +60,9 @@ if __name__ == '__main__':
     condition = threading.Condition()
     m = Map(xSize, ySize)
 
+    #number of characters to shift in Caesar cipher, acts as key for "encryption"
+    cipherDistance = 1
+
     numRobots = 5
     rules = Rules(numRobots, m, condition)
     print("before rules")
@@ -72,7 +79,7 @@ if __name__ == '__main__':
                 uniqueIDfound = True
         robotIDs.append(newID)
         location = checkRobotPlacement(m)
-        r1 = Robot(location[0],location[1],xSize,ySize,m, newID, rules, condition, numRobots)
+        r1 = Robot(location[0],location[1],xSize,ySize,m, newID, rules, condition, numRobots, cipherDistance)
         robots.append(r1)
     
     m.print()

@@ -5,9 +5,10 @@ import time
 import logging
 from queue import *
 import random
+from cipher import *
 
 class Robot(Thread):
-    def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition, numRobots):
+    def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition, numRobots, cipherDistance):
         #Intialize
         #params: start x coord, start y coord, 
         self.x = x
@@ -33,6 +34,7 @@ class Robot(Thread):
         self.robotList = {}
         self.leaderElected = False
         self.robotPlacement = []
+        self.cipherDistance = cipherDistance
 
         #if(x!=0):
         #	self.matrix[x-1][y] = m[x-1][y]
@@ -46,6 +48,7 @@ class Robot(Thread):
     def recieveMessage(self, message):
         #logging.info("Robot"+str(self.robotID)+" recieved message! - "+str(message))
 
+
         if message[1] == "Elect leader":
             self.queue.put(message[0])
         elif message[1] == "Move":
@@ -55,11 +58,19 @@ class Robot(Thread):
             while(not self.leaderElected):
                 self.logSelf("Waiting for leader to be elected")
                 time.sleep(0.005)
-            if(self.isLeader):  
-                if(not self.goalFound and message[1] =="goal"):
-                    self.goalX = message[0][0]
-                    self.goalY = message[0][1]
-                    self.logSelf("Leader found goal at "+str(self.goalX) +" " + str(self.goalY))
+            if(self.isLeader):
+                #incoming string will either be "position" or encrypted goal message
+                if message[1] != "position":
+                    #decrypt goal message here
+                    decryptedStr = decryptedStr(cipherDistance, message[1])
+                    #split decrypted message
+                    splitString = str.split(decryptedStr)
+
+                    #shifted this if statement one tab right when adding encryption
+                    if(not self.goalFound and splitString[2] =="goal"):
+                        self.goalX = splitString[0]
+                        self.goalY = splitString[1]
+                        self.logSelf("Leader found goal at "+str(self.goalX) +" " + str(self.goalY))
                 elif(message[1] == "position"):
                     mesX = message[2][0]
                     mesY = message[2][1]
@@ -107,9 +118,8 @@ class Robot(Thread):
     def sendCommands(self):
         self.robotList[str(self.robotID)] = [self.x,self.y]
         #logging.info("robotList = "+str(self.robotList))
-
+        self.robotIDsPlaced= []
         if self.goalFound and len(self.robotPlacement)==0:
-            self.robotIDsPlaced= []
             goalPlace = 0
             placed = 0
             ringNum = 1
@@ -853,18 +863,20 @@ class Robot(Thread):
         self.network.broadcastMessage([self.robotID, "position", [self.x,self.y]])
 
         #check for goal
+        #self.network.broadcastMessage(str(self.x-1)+" "+str(self.y)+ " goal")
+
         if not self.goalFound:
             if(self.x!=0 and self.matrix[self.x-1][self.y] == 'g'):
-                self.network.broadcastMessage([[self.x-1,self.y], "goal"])
+                self.network.broadcastMessage(encrypt(cipherDistance, str(self.x-1)+" "+str(self.y)+ " goal"))
                 self.goalFound = True
             elif(self.x!=self.xSize-1 and self.matrix[self.x+1][self.y] == 'g'):
-                self.network.broadcastMessage([[self.x-1,self.y], "goal"])
+                self.network.broadcastMessage(encrypt(cipherDistance, str(self.x-1) + " " +str(self.y)+ " goal"))
                 self.goalFound = True
             elif(self.y!=0 and self.matrix[self.x][self.y-1] == 'g'):
-                self.network.broadcastMessage([[self.x,self.y+1], "goal"])
+                self.network.broadcastMessage(encrypt(cipherDistance, str(self.x) + " " + str(self.y+1) + " goal"))
                 self.goalFound = True
             elif(self.y!=self.ySize-1 and self.matrix[self.x][self.y+1] == 'g'):
-                self.network.broadcastMessage([[self.x,self.y-1], "goal"])
+                self.network.broadcastMessage(encrypt(cipherDistance, str(self.x) + " " +str(self.y-1) + " goal"))
                 self.goalFound = True
 
     def printKnowledge(self):
