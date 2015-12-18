@@ -10,13 +10,13 @@ class Map:
         #self.lock = threading.Lock()
         self.xSize = xSize
         self.ySize = ySize
+        self.goalX = goalX
+        self.goalY = goalY
 
         #set goal
-        ranX = random.randint(0,xSize-1)
-        ranY = random.randint(0,ySize-1)
 
-        self.matrix[ranX][ranY] = "g"
-        self.goal = [ranX,ranY]
+        self.matrix[self.goalX][self.goalY] = "g"
+        self.goal = [self.goalX,self.goalY]
 
         self.lock = threading.Lock()
 

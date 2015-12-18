@@ -29,6 +29,9 @@
     <Compile Include="bin\Map.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="bin\cipher.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="bin\Network.py">
       <SubType>Code</SubType>
     </Compile>
