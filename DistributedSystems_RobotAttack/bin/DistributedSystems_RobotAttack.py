@@ -50,8 +50,8 @@ if __name__ == '__main__':
 
     os.remove("robotattack.log");
 
-    xSize = 5
-    ySize = 5
+    xSize = 10
+    ySize = 10
 
     condition = threading.Condition()
     m = Map(xSize, ySize)
@@ -102,3 +102,5 @@ if __name__ == '__main__':
     #r1.printKnowledge()
     #r1.printPos()
     #m.print()
+
+    rules.join()

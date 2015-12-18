@@ -5,6 +5,7 @@ import time
 import logging
 from queue import *
 import random
+import math
 
 class Robot(Thread):
     def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition, numRobots):
@@ -34,6 +35,12 @@ class Robot(Thread):
         self.leaderElected = False
         self.robotPlacement = []
 
+        #CONFIGURATION for pathing
+        self.sortAscendAfter = True
+        self.reCalculatePosition = False
+
+        self.placedRobotM ={}
+
         #if(x!=0):
         #	self.matrix[x-1][y] = m[x-1][y]
         #if(x!=xSize-1):
@@ -60,10 +67,16 @@ class Robot(Thread):
                     self.goalX = message[0][0]
                     self.goalY = message[0][1]
                     self.logSelf("Leader found goal at "+str(self.goalX) +" " + str(self.goalY))
+                    self.goalFound=True
                 elif(message[1] == "position"):
                     mesX = message[2][0]
                     mesY = message[2][1]
+                    if(message[0] in self.placedRobotM):
+                        [xM,yM] = self.placedRobotM[message[0]]
+                        self.matrix[xM][yM] = "0"
                     self.matrix[mesX][mesY] = str(message[0])
+                    self.placedRobotM[message[0]] = [mesX,mesY]
+
                     self.robotList[str(message[0])] = [mesX,mesY]
         self.logSelf("finished recieving message - "+str(message))
     def robotConnectToNetwork(self, Network):
@@ -86,29 +99,85 @@ class Robot(Thread):
 
         if(lowest == self.robotID):
             self.isLeader = True
-            #self.robotPlacement = []
-            if(not self.goalFound):
-                self.determineQuadrants()
+            self.robotQuadrantAssignments = []
+            
         self.leaderElected = True
 
     def determineQuadrants(self):
-        blarg =1
-        #if(self.xSize % 2 == 0):
-        #    #if even board horizontal size, then
-        #    leftSideHorizontalSize = 0 to self.xSize/2 -1
-	       # rightSideHorizontalSize = mapX/2  to right end
-        #else #is odd
-	       # leftSideHorizontalSize = 0 to ceiling(mapX/2)
-	       # rightSideHorizontalSize = leftSideHorizontalSize+1 to right end
 
-        
+        if(self.xSize % 2 == 0):
+            #if even board horizontal size, then
+            self.leftSideVerticalSizeEnd = int(self.xSize/2) -1
+        else: #is odd
+            self.leftSideVerticalSizeEnd =int(self.xSize/2)
+
+        #divide vertical distance by half the number of robots(half for each side)
+        leftNumRobots = int(self.numRobots/2) #number of vertical spaces on each side
+        rightNumRobots = self.numRobots - leftNumRobots #right side gets less in case of odd number
+
+        #don't consider top rows (-2)
+        leftSpacing = int(math.ceil((self.ySize-2)/leftNumRobots))
+        if(leftSpacing<1):
+            leftSpacing = 1
+
+        #don't consider top rows (-2)
+        rightSpacing = int(math.ceil((self.ySize-2)/rightNumRobots))
+        if(rightSpacing<1):
+            rightSpacing = 1
+
+        logging.info("leftNumR="+str(leftNumRobots)+" rightNumR="+str(rightNumRobots)+" leftSpacing="+str(leftSpacing))
+
+        #iterate through spaces, first i spaces assigned to first robot, next i spaces to second on that #side, etc
+        #robots start in top left corner of their area
+        #Also find the distance of each robot to the space and pick the closest for each robot
+
+        quadrantStarts=[]
+        #left side (don't consider top rows)
+        y=1
+        while(y<self.ySize-1):
+            quadrantStarts.append([1,y])
+            y+=leftSpacing
+        #right side (don't consider top rows)
+        y=1
+        xEnd = self.xSize-2
+        while(y<self.ySize-1):
+            quadrantStarts.append([self.leftSideVerticalSizeEnd+2, y])
+            y+=rightSpacing
+
+        logging.info("robotList="+str(self.robotList))
+        logging.info("Quadrant starts ="+str(quadrantStarts))
+        self.robotQuadrantAssignments = []
+        for rKey in self.robotList.keys():
+            if(len(quadrantStarts)>0):
+                [rx, ry] = self.robotList[rKey]
+                lowestD = 999999
+                closestQ = None
+                for q in quadrantStarts:
+                    distance = abs(q[0]-rx) + abs(q[1]-ry)
+                    if(distance<lowestD):
+                        lowestD = distance
+                        closestQ = q
+                quadrantStarts.remove(closestQ)
+                self.robotQuadrantAssignments.append([rKey, closestQ[0], closestQ[1], False, False, False])
+                #1st False = This is if the robot is doing the quadrant search currently
+                #2nd False = This is if the robot reached the end of the quadrant
+                #3rd False = This is if the robot is moving left then it is True otherise right
+            else:
+                break
+        logging.info("Quadrants found! -"+str(self.robotQuadrantAssignments))
+
+
     #Broadcast commands over the network to all robots
     #Move self      
     def sendCommands(self):
-        self.robotList[str(self.robotID)] = [self.x,self.y]
         #logging.info("robotList = "+str(self.robotList))
-
+        
+        firstRunOf = True
+        if(self.goalFound and firstRunOf):
+            self.robotPlacement = []
+            firstRunOf = False
         if self.goalFound and len(self.robotPlacement)==0:
+
             self.robotIDsPlaced= []
             goalPlace = 0
             placed = 0
@@ -179,10 +248,12 @@ class Robot(Thread):
                 right = [self.goalX+ringNum, self.goalY]
                 posList=[top, bot, left, right]
 
+                toRemove = []
                 for pos in posList:
                     if(pos[0]<0 or pos[0]>self.xSize-1 or pos[1]<0 or pos[1]>self.ySize-1):
-                        posList.remove(pos)
-
+                        toRemove.append(pos)
+                for pos in toRemove:
+                    posList.remove(pos)
 
                 #calculate the cross poisitions and add them to robotPlacementTemp
                 posListOrig = posList
@@ -308,10 +379,11 @@ class Robot(Thread):
                 
 
             #this is done to ensure empty spaces are assigned first   
-            logging.info("before sort desc robotPlacement "+str(robotPlacementTemp))
+            logging.info("before sort desc robotPlacementTemp "+str(robotPlacementTemp))
             robotPlacementTemp = sorted(robotPlacementTemp, key=lambda r: r[3], reverse = True)
-            logging.info("after sort desc robotPlacement "+str(robotPlacementTemp))
+            logging.info("after sort desc robotPlacementTemp "+str(robotPlacementTemp))
 
+            logging.info("tempRobotList2="+str(tempRobotList2))
             #CAUSES robots to move out of spot and back into spot if run more than once
             addedPos = 0
             while(len(robotPlacementTemp)>0 and addedPos<len(posList) and addedPos<self.numRobots):
@@ -335,131 +407,80 @@ class Robot(Thread):
                 tempRobotList2.remove(lowestRobot)
                 logging.info(str(lowestRobot) + " is the lowest robot with distance " + str(lowestDist) + " for space number " +str(addedPos ) + " at location "+str(lowestPos[0])+", "+str(lowestPos[1]))
 
-            #robots closer to position move first
-            logging.info("before sort ascend robotPlacement "+str(self.robotPlacement))
-            self.robotPlacement = sorted(self.robotPlacement, key=lambda r: r[3])
-            logging.info("after sort ascend robotPlacement "+str(self.robotPlacement))  
-                
-
-
-            #tempRobotList = deepcopy(self.robotList)
-            #if(goalPlace>3):
-            #    #have a loop from -ringNum to ringNum for x and y
-            #    #find what the x and y the goal place corespond to
-            #    tempGoalPlace = 0
-            #    foundRingPlace = False
-            #    for j in range(self.goalY-ringNum,self.goalY+ringNum+1):
-            #        if(j==self.goalY-ringNum or j == self.goalY+ringNum):
-            #            for i in range(self.goalX-ringNum,self.goalX+ringNum+1):
-            #                #calculate position
-            #                if tempGoalPlace+4 == goalPlace:
-            #                    #bounds checks
-            #                    if (i == self.goalX or j == self.goalY) or (i < 0 or i >= self.xSize) or (j < 0 or j >= self.ySize) or (self.mainMap.matrix[i][j]!="0"):
-            #                        invalidPlace = True
-            #                    #logging.info("Found ring place -> x="+str(i)+" y="+str(j))
-            #                    foundRingPlace = True
-            #                    break
-            #                tempGoalPlace +=1
-            #        else:
-            #            for i in [self.goalX-ringNum, self.goalX+ringNum]:
-            #                #calculate position
-            #                if tempGoalPlace+4 == goalPlace:
-            #                    #bounds checks
-            #                    if (i == self.goalX or j == self.goalY) or (i < 0 or i >= self.xSize) or (j < 0 or j >= self.ySize) or (self.mainMap.matrix[i][j]!="0"):
-            #                        invalidPlace = True
-            #                    #logging.info("Found ring place -> x="+str(i)+" y="+str(j))
-            #                    foundRingPlace = True
-            #                    break
-            #                tempGoalPlace +=1
-            #        if(foundRingPlace):
-            #            break
-
-
-            #while(placed<len(self.robotList)):
-            #    lowest = 99999
-            #    i=-1
-            #    j=-1
-
-                
-            #    if not invalidPlace:
-            #        for r2key in tempRobotList:
-            #            #calc manhatttan distance from r2 to goal place
-            #            #returns the distance or -1 if invalid
-            #            if(goalPlace == 0):
-            #                #top
-            #                i = self.goalX
-            #                j = self.goalY-ringNum
-            #                if(j<0):
-            #                    dist= -1
-            #                else:
-            #                    dist=  self.calcBetweenTwoSpaces(self.goalX, self.goalY-ringNum, self.robotList[r2key][0], self.robotList[r2key][1])
-            #            elif(goalPlace == 1):
-            #                #bot
-            #                i = self.goalX
-            #                j = self.goalY+ringNum
-            #                if(j>=self.ySize):
-            #                    dist= -1
-            #                else:
-            #                    dist=  self.calcBetweenTwoSpaces(self.goalX, self.goalY+ringNum, self.robotList[r2key][0], self.robotList[r2key][1])
-            #            elif(goalPlace== 2):
-            #                #left
-            #                i = self.goalX-ringNum
-            #                j = self.goalY
-            #                if(i<0):
-            #                    dist= -1
-            #                else:
-            #                    dist=  self.calcBetweenTwoSpaces(self.goalX-ringNum, self.goalY, self.robotList[r2key][0], self.robotList[r2key][1])
-            #            elif(goalPlace == 3):
-            #                #right
-            #                i = self.goalX+ringNum
-            #                j = self.goalY
-            #                if(i>=self.xSize):
-            #                    dist= -1
-            #                else:
-            #                    dist=  self.calcBetweenTwoSpaces(self.goalX+ringNum, self.goalY, self.robotList[r2key][0], self.robotList[r2key][1])
-            #            else:
-            #                #we want to do the ring now 
-            #                tempRL = self.robotList[r2key]
-            #                dist= self.calcBetweenTwoSpaces(i,j, tempRL[0], tempRL[1])
-                    
-            #            if(dist != -1):
-            #                if dist < lowest:
-            #                    lowest = dist
-            #                    lowestRobot = r2key
-            #                    lowestPlace = [i,j]
-            #            else:
-            #                invalidPlace = True
-            #                break
-
-            #        if not invalidPlace:
-            #            placed+=1
-            #            self.robotPlacement.append([lowestRobot, i, j, lowest])
-            #            #logging.info(tempRobotList)
-            #            del tempRobotList[lowestRobot]
-            #            #logging.info("tempRobotList after del "+str(tempRobotList))
-            #            #logging.info(str(lowestRobot) + " is the lowest robot with distance " + str(lowest) + " for space number " +str(goalPlace ) + " at location "+str(lowestPlace[0])+", "+str(lowestPlace[1]))
-                
-            #    goalPlace+=1    
-            #    #multiple of 8 placements in each ring
-            #    if(goalPlace == (8*ringNum)+4):
-            #        ringNum+=1
-            #        goalPlace = 0
-            #    invalidPlace = False
-
-
-
             #logging.info(self.robotList)
             #message = [self.robotID, "Move", "d"]
             #self.network.broadcastMessage(message)
             #self.move("d")
+        elif(not self.goalFound):
+            #move to quadrant
 
+            logging.info("Goal not found. Assigning quadrants.")
+
+            self.robotIDsPlaced= []
+
+            for q in self.robotQuadrantAssignments:
+                
+                r = self.robotList[q[0]]
+                logging.info("r = "+str(r))
+                logging.info("looking at quadrant = "+str(q))
+                #1st False 3= This is if the robot is doing the quadrant search currently
+                #2nd False 4= This is if the robot reached the end of the quadrant
+                #3rd False 5= This is if the robot is moving left then it is True otherise right
+                #if doing quadrant current
+                if(q[3]==True):
+                    if(r[1]==1 or r[1] == self.leftSideVerticalSizeEnd-1 or r[1] == self.leftSideVerticalSizeEnd+1 or r[1]==self.xSize-2):
+                        #Move down since we reached the end of the quadrant
+
+                        #Make sure we move down one more time
+                        q[4] = True
+
+                        self.network.broadcastMessage([q[0], "Move", "d"])
+                    elif(q[4]==True):
+                        #we need to move down again
+
+                        #Switch directions
+                        q[5] = not q[5]
+
+                        q[4] = False
+
+                        self.network.broadcastMessage([q[0], "Move", "d"])
+                    elif(q[5]==True):
+                        self.network.broadcastMessage([q[0], "Move", "l"])
+                    else:
+                        self.network.broadcastMessage([q[0], "Move", "r"])
+                #else moving to quadarant
+                else:
+                    if(r[0]==q[1] and r[1]==q[2]):
+                        q[3] = True
+                        logging.info("Ready to start quadrant for r="+str(q[0]))
+                        if(q[5]==True):
+                            self.network.broadcastMessage([q[0], "Move", "l"])
+                        else:
+                            self.network.broadcastMessage([q[0], "Move", "r"])
+                    else:
+                        #do pathing to get to the quadrant start
+                        logging.info("Pathing to quadrant for r="+str(q[0]))
+                        self.robotPlacement.append([q[0], q[1], q[2], 1])
+                self.robotIDsPlaced.append(q[0])
+
+        if(self.sortAscendAfter):
+            #robots closer to position move first
+            logging.info("before sort ascend robotPlacement "+str(self.robotPlacement))
+            self.robotPlacement = sorted(self.robotPlacement, key=lambda r: r[3])
+            logging.info("after sort ascend robotPlacement "+str(self.robotPlacement))  
+        else:
+            #robots farther away move first  
+            logging.info("before sort desc robotPlacement "+str(self.robotPlacement))
+            robotPlacement = sorted(self.robotPlacement, key=lambda r: r[3], reverse = True)
+            logging.info("after sort desc robotPlacement "+str(self.robotPlacement))
 
         #assign unassigned robots to not move
         for r in self.robotList.keys():
             if(not r in self.robotIDsPlaced):
-                rx, ry = self.robotList[r]
+                rTemp = self.robotList[r]
+                rx, ry = rTemp[0], rTemp[1]
                 rPTemp = [r, rx, ry, 0]
-                logging.info("This robot was not placed - "+str(rPTemp))
+                logging.error("This robot was not placed - "+str(rPTemp))
                 self.robotPlacement.append(rPTemp)
             
 
@@ -467,21 +488,24 @@ class Robot(Thread):
         self.pathList = []
         self.robotsMoved = []
 
-        #sort robotPlacement by distance ascending
-        self.robotPlacement = sorted(self.robotPlacement, key=lambda r: r[3])
-        logging.info("robotPlacement after sort = "+str(self.robotPlacement))
-
         self.destinationList = []
         for robotP in self.robotPlacement:
             tempRL = self.robotList[robotP[0]]
             self.calculatePathAndSend(robotP[0], robotP[1],robotP[2], tempRL[0], tempRL[1])
             logging.info("pathList after moving robot:"+str(robotP[0])+" = "+str(self.pathList))
-        self.robotPlacement = []
+        
+        if(self.reCalculatePosition or not self.goalFound):
+            self.robotPlacement = []
         
     #if you can't move vertically to the position y, then reduce yMove by 1
     #alters path
     def tryMoveVert(self, xMove, yMove, destY, moveDown, roundNum, path, pathStr):
+        logging.info("tryMoveVert called with "+str([self, xMove, yMove, destY, moveDown, roundNum, path, pathStr]))
+        logging.info("pathList="+str(self.pathList))
+        logging.info("destinationList="+str(self.destinationList))
+        
         while(yMove!=destY):
+
             if(moveDown):
                 yMove+=1
             else:
@@ -489,23 +513,39 @@ class Robot(Thread):
             pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
             pStr2 = str(xMove)+" "+str(yMove)
             #if(self.matrix[xMove][yMove] != "0"):
-            if(pStr in self.pathList or pStr2 in self.destinationList or (xMove==self.goalX and yMove==self.goalY) or yMove<0 or yMove>self.ySize-1):
+            if(pStr in self.pathList or pStr2 in self.destinationList or (xMove==self.goalX and yMove==self.goalY) or yMove<0 or yMove>self.ySize-1 or self.matrix[xMove][yMove]!="0"):
                 #reset yMove
                 roundNum-=1
                 if(moveDown):
                     yMove-=1
                 else:
                     yMove+=1
+                
+                logging.info("tryMoveVert failed with yMove="+str(yMove))
+                if(pStr in self.pathList):
+                    logging.info("pStr:"+str(pStr)+" in pathList:"+str(self.pathList))
+                if(pStr2 in self.destinationList):
+                    logging.info("pStr2:"+str(pStr2)+" in destinationList:"+str(self.destinationList))
+                if(xMove==self.goalX and yMove==self.goalY):
+                    logging.info("failed due to on goal")
+                if(self.matrix[xMove][yMove]!="0"):
+                    logging.info("failed due to space filled -"+str(self.matrix[xMove][yMove]))
+
                 break
             else:
-                roundNum+=1
                 path.append([roundNum, xMove, yMove])
                 pathStr.append(str(roundNum)+" "+str(xMove)+" "+str(yMove))
-        logging.info("tryMoveVert finished and got ["+str(xMove)+" "+str(yMove)+"]")
+                roundNum+=1
+        logging.info("tryMoveVert finished and got ["+str(xMove)+" "+str(yMove)+"] with path ->"+str(path))
         return yMove, roundNum
     #if you can't move horizontally to the position, then reset xMove completely
     #alters path
     def tryMoveHor(self, xMove, yMove, destX, moveRight, roundNum, path, pathStr):	
+        logging.info("matrix = "+str(self.matrix))
+        logging.info("tryMoveHor called with "+str([self, xMove, yMove, destX, moveRight, roundNum, path, pathStr]))
+        logging.info("pathList="+str(self.pathList))
+        logging.info("destinationList="+str(self.destinationList))
+
         roundNumOrig = roundNum
         while(xMove!=destX):
             if(moveRight):
@@ -515,15 +555,24 @@ class Robot(Thread):
             #if(self.matrix[xMove][yMove] != "0"):
             pStr = str(roundNum)+" "+str(xMove)+" "+str(yMove)
             pStr2 = str(xMove)+" "+str(yMove)
-            if(pStr in self.pathList or pStr2 in self.destinationList or (xMove==self.goalX and yMove==self.goalY)):
-                #reset yMove
+            if(pStr in self.pathList or pStr2 in self.destinationList or (xMove==self.goalX and yMove==self.goalY)  or xMove<0 or xMove>self.ySize-1 or self.matrix[xMove][yMove]!="0"):
+
                 roundNum = roundNumOrig
-                logging.info("tryMoveVert failed")
+                logging.info("tryMoveHor failed with xMove="+str(xMove) +" and yMove="+str(yMove))
+                if(pStr in self.pathList):
+                    logging.info("pStr:"+str(pStr)+" in pathList:"+str(self.pathList))
+                if(pStr2 in self.destinationList):
+                    logging.info("pStr2:"+str(pStr2)+" in destinationList:"+str(self.destinationList))
+                if(xMove==self.goalX and yMove==self.goalY):
+                    logging.info("failed due to on goal")
+                if(self.matrix[xMove][yMove]!="0"):
+                    logging.info("failed due to space filled ="+str(self.matrix[xMove][yMove]))
                 return -1, roundNum
             else:
-                roundNum+=1
+                
                 path.append([roundNum, xMove, yMove])
                 pathStr.append(str(roundNum)+" "+str(xMove)+" "+str(yMove))
+                roundNum+=1
         logging.info("tryMoveHor succeeded and got ["+str(xMove)+" "+str(yMove)+"]")
         return xMove, roundNum
 
@@ -533,7 +582,9 @@ class Robot(Thread):
         xMove = curX
             
         #restore max vert path
+        
         path = savePathVert
+        logging.info("path after restor = "+str(path))
         roundNum = savePathRound
         yMove = savePathY
 
@@ -550,7 +601,7 @@ class Robot(Thread):
             else:
                 yMove-=1
 
-            if(yMove<0 or yMove>self.ySize):
+            if(yMove<0 or yMove>self.ySize-1):
                 logging.error("No valid arc path past depth due to going off board for robot:"+str(id)+"! Stuck on ["+str(xMove)+", "+str(yMove)+"] so do nothing")
                 vaildPath = False
                 break
@@ -585,10 +636,12 @@ class Robot(Thread):
                 if(yMove == destY):
                     validPath = True
                 break
+        logging.info("arcPath done with path, pathStr, validPath, xMove, yMove "+str([path, pathStr, validPath, xMove, yMove]))
         return path, pathStr, validPath, xMove, yMove
 
     def calculatePathAndSend(self, id, destX, destY, curX, curY):
         logging.info("MoveAndSend - id:"+str(id)+" destx:" +str(destX)+" destY:"+str(destY)+" curX:"+str(curX)+" curY:"+str(curY))
+        logging.info("robotList = "+str(self.robotList))
         pathStr = ""
         validPath = False
         path = []
@@ -672,6 +725,7 @@ class Robot(Thread):
             else:
                 #move down for arc
                 moveDown = True
+            logging.info("path before restore = "+str(path))
             path, pathStr, validPath, xMove, yMove = self.calcArcPath(moveDown, curX, curY, xMove, yMove, destX, destY, savePathVert, savePathRound, savePathY)
             if(not validPath):
                 path, pathStr, validPath, xMove, yMove = self.calcArcPath(not moveDown, curX, curY, xMove, yMove, destX, destY, savePathVert, savePathRound, savePathY)
@@ -767,6 +821,8 @@ class Robot(Thread):
         self.network.broadcastMessage([self.robotID, "position", [self.x,self.y]])
         time.sleep(.005)
 
+        self.getLatest()
+
         while(self.alive):
             self.logSelf("start while")
             if(self.isLeader):
@@ -774,7 +830,11 @@ class Robot(Thread):
                 while(len(self.robotList)<self.numRobots-1):
                     time.sleep(0.005)
                     #logging.info("robotList = "+str(self.robotList))
+                
+                self.robotList[str(self.robotID)] = [self.x,self.y]
 
+                if(not self.goalFound and len(self.robotQuadrantAssignments) ==0):
+                    self.determineQuadrants()
                 #Leader issue commands to other robots through the network
                 #This also moves the leader
                 self.sendCommands()
@@ -858,13 +918,13 @@ class Robot(Thread):
                 self.network.broadcastMessage([[self.x-1,self.y], "goal"])
                 self.goalFound = True
             elif(self.x!=self.xSize-1 and self.matrix[self.x+1][self.y] == 'g'):
-                self.network.broadcastMessage([[self.x-1,self.y], "goal"])
+                self.network.broadcastMessage([[self.x+1,self.y], "goal"])
                 self.goalFound = True
             elif(self.y!=0 and self.matrix[self.x][self.y-1] == 'g'):
-                self.network.broadcastMessage([[self.x,self.y+1], "goal"])
+                self.network.broadcastMessage([[self.x,self.y-1], "goal"])
                 self.goalFound = True
             elif(self.y!=self.ySize-1 and self.matrix[self.x][self.y+1] == 'g'):
-                self.network.broadcastMessage([[self.x,self.y-1], "goal"])
+                self.network.broadcastMessage([[self.x,self.y+1], "goal"])
                 self.goalFound = True
 
     def printKnowledge(self):

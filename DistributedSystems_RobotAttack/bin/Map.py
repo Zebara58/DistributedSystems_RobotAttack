@@ -4,7 +4,7 @@ import threading
 class Map:
     
     def __init__(self, xSize, ySize):
-        self.matrix = [['0' for x in range(xSize)] for y in range(ySize)]
+        self.matrix = [["0" for x in range(xSize)] for y in range(ySize)]
         #self.matrix[3][3] = 1
         #self.matrix[1][0] = 1
         #self.lock = threading.Lock()
@@ -15,13 +15,13 @@ class Map:
         ranX = random.randint(0,xSize-1)
         ranY = random.randint(0,ySize-1)
 
-        self.matrix[ranX][ranY] = 'g'
+        self.matrix[ranX][ranY] = "g"
         self.goal = [ranX,ranY]
 
         self.lock = threading.Lock()
 
     def checkIfFilled(self, x, y):
-        if self.matrix[x][y] == '0':
+        if self.matrix[x][y] == "0":
             return False
         else:
             return True
