@@ -49,7 +49,6 @@ if __name__ == '__main__':
         else:
             xSize = int(inputTry)
             ySize = int(inputTry)
-        print(xSize)
         userInputValid = True
 
     #reset for next loop
@@ -89,7 +88,7 @@ if __name__ == '__main__':
         goalY = int(input())
 
 
-    if(os._exists("robotattack.log")):
+    if(os.path.isfile("robotattack.log")):
         os.remove("robotattack.log");
 
     #xSize = 5
@@ -111,9 +110,9 @@ if __name__ == '__main__':
 
 
     rules = Rules(numRobots, m, condition)
-    print("before rules")
+
     rules.start()
-    print("rules started")
+
     robots = []
     robotIDs = []
     for i in range(0,numRobots):

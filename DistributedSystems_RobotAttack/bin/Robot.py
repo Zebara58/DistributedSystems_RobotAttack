@@ -173,7 +173,7 @@ class Robot(Thread):
                         lowestD = distance
                         closestQ = q
                 quadrantStarts.remove(closestQ)
-                self.robotQuadrantAssignments.append([rKey, closestQ[0], closestQ[1], False, False, False])
+                self.robotQuadrantAssignments.append([rKey, closestQ[0], closestQ[1], False, 0, False])
                 #1st False = This is if the robot is doing the quadrant search currently
                 #2nd False = This is if the robot reached the end of the quadrant
                 #3rd False = This is if the robot is moving left then it is True otherise right
@@ -444,21 +444,38 @@ class Robot(Thread):
                 #2nd False 4= This is if the robot reached the end of the quadrant
                 #3rd False 5= This is if the robot is moving left then it is True otherise right
                 #if doing quadrant current
+
+                #for reference
+                #if(self.xSize % 2 == 0):
+                ##if even board horizontal size, then
+                #    self.leftSideVerticalSizeEnd = int(self.xSize/2) -1
+                #else: #is odd
+                #    self.leftSideVerticalSizeEnd =int(self.xSize/2)
+
                 if(q[3]==True):
-                    if(r[1]==1 or r[1] == self.leftSideVerticalSizeEnd-1 or r[1] == self.leftSideVerticalSizeEnd+1 or r[1]==self.xSize-2):
-                        #Move down since we reached the end of the quadrant
-
-                        #Make sure we move down one more time
-                        q[4] = True
-
-                        self.network.broadcastMessage([q[0], "Move", "d"])
-                    elif(q[4]==True):
+                    if(q[4]==1):
                         #we need to move down again
 
                         #Switch directions
                         q[5] = not q[5]
 
-                        q[4] = False
+                        q[4] = 2
+
+                        self.network.broadcastMessage([q[0], "Move", "d"])
+                    elif(q[4]==2):
+                        q[4]=3
+                        self.network.broadcastMessage([q[0], "Move", "d"])
+                    elif(q[4]==3):
+                        q[4]=0
+                        if(q[5]==True):
+                            self.network.broadcastMessage([q[0], "Move", "l"])
+                        else:
+                            self.network.broadcastMessage([q[0], "Move", "r"])
+                    elif(r[0]==1 or r[0] == self.leftSideVerticalSizeEnd-1 or r[0] == self.leftSideVerticalSizeEnd+1 or r[0]==self.xSize-2):
+                        #Move down since we reached the end of the quadrant
+
+                        #Make sure we move down one more time
+                        q[4] = 1
 
                         self.network.broadcastMessage([q[0], "Move", "d"])
                     elif(q[5]==True):
@@ -504,6 +521,8 @@ class Robot(Thread):
         logging.info("robotPlacement = "+str(self.robotPlacement))
         self.pathList = []
         self.robotsMoved = []
+
+        logging.info("before calculatePathAndSend robotPlacement="+str(self.robotPlacement))
 
         self.destinationList = []
         for robotP in self.robotPlacement:
@@ -891,21 +910,29 @@ class Robot(Thread):
             if(self.x!=self.xSize-1):
                 if(self.matrix[self.x+1][self.y]=='0'):
                     self.x = self.x+1
+                else:
+                    logging.error("move right blocked = self.matrix[self.x+1][self.y] " + str(self.matrix[self.x+1][self.y]))
 
         elif(dir=="l"):
             if(self.x!=0):
                 if(self.matrix[self.x-1][self.y]=='0'):
                     self.x = self.x-1
+                else:
+                    logging.error("move left blocked = self.matrix[self.x-1][self.y] " + str(self.matrix[self.x-1][self.y]))
                     
         elif(dir=="d"):
             if(self.y!=self.ySize-1):
                 if(self.matrix[self.x][self.y+1]=='0'):
                     self.y = self.y+1
+                else:
+                    logging.error("move down blocked = self.matrix[self.x][self.y+1] "+str(self.matrix[self.x][self.y+1]))
 
         elif(dir=="u"):
             if(self.y!=0):
                 if(self.matrix[self.x][self.y-1]=='0'):
                     self.y = self.y-1
+                else:
+                    logging.error("move up blocked = self.matrix[self.x][self.y-1] "+ str(self.matrix[self.x][self.y-1]))
 
         #m.getLock()
         if(self.mainMap.update(self.x, self.y, prevLocX, prevLocY, self.robotID)):
