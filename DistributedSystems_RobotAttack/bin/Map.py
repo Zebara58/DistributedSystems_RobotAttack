@@ -1,4 +1,8 @@
-﻿#This is the main map object that is printed to the terminal. 
+﻿#Name: Kyle Brennan and Sean Kearney
+#Date: 12/18/2015
+#Class: CSCI 652
+#Institution: Rochester Institute of Technology
+#Description: This is the main map object that is printed to the terminal. 
 #Robots update the main map after they move. The Map object locks for each update.
 #The Map object stops invalid updates to the main map.
 
@@ -7,7 +11,7 @@ import random
 import threading
 class Map:
     
-    #Pre: The board size (the x and y size) along with the goal x and y position.
+    #Pre: This takes the board size (the x and y size) along with the goal x and y position.
     #Post: Initializes the main map with the specified size and goal.
     def __init__(self, xSize, ySize, goalX, goalY):
         self.matrix = [["0" for x in range(xSize)] for y in range(ySize)]

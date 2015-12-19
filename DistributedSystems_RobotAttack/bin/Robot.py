@@ -1,4 +1,13 @@
-﻿from copy import copy, deepcopy
+﻿#Name: Kyle Brennan and Sean Kearney
+#Date: 12/18/2015
+#Class: CSCI 652
+#Institution: Rochester Institute of Technology
+#Description: This is the robot that tries to help surround the goal.
+#If a robot is elected the leader, then that robot 
+#commands all the other robots. See the report for a detailed
+#analysis for how the algorithms operate.
+
+from copy import copy, deepcopy
 from threading import Thread
 import threading
 import time
@@ -10,8 +19,21 @@ from cipher import *
 
 
 class Robot(Thread):
-    def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition, numRobots, cipherDistance):
-        #Intialize
+
+    #Pre: This initializes the robot with: 
+    #1. The x and y coordinate of the new robot
+    #2. The x and y size of the board
+    #3. The Map object pointer
+    #4. The robot's ID
+    #5. The Rules thread pointer
+    #6. The condition object that is used by the Rules thread
+    # to stop robots from taking multiple turns in a row
+    #7. The cipherDistance for decrypting messages
+    #Post: This initializes the Robot.
+    #Note that the number of robots is determined by waiting in the Run
+    #thread for 5 seconds and counting messages.
+    def __init__(self, x, y, xSize, ySize, m, robotID, rules, condition, cipherDistance):
+        #Initialize
         #params: start x coord, start y coord, 
         self.x = x
         self.xSize = xSize
@@ -27,7 +49,7 @@ class Robot(Thread):
         Thread.__init__(self)
         self.isLeader = False
         self.leaderFound = False
-        self.numRobots = numRobots
+
         self.queue = Queue()
         self.moveQueue = Queue()
         self.goalFound = False
@@ -54,6 +76,9 @@ class Robot(Thread):
         #if(y!=ySize-1):
         #	self.matrix[x][y+1] = m[x][y+1]
 
+    #Pre: Receive any message array with the requirement that the first
+    #element is the robot ID who sent the message.
+    #Post: This performs actions based on the message contents.
     def recieveMessage(self, message):
         #logging.info("Robot"+str(self.robotID)+" recieved message! - "+str(message))
 
@@ -94,6 +119,7 @@ class Robot(Thread):
 
                     self.robotList[str(message[0])] = [mesX,mesY]
         self.logSelf("finished recieving message - "+str(message))
+    
     def robotConnectToNetwork(self, Network):
         self.network = Network
 
@@ -102,7 +128,7 @@ class Robot(Thread):
         self.goalY = goal[1]
         self.goalFound = True
 
-    #Elect self as leader if self has the lowest ID
+    #Post: Elect self as leader if self has the lowest ID of all the robots.
     def electLeader(self):
         lowest = self.robotID
         #logging.info(str(self.queue.qsize()) +" queue size")
@@ -118,6 +144,8 @@ class Robot(Thread):
             
         self.leaderElected = True
 
+    #Post: Determine the quadrants based on the number of robots
+    #and the board size.
     def determineQuadrants(self):
 
         if(self.xSize % 2 == 0):
@@ -182,8 +210,10 @@ class Robot(Thread):
         logging.info("Quadrants found! -"+str(self.robotQuadrantAssignments))
 
 
-    #Broadcast commands over the network to all robots
-    #Move self      
+    #Post: Broadcast movement commands over the network to all robots.
+    #This is where the robot position assignments are set and
+    #the pathing is calculated.
+    #Move self if leader.   
     def sendCommands(self):
         #logging.info("robotList = "+str(self.robotList))
 
@@ -533,8 +563,9 @@ class Robot(Thread):
         if(self.reCalculatePosition or not self.goalFound):
             self.robotPlacement = []
         
-    #if you can't move vertically to the position y, then reduce yMove by 1
-    #alters path
+    #Post: This moves robots vertically towards the destination position. 
+    #If you can't move vertically to the position y, then reduce yMove by 1.
+    #This alters the stored "path" array for collision detection.
     def tryMoveVert(self, xMove, yMove, destY, moveDown, roundNum, path, pathStr):
         logging.info("tryMoveVert called with "+str([self, xMove, yMove, destY, moveDown, roundNum, path, pathStr]))
         logging.info("pathList="+str(self.pathList))
@@ -574,8 +605,10 @@ class Robot(Thread):
                 roundNum+=1
         logging.info("tryMoveVert finished and got ["+str(xMove)+" "+str(yMove)+"] with path ->"+str(path))
         return yMove, roundNum
-    #if you can't move horizontally to the position, then reset xMove completely
-    #alters path
+    #Post: This moves robots horizontally towards the destination position.
+    #If you get to the destination x position, then return the new x position and the round number
+    #If you can't move horizontally to the position, then reset xMove completely and return -1 with the round number
+    #This alters the stored "path" array for collision detection.
     def tryMoveHor(self, xMove, yMove, destX, moveRight, roundNum, path, pathStr):	
         logging.info("matrix = "+str(self.matrix))
         logging.info("tryMoveHor called with "+str([self, xMove, yMove, destX, moveRight, roundNum, path, pathStr]))
@@ -612,6 +645,7 @@ class Robot(Thread):
         logging.info("tryMoveHor succeeded and got ["+str(xMove)+" "+str(yMove)+"]")
         return xMove, roundNum
 
+    #Post: This calculates the arc path to the destination position. 
     def calcArcPath(self, moveDown, curX, curY, xMove, yMove, destX, destY, savePathVert, savePathRound, savePathY):
         logging.info("Starting arc path past depth to dest Y for robot:"+str(id))
         #start moving past the goal and checking
@@ -675,6 +709,7 @@ class Robot(Thread):
         logging.info("arcPath done with path, pathStr, validPath, xMove, yMove "+str([path, pathStr, validPath, xMove, yMove]))
         return path, pathStr, validPath, xMove, yMove
 
+    #Post: This calculates the 'L' path and broadcasts movement commands.
     def calculatePathAndSend(self, id, destX, destY, curX, curY):
         logging.info("MoveAndSend - id:"+str(id)+" destx:" +str(destX)+" destY:"+str(destY)+" curX:"+str(curX)+" curY:"+str(curY))
         logging.info("robotList = "+str(self.robotList))
@@ -811,6 +846,11 @@ class Robot(Thread):
                 else:
                     logging.error("Impossible case! try to determine direction from 'n'")
                     pathStr = self.moveBroadcast(xMove, yMove, id, "n")
+    
+    #Post: This moves the robot in the direction specified.
+    #If self is leader, then move self.
+    #Else broadcast the message.
+    #This returns the path string
     def moveBroadcast(self, xMove, yMove, id, dir):
         logging.info(str(dir)+" move")
         pathStr = str(xMove)+" "+str(yMove)
@@ -818,14 +858,10 @@ class Robot(Thread):
             self.move(dir)
         else:
             self.network.broadcastMessage([id,"Move",dir])
+        return pathStr
 
-    def moveBroadcast2(self, id, dir):
-        logging.info(str(dir)+" move")
-        if(str(self.robotID) == id):
-            self.move(dir)
-        else:
-            self.network.broadcastMessage([id,"Move",dir])
-
+    #Post: This calculates and returns the Manhattan distance 
+    #between two positions.
     def calcBetweenTwoSpaces(self, targetX, targetY, rx, ry):
         distance = abs(targetX-rx) + abs(targetY-ry)
 
@@ -838,6 +874,12 @@ class Robot(Thread):
     def logSelf(self, m):
         logging.info("Robot"+str(self.robotID)+" "+m)
 
+    #Post: This is the thread running for this robot.
+    #First elect a leader.
+    #Start the loop with broadcasting your position.
+    #If self is not the leader, then wait for commands.
+    #If self is the leader, then issue commands.
+    #Update self and map before looping again.
     def run(self):
         logging.info('robot_'+str(self.robotID)+' started!')
         
@@ -845,9 +887,15 @@ class Robot(Thread):
         message.append(self.robotID)
         message.append("Elect leader")
         self.network.broadcastMessage(message)
-        #Wait for the messages for the election are recieved
-        while(self.queue.qsize()!=(self.numRobots -1)):
-            time.sleep(0.005)
+        #Wait 5 seconds for the messages for the election are recieved
+        #while(self.queue.qsize()!=(self.numRobots -1)):
+        #    time.sleep(0.005)
+        time.sleep(1)
+        
+        #set number of robots based on messages recieved
+        self.numRobots = self.queue.qsize()+1
+        self.logSelf("Found number of robots to be: "+str(self.numRobots))
+
         #logging.info(str(self.queue.qsize()) +" queue size")
         self.electLeader()
         #logging.info('Leader elected!')
@@ -903,6 +951,7 @@ class Robot(Thread):
         logging.info('robot_'+str(self.robotID)+' finished!');
 
 
+    #Post: Move the robot based on the direction.
     def move(self, dir):
         prevLocX = self.x
         prevLocY = self.y
@@ -944,6 +993,9 @@ class Robot(Thread):
         #m.releaseLock()
         #self.wait()
 
+    #Post: Get the latest from the main map.
+    #If you see the goal and it has not been found,
+    #then broadcast the goal location (encrypted)
     def getLatest(self):
         if(self.x!=0):
         	self.matrix[self.x-1][self.y] = self.mainMap.matrix[self.x-1][self.y]

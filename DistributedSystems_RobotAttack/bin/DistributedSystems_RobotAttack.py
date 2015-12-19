@@ -1,4 +1,21 @@
-﻿from threading import Thread
+﻿#Name: Kyle Brennan and Sean Kearney
+#Date: 12/18/2015
+#Class: CSCI 652
+#Institution: Rochester Institute of Technology
+#Description: This is a multithreaded application to coordinate virtual robots with 
+#malicious robots to surround a goal location with or without knowing where the 
+#goal is. The robots cannot directly communicate with each other and each robot 
+#broadcasts messages through the network object to all other robots. To coordinate 
+#the robots, the bully algorithm is utilized to elect a leader who dictates all 
+#robot movement. If the goal is not known, then a scanning search algorithm is used 
+#to find the goal. If the goal is found, then robots are assigned once to a position 
+#around the goal. The leader recalculates the path of each robot to the goal after 
+#each move. To stop malicious robots from receiving commands or the goal position, 
+#encryption is utilized. This algorithm gets the robots to the goal in efficient 
+#time to beat the malicious robots to the goal.
+
+
+from threading import Thread
 import threading
 from Map import Map
 from Robot import Robot
@@ -141,7 +158,7 @@ if __name__ == '__main__':
                 location.append(robotY)
         else:
             location = checkRobotPlacement(m)
-        r1 = Robot(location[0],location[1],xSize,ySize,m, newID, rules, condition, numRobots, cipherDistance)
+        r1 = Robot(location[0],location[1],xSize,ySize,m, newID, rules, condition, cipherDistance)
         robots.append(r1)
     
     m.print()
@@ -171,5 +188,5 @@ if __name__ == '__main__':
     #r1.printKnowledge()
     #r1.printPos()
     #m.print()
-
+    print("Set to wait 1 second between each round.")
     rules.join()
