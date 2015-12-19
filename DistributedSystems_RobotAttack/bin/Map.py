@@ -43,7 +43,10 @@ class Map:
         for y in range(self.ySize):
             string = ""
             for x in range(self.xSize):
-                string += str(self.matrix[x][y]) + "  "
+                if(self.matrix[x][y]!="g" and int(self.matrix[x][y])>9):
+                    string += str(self.matrix[x][y]) + " "
+                else:
+                    string += str(self.matrix[x][y]) + "  "
             print(string)
         print("*****************************************")
 

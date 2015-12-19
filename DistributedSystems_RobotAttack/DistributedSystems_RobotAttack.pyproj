@@ -25,6 +25,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="bin\BadRobot.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="bin\DistributedSystems_RobotAttack.py" />
     <Compile Include="bin\Map.py">
       <SubType>Code</SubType>

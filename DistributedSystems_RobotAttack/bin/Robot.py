@@ -994,8 +994,6 @@ class Robot(Thread):
         #self.wait()
 
     #Post: Get the latest from the main map.
-    #If you see the goal and it has not been found,
-    #then broadcast the goal location (encrypted)
     def getLatest(self):
         if(self.x!=0):
         	self.matrix[self.x-1][self.y] = self.mainMap.matrix[self.x-1][self.y]

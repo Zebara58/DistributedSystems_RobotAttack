@@ -21,6 +21,7 @@ from Map import Map
 from Robot import Robot
 from Rules import Rules
 from Network import Network
+from BadRobot import BadRobot
 import os
 import random
 from cipher import *
@@ -46,6 +47,9 @@ if __name__ == '__main__':
     knowGoal = True
     setStart = False
     badBots = False
+    numBad = 0
+    badRobotsList = []
+    badRobotsIDs = []
 
     userInputValid = False
     #board size, no catch currently for non-ints, defaults to 5 if int entered is less than 5
@@ -126,6 +130,10 @@ if __name__ == '__main__':
     else:
         numRobots = numRobotsInput
 
+    if(badBots):
+        print("Please give the number of malicious robots: ")
+        numBad = int(input())
+        numRobots+=numBad
 
     rules = Rules(numRobots, m, condition)
 
@@ -133,7 +141,8 @@ if __name__ == '__main__':
 
     robots = []
     robotIDs = []
-    for i in range(0,numRobots):
+    numGoodBots = numRobots-numBad
+    for i in range(0,numGoodBots):
         uniqueIDfound = False
         
         while not uniqueIDfound:
@@ -161,8 +170,28 @@ if __name__ == '__main__':
             #random robot location
             location = checkRobotPlacement(m)
         r1 = Robot(location[0],location[1],xSize,ySize,m, newID, rules, condition, cipherDistance)
-        robots.append(r1)
+        badRobotsList.append(r1)
     
+    if(badBots):
+
+        for i in range(0,numBad):
+            uniqueIDfound = False
+        
+            while not uniqueIDfound:
+                newID = random.randint(1, 99)
+                if newID not in robotIDs:
+                    uniqueIDfound = True
+
+            badRobotsIDs.append(newID)
+
+            location = checkRobotPlacement(m)
+            rBad1 = BadRobot(location[0],location[1],xSize,ySize,m, newID, rules, condition)
+            badRobotsList.append(rBad1)
+
+
+    if(badBots):
+        print("Added malicious robots with IDs: "+str(badRobotsIDs))
+
     m.print()
     n = Network()
 
@@ -173,11 +202,20 @@ if __name__ == '__main__':
     for r in robots:
         n.addRobots(r)
 
+    for badR in badRobotsList:
+        n.addRobots(badR)
+
     for r in robots:
         r.robotConnectToNetwork(n)
+
+    for badR in badRobotsList:
+        badR.robotConnectToNetwork(n)
     
     for r in robots:
         r.start()
+
+    for badR in badRobotsList:
+        badR.start()
 
     #t_rules.join()
 
