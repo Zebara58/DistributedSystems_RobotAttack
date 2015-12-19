@@ -26,9 +26,9 @@ import random
 from cipher import *
 
 
-#Robot/malicious in matrix is 1
+#Robot/malicious in matrix is robotID
 #Empty spaces is 0
-#Goal is 2
+#Goal is g
 
 #Matrix[x][y]
 import time
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     badBots = False
 
     userInputValid = False
-    #board size, no catch currently for non-ints
+    #board size, no catch currently for non-ints, defaults to 5 if int entered is less than 5
     while not userInputValid:
         print("Please enter the board edge size(must be at least 5):")
         inputTry = int(input())
@@ -99,6 +99,7 @@ if __name__ == '__main__':
         goalX = random.randint(0,xSize-1)
         goalY = random.randint(0,ySize-1)
     else:
+        #user chooses goal location
         print("Please give the goal X coordinate from 0 to "+str(xSize-1))
         goalX = int(input())
         print("Please give the goal Y coordinate from 0 to "+str(ySize-1))
@@ -117,7 +118,7 @@ if __name__ == '__main__':
     #number of characters to shift in Caesar cipher, acts as key for "encryption"
     cipherDistance = 1
 
-    #choose the number of robots
+    #choose the number of robots, needs at least 2, no catch for invalid/non-int inputs
     print("Choose the number of robots:")
     numRobotsInput = int(input())
     if numRobotsInput < 2:
@@ -157,6 +158,7 @@ if __name__ == '__main__':
                 location.append(robotX)
                 location.append(robotY)
         else:
+            #random robot location
             location = checkRobotPlacement(m)
         r1 = Robot(location[0],location[1],xSize,ySize,m, newID, rules, condition, cipherDistance)
         robots.append(r1)

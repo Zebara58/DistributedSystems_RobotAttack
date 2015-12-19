@@ -1,4 +1,10 @@
-#From http://programeveryday.com/post/implementing-a-basic-caesar-cipher-in-python/
+﻿#Name: Kyle Brennan and Sean Kearney
+#Date: 12/18/2015
+#Class: CSCI 652
+#Institution: Rochester Institute of Technology
+#Description: This is a simplementation of a Caesar Cipher
+#The entirety of the code in this file was taken from 
+#http://programeveryday.com/post/implementing-a-basic-caesar-cipher-in-python/
 
 def encrypt(n, plaintext):
     key = 'abcdefghijklmnopqrstuvwxyz'
