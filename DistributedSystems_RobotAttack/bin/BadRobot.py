@@ -1,4 +1,4 @@
-#Name: Kyle Brennan and Sean Kearney
+﻿#Name: Kyle Brennan and Sean Kearney
 #Date: 12/18/2015
 #Class: CSCI 652
 #Institution: Rochester Institute of Technology
@@ -169,7 +169,7 @@ class BadRobot(Thread):
         if(dir=="r"):
             if(self.x!=self.xSize-1):
                 visitStr = str(self.x+1) + " "+ str(self.y)
-                if(self.matrix[self.x+1][self.y]=="0" or (not visitStr in self.visited)):
+                if(self.matrix[self.x+1][self.y]=="0" and (not visitStr in self.visited)):
                     self.x = self.x+1
                 else:
                     #logging.error("move right blocked = self.matrix[self.x+1][self.y] " + str(self.matrix[self.x+1][self.y]))
@@ -178,7 +178,7 @@ class BadRobot(Thread):
         elif(dir=="l"):
             if(self.x!=0):
                 visitStr = str(self.x-1) + " "+ str(self.y)
-                if(self.matrix[self.x-1][self.y]=="0" or (not visitStr in self.visited)):
+                if(self.matrix[self.x-1][self.y]=="0" and (not visitStr in self.visited)):
                     self.x = self.x-1
                 else:
                     #logging.error("move left blocked = self.matrix[self.x-1][self.y] " + str(self.matrix[self.x-1][self.y]))
@@ -187,7 +187,7 @@ class BadRobot(Thread):
         elif(dir=="d"):
             if(self.y!=self.ySize-1):
                 visitStr = str(self.x) + " "+ str(self.y+1)
-                if(self.matrix[self.x][self.y+1]=="0" or (not visitStr in self.visited)):
+                if(self.matrix[self.x][self.y+1]=="0" and (not visitStr in self.visited)):
                     self.y = self.y+1
                 else:
                     #logging.error("move down blocked = self.matrix[self.x][self.y+1] "+str(self.matrix[self.x][self.y+1]))
@@ -196,7 +196,7 @@ class BadRobot(Thread):
         elif(dir=="u"):
             if(self.y!=0):
                 visitStr = str(self.x) + " "+ str(self.y-1)
-                if(self.matrix[self.x][self.y-1]=="0" or (not visitStr in self.visited)):
+                if(self.matrix[self.x][self.y-1]=="0" and (not visitStr in self.visited)):
                     self.y = self.y-1
                 else:
                     #logging.error("move up blocked = self.matrix[self.x][self.y-1] "+ str(self.matrix[self.x][self.y-1]))
